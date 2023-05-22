@@ -1,13 +1,13 @@
 ### Settings to control installation path e.g. for test installs
-export CONDA_BASE="${CONDA_BASE:-/g/data/hh5/public}"
-export ADMIN_DIR="${ADMIN_DIR:-/g/data/hh5/admin/conda_concept/admin}"
+export CONDA_BASE="${CONDA_BASE:-/g/data/xp65/public}"
+export ADMIN_DIR="${ADMIN_DIR:-/g/data/xp65/admin/conda_concept/admin}"
 export CONDA_TEMP_PATH="${PBS_JOBFS:-${CONDA_TEMP_PATH}}"
 export SCRIPT_DIR="${SCRIPT_DIR:-$PWD}"
 
-export SCRIPT_SUBDIR="apps/cms_conda_scripts"
+export SCRIPT_SUBDIR="apps/med_conda_scripts"
 export MODULE_SUBDIR="modules"
 export APPS_SUBDIR="apps"
-export CONDA_INSTALL_BASENAME="cms_conda"
+export CONDA_INSTALL_BASENAME="med_conda"
 export MODULE_NAME="conda_concept"
 
 ### Derived locations - extra '.' for arcane rsync magic
@@ -17,14 +17,14 @@ export JOB_LOG_DIR="${ADMIN_DIR}"/logs
 export BUILD_STAGE_DIR="${ADMIN_DIR}"/staging
 
 ### Groups
-export APPS_USERS_GROUP=hh5
-export APPS_OWNERS_GROUP=hh5_w
+export APPS_USERS_GROUP=xp65
+export APPS_OWNERS_GROUP=xp65
 
 ### Version settings
-export ENVIRONMENT=analysis3
-export VERSION_TO_MODIFY=23.01
-export STABLE_VERSION=22.10
-export UNSTABLE_VERSION=23.01
+export ENVIRONMENT=med-conda
+export VERSION_TO_MODIFY=0.1
+export STABLE_VERSION=0.1
+export UNSTABLE_VERSION=0.1
 export FULLENV="${ENVIRONMENT}-${VERSION_TO_MODIFY}"
 
 ### Other settings
