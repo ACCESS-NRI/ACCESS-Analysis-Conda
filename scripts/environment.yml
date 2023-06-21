@@ -49,6 +49,7 @@ dependencies:
 - asyncssh
 - gevent
 - julia
+- era5cli
 - pip:
   - railroad-diagrams ### Unlisted dependency of pip and pyparsing
 
