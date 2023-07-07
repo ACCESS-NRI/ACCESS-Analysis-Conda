@@ -55,7 +55,7 @@ dependencies:
 - mpi4py
 - esmf
 - esmpy
-- xesmf
+- xesmf>=0.7.1
 - xarray
 - shapely
 - cf_xarray
