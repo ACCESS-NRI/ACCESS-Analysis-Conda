@@ -2,12 +2,11 @@ name: med-condaenv
 channels:
   - conda-forge
   - accessnri
-  - nodefaults
 variables:
   CARTOPY_USER_BACKGROUNDS: /g/data/xp65/public/apps/cartopy-data/backgrounds
 dependencies:
   - pip!=21.3
-  - python>=3.8
+  - python>=3.9
   - access-nri-intake==0.0.8 # Keep pinned to latest version while in development
   - apscheduler
   - aiohttp
@@ -39,8 +38,7 @@ dependencies:
   - joblib
   - lime
   - mapgenerator>=1.0.5
-  - matplotlib-base # pinning matplotlib to 3.5.3 temporarily until plotnine issue is fixed https://github.com/has2k1/plotnine/issues/620
-  - matplotlib==3.5.3  #
+  - matplotlib==3.5.3
   - natsort
   - nc-time-axis
   - netCDF4
