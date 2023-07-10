@@ -157,6 +157,6 @@ dependencies:
   # Julia (dependencies installed by separate script)
   - julia
 
-- pip:
-  - railroad-diagrams ### Unlisted dependency of pip and pyparsing
+  - pip:
+    - railroad-diagrams ### Unlisted dependency of pip and pyparsing
 
