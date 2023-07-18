@@ -16,7 +16,6 @@ dependencies:
 - cdo>=1.9.5 # pinned for solver stability
 # pinning matplotlib to 3.5.3 temporarily until plotnine issue is fixed https://github.com/has2k1/plotnine/issues/620
 - matplotlib==3.5.3  #
-- pydantic<2.0 # Until https://github.com/intake/intake-esm/pull/619 is fixed
 - jinja2
 - ilamb
 - dask
@@ -28,6 +27,9 @@ dependencies:
 - iris-esmf-regrid
 - intake
 - access-nri-intake==0.0.8 # Keep pinned to latest version while in development
+- intake-esm<2023.7.7 # Can remove with access-nri-intake==0.0.9
+- ecgtools<2023.7.13 # Can remove with access-nri-intake==0.0.9
+- pydantic<2.0 # Can remove with access-nri-intake==0.0.9
 - netcdf4<=1.6.0 ### Workaround for https://github.com/pydata/xarray/issues/7079
 - nodejs
 - numpy>=1.21, !=1.24.3  # severe masking bug
@@ -47,6 +49,7 @@ dependencies:
 - jupyter-server-proxy
 - jupyter-book
 - jupyter-resource-usage
+- jsonschema>=4.18.1
 - greenlet ### Dependency of... something?
 - objgraph ### Unlisted dependency of greenlet
 - asyncssh
