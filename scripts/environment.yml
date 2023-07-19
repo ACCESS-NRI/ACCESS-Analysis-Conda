@@ -49,7 +49,7 @@ dependencies:
 - jupyter-server-proxy
 - jupyter-book
 - jupyter-resource-usage
-- jsonschema>=4.18.1
+# - jsonschema>=4.18.1
 - greenlet ### Dependency of... something?
 - objgraph ### Unlisted dependency of greenlet
 - asyncssh
@@ -58,7 +58,7 @@ dependencies:
 - mpi4py
 - esmf
 - esmpy
-- pytest-json-report
+- pytest-json-report # needed by esmf and esmfpy
 - xesmf >=0.7.1
 - xarray >=0.12.0
 - shapely
