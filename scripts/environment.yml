@@ -49,7 +49,7 @@ dependencies:
 - jupyter-server-proxy
 - jupyter-book
 - jupyter-resource-usage
-- jsonschema>=4.18.1
+# - jsonschema>=4.18.1
 - greenlet ### Dependency of... something?
 - objgraph ### Unlisted dependency of greenlet
 - asyncssh
