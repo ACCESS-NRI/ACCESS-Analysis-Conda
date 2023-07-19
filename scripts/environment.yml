@@ -27,8 +27,8 @@ dependencies:
 - iris-esmf-regrid
 - intake
 - access-nri-intake==0.0.8 # Keep pinned to latest version while in development
-# - intake-esm<2023.7.7 # Can remove with access-nri-intake==0.0.9
-# - ecgtools<2023.7.13 # Can remove with access-nri-intake==0.0.9
+- intake-esm<2023.7.7 # Can remove with access-nri-intake==0.0.9
+- ecgtools<2023.7.13 # Can remove with access-nri-intake==0.0.9
 - pydantic<2.0 # Can remove with access-nri-intake==0.0.9
 - netcdf4<=1.6.0 ### Workaround for https://github.com/pydata/xarray/issues/7079
 - nodejs
@@ -49,7 +49,7 @@ dependencies:
 - jupyter-server-proxy
 - jupyter-book
 - jupyter-resource-usage
-# - jsonschema>=4.18.1
+- jsonschema>=4.18.1
 - greenlet ### Dependency of... something?
 - objgraph ### Unlisted dependency of greenlet
 - asyncssh
