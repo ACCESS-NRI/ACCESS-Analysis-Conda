@@ -37,6 +37,7 @@ dependencies:
 - pandas
 - scipy
 - h5py
+- pyproj>=3.6.1
 - numba
 - esmvaltool 2.9.*
 - esmvaltool-python
