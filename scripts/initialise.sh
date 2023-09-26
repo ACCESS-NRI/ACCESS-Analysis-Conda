@@ -27,9 +27,8 @@ function inner() {
 
     mkdir -p "${CONDA_MODULE_PATH}"
     ### These files contain hard-coded paths to the conda installation - these paths are created with variables set by install_config.sh
-    copy_and_replace "${SCRIPT_DIR}"/../modules/common_v3 "${CONDA_MODULE_PATH}"/.common_v3 CONDA_BASE APPS_SUBDIR CONDA_INSTALL_BASENAME SCRIPT_SUBDIR
-    copy_and_replace "${SCRIPT_DIR}"/../modules/are       "${CONDA_MODULE_PATH}"/are        CONDA_BASE APPS_SUBDIR CONDA_INSTALL_BASENAME
-    copy_and_replace "${SCRIPT_DIR}"/launcher_conf.sh     "${CONDA_SCRIPT_PATH}"/launcher_conf.sh            CONDA_BASE APPS_SUBDIR CONDA_INSTALL_BASENAME
+    copy_and_replace "${SCRIPT_DIR}"/../modules/common_v3 "${CONDA_MODULE_PATH}"/.common_v3       CONDA_BASE APPS_SUBDIR CONDA_INSTALL_BASENAME SCRIPT_SUBDIR
+    copy_and_replace "${SCRIPT_DIR}"/launcher_conf.sh     "${CONDA_SCRIPT_PATH}"/launcher_conf.sh CONDA_BASE APPS_SUBDIR CONDA_INSTALL_BASENAME
 
     conda clean -a -f -y
 

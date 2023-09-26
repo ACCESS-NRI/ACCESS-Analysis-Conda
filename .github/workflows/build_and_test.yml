@@ -3,10 +3,24 @@ on: pull_request
 jobs:
   build:
     runs-on: ubuntu-latest
+    container:
+      image: quay.io/singularity/singularity:v3.11.4
+      options: --privileged
     steps:
       - name: Checkout repository
         ### Latest at time of writing
         uses: actions/checkout@v3.3.0
+      - name: Check if container definition has changed
+        id: changed-container-def
+        uses: tj-actions/changed-files@v37
+        with:
+          files_yaml: |
+            containerdef:
+              - container/container.def
+      - name: Build container if definition has changed
+        if: steps.changed-container-def.outputs.containerdef_any_changed == 'true'
+        run: |
+          sudo -E singularity build container/base.sif container/container.def
       - name: Sync repository to Gadi
         ### Latest at time of writing
         uses: up9cloud/action-rsync@v1.3
@@ -38,7 +52,7 @@ jobs:
             eval $( grep ADMIN_DIR $SCRIPT_DIR/install_config.sh )
             eval $( grep JOB_LOG_DIR $SCRIPT_DIR/install_config.sh )
             cd $JOB_LOG_DIR
-            qsub -N build_conda -lncpus=1,mem=20GB,walltime=2:00:00,jobfs=50GB,storage=gdata/xp65 -v SCRIPT_DIR -P iq82 -q copyq -Wblock=true -Wumask=037 "${SCRIPT_DIR}"/build.sh
+            qsub -N build_conda -lncpus=1,mem=20GB,walltime=2:00:00,jobfs=50GB,storage=gdata/xp65+gdata/hh5 -v SCRIPT_DIR -P iq82 -q copyq -Wblock=true -Wumask=037 "${SCRIPT_DIR}"/build.sh
   test:
     needs: build
     runs-on: ubuntu-latest
@@ -54,4 +68,4 @@ jobs:
             eval $( grep ADMIN_DIR $SCRIPT_DIR/install_config.sh )
             eval $( grep JOB_LOG_DIR $SCRIPT_DIR/install_config.sh )
             cd $JOB_LOG_DIR
-            qsub -N test_conda -lncpus=4,mem=20GB,walltime=0:20:00,jobfs=50GB,storage=gdata/xp65 -v SCRIPT_DIR -P iq82 -Wblock=true -Wumask=037 "${SCRIPT_DIR}"/test.sh
+            qsub -N test_conda -lncpus=4,mem=20GB,walltime=0:20:00,jobfs=50GB,storage=gdata/xp65+gdata/hh5 -v SCRIPT_DIR -P iq82 -Wblock=true -Wumask=037 "${SCRIPT_DIR}"/test.sh

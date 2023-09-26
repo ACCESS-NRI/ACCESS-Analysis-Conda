@@ -60,16 +60,29 @@ function inner() {
 
     ### Replace things from apps
     for pkg in "${replace_from_apps[@]}"; do
-        for dir in bin etc lib include; do 
-            pushd $dir 
-            for i in $( find /apps/$pkg/$dir -maxdepth 1 -type f ); do 
-                fn=$( basename $i ) 
-                [[ -e $fn ]] && rm $fn && ln -s $i
-            done
-            popd
+        for dir in bin etc lib include; do
+	    if [[ -d "${dir}" ]]; then
+                pushd $dir
+                apps_subdir=/apps/"${pkg}"/"${dir}"
+                for i in $( find "${apps_subdir}" -type f ); do
+                    fn="${i//$apps_subdir\//}"
+                    [[ -e $fn ]] && rm $fn
+                    [[ "${fn}" != "${fn%/*}" ]] && mkdir -p "${fn%/*}"
+                    ln -s "${i}" "${fn}"
+                done
+                popd
+	    fi
         done
     done
     popd
+
+    ### Update any supporting infrastructure
+    copy_if_changed "${SCRIPT_DIR}"/launcher.sh "${CONDA_SCRIPT_PATH}"/launcher.sh
+    for override in "${SCRIPT_DIR}"/overrides/*; do
+        copy_if_changed "${override}" "${CONDA_SCRIPT_PATH}"/overrides/"${override##*/}"
+    done
+    copy_and_replace_if_changed "${SCRIPT_DIR}"/../modules/common_v3 "${CONDA_MODULE_PATH}"/.common_v3       CONDA_BASE APPS_SUBDIR CONDA_INSTALL_BASENAME SCRIPT_SUBDIR
+    copy_and_replace_if_changed "${SCRIPT_DIR}"/launcher_conf.sh     "${CONDA_SCRIPT_PATH}"/launcher_conf.sh CONDA_BASE APPS_SUBDIR CONDA_INSTALL_BASENAME
 
     ### Create symlink tree
     mkdir -p "${CONDA_SCRIPT_PATH}"/"${FULLENV}".d/{bin,overrides}
@@ -120,6 +133,13 @@ else
     ./initialise.sh
 fi
 
+### Copy in any files outside the conda directory tree that may be needed
+echo "Copying external files"
+for f in "${outside_files_to_copy[@]}"; do
+    mkdir -p "${OVERLAY_BASE}"/$( dirname "${f#/g/}" )
+    cp "${f}" "${OVERLAY_BASE}"/"${f#/g/}"
+done
+
 if [[ -e  "${CONDA_INSTALLATION_PATH}/envs/${FULLENV}.sqsh" ]]; then
     pushd "${CONDA_TEMP_PATH}"
     unsquashfs -processors 1 "${CONDA_INSTALLATION_PATH}/envs/${FULLENV}.sqsh"
@@ -133,15 +153,23 @@ fi
 
 ln -sf "${ENV_INSTALLATION_PATH}" "${CONDA_OUTER_BASE}"/"${APPS_SUBDIR}"/"${CONDA_INSTALL_BASENAME}"/envs/
 
-"${SINGULARITY_BINARY_PATH}" -s exec --bind /etc,/half-root,/local,/ram,/run,/system,/usr,/var/lib/sss,/var/run/munge,/var/lib/rpm,"${OVERLAY_BASE}":/g "${CONTAINER_PATH}" $( realpath $0 ) --inner "${DO_UPDATE}"
+if [[ -e "${CONTAINER_PATH}" ]]; then
+    ### New container, use that
+    my_container="${CONTAINER_PATH}"
+else
+    my_container="${CONDA_OUTER_BASE}"/"${APPS_SUBDIR}"/"${CONDA_INSTALL_BASENAME}"/etc/"${CONTAINER_PATH##*/}"
+fi
+
+"${SINGULARITY_BINARY_PATH}" -s exec --bind /etc,/half-root,/local,/ram,/run,/system,/usr,/var/lib/sss,/var/run/munge,/var/lib/rpm,"${OVERLAY_BASE}":/g "${my_container}" $( realpath $0 ) --inner "${DO_UPDATE}"
 if [[ $? -ne 0 ]]; then
     exit 1
 fi
 
 ### See if the container has been updated
-read newhash fn < <( md5sum "${CONTAINER_PATH}" )
-read oldhash fn < <( md5sum "${CONDA_OUTER_BASE}"/"${APPS_SUBDIR}"/"${CONDA_INSTALL_BASENAME}"/etc/"${CONTAINER_PATH##*/}" )
-if [[ "${oldhash}" != "${newhash}" ]]; then
+### The container will only exist on ${CONTAINER_PATH} if it was built by the github action
+#read newhash fn < <( md5sum "${CONTAINER_PATH}" )
+#read oldhash fn < <( md5sum "${CONDA_OUTER_BASE}"/"${APPS_SUBDIR}"/"${CONDA_INSTALL_BASENAME}"/etc/"${CONTAINER_PATH##*/}" )
+if [[ -e "${CONTAINER_PATH}" ]]; then
     echo "Container update detected. Copying in new container"
     cp "${CONTAINER_PATH}" "${CONDA_OUTER_BASE}"/"${APPS_SUBDIR}"/"${CONDA_INSTALL_BASENAME}"/etc/"${CONTAINER_PATH##*/}"
 fi
@@ -162,7 +190,7 @@ pushd "${CONDA_TEMP_PATH}"
 ### Don't need to think too hard, squashfs are read-only
 chgrp -R "${APPS_USERS_GROUP}" squashfs-root
 
-mksquashfs squashfs-root "${FULLENV}".sqsh -b 1M -no-recovery -noI -noD -noF -noX -processors 8 2>/dev/null
+mksquashfs squashfs-root "${FULLENV}".sqsh -no-fragments -no-duplicates -no-sparse -no-exports -no-recovery -noI -noD -noF -noX -processors 8 2>/dev/null
 ### Stage this file and rename when we're ready
 cp "${FULLENV}".sqsh "${BUILD_STAGE_DIR}"/"${FULLENV}".sqsh.tmp
 set_apps_perms "${BUILD_STAGE_DIR}"/"${FULLENV}".sqsh.tmp
@@ -170,7 +198,7 @@ popd
 
 ### Can't use ${CONDA_SCRIPT_PATH} or "${CONDA_INSTALLATION_PATH}" due to the need to string match on those paths
 ### which they won't with the '/./' part required for arcane rsync magic
-construct_module_insert "${SINGULARITY_BINARY_PATH}" "${OVERLAY_BASE}" "${CONTAINER_PATH}" "${BUILD_STAGE_DIR}"/"${FULLENV}".sqsh.tmp "${SCRIPT_DIR}"/condaenv.sh "${CONDA_INSTALLATION_PATH}" "${CONDA_BASE}"/"${APPS_SUBDIR}"/"${CONDA_INSTALL_BASENAME}"/envs/"${FULLENV}" "${CONDA_BASE}"/"${SCRIPT_SUBDIR}"/"${FULLENV}".d/bin "${CONDA_OUTER_BASE}"/"${MODULE_SUBDIR}"/"${MODULE_NAME}"/."${FULLENV}"
+construct_module_insert "${SINGULARITY_BINARY_PATH}" "${OVERLAY_BASE}" "${my_container}" "${BUILD_STAGE_DIR}"/"${FULLENV}".sqsh.tmp "${SCRIPT_DIR}"/condaenv.sh "${CONDA_INSTALLATION_PATH}" "${CONDA_BASE}"/"${APPS_SUBDIR}"/"${CONDA_INSTALL_BASENAME}"/envs/"${FULLENV}" "${CONDA_BASE}"/"${SCRIPT_SUBDIR}"/"${FULLENV}".d/bin "${CONDA_OUTER_BASE}"/"${MODULE_SUBDIR}"/"${MODULE_NAME}"/."${FULLENV}"
 
 rm "${CONDA_OUTER_BASE}"/"${APPS_SUBDIR}"/"${CONDA_INSTALL_BASENAME}"/envs/"${FULLENV}"
 ln -s /opt/conda/"${FULLENV}" "${CONDA_OUTER_BASE}"/"${APPS_SUBDIR}"/"${CONDA_INSTALL_BASENAME}"/envs/

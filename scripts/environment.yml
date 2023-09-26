@@ -66,11 +66,12 @@ dependencies:
 - shapely
 - cf_xarray
 - sparse
+- coecms::ucx-py
 - xgboost >1.6.1  # github.com/ESMValGroup/ESMValTool/issues/2779
 - med-diagnostics==0.0.1 # pining for now
 - pip:
   - railroad-diagrams ### Unlisted dependency of pip and pyparsing
-  - access-med-utils==0.1.5
+  - access-med-utils==0.1.6
   
 # Julia (dependencies installed by separate script)
 - julia

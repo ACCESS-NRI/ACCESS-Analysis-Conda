@@ -170,3 +170,30 @@ function copy_and_replace() {
     fi
 
 }
+
+function copy_if_changed() {
+    ### Copy "${1}" to "${2}", but only if "${1}" has changed
+    in="${1}"
+    out="${2}"
+
+    if ! diff -q "${in}" "${out}" > /dev/null; then
+        echo "Copying updated ${in##*/}"
+        cp "${in}" "${out}"
+    fi
+}
+
+function copy_and_replace_if_changed() {
+    ### copy_and_replace as above, but only if the end result would be
+    ### different
+    in="${1}"
+    final_out="${2}"
+    shift 2
+    out=$( mktemp -p /tmp )
+    trap 'rm -f "${out}"' EXIT
+    copy_and_replace "${in}" "${out}" "${@}"
+    if ! diff -q "${final_out}" "${out}" > /dev/null; then
+        echo "Copying updated ${in##*/}"
+        mv "${out}" "${final_out}"
+    fi
+
+}

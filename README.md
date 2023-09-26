@@ -34,4 +34,4 @@ For other operations, see the 'Maintenance' section of the [Conda hh5 environmen
 
 Set the following:
 * Under `Advanced options > Module directories` insert: `/g/data/xp65/public/modules`
-* Under `Advanced options > Modules` insert: `conda/are`
+* Under `Advanced options > Modules` insert: `conda/access-med`

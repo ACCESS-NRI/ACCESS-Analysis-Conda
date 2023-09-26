@@ -1,3 +1,5 @@
+Bootstrap: scratch
+
 %setup
         mkdir -p ${SINGULARITY_ROOTFS}/usr/bin
         ln -s usr/bin ${SINGULARITY_ROOTFS}/bin
@@ -33,6 +35,11 @@
         ### Mount points for service sockets
         mkdir -p ${SINGULARITY_ROOTFS}/var/lib/sss
         mkdir -p ${SINGULARITY_ROOTFS}/var/run/munge
+
+        mkdir -p ${SINGULARITY_ROOTFS}/opt/conda/analysis3-22.07
+        mkdir -p ${SINGULARITY_ROOTFS}/opt/conda/analysis3-22.10
+        mkdir -p ${SINGULARITY_ROOTFS}/opt/conda/analysis3-23.01
+        mkdir -p ${SINGULARITY_ROOTFS}/opt/conda/analysis3-23.04
 
 %runscript
         /usr/bin/bash -l
