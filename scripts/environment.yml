@@ -7,7 +7,6 @@ variables:
 dependencies:
 - apscheduler
 - fs
-- python>=3.9
 - libnetcdf>=4.7.4=mpi_openmpi* # pinned for solver stability
 - pip
 - pytest >=3.9,!=6.0.0rc1,!=6.0.0
