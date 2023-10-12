@@ -68,7 +68,7 @@ dependencies:
 - sparse
 - coecms::ucx-py
 - xgboost >1.6.1  # github.com/ESMValGroup/ESMValTool/issues/2779
-- med-diagnostics==0.0.1 # pining for now
+  #- med-diagnostics==0.0.1 # pining for now
 - pip:
   - railroad-diagrams ### Unlisted dependency of pip and pyparsing
   - access-med-utils==0.1.6
