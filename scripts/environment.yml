@@ -68,7 +68,6 @@ dependencies:
 - coecms::ucx-py
 - xgboost >1.6.1  # github.com/ESMValGroup/ESMValTool/issues/2779
 - med-diagnostics
-- pyproj>=3.6.1
 - pip:
   - railroad-diagrams ### Unlisted dependency of pip and pyparsing
   - access-med-utils==0.1.6
