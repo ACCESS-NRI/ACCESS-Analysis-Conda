@@ -1,7 +1,6 @@
 name: med-condaenv
 channels:
 - conda-forge
-- accessnri
 variables:
   CARTOPY_USER_BACKGROUNDS: /g/data/xp65/public/apps/cartopy-data/backgrounds
 dependencies:
@@ -28,7 +27,6 @@ dependencies:
 - iris-esmf-regrid
 - iris-grib
 - intake
-- access-nri-intake
 - netcdf4<=1.6.0 ### Workaround for https://github.com/pydata/xarray/issues/7079
 - mo_pack
 - nodejs
@@ -65,9 +63,10 @@ dependencies:
 - shapely
 - cf_xarray
 - sparse
-- coecms::ucx-py
 - xgboost >1.6.1  # github.com/ESMValGroup/ESMValTool/issues/2779
-- med-diagnostics
+- coecms::ucx-py
+- accessnri::access-nri-intake
+- accessnri::med-diagnostics
 - pip:
   - railroad-diagrams ### Unlisted dependency of pip and pyparsing
   - access-med-utils
