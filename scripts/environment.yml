@@ -28,7 +28,7 @@ dependencies:
 - iris-esmf-regrid
 - iris-grib
 - intake
-- access-nri-intake==0.0.9 # Keep pinned to latest version while in development
+- access-nri-intake
 - netcdf4<=1.6.0 ### Workaround for https://github.com/pydata/xarray/issues/7079
 - mo_pack
 - nodejs
@@ -67,10 +67,10 @@ dependencies:
 - sparse
 - coecms::ucx-py
 - xgboost >1.6.1  # github.com/ESMValGroup/ESMValTool/issues/2779
-  #- med-diagnostics==0.0.1 # pining for now
+- med-diagnostics
 - pip:
   - railroad-diagrams ### Unlisted dependency of pip and pyparsing
-  - access-med-utils==0.1.6
+  - access-med-utils
   
 # Julia (dependencies installed by separate script)
-- julia
+#- julia
