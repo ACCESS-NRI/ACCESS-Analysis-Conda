@@ -43,7 +43,7 @@ dependencies:
 - esmvaltool-ncl
 - scikit-image
 - jupyter
-- notebook<6.5.3
+- notebook
 - jupyter_nbextensions_configurator
 - jupyter_contrib_nbextensions
 - jupyterlab
