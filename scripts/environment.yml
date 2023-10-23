@@ -4,11 +4,12 @@ channels:
 variables:
   CARTOPY_USER_BACKGROUNDS: /g/data/xp65/public/apps/cartopy-data/backgrounds
 dependencies:
+- python>=3.10
 - apscheduler
 - fs
 - libnetcdf>=4.7.4=mpi_openmpi* # pinned for solver stability
 - pip
-- pytest >=3.9,!=6.0.0rc1,!=6.0.0
+- pytest
 - pytest-cov
 - autopep8
 - cartopy
@@ -23,14 +24,13 @@ dependencies:
 - panel
 - hvplot
 - datashader
-- iris>=3.1.0
-- iris-esmf-regrid
+- iris
 - iris-grib
 - intake
 - netcdf4<=1.6.0 ### Workaround for https://github.com/pydata/xarray/issues/7079
 - mo_pack
 - nodejs
-- numpy>=1.21, !=1.24.3  # severe masking bug
+- numpy>=1.21
 - pandas
 - scipy
 - h5py
@@ -45,7 +45,6 @@ dependencies:
 - jupyter_nbextensions_configurator
 - jupyter_contrib_nbextensions
 - jupyterlab
-- jsonschema>=4.18.1
 - jupyterlab_server
 - jupyter-server-proxy
 - jupyter-resource-usage
@@ -57,13 +56,11 @@ dependencies:
 - mpi4py
 - esmf>=8.0.1,<8.4.2=mpi_openmpi*
 - esmpy>=8.0.1=mpi_openmpi*
-- pytest-json-report ### Needed for esmpy
-- xesmf >=0.7.1
-- xarray >=0.12.0
+- xesmf
+- xarray
 - shapely
 - cf_xarray
 - sparse
-- xgboost >1.6.1  # github.com/ESMValGroup/ESMValTool/issues/2779
 - coecms::ucx-py
 - accessnri::access-nri-intake
 - accessnri::med-diagnostics
