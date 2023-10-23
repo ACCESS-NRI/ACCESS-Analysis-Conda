@@ -22,9 +22,9 @@ export APPS_OWNERS_GROUP=xp65_w
 
 ### Version settings
 export ENVIRONMENT=access-med
-export VERSION_TO_MODIFY=0.4
+export VERSION_TO_MODIFY=0.5
 export STABLE_VERSION=0.3
-export UNSTABLE_VERSION=0.4
+export UNSTABLE_VERSION=0.5
 export FULLENV="${ENVIRONMENT}-${VERSION_TO_MODIFY}"
 
 ### Other settings
