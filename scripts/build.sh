@@ -20,7 +20,7 @@ function inner() {
     source "${CONDA_INSTALLATION_PATH}"/etc/profile.d/conda.sh
     ### Create the environment
     if [[ "${1}" == "--install" ]]; then
-        ${MAMBA} env create -p "${CONDA_INSTALLATION_PATH}/envs/${FULLENV}" -f environment.yml
+        ${MAMBA} env create -p "${CONDA_INSTALLATION_PATH}/envs/${FULLENV}" -f environment.yml -vv
         if [[ $? -ne 0 ]]; then
             echo "Error installing new environment"
             exit 1
