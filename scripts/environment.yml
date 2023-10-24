@@ -5,70 +5,41 @@ channels:
 variables:
   CARTOPY_USER_BACKGROUNDS: /g/data/xp65/public/apps/cartopy-data/backgrounds
 dependencies:
-- apscheduler
-- fs
 - python>=3.9
-- libnetcdf>=4.7.4=mpi_openmpi* # pinned for solver stability
+- openmpi
+- mpi4py
 - pip
 - pytest >=3.9,!=6.0.0rc1,!=6.0.0
+- libnetcdf=*=mpi_openmpi*
 - pytest-cov
 - autopep8
-- cartopy
-- pyyaml
-- cdo>=1.9.5 # pinned for solver stability
-- matplotlib
-- jinja2
 - ilamb 2.7.*
-- dask
-- distributed
-- dask-labextension
-- panel
-- hvplot
-- datashader
-- iris>=3.1.0
-- iris-esmf-regrid
-- iris-grib
-- intake
 - access-nri-intake==0.0.9 # Keep pinned to latest version while in development
-- netcdf4<=1.6.0 ### Workaround for https://github.com/pydata/xarray/issues/7079
-- mo_pack
-- nodejs
-- numpy>=1.21, !=1.24.3  # severe masking bug
-- pandas
-- scipy
-- h5py
-- numba
 - esmvaltool 2.9.*
-- esmvaltool-python
-- esmvaltool-ncl
-- scikit-image
 - jupyter
-- notebook<6.5.3
+- notebook
 - jupyter_nbextensions_configurator
 - jupyter_contrib_nbextensions
 - jupyterlab
-- jsonschema>=4.18.1
 - jupyterlab_server
 - jupyter-server-proxy
 - jupyter-resource-usage
-- greenlet ### Dependency of... something?
-- objgraph ### Unlisted dependency of greenlet
-- asyncssh
-- gevent
 - openmpi
 - mpi4py
-- esmf>=8.0.1=mpi_openmpi*
-- esmpy>=8.0.1=mpi_openmpi*
-- pytest-json-report ### Needed for esmpy
-- xesmf >=0.7.1
-- xarray >=0.12.0
-- shapely
-- cf_xarray
-- sparse
-- coecms::ucx-py
-- xgboost >1.6.1  # github.com/ESMValGroup/ESMValTool/issues/2779
 - med-diagnostics
 - pyproj>=3.6.1
+- coecms::ucx-py
+- dask-labextension
+- iris-grib # Can we do without?
+- hvplot # Why do we need this?
+- datashader # why do we need this?
+- mo_pack # why do we need this?
+- nodejs # why do we need this?
+- h5py # why do we need this?
+- greenlet # why do we need this?
+- objgraph # unlisted dependency of greenlet
+- asyncssh # why do we need this?
+- pytest-json-report ## needed for esmpy
 - pip:
   - railroad-diagrams ### Unlisted dependency of pip and pyparsing
   - access-med-utils==0.1.6
