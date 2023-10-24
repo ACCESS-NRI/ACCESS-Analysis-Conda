@@ -29,6 +29,8 @@ dependencies:
 - pyproj>=3.6.1
 - coecms::ucx-py
 - dask-labextension
+- esmf=*=mpi_openmpi*
+- esmpy=*=mpi_openmpi*
 - iris-grib # Can we do without?
 - hvplot # Why do we need this?
 - datashader # why do we need this?
