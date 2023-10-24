@@ -6,7 +6,7 @@ variables:
   CARTOPY_USER_BACKGROUNDS: /g/data/xp65/public/apps/cartopy-data/backgrounds
 dependencies:
 - python>=3.9
-- openmpi
+- openmpi==4.1.5
 - mpi4py
 - pip
 - pytest >=3.9,!=6.0.0rc1,!=6.0.0
