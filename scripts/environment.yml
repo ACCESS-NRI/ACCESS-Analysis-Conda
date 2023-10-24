@@ -18,8 +18,8 @@ dependencies:
 - esmvaltool 2.9.*
 - jupyter
 - notebook
-- jupyter_nbextensions_configurator
-- jupyter_contrib_nbextensions
+  #- jupyter_nbextensions_configurator
+  #- jupyter_contrib_nbextensions
 - jupyterlab
 - jupyterlab_server
 - jupyter-server-proxy
