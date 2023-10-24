@@ -17,14 +17,13 @@ dependencies:
 - access-nri-intake==0.0.9 # Keep pinned to latest version while in development
 - esmvaltool 2.9.*
 - jupyter
-- notebook
+- notebook<7
 - jupyter_nbextensions_configurator
 - jupyter_contrib_nbextensions
 - jupyterlab
 - jupyterlab_server
 - jupyter-server-proxy
 - jupyter-resource-usage
-- openmpi
 - mpi4py
 - med-diagnostics
 - pyproj>=3.6.1
@@ -44,5 +43,3 @@ dependencies:
   - railroad-diagrams ### Unlisted dependency of pip and pyparsing
   - access-med-utils==0.1.6
   
-# Julia (dependencies installed by separate script)
-- julia
