@@ -1,17 +1,5 @@
 name: med-esmvaltool
 channels:
 - conda-forge
-- accessnri
-variables:
-  CARTOPY_USER_BACKGROUNDS: /g/data/xp65/public/apps/cartopy-data/backgrounds
 dependencies:
 - esmvaltool 2.9.*
-- jupyter
-- notebook<7.0 # jupyter_contrib_nbextensions not compatible with version 7
-- jupyter_contrib_nbextensions
-- jupyterlab
-- jupyterlab_server
-- jupyter-server-proxy
-- jupyter-resource-usage
-- pyproj>=3.6.1
-- coecms::ucx-py
