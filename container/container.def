@@ -36,10 +36,5 @@ Bootstrap: scratch
         mkdir -p ${SINGULARITY_ROOTFS}/var/lib/sss
         mkdir -p ${SINGULARITY_ROOTFS}/var/run/munge
 
-        mkdir -p ${SINGULARITY_ROOTFS}/opt/conda/analysis3-22.07
-        mkdir -p ${SINGULARITY_ROOTFS}/opt/conda/analysis3-22.10
-        mkdir -p ${SINGULARITY_ROOTFS}/opt/conda/analysis3-23.01
-        mkdir -p ${SINGULARITY_ROOTFS}/opt/conda/analysis3-23.04
-
 %runscript
         /usr/bin/bash -l
