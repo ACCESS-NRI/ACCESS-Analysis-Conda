@@ -39,6 +39,10 @@ dependencies:
 - objgraph # unlisted dependency of greenlet
 - asyncssh # why do we need this?
 - pytest-json-report ## needed for esmpy
+
+# Required for testing
+- fs
+
 - pip:
   - railroad-diagrams ### Unlisted dependency of pip and pyparsing
   - access-med-utils==0.1.6
