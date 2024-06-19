@@ -1,0 +1,70 @@
+# Modules test will not try to import (should be cleaned)
+skip:
+# Cause errors and don't throw exceptions cleanly
+- access_nri_intake
+- psutil.tests
+- pandas.io.clipboard
+- matplotlib.backends
+- pbr.tests
+- plotly.plotly
+- bokeh.server.django
+- xesmf
+# Too many, or not necessary
+- iris.tests
+- cartopy.tests
+- plotly.validators
+- xarray.tests
+- pyresample.test
+- pyferret.eofanal
+- ants.tests
+- alembic.testing
+- sqlalchemy.testing
+- httpx
+- sanic
+- tests # random tests from black?
+ # - cupy # Disable when testing locally
+ # - cupyx # ditto
+ # - nci_intake_catalogue # ditto
+ # - wrf # Prints garbage at v1.3.2.5
+- matplotlib.tests # No test data
+- prometheus_client.twisted # No twisted
+- pyface
+- qt
+- traits
+- traitsui
+- vtk
+- pyparsing
+- tensorflow_estimator
+- acs_replica_intake  # can't load catalogue file
+- access_nri_intake  # can't load catalogue file
+- pip._vendor.chardet # encounters a null byte, doesn't seem to be an error
+- pykrige # AttributeError: module 'scipy.linalg' has no attribute 'pinv2' -- rk4417
+# for both hdbscan and cosima_cookbook see https://accessdev.nci.org.au/jenkins/job/conda/job/analysis3-unstable/1351/consoleFull
+- hdbscan # test errors but can import
+- cosima_cookbook  # test error 
+  #- plotnine # can't import fails on "import matplotlib._contour as _contour" which seems to work otherwise
+  #- nctoolkit # calls plotnine
+- xgboost.spark ### Don't think we support spark as a parallel backend
+- skimage.future.graph ### Deprecated
+- send2trash
+- esmf_regrid
+- esmvaltool.diag_scripts
+- med_diagnostics
+- numba
+- urllib3
+- pip
+- prompt_toolkit
+- prospector
+
+# Preload these modules before testing to avoid weird python issues
+preload:
+- xarray
+- setuptools.command.build_ext ### Strange issue with numba.pycc
+- setuptools.command.build_ext ### Strange issue with numba.pycc
+
+# Allow loading, but pass exceptions. When exceptions no longer triggered
+# can remove
+exception:
+- matplotlib.tests
+- zmq.backend.cffi
+
