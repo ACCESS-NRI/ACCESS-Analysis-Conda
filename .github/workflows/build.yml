@@ -22,4 +22,4 @@ jobs:
             eval $( grep ADMIN_DIR $SCRIPT_DIR/install_config.sh )
             eval $( grep JOB_LOG_DIR $SCRIPT_DIR/install_config.sh )
             cd $JOB_LOG_DIR
-            qsub -N build_${{ inputs.environment }} -lncpus=1,mem=20GB,walltime=2:00:00,jobfs=50GB,storage=gdata/xp65+scratch/iq82+gdata/hh5+scratch/hh5 -v SCRIPT_DIR,CONDA_ENVIRONMENT=${{ inputs.environment }} -P iq82 -q copyq -Wblock=true -Wumask=037 "${SCRIPT_DIR}"/build.sh
+            qsub -N build_${{ inputs.environment }} -lncpus=1,mem=20GB,walltime=2:00:00,jobfs=50GB,storage=gdata/xp65+scratch/iq82+gdata/hh5+scratch/hh5+gdata/tm70 -v SCRIPT_DIR,CONDA_ENVIRONMENT=${{ inputs.environment }} -P iq82 -q copyq -Wblock=true -Wumask=037 "${SCRIPT_DIR}"/build.sh
