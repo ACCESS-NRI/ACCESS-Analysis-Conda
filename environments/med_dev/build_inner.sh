@@ -10,8 +10,8 @@ jupyter lab build
 pushd "${CONDA_INSTALLATION_PATH}/envs/${FULLENV}/lib/python3.11/site-packages"
 rm -rf esmvalcore
 rm -rf esmvaltool
-ln -sf /g/data/tm70/rb5533/code-dev/esmvalcore esmvalcore
-ln -sf /g/data/tm70/rb5533/code-dev/esmvaltool esmvaltool
+ln -sf /g/data/tm70/rb5533/code-dev/ESMValCore esmvalcore
+ln -sf /g/data/tm70/rb5533/code-dev/ESMValTool esmvaltool
 popd
 
 pushd "${CONDA_INSTALLATION_PATH}/envs/${FULLENV}/lib/python3.11/site-packages/esmvaltool"
