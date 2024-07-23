@@ -32,15 +32,12 @@ dependencies:
 - access-nri-intake>=0.1.1
 - netcdf4<=1.6.0 ### Workaround for https://github.com/pydata/xarray/issues/7079
 - mo_pack
-- nodejs
+- nodejs>=20.0.0
 - numpy>=1.21, !=1.24.3  # severe masking bug
 - pandas
 - scipy
 - h5py
 - numba
-- esmvaltool 2.9.*
-- esmvaltool-python
-- esmvaltool-ncl
 - scikit-image
 - jupyter
 - notebook<6.5.3
@@ -68,6 +65,7 @@ dependencies:
 - coecms::ucx-py
 - xgboost >1.6.1  # github.com/ESMValGroup/ESMValTool/issues/2779
 - med-diagnostics==0.0.1 # pining for now
+- cdms2
 - access-med-tools
 - pip:
   - railroad-diagrams ### Unlisted dependency of pip and pyparsing 
