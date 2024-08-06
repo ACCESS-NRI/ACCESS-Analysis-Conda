@@ -9,9 +9,9 @@
 
 
 ### Optional config for custom deploy script
-export VERSION_TO_MODIFY=0.8
-export STABLE_VERSION=0.3
-export UNSTABLE_VERSION=0.8
+export VERSION_TO_MODIFY=0.9
+export STABLE_VERSION=0.9
+export UNSTABLE_VERSION=0.9
 
 ### Version settings
 export ENVIRONMENT=esmvaltool
