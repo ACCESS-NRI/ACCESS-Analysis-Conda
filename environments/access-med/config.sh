@@ -9,9 +9,9 @@
 
 
 ### Optional config for custom deploy script
-export VERSION_TO_MODIFY=0.8
-export STABLE_VERSION=0.8
-export UNSTABLE_VERSION=0.8
+export VERSION_TO_MODIFY=0.6
+export STABLE_VERSION=0.6
+export UNSTABLE_VERSION=0.6
 
 ### Version settings
 export ENVIRONMENT=access-med
