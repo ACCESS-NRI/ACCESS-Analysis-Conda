@@ -18,7 +18,6 @@ dependencies:
 - cdo>=1.9.5 # pinned for solver stability
 - matplotlib
 - jinja2
-- ilamb 2.7.*
 - dask
 - distributed
 - dask-labextension
@@ -69,6 +68,8 @@ dependencies:
 - access-med-tools
 - pip:
   - railroad-diagrams ### Unlisted dependency of pip and pyparsing 
+  - git+https://github.com/rubisco-sfa/ILAMB.git@v2.7.1
+
   
 # Julia (dependencies installed by separate script)
 - julia
