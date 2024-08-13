@@ -9,12 +9,12 @@
 
 
 ### Optional config for custom deploy script
-export VERSION_TO_MODIFY=0.9
-export STABLE_VERSION=0.9
-export UNSTABLE_VERSION=0.9
+export VERSION_TO_MODIFY=0.6
+export STABLE_VERSION=0.6
+export UNSTABLE_VERSION=0.6
 
 ### Version settings
-export ENVIRONMENT=esmvaltool
+export ENVIRONMENT=access-med
 export FULLENV="${ENVIRONMENT}-${VERSION_TO_MODIFY}"
 
 declare -a rpms_to_remove=( "openssh-clients" "openssh-server" "openssh" )
