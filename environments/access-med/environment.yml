@@ -66,6 +66,7 @@ dependencies:
 - med-diagnostics==0.0.1 # pining for now
 - cdms2
 - access-med-tools==0.1.9
+- mopper
 - pip:
   - railroad-diagrams ### Unlisted dependency of pip and pyparsing 
   - git+https://github.com/rubisco-sfa/ILAMB.git@v2.7.1
