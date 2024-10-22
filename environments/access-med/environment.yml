@@ -67,10 +67,17 @@ dependencies:
 - cdms2
 - access-med-tools==0.1.9
 - mopper
+- pillow
+- ipywidgets
+- astropy
+- tqdm
 - pip:
+  - lavavu
   - railroad-diagrams ### Unlisted dependency of pip and pyparsing 
   - git+https://github.com/rubisco-sfa/ILAMB.git@v2.7.1
-
+  - git+https://github.com/ACCESS-NRI/ACCESS-Vis.git
+  - py360convert
+  - numpy-quaternion
   
 # Julia (dependencies installed by separate script)
 - julia
