@@ -72,7 +72,7 @@ dependencies:
 - astropy
 - tqdm
 - pip:
-  - lavavu
+  - lavavu-osmesa # CPU only version of lavavu
   - railroad-diagrams ### Unlisted dependency of pip and pyparsing 
   - git+https://github.com/rubisco-sfa/ILAMB.git@v2.7.1
   - git+https://github.com/ACCESS-NRI/ACCESS-Vis.git
