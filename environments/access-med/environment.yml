@@ -71,6 +71,7 @@ dependencies:
 - ipywidgets
 - astropy
 - tqdm
+- moderngl
 - pip:
   - lavavu
   - railroad-diagrams ### Unlisted dependency of pip and pyparsing 
