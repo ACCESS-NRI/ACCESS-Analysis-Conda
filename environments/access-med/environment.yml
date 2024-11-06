@@ -74,7 +74,7 @@ dependencies:
 - moderngl
 - ffmpeg
 - pip:
-  - lavavu
+  - lavavu==1.8.83
   - railroad-diagrams ### Unlisted dependency of pip and pyparsing 
   - git+https://github.com/rubisco-sfa/ILAMB.git@v2.7.1
   - git+https://github.com/ACCESS-NRI/ACCESS-Vis.git
