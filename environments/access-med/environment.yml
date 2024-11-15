@@ -72,7 +72,7 @@ dependencies:
 - astropy
 - tqdm
 - moderngl
-- esmvalcore 2.11.*
+- esmvalcore 2.11
 - pip:
   - lavavu
   - railroad-diagrams ### Unlisted dependency of pip and pyparsing 
