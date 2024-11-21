@@ -28,7 +28,7 @@ dependencies:
 - iris-esmf-regrid
 - iris-grib
 - intake
-- access-nri-intake>=0.1.4
+- access-nri-intake>=0.1.5
 - netcdf4<=1.6.0 ### Workaround for https://github.com/pydata/xarray/issues/7079
 - mo_pack
 - nodejs>=20.0.0
