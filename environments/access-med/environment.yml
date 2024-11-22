@@ -7,7 +7,7 @@ variables:
 dependencies:
 - apscheduler
 - fs
-- python>=3.10
+- python>=3.11
 - libnetcdf=*=mpi_openmpi* # pinned for solver stability
 - pip
 - pytest >=3.9,!=6.0.0rc1,!=6.0.0
@@ -64,7 +64,6 @@ dependencies:
 - coecms::ucx-py
 - xgboost >1.6.1  # github.com/ESMValGroup/ESMValTool/issues/2779
 - med-diagnostics==0.0.1 # pining for now
-- cdms2
 - access-med-tools==0.1.9
 - mopper==1.1.1
 - pillow
