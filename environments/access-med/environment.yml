@@ -64,7 +64,6 @@ dependencies:
 - coecms::ucx-py
 - xgboost >1.6.1  # github.com/ESMValGroup/ESMValTool/issues/2779
 - med-diagnostics==0.0.1 # pining for now
-- cdms2
 - access-med-tools==0.1.9
 - mopper==1.1.1
 - pillow
