@@ -13,6 +13,7 @@ dependencies:
 - pytest >=3.9,!=6.0.0rc1,!=6.0.0
 - pytest-cov
 - autopep8
+- accessnri::benchcab
 - cartopy
 - pyyaml
 - cdo>=1.9.5 # pinned for solver stability
