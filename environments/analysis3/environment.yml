@@ -4,7 +4,7 @@ channels:
 - conda-forge
 - accessnri
 variables:
-  CARTOPY_USER_BACKGROUNDS: /g/data/hh5/public/apps/cartopy-data/backgrounds
+  CARTOPY_USER_BACKGROUNDS: /g/data/xp65/public/apps/cartopy-data/backgrounds
 dependencies:
 - python>=3.10
 - pip
