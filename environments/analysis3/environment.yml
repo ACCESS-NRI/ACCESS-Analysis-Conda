@@ -6,7 +6,7 @@ channels:
 variables:
   CARTOPY_USER_BACKGROUNDS: /g/data/hh5/public/apps/cartopy-data/backgrounds
 dependencies:
-- python>=3.10
+- python>=3.11
 - pip
 - sqlalchemy<2.0 ### cosima cookbook does not import with sqlalchemy 2
 - libnetcdf=*=mpi_openmpi*
@@ -221,7 +221,7 @@ dependencies:
 - ujson
 - intake-thredds
 - cafaz
-- cdms2
+#- cdms2 incompatible with 3.11
 - pygam
 - pysal
 - xmhw
