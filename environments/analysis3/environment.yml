@@ -4,7 +4,7 @@ channels:
 - conda-forge
 - accessnri
 variables:
-  CARTOPY_USER_BACKGROUNDS: /g/data/hh5/public/apps/cartopy-data/backgrounds
+  CARTOPY_USER_BACKGROUNDS: /g/data/xp65/public/apps/cartopy-data/backgrounds
 dependencies:
 - python>=3.11
 - pip
@@ -177,7 +177,6 @@ dependencies:
 - geoplot
 - dask-ml
 - mamba
-- intake-esm
 - pykrige
 - nci_intake_catalogue
 - cmdline_provenance
@@ -219,7 +218,7 @@ dependencies:
 - s3fs
 - kerchunk
 - ujson
-- intake-thredds
+#- intake-thredds # Does not support intake 2
 - cafaz
 #- cdms2 incompatible with 3.11
 - pygam
@@ -272,7 +271,7 @@ dependencies:
 - cmor
 - bargeparse
 - accessnri::amami
-- accessnri::access-nri-intake
+- accessnri::access-nri-intake>=0.1.5
 - ipynbname
 - shellcheck
 - pysteps
@@ -295,4 +294,5 @@ dependencies:
 - mopper
 - scores
 - pip:
+  - git+https://github.com/intake/intake-esm.git
   - railroad-diagrams ### Unlisted dependency of pip and pyparsing
