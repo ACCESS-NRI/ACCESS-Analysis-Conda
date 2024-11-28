@@ -78,7 +78,7 @@ dependencies:
 - scikit-learn
 - filelock
 - gsw
-- nb_conda_kernels
+#- nb_conda_kernels Maybe causing pb (it does not exist in access-med)
 - poppler
 - fiona
 - hupper
