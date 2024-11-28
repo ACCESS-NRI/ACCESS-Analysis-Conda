@@ -177,7 +177,6 @@ dependencies:
 - geoplot
 - dask-ml
 - mamba
-- intake-esm
 - pykrige
 - nci_intake_catalogue
 - cmdline_provenance
@@ -272,7 +271,7 @@ dependencies:
 - cmor
 - bargeparse
 - accessnri::amami
-- accessnri::access-nri-intake
+- accessnri::access-nri-intake>=0.1.5
 - ipynbname
 - shellcheck
 - pysteps
@@ -295,4 +294,5 @@ dependencies:
 - mopper
 - scores
 - pip:
+  - git+https://github.com/intake/intake-esm.git
   - railroad-diagrams ### Unlisted dependency of pip and pyparsing
