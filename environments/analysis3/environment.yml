@@ -103,6 +103,7 @@ dependencies:
 - cfgrib
 - h5netcdf
 - intake
+- intake-esm
 - gridfill
 - xgcm
 - xrft
@@ -294,5 +295,4 @@ dependencies:
 - mopper
 - scores
 - pip:
-  - git+https://github.com/intake/intake-esm.git
   - railroad-diagrams ### Unlisted dependency of pip and pyparsing
