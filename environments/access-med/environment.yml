@@ -69,7 +69,7 @@ dependencies:
 - mopper==1.1.1
 - pillow
 - ipywidgets
-- astropy>=7.0.0
+- astropy
 - tqdm
 - moderngl
 - ffmpeg
