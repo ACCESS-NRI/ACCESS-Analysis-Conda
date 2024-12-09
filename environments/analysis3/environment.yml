@@ -272,7 +272,7 @@ dependencies:
 - cmor
 - bargeparse
 - accessnri::amami
-- accessnri::access-nri-intake>=0.1.5
+- accessnri::access-nri-intake==1.0.0b2
 - ipynbname
 - shellcheck
 - pysteps
