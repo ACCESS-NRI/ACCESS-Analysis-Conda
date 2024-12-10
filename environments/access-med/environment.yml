@@ -66,7 +66,6 @@ dependencies:
 - xgboost >1.6.1  # github.com/ESMValGroup/ESMValTool/issues/2779
 - med-diagnostics==0.0.1 # pining for now
 - access-med-tools==0.1.9
-- mopper==1.1.1
 - pillow
 - ipywidgets
 - astropy
@@ -77,7 +76,7 @@ dependencies:
   - lavavu==1.8.84
   - railroad-diagrams ### Unlisted dependency of pip and pyparsing 
   - git+https://github.com/rubisco-sfa/ILAMB.git@v2.7.1
-  - git+https://github.com/ACCESS-NRI/ACCESS-Vis.git
+  - git+https://github.com/ACCESS-NRI/ACCESS-Vis.git@v1.0.1
   - py360convert
   - numpy-quaternion
   
