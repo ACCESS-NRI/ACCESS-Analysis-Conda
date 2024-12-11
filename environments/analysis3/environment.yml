@@ -9,7 +9,7 @@ variables:
 dependencies:
 - python>=3.11
 - pip
-- sqlalchemy<2.0 ### cosima cookbook does not import with sqlalchemy 2
+- sqlalchemy
 - libnetcdf=*=mpi_openmpi*
 - coecms-nci
 - cdo
@@ -113,13 +113,11 @@ dependencies:
 - matplotlib-venn
 - nchash
 - umtools
-- cosima-cookbook
 - clef
 - nccmp
 - coecms-util
 - yamanifest
 - cmocean
-- accessnri::payu<1.1
 - splitvar
 - marineHeatWaves
 - holoviews
@@ -227,7 +225,6 @@ dependencies:
 - xmhw
 - argopy
 - dataclasses-json
-- ilamb
 - posix_ipc
 - spectrum
 - arch-py
