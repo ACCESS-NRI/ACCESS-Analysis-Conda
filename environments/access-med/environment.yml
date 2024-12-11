@@ -2,6 +2,7 @@ name: med-condaenv
 channels:
 - conda-forge
 - accessnri
+- nodefaults
 variables:
   CARTOPY_USER_BACKGROUNDS: /g/data/xp65/public/apps/cartopy-data/backgrounds
 dependencies:
