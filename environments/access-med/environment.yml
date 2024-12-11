@@ -63,7 +63,7 @@ dependencies:
 - shapely
 - cf_xarray
 - sparse
-- accessnri::ucx-py
+- coecms::ucx-py
 - xgboost >1.6.1  # github.com/ESMValGroup/ESMValTool/issues/2779
 - med-diagnostics==0.0.1 # pining for now
 - access-med-tools==0.1.9
