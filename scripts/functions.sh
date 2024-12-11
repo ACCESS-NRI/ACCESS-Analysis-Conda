@@ -80,17 +80,30 @@ function write_modulerc() {
     module_path="${4}"
     module_name="${5}"
 
-    cat<<EOF > "${module_path}"/.modulerc
+    modulerc_file="${module_path}/.modulerc"
+
+    # Create a new .modulerc file if it doesn't exist
+    if [ ! -f "${modulerc_file}" ]; then
+        touch "${modulerc_file}"
+    fi
+
+    # Remove lines containing the specified module_name
+    temp_file=$(mktemp)
+    grep -v "module-version ${module_name}/" "${modulerc_file}" > "${temp_file}"
+    mv "${temp_file}" "${modulerc_file}"
+
+    # Append the new module_version lines
+    cat <<EOF >> "${modulerc_file}"
 #%Module1.0
 
-module-version ${module_name}/${stable} access-med ${env_name} default
+module-version ${module_name}/${stable} access-med ${env_name}
 module-version ${module_name}/${unstable} ${env_name}-unstable
 
 EOF
 
-    set_apps_perms "${module_path}/.modulerc"
-
+    set_apps_perms "${modulerc_file}"
 }
+
 
 function symlink_atomic_update() {
     link_name="${1}"
