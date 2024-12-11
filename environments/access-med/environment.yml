@@ -62,7 +62,7 @@ dependencies:
 - shapely
 - cf_xarray
 - sparse
-- coecms::ucx-py
+- access-nri::ucx-py
 - xgboost >1.6.1  # github.com/ESMValGroup/ESMValTool/issues/2779
 - med-diagnostics==0.0.1 # pining for now
 - access-med-tools==0.1.9
@@ -72,13 +72,11 @@ dependencies:
 - tqdm
 - moderngl
 - ffmpeg
+- ilamb==2.7.2
 - pip:
   - lavavu==1.8.84
   - railroad-diagrams ### Unlisted dependency of pip and pyparsing 
-  - git+https://github.com/rubisco-sfa/ILAMB.git@v2.7.1
   - git+https://github.com/ACCESS-NRI/ACCESS-Vis.git@v1.0.1
   - py360convert
   - numpy-quaternion
   
-# Julia (dependencies installed by separate script)
-- julia
