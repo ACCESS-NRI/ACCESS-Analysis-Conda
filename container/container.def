@@ -38,13 +38,10 @@ Bootstrap: scratch
         mkdir -p ${SINGULARITY_ROOTFS}/var/lib/sss
         mkdir -p ${SINGULARITY_ROOTFS}/var/run/munge
 
-        mkdir -p ${SINGULARITY_ROOTFS}/opt/conda/analysis3-22.07
-        mkdir -p ${SINGULARITY_ROOTFS}/opt/conda/analysis3-22.10
-        mkdir -p ${SINGULARITY_ROOTFS}/opt/conda/analysis3-23.01
-        mkdir -p ${SINGULARITY_ROOTFS}/opt/conda/analysis3-23.04
-        mkdir -p ${SINGULARITY_ROOTFS}/opt/conda/analysis3-23.07
-        mkdir -p ${SINGULARITY_ROOTFS}/opt/conda/analysis3-23.10
-        mkdir -p ${SINGULARITY_ROOTFS}/opt/conda/analysis3-24.01
+        mkdir -p ${SINGULARITY_ROOTFS}/opt/conda/analysis3-24.12
+        mkdir -p ${SINGULARITY_ROOTFS}/opt/conda/analysis3-25.01
+        mkdir -p ${SINGULARITY_ROOTFS}/opt/conda/access-med-0.12
+        mkdir -p ${SINGULARITY_ROOTFS}/opt/conda/esmvaltool-0.5
 
 %runscript
         /usr/bin/bash -l
