@@ -94,11 +94,8 @@ function write_modulerc() {
 
     # Append the new module_version lines
     cat <<EOF >> "${modulerc_file}"
-#%Module1.0
-
 module-version ${module_name}/${stable} access-med ${env_name}
 module-version ${module_name}/${unstable} ${env_name}-unstable
-
 EOF
 
     set_apps_perms "${modulerc_file}"
