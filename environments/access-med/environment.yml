@@ -2,6 +2,7 @@ name: med-condaenv
 channels:
 - conda-forge
 - accessnri
+- nodefaults
 variables:
   CARTOPY_USER_BACKGROUNDS: /g/data/xp65/public/apps/cartopy-data/backgrounds
 dependencies:
@@ -29,7 +30,7 @@ dependencies:
 - iris-esmf-regrid
 - iris-grib
 - intake
-- access-nri-intake>=0.1.5
+- access-nri-intake
 - netcdf4<=1.6.0 ### Workaround for https://github.com/pydata/xarray/issues/7079
 - mo_pack
 - nodejs>=20.0.0
@@ -72,13 +73,11 @@ dependencies:
 - tqdm
 - moderngl
 - ffmpeg
+- ilamb==2.7.2
 - pip:
   - lavavu==1.8.84
   - railroad-diagrams ### Unlisted dependency of pip and pyparsing 
-  - git+https://github.com/rubisco-sfa/ILAMB.git@v2.7.1
   - git+https://github.com/ACCESS-NRI/ACCESS-Vis.git@v1.0.1
   - py360convert
   - numpy-quaternion
   
-# Julia (dependencies installed by separate script)
-- julia
