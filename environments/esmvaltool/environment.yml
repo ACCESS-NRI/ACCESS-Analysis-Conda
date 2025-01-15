@@ -23,6 +23,7 @@ dependencies:
   - cmocean
   - cython
   - dask
+  - dask-labextension
   - distributed
   - ecmwf-api-client
   - eofs
