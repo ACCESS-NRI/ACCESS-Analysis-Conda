@@ -106,7 +106,6 @@ dependencies:
 - pylint
 - matplotlib-venn
 - umtools
-- clef
 - nccmp
 - coecms-util
 - cmocean
