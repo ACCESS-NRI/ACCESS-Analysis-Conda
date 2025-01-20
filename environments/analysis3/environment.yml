@@ -117,7 +117,6 @@ dependencies:
 - palettable
 - xlrd
 - mdssdiff
-- mnctools
 - satpy
 - statsmodels
 - dask-labextension
