@@ -128,7 +128,6 @@ dependencies:
 - jupyter-server-proxy
 - sphinx
 - doc8
-- pymunge
 - climtas
 - asyncssh
 - ants
