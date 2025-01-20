@@ -80,7 +80,6 @@ dependencies:
 - hupper
 - kealib
 - mo_pack
-- mule
 - cf-units
 - python-stratify
 - nbdime
