@@ -182,7 +182,6 @@ dependencies:
 - python-eccodes
 - python-gist
 - python-graphviz
-- python-hdf5
 - python-kaleido
 - python-magic
 - python-stratify
