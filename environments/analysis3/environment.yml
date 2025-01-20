@@ -219,7 +219,6 @@ dependencies:
 - lmfit
 - xclim
 - jupyter-resource-usage
-- acs_replica_intake
 - matchpy
 - mscorefonts
 - opencv  
