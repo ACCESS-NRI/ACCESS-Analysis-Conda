@@ -194,7 +194,6 @@ dependencies:
 - s3fs
 - kerchunk
 - ujson
-- cafaz
 - pygam
 - pysal
 - argopy
