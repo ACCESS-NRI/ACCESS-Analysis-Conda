@@ -104,7 +104,6 @@ dependencies:
 - xrft
 - pylint
 - matplotlib-venn
-- umtools
 - nccmp
 - cmocean
 - marineHeatWaves
