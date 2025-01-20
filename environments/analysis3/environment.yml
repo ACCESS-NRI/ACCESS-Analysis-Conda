@@ -14,8 +14,6 @@ dependencies:
 - coecms-nci
 - cdo
 - hdf5
- #x basemap # Deprecated, see https://matplotlib.org/basemap/users/intro.html#deprecation-notice
- #x basemap-data-hires
 - cartopy
 - dask
 - distributed
@@ -67,9 +65,8 @@ dependencies:
 - gdal
 - libgdal
 - matplotlib
-#- matplotlib>=3.5.2|<=3.4.3  # pinned to solve  https://github.com/matplotlib/matplotlib/issues/21917
 - dreqpy
-- pint ###<0.24 ### https://github.com/Ouranosinc/xclim/issues/1771
+- pint
 - pycodestyle 
 - nc-time-axis
 - jq
@@ -79,7 +76,6 @@ dependencies:
 - scikit-learn
 - filelock
 - gsw
-#- nb_conda_kernels Maybe causing pb (it does not exist in access-med)
 - poppler
 - fiona
 - hupper
@@ -211,9 +207,7 @@ dependencies:
 - s3fs
 - kerchunk
 - ujson
-#- intake-thredds # Does not support intake 2
 - cafaz
-#- cdms2 incompatible with 3.11
 - pygam
 - pysal
 - xmhw
