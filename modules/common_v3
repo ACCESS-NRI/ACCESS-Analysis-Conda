@@ -15,6 +15,7 @@ set overlay_path [ string map {/conda/ /envs/} $basedir ].sqsh
 set launcher $myscripts/launcher.sh
 
 module load singularity
+module load openmpi/4.1.7
 
 prepend-path CONTAINER_OVERLAY_PATH $overlay_path
 prepend-path SINGULARITYENV_PREPEND_PATH $basedir/condabin
