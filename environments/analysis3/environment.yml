@@ -160,7 +160,6 @@ dependencies:
 - dask-ml
 - mamba
 - pykrige
-- nci_intake_catalogue
 - cmdline_provenance
 - mplleaflet
 - branca
