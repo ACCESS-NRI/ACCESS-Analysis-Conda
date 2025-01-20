@@ -116,7 +116,6 @@ dependencies:
 - mpi4py
 - palettable
 - xlrd
-- mdssdiff
 - satpy
 - statsmodels
 - dask-labextension
