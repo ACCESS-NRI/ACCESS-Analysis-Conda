@@ -31,7 +31,6 @@ dependencies:
 - xarray
 
 # Remaining packages
-- accessnri::amami
 - accessnri::benchcab
 - accessnri::access-nri-intake==1.0.0
 - aiohttp
@@ -48,17 +47,13 @@ dependencies:
 - bokeh
 - bottleneck
 - branca
-- cafaz
-- cartopy_userconfig
 - celluloid
 - cf-python
 - cf-units
 - cftime
 - cfunits
 - cfgrib
-- click_default_group
 - climpred
-- climtas
 - cmdline_provenance
 - cmor
 - cmocean
@@ -84,7 +79,6 @@ dependencies:
 - eccodes
 - ecmwf-api-client
 - eofs
-- era5grib
 - erddapy
 - esmf=*=mpi_openmpi*
 - esmvalcore==2.11.*
@@ -139,7 +133,6 @@ dependencies:
 - line_profiler
 - lmfit
 - mamba
-- marineHeatWaves
 - matchpy
 - matplotlib
 - matplotlib-scalebar
@@ -199,13 +192,9 @@ dependencies:
 - pygrib
 - pygam
 - pyhdf
-- pylith
 - pylint
 - pymannkendall
-- pymunge
 - pyqt
-- pyregiones
-- pystranext
 - pytest
 - rasterio
 - rasterstats
@@ -233,8 +222,6 @@ dependencies:
 - tqdm
 - u8darts-all
 - ujson
-- umtools
-- uvcdat
 - vtk
 - watermark
 - wavespectra
@@ -251,7 +238,6 @@ dependencies:
 - xesmf
 - xgcm
 - xhistogram
-- xmhw
 - xmitgcm
 - xmip
 - xmovie
