@@ -207,7 +207,6 @@ dependencies:
 - cafaz
 - pygam
 - pysal
-- xmhw
 - argopy
 - dataclasses-json
 - posix_ipc
