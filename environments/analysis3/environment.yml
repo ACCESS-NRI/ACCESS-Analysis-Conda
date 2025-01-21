@@ -161,7 +161,7 @@ dependencies:
 - numpy_groupies
 - objgraph ### Unlisted dependency of greenlet
 - odc-geo
-- openmpi==4.1.6
+- openmpi==5.0.5
 - opencv
 - pandas
 - panel
