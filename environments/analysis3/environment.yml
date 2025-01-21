@@ -29,7 +29,6 @@ dependencies:
 - xarray
 
 # Remaining packages
-- accessnri::amami
 - accessnri::benchcab
 - accessnri::access-nri-intake==1.0.0
 - aiohttp
