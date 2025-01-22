@@ -3,8 +3,6 @@ channels:
 - conda-forge
 - accessnri
 - nodefaults
-variables:
-  CARTOPY_USER_BACKGROUNDS: /g/data/xp65/public/apps/cartopy-data/backgrounds
 dependencies:
 # SPEC0 packages
 - cartopy
@@ -29,7 +27,6 @@ dependencies:
 - seaborn
 - sqlalchemy
 - xarray
-
 # Remaining packages
 - accessnri::benchcab
 - accessnri::access-nri-intake==1.0.0
