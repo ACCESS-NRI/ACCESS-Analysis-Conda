@@ -1,7 +1,7 @@
 name: analysis3
 channels:
-- conda-forge
 - accessnri
+- conda-forge
 - nodefaults
 variables:
   CARTOPY_USER_BACKGROUNDS: /g/data/xp65/public/apps/cartopy-data/backgrounds
