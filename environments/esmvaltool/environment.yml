@@ -5,6 +5,7 @@ channels:
   # during the rc phase right before the next release of the
   # ESMValCore.
   # - conda-forge/label/esmvalcore_rc
+  - accessnri
   - conda-forge
   - nodefaults
 
