@@ -3,14 +3,11 @@ channels:
 - accessnri
 - conda-forge
 - nodefaults
-variables:
-  CARTOPY_USER_BACKGROUNDS: /g/data/xp65/public/apps/cartopy-data/backgrounds
 dependencies:
 - python>=3.11
 - pip
 - sqlalchemy
 - libnetcdf=*=mpi_openmpi*
-- coecms-nci
 - cdo
 - hdf5
 - cartopy
@@ -65,7 +62,7 @@ dependencies:
 - libgdal
 - matplotlib
 - dreqpy
-- pint ###<0.24 ### https://github.com/Ouranosinc/xclim/issues/1771
+- pint
 - pycodestyle 
 - nc-time-axis
 - jq
@@ -80,7 +77,6 @@ dependencies:
 - hupper
 - kealib
 - mo_pack
-- mule
 - cf-units
 - python-stratify
 - nbdime
@@ -107,8 +103,6 @@ dependencies:
 - dusqlpg
 - matplotlib-venn
 - nchash
-- umtools
-- clef
 - nccmp
 - coecms-util
 - yamanifest
@@ -125,9 +119,6 @@ dependencies:
 - mpi4py
 - palettable
 - xlrd
-- nccompress
-- mdssdiff
-- mnctools
 - addmeta
 - satpy
 - statsmodels
@@ -136,12 +127,9 @@ dependencies:
 - jupyter-server-proxy
 - sphinx
 - doc8
-- pymunge
-- climtas
 - asyncssh
 - ants
 - xhistogram
-- cartopy_userconfig=1.0.gadi
 - geopy
 - ninja
 - hvplot
@@ -172,7 +160,6 @@ dependencies:
 - dask-ml
 - mamba
 - pykrige
-- nci_intake_catalogue
 - cmdline_provenance
 - mplleaflet
 - branca
@@ -184,7 +171,6 @@ dependencies:
 - autopep8
 - spyder-kernels
 - dask-xgboost
-- git-subtree
 - xarray-spatial
 - watermark
 - cvxpy
@@ -212,10 +198,8 @@ dependencies:
 - s3fs
 - kerchunk
 - ujson
-- cafaz
 - pygam
 - pysal
-- xmhw
 - argopy
 - dataclasses-json
 - posix_ipc
@@ -230,7 +214,6 @@ dependencies:
 - lmfit
 - xclim
 - jupyter-resource-usage
-- acs_replica_intake
 - matchpy
 - mscorefonts
 - opencv  
@@ -261,7 +244,6 @@ dependencies:
 - odc-geo
 - cmor
 - bargeparse
-- accessnri::amami
 - accessnri::access-nri-intake==1.0.0
 - ipynbname
 - shellcheck
