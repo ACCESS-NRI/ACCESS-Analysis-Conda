@@ -55,7 +55,6 @@ dependencies:
 - memory_profiler
 - fs
 - python-magic
-- click_default_group
 - regionmask
 - rasterio
 - gdal
@@ -100,15 +99,9 @@ dependencies:
 - xrft
 - doit
 - pylint
-- dusqlpg
 - matplotlib-venn
-- nchash
 - nccmp
-- coecms-util
-- yamanifest
 - cmocean
-- splitvar
-- marineHeatWaves
 - holoviews
 - geoviews
 - pytest-cov
@@ -119,7 +112,6 @@ dependencies:
 - mpi4py
 - palettable
 - xlrd
-- addmeta
 - satpy
 - statsmodels
 - dask-labextension
@@ -141,7 +133,6 @@ dependencies:
 - docrep
 - earthpy
 - descartes
-- era5grib
 - conda-tree
 - xmitgcm
 - cupy
