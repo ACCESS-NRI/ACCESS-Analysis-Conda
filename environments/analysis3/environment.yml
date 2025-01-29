@@ -102,7 +102,7 @@ dependencies:
 - h5netcdf
 - h5py
 - hdbscan
-- hdf5
+- hdf5>=1.14.4
 - holoviews
 - hupper
 - hvplot
