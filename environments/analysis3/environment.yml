@@ -78,7 +78,6 @@ dependencies:
 - eofs
 - erddapy
 - esmf=*=mpi_openmpi*
-- esmvalcore==2.11.*
 - esmpy
 - f90nml
 - ffmpeg
