@@ -143,7 +143,6 @@ dependencies:
 - mscorefonts
 - nbdime
 - nc-time-axis
-- nccmp
 - ncdu
 - nctoolkit
 - neutralocean
