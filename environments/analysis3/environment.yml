@@ -120,7 +120,6 @@ dependencies:
 - jupyter-server-proxy
 - jupyterlab
 - jupyterlab_server
-- kealib
 - kerchunk
 - lftp
 - libgdal
