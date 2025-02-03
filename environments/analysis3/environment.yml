@@ -22,7 +22,7 @@ dependencies:
 - pygrib
 - pyhdf
 - pytest
-- python>=3.11
+- python==3.11
 - scipy
 - seaborn
 - sqlalchemy
@@ -52,7 +52,7 @@ dependencies:
 - cfgrib
 - climpred
 - cmdline_provenance
-- cmor
+- cmor>=3.9
 - cmocean
 - compliance-checker
 - conda-build
