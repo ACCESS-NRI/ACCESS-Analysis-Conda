@@ -101,7 +101,7 @@ dependencies:
 - h5netcdf
 - h5py
 - hdbscan
-- hdf5=1.14.4=mpi_openmpi*
+- hdf5!=1.14.3=mpi_openmpi*
 - holoviews
 - hupper
 - hvplot
