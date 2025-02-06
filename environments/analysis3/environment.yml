@@ -1,4 +1,4 @@
-name: analysis_spec0
+name: analysis3
 channels:
 - conda-forge
 - nodefaults
