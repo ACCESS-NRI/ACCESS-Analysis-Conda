@@ -1,11 +1,12 @@
-name: analysis3
+name: analysis3-edge
 channels:
 - conda-forge
 - nodefaults
 dependencies:
+# SPEC0 packages
 - python==3.11.*
 - dask==2025.1.*
-- numpy==1.26.*
+- numpy==2.2.*
 - scipy==1.15.*
 - matplotlib==3.10.*
 - pandas==2.2.*
@@ -17,12 +18,25 @@ dependencies:
 - iris==3.11.*
 - netcdf4==1.7.*
 - libnetcdf=*=mpi_openmpi*
-- openmpi==4.1.6
+- openmpi==5.0.5
 - pip=25.*
-- hdf5=1.14.*=mpi_openmpi* # issues with version 1.14.3, version 1.14.4 not available for openmpi < 5.0
+- hdf5=1.14.*=mpi_openmpi*
 - jupyterlab==4.3.*
 - cmor==3.9.*
 - accessnri::access-nri-intake==1.0.*
+# - numba needs numpy < 2.0
+#- dask-ml Causing issue for some reasons
+#- datashader requires numpy <2.0
+#- geocat-comp issue with numpy <2. and probably python 3.11
+#- geocat-comp requires numba and numpy < 2.0
+#- icclim requires numba
+#- neutralocean needs numpy < 2.0
+#- regional-mom6 needs numpy <2
+#- tensorflow
+#- u8darts-all requires numba
+#- wavespectra, needs numpy <2
+#- wrf-python needs numpy <2
+#- xarray-spatial needs numpy <2.
 - aiohttp
 - aiohttp-cors
 - ants
@@ -59,11 +73,9 @@ dependencies:
 - cvxpy
 - dask-jobqueue
 - dask-labextension
-- dask-ml
 - dask-xgboost
 - dataclasses-json
 - dataset
-- datashader
 - descartes
 - distributed
 - doc8
@@ -76,7 +88,6 @@ dependencies:
 - erddapy
 - esmf
 - esmpy
-- esmvalcore
 - f90nml
 - ffmpeg
 - filelock
@@ -87,7 +98,6 @@ dependencies:
 - fs
 - gcc_linux-64
 - gcm_filters
-- geocat-comp
 - geocat-viz
 - geoplot
 - geopy
@@ -99,7 +109,6 @@ dependencies:
 - httpx
 - hupper
 - hvplot
-- icclim
 - intake
 - intake-esm
 - ipdb
@@ -136,11 +145,9 @@ dependencies:
 - nc-time-axis
 - ncdu
 - nctoolkit
-- neutralocean
 - ninja
 - nodejs
 - notebook
-- numba
 - numexpr
 - odc-geo
 - opencv
@@ -172,7 +179,6 @@ dependencies:
 - rasterio
 - rasterstats
 - rechunker
-- regional-mom6
 - regionmask
 - rioxarray
 - ruff
@@ -187,22 +193,17 @@ dependencies:
 - sqlalchemy
 - statsmodels
 - sympy
-- tensorflow
 - timezonefinder
 - tintx
 - tqdm
 - twine
-- u8darts-all
 - ujson
 - vtk
 - watchdog
 - watermark
-- wavespectra
 - webcolors
 - windspharm
 - wradlib
-- wrf-python
-- xarray-spatial
 - xarraymannkendall
 - xcdat
 - xclim
