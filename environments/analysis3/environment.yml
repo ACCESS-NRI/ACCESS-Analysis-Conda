@@ -1,218 +1,219 @@
 name: analysis3
 channels:
-- conda-forge
-- nodefaults
+  - conda-forge
+  - nodefaults
 dependencies:
-- python==3.11.*
-- dask==2025.1.*
-- numpy==1.26.*
-- scipy==1.15.*
-- matplotlib==3.10.*
-- pandas==2.2.*
-- scikit-image==0.25.*
-- scikit-learn==1.6.*
-- xarray==2025.1.*
-- ipython==8.31.*
-- zarr==2.18.*
-- iris==3.11.*
-- netcdf4==1.7.*
-- libnetcdf=*=mpi_openmpi*
-- openmpi==4.1.6
-- pip=25.*
-- hdf5=1.14.*=mpi_openmpi* # issues with version 1.14.3, version 1.14.4 not available for openmpi < 5.0
-- jupyterlab==4.3.*
-- cmor==3.9.*
-- accessnri::access-nri-intake==1.1.*
-- conda-forge::intake-dataframe-catalog==0.3.1
-- aiohttp
-- aiohttp-cors
-- ants
-- anytree
-- arch-py
-- argopy
-- arm_pyart
-- asyncssh
-- autopep8
-- bargeparse
-- black
-- bokeh
-- bottleneck
-- branca
-- cartopy
-- cdo
-- celluloid
-- cf-python
-- cf-units
-- cfgrib
-- cftime
-- cfunits
-- climpred
-- cmdline_provenance
-- cmocean
-- cmor
-- compliance-checker
-- conda-build
-- conda-lock
-- conda-tree
-- conda-verify
-- crick
-- cupy
-- cvxpy
-- dask-jobqueue
-- dask-labextension
-- dask-ml
-- dask-xgboost
-- dataclasses-json
-- dataset
-- datashader
-- descartes
-- distributed
-- doc8
-- docrep
-- dreqpy
-- earthpy
-- eccodes
-- ecmwf-api-client
-- eofs
-- erddapy
-- esmf
-- esmpy
-- esmvalcore
-- f90nml
-- ffmpeg
-- filelock
-- fiona
-- flox
-- folium
-- fortran-language-server
-- fs
-- gcc_linux-64
-- gcm_filters
-- geocat-comp
-- geocat-viz
-- geoplot
-- geopy
-- gridfill
-- gsw
-- h5py
-- hdbscan
-- holoviews
-- httpx
-- hupper
-- hvplot
-- icclim
-- intake
-- intake-esm==2025.2.3
-- ipdb
-- ipympl
-- ipynbname
-- ipywidgets
-- iris-grib
-- jags
-- joblib
-- jq
-- jupyter
-- jupyter-book
-- jupyter-resource-usage
-- jupyter-server-proxy
-- jupyterlab_server
-- kerchunk
-- lftp
-- libgdal
-- libtiff
-- line_profiler
-- lmfit
-- mamba
-- matchpy
-- matplotlib-scalebar
-- matplotlib-venn
-- mayavi
-- memory_profiler
-- metpy
-- mo_pack
-- mpl-scatter-density
-- mplleaflet
-- mscorefonts
-- nbdime
-- nc-time-axis
-- ncdu
-- nctoolkit
-- neutralocean
-- ninja
-- nodejs
-- notebook
-- numba
-- numexpr
-- odc-geo
-- opencv
-- panel
-- param
-- parcels
-- pdbufr
-- pint
-- plotly
-- poppler
-- posix_ipc
-- psutil
-- pydantic
-- pydap
-- pyextremes
-- pygam
-- pygrib
-- pyhdf
-- pylint
-- pymannkendall
-- pysal
-- pytables
-- pytest
-- pytest-cov
-- python-eccodes
-- python-graphviz
-- python-magic
-- python-stratify
-- rasterio
-- rasterstats
-- rechunker
-- regional-mom6
-- regionmask
-- rioxarray
-- ruff
-- s3fs
-- satpy
-- seaborn
-- sh
-- sharppy
-- shellcheck
-- siphon
-- spyder-kernels
-- sqlalchemy
-- statsmodels
-- sympy
-- tensorflow
-- timezonefinder
-- tintx
-- tqdm
-- twine
-- u8darts-all
-- ujson
-- vtk
-- watchdog
-- watermark
-- wavespectra
-- webcolors
-- windspharm
-- wradlib
-- wrf-python
-- xarray-spatial
-- xarraymannkendall
-- xcdat
-- xclim
-- xesmf
-- xgcm
-- xhistogram
-- xmip
-- xmitgcm
-- xmovie
-- xrft
-- xskillscore
-- xwrf
+  - python==3.11.*
+  - dask==2025.1.*
+  - numpy==1.26.*
+  - scipy==1.15.*
+  - matplotlib==3.10.*
+  - pandas==2.2.*
+  - scikit-image==0.25.*
+  - scikit-learn==1.6.*
+  - xarray==2025.1.*
+  - ipython==8.31.*
+  - zarr==2.18.*
+  - iris==3.11.*
+  - netcdf4==1.7.*
+  - libnetcdf=*=mpi_openmpi*
+  - openmpi==4.1.6
+  - pip=25.*
+  - hdf5=1.14.*=mpi_openmpi* # issues with version 1.14.3, version 1.14.4 not available for openmpi < 5.0
+  - jupyterlab==4.3.*
+  - cmor==3.9.*
+  - accessnri::access-nri-intake==1.1.*
+  - conda-forge::intake-dataframe-catalog==0.3.1
+  - aiohttp
+  - aiohttp-cors
+  - ants
+  - anytree
+  - arch-py
+  - argopy
+  - arm_pyart
+  - asyncssh
+  - autopep8
+  - bargeparse
+  - black
+  - bokeh
+  - bottleneck
+  - branca
+  - cartopy
+  - cdo
+  - celluloid
+  - cf-python
+  - cf-units
+  - cfgrib
+  - cftime
+  - cfunits
+  - climpred
+  - cmdline_provenance
+  - cmocean
+  - cmor
+  - compliance-checker
+  - conda-build
+  - conda-lock
+  - conda-tree
+  - conda-verify
+  - crick
+  - cupy
+  - cvxpy
+  - dask-jobqueue
+  - dask-labextension
+  - dask-ml
+  - dask-xgboost
+  - dataclasses-json
+  - dataset
+  - datashader
+  - descartes
+  - distributed
+  - doc8
+  - docrep
+  - dreqpy
+  - earthpy
+  - eccodes
+  - ecmwf-api-client
+  - eofs
+  - erddapy
+  - esmf
+  - esmpy
+  - esmvalcore
+  - f90nml
+  - ffmpeg
+  - filelock
+  - fiona
+  - flox
+  - folium
+  - fortran-language-server
+  - fs
+  - gcc_linux-64
+  - gcm_filters
+  - geocat-comp
+  - geocat-viz
+  - geoplot
+  - geopy
+  - gridfill
+  - gsw
+  - h5py
+  - hdbscan
+  - holoviews
+  - httpx
+  - hupper
+  - hvplot
+  - icclim
+  - intake
+  - intake-esm==2025.2.3
+  - ipdb
+  - ipympl
+  - ipynbname
+  - ipywidgets
+  - iris-grib
+  - jags
+  - joblib
+  - jq
+  - jupyter
+  - jupyter-book
+  - jupyter-resource-usage
+  - jupyter-server-proxy
+  - jupyterlab_server
+  - kerchunk
+  - lftp
+  - libgdal
+  - libtiff
+  - line_profiler
+  - lmfit
+  - mamba
+  - matchpy
+  - matplotlib-scalebar
+  - matplotlib-venn
+  - mayavi
+  - memory_profiler
+  - metpy
+  - mo_pack
+  - mpl-scatter-density
+  - mplleaflet
+  - mscorefonts
+  - nbdime
+  - nc-time-axis
+  - ncdu
+  - nctoolkit
+  - neutralocean
+  - ninja
+  - nodejs
+  - notebook
+  - numba
+  - numexpr
+  - odc-geo
+  - opencv
+  - panel
+  - param
+  - parcels
+  - pdbufr
+  - pint
+  - plotly
+  - poppler
+  - posix_ipc
+  - psutil
+  - pydantic
+  - pydap
+  - pyextremes
+  - pygam
+  - pygrib
+  - pyhdf
+  - pylint
+  - pymannkendall
+  - pysal
+  - pytables
+  - pytest
+  - pytest-cov
+  - python-eccodes
+  - python-graphviz
+  - python-magic
+  - python-stratify
+  - rasterio
+  - rasterstats
+  - rechunker
+  - regional-mom6
+  - regionmask
+  - rioxarray
+  - ruff
+  - s3fs
+  - satpy
+  - seaborn
+  - sh
+  - sharppy
+  - shellcheck
+  - siphon
+  - spyder-kernels
+  - sqlalchemy
+  - statsmodels
+  - sympy
+  - tensorflow
+  - timezonefinder
+  - tintx
+  - tqdm
+  - twine
+  - u8darts-all
+  - ujson
+  - vtk
+  - watchdog
+  - watermark
+  - wavespectra
+  - webcolors
+  - windspharm
+  - wradlib
+  - wrf-python
+  - xarray-spatial
+  - xarraymannkendall
+  - xcdat
+  - xclim
+  - xesmf
+  - xgcm
+  - xhistogram
+  - xmip
+  - xmitgcm
+  - xmovie
+  - xrft
+  - xskillscore
+  - xwrf
+  - yamanifest
