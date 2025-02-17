@@ -24,6 +24,8 @@ dependencies:
 - cmor==3.9.*
 - accessnri::access-nri-intake==1.1.*
 - conda-forge::intake-dataframe-catalog==0.3.1
+- accessnri::yamanifest
+- coecms::nchash
 - aiohttp
 - aiohttp-cors
 - ants
