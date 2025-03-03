@@ -75,9 +75,9 @@ dependencies:
 - ffmpeg
 - ilamb==2.7.2
 - pip:
-  - lavavu==1.8.84
+  - lavavu==1.9.0
   - railroad-diagrams ### Unlisted dependency of pip and pyparsing 
-  - git+https://github.com/ACCESS-NRI/ACCESS-Vis.git@v1.0.1
+  - git+https://github.com/ACCESS-NRI/ACCESS-Vis.git@v1.0.2
   - py360convert
   - numpy-quaternion
   
