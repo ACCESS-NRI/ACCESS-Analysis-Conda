@@ -1,0 +1,69 @@
+name: access-vis
+channels:
+- accessnri
+- conda-forge
+- nodefaults
+dependencies:
+# SPEC0 packages
+- cartopy
+- cdo
+- dask
+- distributed
+- hdf5
+- ipython
+- iris
+- jupyter
+- libnetcdf=*=mpi_openmpi*
+- netcdf4
+- notebook
+- numpy
+- pandas
+- pip
+- pygrib
+- pyhdf
+- pytest
+- python>=3.11
+- scipy
+- seaborn
+- sqlalchemy
+- xarray
+# Remaining packages
+- accessnri::access-nri-intake
+- accessnri::ucx-py
+- astropy
+- cf_xarray
+- dask
+- dask-labextension
+- datashader
+- distributed
+- ffmpeg
+- hvplot
+- intake
+- ipywidgets
+- jinja2
+- jsonschema>=4.18.1
+- jupyter
+- jupyter-resource-usage
+- jupyter-server-proxy
+- jupyter_contrib_nbextensions
+- jupyter_nbextensions_configurator
+- jupyterlab
+- jupyterlab_server
+- libnetcdf=*=mpi_openmpi* # pinned for solver stability
+- matplotlib
+- moderngl
+- mpi4py
+- notebook
+- openmpi==4.1.6
+- pillow
+- pip
+- pyyaml
+- shapely
+- tqdm
+- pip:
+  - lavavu==1.9.0
+  - railroad-diagrams ### Unlisted dependency of pip and pyparsing 
+  - git+https://github.com/ACCESS-NRI/ACCESS-Vis.git@v1.0.2
+  - py360convert
+  - numpy-quaternion
+  
