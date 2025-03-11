@@ -53,6 +53,7 @@ dependencies:
 - matplotlib
 - moderngl
 - mpi4py
+- nodejs
 - notebook
 - openmpi==4.1.6
 - pillow
