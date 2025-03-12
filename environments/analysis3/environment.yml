@@ -136,7 +136,6 @@ dependencies:
 - mplleaflet
 - mscorefonts
 - nbdime
-- nb_conda_kernels
 - nc-time-axis
 - ncdu
 - nctoolkit
