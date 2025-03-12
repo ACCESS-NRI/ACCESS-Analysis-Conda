@@ -31,6 +31,7 @@ dependencies:
 - accessnri::access-nri-intake
 - accessnri::ucx-py
 - astropy
+- av
 - cf_xarray
 - dask
 - dask-labextension
