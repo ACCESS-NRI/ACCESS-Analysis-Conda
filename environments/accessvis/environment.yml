@@ -65,7 +65,7 @@ dependencies:
 - pip:
   - lavavu==1.9.0
   - railroad-diagrams ### Unlisted dependency of pip and pyparsing 
-  - git+https://github.com/ACCESS-NRI/ACCESS-Vis.git@v1.0.3
+  - git+https://github.com/ACCESS-NRI/ACCESS-Vis.git@v1.0.4
   - py360convert
   - numpy-quaternion
   

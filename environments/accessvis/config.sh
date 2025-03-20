@@ -9,9 +9,9 @@
 
 
 ### Optional config for custom deploy script
-export VERSION_TO_MODIFY=0.2
+export VERSION_TO_MODIFY=0.3
 export STABLE_VERSION=0.1
-export UNSTABLE_VERSION=0.2
+export UNSTABLE_VERSION=0.3
 
 ### Version settings
 export ENVIRONMENT=access-vis
