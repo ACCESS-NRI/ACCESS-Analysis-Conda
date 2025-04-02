@@ -15,7 +15,7 @@ rm config-references.yml
 ln -sf /g/data/xp65/public/apps/esmvaltool/config/config-references.yml config-references.yml
 popd
 
-pushd "${CONDA_INSTALLATION_PATH}/envs/${FULLENV}/lib/python3.11/site-packages/esmvalcore"
+pushd "${CONDA_INSTALLATION_PATH}/envs/${FULLENV}/lib/python3.11/site-packages/esmvalcore/config/configurations/defaults"
 rm config-user.yml
 ln -sf /g/data/xp65/public/apps/esmvaltool/config/config-user.yml config-user.yml
 popd
