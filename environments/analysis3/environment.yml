@@ -219,3 +219,76 @@ dependencies:
 - xrft
 - xskillscore
 - xwrf
+
+# Needed for ESMValTool merge
+- esmvaltool==2.12.*
+- cdsapi
+- curl<8.10
+- importlib_metadata<8  # https://github.com/ESMValGroup/ESMValTool/issues/3699 only for Python 3.10/11 and esmpy<8.6
+- lime
+- mapgenerator>=1.0.5
+- natsort
+- openpyxl
+- psyplot>=1.5.0
+- psy-maps>=1.5.0
+- psy-reg>=1.5.0
+- psy-simple>=1.5.0
+- pys2index
+- python-cdo
+- seawater
+- flake8
+- pytest-env
+- pytest-html
+- pytest-metadata
+- pytest-mock
+- pytest-xdist
+
+# For documentation
+- autodocsumm>=0.2.2
+- nbsphinx
+- pydata-sphinx-theme
+- codespell==2.3.0
+- docformatter==1.7.5
+- imagehash
+- isort==5.13.2
+- pre-commit
+- prospector>=1.12
+- pyroma
+- yamllint==1.35.1
+- yapf
+# NCL and dependencies
+- ncl
+- imagemagick
+- nco
+
+# R and dependencies
+- cdo
+- r-base>=3.5,<4.3.0  # https://github.com/ESMValGroup/ESMValTool/pull/3924
+- r-abind
+- r-akima
+- r-climdex.pcic
+- r-climprojdiags
+- r-docopt
+- r-dotcall64
+- r-functional
+- r-ggplot2
+- r-gridextra
+- r-logging
+- r-mapproj
+- r-maps
+- r-multiapply
+- r-ncdf4
+- r-ncdf4.helpers
+- r-pcict
+- r-plyr
+- r-rcolorbrewer
+- r-rcpp
+- r-s2dverification
+- r-snow
+- r-spei
+- r-udunits2
+- r-yaml
+# R packages needed for development
+- r-git2r  # dependency of lintr
+- r-lintr==3.1.2
+- r-styler==1.10.3
