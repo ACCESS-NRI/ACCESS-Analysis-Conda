@@ -33,8 +33,10 @@ dependencies:
 - arch-py
 - argopy
 - arm_pyart
+- astropy
 - asyncssh
 - autopep8
+- av
 - bargeparse
 - black
 - bokeh
@@ -103,6 +105,7 @@ dependencies:
 - hupper
 - hvplot
 - icclim
+- ilamb==2.7.2
 - intake
 - intake-esm==2025.2.3
 - ipdb
@@ -111,8 +114,10 @@ dependencies:
 - ipywidgets
 - iris-grib
 - jags
+- jinja2
 - joblib
 - jq
+- jsonschema>=4.18.1
 - jupyter
 - jupyter-book
 - jupyter-resource-usage
@@ -132,6 +137,8 @@ dependencies:
 - memory_profiler
 - metpy
 - mo_pack
+- moderngl
+- mpi4py
 - mpl-scatter-density
 - mplleaflet
 - mscorefonts
@@ -152,11 +159,13 @@ dependencies:
 - param
 - parcels
 - pdbufr
+- pillow
 - pint
 - plotly
 - poppler
 - posix_ipc
 - psutil
+- pyarrow
 - pydantic
 - pydap
 - pyextremes
@@ -219,6 +228,13 @@ dependencies:
 - xrft
 - xskillscore
 - xwrf
+
+- pip:
+  - lavavu==1.9.5
+  - railroad-diagrams ### Unlisted dependency of pip and pyparsing 
+  - git+https://github.com/ACCESS-NRI/ACCESS-Vis.git@v1.0.4
+  - py360convert
+  - numpy-quaternion
 
 # Needed for ESMValTool merge
 - esmvaltool==2.12.*
