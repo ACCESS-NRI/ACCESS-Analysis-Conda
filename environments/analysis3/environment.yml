@@ -25,6 +25,7 @@ dependencies:
 - accessnri::access-nri-intake==1.2.1
 - conda-forge::intake-dataframe-catalog==0.3.1
 - accessnri::yamanifest
+- accessnri::access-med-tools==0.1.14
 - coecms::nchash
 - aiohttp
 - aiohttp-cors
@@ -206,6 +207,7 @@ dependencies:
 - tqdm
 - twine
 - u8darts-all
+- ultraplot
 - ujson
 - vtk
 - watchdog
