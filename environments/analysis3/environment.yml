@@ -27,6 +27,7 @@ dependencies:
 - accessnri::yamanifest
 - accessnri::access-med-tools==0.1.20
 - accessnri::access-mopper==2.0.0a9
+- accessnri::ucx-py
 - coecms::nchash
 - aiohttp
 - aiohttp-cors
