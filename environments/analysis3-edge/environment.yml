@@ -24,6 +24,7 @@ dependencies:
 - jupyterlab==4.3.*
 - cmor==3.9.*
 - accessnri::access-nri-intake==1.0.*
+- accessnri::access-py-telemetry==0.1.*
 # - numba needs numpy < 2.0
 #- dask-ml Causing issue for some reasons
 #- datashader requires numpy <2.0
