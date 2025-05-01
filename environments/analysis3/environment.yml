@@ -194,6 +194,7 @@ dependencies:
 - ruff
 - s3fs
 - satpy
+- scores
 - seaborn
 - sh
 - sharppy
