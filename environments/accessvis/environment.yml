@@ -59,6 +59,7 @@ dependencies:
 - openmpi==4.1.6
 - pillow
 - pip
+- pyshp
 - pyyaml
 - shapely
 - tqdm
