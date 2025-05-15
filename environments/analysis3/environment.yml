@@ -214,7 +214,7 @@ dependencies:
 - tqdm
 - twine
 - u8darts-all
-- access-nri::ucx-py
+- accessnri::ucx-py
 - ucx==1.15.0
 - ultraplot
 - ujson
