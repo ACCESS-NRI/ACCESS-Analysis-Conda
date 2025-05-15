@@ -51,6 +51,7 @@ dependencies:
 - celluloid
 - cf-python
 - cf-units
+- cfchecker
 - cfgrib
 - cftime
 - cfunits
