@@ -182,6 +182,7 @@ dependencies:
 - pymannkendall
 - pysal
 - pyshp
+- pysteps
 - pytables
 - pytest
 - pytest-cov
