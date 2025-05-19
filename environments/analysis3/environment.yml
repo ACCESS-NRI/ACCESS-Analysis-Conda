@@ -178,6 +178,7 @@ dependencies:
 - pyextremes
 - pygam
 - pygrib
+- pygmt
 - pyhdf
 - pylint
 - pymannkendall
