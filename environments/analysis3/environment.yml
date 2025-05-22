@@ -195,7 +195,7 @@ dependencies:
 - rasterio
 - rasterstats
 - rechunker
-- regional-mom6
+- regional-mom6>=1.0.0
 - regionmask
 - rioxarray
 - ruff
