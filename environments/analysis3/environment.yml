@@ -4,7 +4,7 @@ channels:
 - nodefaults
 dependencies:
 - python==3.11.*
-- dask==2025.3.*
+- dask==2025.5.*
 - numpy==1.26.*
 - scipy==1.15.*
 - matplotlib==3.10.*
