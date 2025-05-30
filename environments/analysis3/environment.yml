@@ -29,6 +29,7 @@ dependencies:
 - accessnri::yamanifest
 - accessnri::access-med-tools==0.1.21
 - accessnri::access-mopper==2.0.0a12
+- accessnri::benchcab==4.2.*
 - coecms::nchash
 - aiohttp
 - aiohttp-cors
@@ -51,6 +52,7 @@ dependencies:
 - celluloid
 - cf-python
 - cf-units
+- cfchecker
 - cfgrib
 - cftime
 - cfunits
@@ -166,6 +168,7 @@ dependencies:
 - pillow
 - pint
 - plotly
+- polars
 - poppler
 - posix_ipc
 - psutil
@@ -175,11 +178,13 @@ dependencies:
 - pyextremes
 - pygam
 - pygrib
+- pygmt
 - pyhdf
 - pylint
 - pymannkendall
 - pysal
 - pyshp
+- pysteps
 - pytables
 - pytest
 - pytest-cov
@@ -190,7 +195,7 @@ dependencies:
 - rasterio
 - rasterstats
 - rechunker
-- regional-mom6
+- regional-mom6>=1.0.0
 - regionmask
 - rioxarray
 - ruff
@@ -212,6 +217,8 @@ dependencies:
 - tqdm
 - twine
 - u8darts-all
+- accessnri::ucx-py
+- ucx==1.15.0
 - ultraplot
 - ujson
 - vtk
