@@ -11,16 +11,16 @@ dependencies:
 - pandas==2.2.*
 - scikit-image==0.25.*
 - scikit-learn==1.6.*
-- xarray==2025.3.*
-- ipython==8.31.*
-- zarr==2.18.*
-- iris==3.11.*
+- xarray==2025.4.*
+- ipython==9.0.*
+- zarr==3.0.*
+- iris==3.12.*
 - netcdf4==1.7.*
 - libnetcdf=*=mpi_openmpi*
 - openmpi==4.1.6
 - pip=25.*
 - hdf5=1.14.*=mpi_openmpi* # issues with version 1.14.3, version 1.14.4 not available for openmpi < 5.0
-- jupyterlab==4.3.*
+- jupyterlab==4.4.*
 - cmor==3.9.*
 - accessnri::access-nri-intake==1.2.3
 - accessnri::access-py-telemetry==0.1.9
