@@ -7,14 +7,14 @@ dependencies:
 - dask==2025.5.*
 - numpy==1.26.*
 - scipy==1.15.*
-- matplotlib==3.10.*
+- matplotlib>=3.9.*
 - pandas==2.2.*
 - scikit-image==0.25.*
 - scikit-learn==1.6.*
-- xarray==2025.3.*
-- ipython==8.31.*
-- zarr==2.18.*
-- iris==3.11.*
+- xarray==2025.4.*
+- ipython<9.0 # See ESMValTool
+- zarr<3.0 # Intake-ESM limitation
+- iris==3.12.*
 - netcdf4==1.7.*
 - libnetcdf=*=mpi_openmpi*
 - openmpi==4.1.6
