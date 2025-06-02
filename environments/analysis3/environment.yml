@@ -7,20 +7,20 @@ dependencies:
 - dask==2025.5.*
 - numpy==1.26.*
 - scipy==1.15.*
-- matplotlib==3.10.*
+- matplotlib>=3.9.*
 - pandas==2.2.*
 - scikit-image==0.25.*
 - scikit-learn==1.6.*
 - xarray==2025.4.*
-- ipython==9.0.*
-- zarr==3.0.*
+- ipython<9.0 # See ESMValTool
+- zarr<3.0 # Intake-ESM limitation
 - iris==3.12.*
 - netcdf4==1.7.*
 - libnetcdf=*=mpi_openmpi*
 - openmpi==4.1.6
 - pip=25.*
 - hdf5=1.14.*=mpi_openmpi* # issues with version 1.14.3, version 1.14.4 not available for openmpi < 5.0
-- jupyterlab==4.4.*
+- jupyterlab==4.3.*
 - cmor==3.9.*
 - accessnri::access-nri-intake==1.2.3
 - accessnri::access-py-telemetry==0.1.9
