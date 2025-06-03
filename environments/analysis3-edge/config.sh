@@ -8,9 +8,7 @@
 ### outside_files_to_copy
 
 ### Optional config for custom deploy script
-export VERSION_TO_MODIFY=25.05
-export STABLE_VERSION=25.05
-export UNSTABLE_VERSION=25.05
+export VERSION_TO_MODIFY=25.06
 
 ### Version settings
 export ENVIRONMENT=analysis3_edge
