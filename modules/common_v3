@@ -38,3 +38,6 @@ if { [ file exists $mydir/.$condaenv ] } {
 setenv OMPI_MCA_orte_launch_agent $myscripts/orted
 setenv MAMBA_ROOT_PREFIX $prefix/$package
 setenv CONDA_EXE $prefix/$package/bin/micromamba
+
+### Set Python path for Dask PBSCluster
+setenv DASK_JOBQUEUE__PBS__PYTHON /g/data/xp65/public/apps/med_conda_scripts/$condaenv.d/bin/python
