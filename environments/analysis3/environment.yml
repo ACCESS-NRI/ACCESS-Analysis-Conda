@@ -21,7 +21,7 @@ dependencies:
 - pip=25.*
 - hdf5=1.14.*=mpi_openmpi* # issues with version 1.14.3, version 1.14.4 not available for openmpi < 5.0
 - jupyterlab==4.3.*
-- cmor==3.9.*
+- cmor==3.10.*
 - accessnri::access-nri-intake==1.2.3
 - accessnri::access-py-telemetry==0.1.9
 - accessnri::access-intake-utils==0.1.7
