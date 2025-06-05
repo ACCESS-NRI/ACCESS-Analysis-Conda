@@ -1,6 +1,7 @@
 name: analysis3
 channels:
 - conda-forge
+- pytorch # for gpu-accelerated pytorch
 - nodefaults
 dependencies:
 - python==3.11.*
@@ -192,6 +193,8 @@ dependencies:
 - python-graphviz
 - python-magic
 - python-stratify
+- pytorch::pytorch
+- pytorch::pytorch-cuda
 - rasterio
 - rasterstats
 - rechunker
