@@ -8,7 +8,7 @@
 ### outside_files_to_copy
 
 ### Optional config for custom deploy script
-export VERSION_TO_MODIFY=25.06
+export VERSION_TO_MODIFY=24.07
 
 ### Version settings
 export ENVIRONMENT=analysis3
