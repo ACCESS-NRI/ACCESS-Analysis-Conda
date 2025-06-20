@@ -26,7 +26,7 @@ dependencies:
 - accessnri::access-py-telemetry==0.1.9
 - accessnri::access-intake-utils==0.1.7
 - conda-forge::intake-dataframe-catalog==0.3.1
-- accessnri::yamanifest
+- accessnri::yamanifest>=0.3.12
 - accessnri::access-med-tools==0.1.21
 - accessnri::access-mopper==2.0.0a12
 - accessnri::benchcab==4.2.*
