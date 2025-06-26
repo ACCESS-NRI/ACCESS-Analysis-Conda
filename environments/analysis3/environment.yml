@@ -177,6 +177,7 @@ dependencies:
 - pydap
 - pyextremes
 - pygam
+- pygamma_n
 - pygrib
 - pygmt
 - pyhdf
