@@ -164,6 +164,7 @@ dependencies:
 - panel
 - param
 - parcels
+- pcmdi_metrics>=3.9.*
 - pdbufr
 - pillow
 - pint
