@@ -41,3 +41,5 @@ setenv CONDA_EXE $prefix/$package/bin/micromamba
 
 ### Set Python path for Dask PBSCluster
 setenv DASK_JOBQUEUE__PBS__PYTHON /g/data/xp65/public/apps/med_conda_scripts/$condaenv.d/bin/python
+### Set the path to the benchcab utility
+setenv BENCHCAB_PATH /g/data/xp65/public/apps/med_conda_scripts/$condaenv.d/bin/benchcab
