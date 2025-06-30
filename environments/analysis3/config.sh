@@ -10,6 +10,7 @@
 ### Optional config for custom deploy script
 export VERSION_TO_MODIFY=25.07
 export STABLE_VERSION=25.07
+export UNSTABLE_VERSION=25.07
 
 ### Version settings
 export ENVIRONMENT=analysis3
