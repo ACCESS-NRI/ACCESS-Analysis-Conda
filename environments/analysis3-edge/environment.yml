@@ -6,8 +6,8 @@ dependencies:
 # SPEC0 packages
 - python==3.11.*
 - dask==2025.5.*
-- numpy==2.2.*
-- scipy==1.16.*
+- numpy==2.3.*
+- scipy==1.15.*
 - matplotlib>3.9
 - pandas==2.3.*
 - scikit-image==0.25.*
