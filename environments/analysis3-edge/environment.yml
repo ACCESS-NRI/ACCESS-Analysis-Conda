@@ -6,13 +6,13 @@ dependencies:
 # SPEC0 packages
 - python==3.11.*
 - dask==2025.5.*
-- numpy==2.2.*
+- numpy==2.3.*
 - scipy==1.15.*
 - matplotlib>3.9
-- pandas==2.2.*
+- pandas==2.3.*
 - scikit-image==0.25.*
-- scikit-learn==1.6.*
-- xarray==2025.4.*
+- scikit-learn==1.7.*
+- xarray==2025.6.*
 - ipython<9.0
 - zarr<3.0
 - iris==3.12.*
@@ -21,9 +21,9 @@ dependencies:
 - openmpi==5.0.5
 - pip=25.*
 - hdf5=1.14.*=mpi_openmpi*
-- jupyterlab==4.3.*
+- jupyterlab==4.4.*
 - cmor==3.9.*
-- accessnri::access-nri-intake==1.0.*
+- accessnri::access-nri-intake==1.2.*
 - accessnri::access-py-telemetry==0.1.*
 # - numba needs numpy < 2.0
 #- dask-ml Causing issue for some reasons
