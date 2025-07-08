@@ -23,3 +23,4 @@ jobs:
             eval $( grep JOB_LOG_DIR $SCRIPT_DIR/install_config.sh )
             cd $JOB_LOG_DIR
             qsub -N build_${{ inputs.environment }} -lncpus=1,mem=40GB,walltime=10:00:00,jobfs=50GB,storage=gdata/xp65+scratch/iq82+gdata/tm70 -v SCRIPT_DIR,CONDA_ENVIRONMENT=${{ inputs.environment }} -P iq82 -q copyq -Wblock=true -Wumask=037 "${SCRIPT_DIR}"/build.sh
+            chgrp xp65_w $(ls build_${{ inputs.environment }}.o* | tail -n 1) $(ls build_${{ inputs.environment }}.e* | tail -n 1) # temporary hack to let me read
