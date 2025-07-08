@@ -192,7 +192,7 @@ dependencies:
 - python-graphviz
 - python-magic
 - python-stratify
-- pytorch=*=cuda*
+- pytorch-gpu
 - rasterio
 - rasterstats
 - rechunker
