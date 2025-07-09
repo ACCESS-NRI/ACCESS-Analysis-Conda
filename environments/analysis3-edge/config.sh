@@ -14,6 +14,9 @@ export VERSION_TO_MODIFY=25.07
 export ENVIRONMENT=analysis3_edge
 export FULLENV="${ENVIRONMENT}-${VERSION_TO_MODIFY}"
 
+### CUDA version
+export CONDA_OVERRIDE_CUDA=12
+
 declare -a rpms_to_remove=( "openssh-clients" "openssh-server" "openssh" )
 declare -a replace_from_apps=( "ucx/1.15.0" openmpi/5.9.5)
 declare -a outside_commands_to_include=( "pbs_tmrsh" "ssh" )
