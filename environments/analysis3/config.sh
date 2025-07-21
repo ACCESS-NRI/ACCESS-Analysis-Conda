@@ -21,3 +21,6 @@ declare -a replace_from_apps=( "ucx/1.15.0" )
 declare -a outside_commands_to_include=( "pbs_tmrsh" "ssh" )
 declare -a outside_files_to_copy=( "/g/data/xp65/public/apps/openmpi/4.1.6" )
 declare -a replace_with_external=( "/g/data/xp65/public/apps/openmpi/4.1.6" )
+
+### Turn off threading in intake-esm - segfaults
+export ITK_ESM_THREADING=False
