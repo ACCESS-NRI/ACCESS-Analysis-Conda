@@ -111,7 +111,7 @@ dependencies:
 - hupper
 - hvplot
 - intake
-- intake-esm
+- intake-esm>=2025.7.9
 - ipdb
 - ipympl
 - ipynbname
