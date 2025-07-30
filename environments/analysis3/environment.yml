@@ -41,7 +41,6 @@ dependencies:
 - atteggiani::shumlib
 - aiohttp
 - aiohttp-cors
-- ants
 - anytree
 - arch-py
 - argopy
