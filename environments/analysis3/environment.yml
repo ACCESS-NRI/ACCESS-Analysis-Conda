@@ -31,9 +31,16 @@ dependencies:
 - accessnri::access-mopper==2.0.0a12
 - accessnri::benchcab==4.2.3
 - coecms::nchash
+- atteggiani::ants
+- atteggiani::mule
+- atteggiani::um-packing
+- atteggiani::mule-utils
+- atteggiani::mule-base
+- atteggiani::um-spiral-search
+- atteggiani::um-ppibm
+- atteggiani::shumlib
 - aiohttp
 - aiohttp-cors
-- ants
 - anytree
 - arch-py
 - argopy
