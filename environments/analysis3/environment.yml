@@ -28,7 +28,7 @@ dependencies:
 - conda-forge::intake-dataframe-catalog==0.3.1
 - accessnri::yamanifest>=0.3.12
 - accessnri::access-med-tools==0.1.21
-- accessnri::access-mopper==2.0.0a12
+- accessnri::access-mopper==2.3.0a4
 - accessnri::benchcab==4.2.3
 - coecms::nchash
 - atteggiani::ants
