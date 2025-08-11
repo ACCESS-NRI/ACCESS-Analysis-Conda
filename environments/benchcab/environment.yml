@@ -1,0 +1,9 @@
+name: benchcab
+channels:
+- accessnri
+- conda-forge
+- nodefaults
+dependencies:
+# Note: the pinned benchcab version should match the BENCHCAB_VERSION
+# environment variable in environments/benchcab/config.sh:
+- accessnri::benchcab==4.2.3
