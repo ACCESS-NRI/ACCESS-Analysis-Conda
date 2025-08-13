@@ -119,7 +119,7 @@ dependencies:
 - icclim
 - ilamb==2.7.2
 - intake
-- intake-esm==2025.2.3
+- intake-esm==2025.7.9
 - ipdb
 - ipympl
 - ipynbname
