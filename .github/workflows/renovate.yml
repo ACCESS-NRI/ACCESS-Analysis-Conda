@@ -24,7 +24,7 @@ jobs:
       TZ: Australia/Brisbane
     steps:
       - name: Run Renovate
-        uses: renovatebot/github-action@v40
+        uses: renovatebot/github-action@v43.0.7
         with:
           # Uses the config file in this repo
           configurationFile: .github/renovate.json
