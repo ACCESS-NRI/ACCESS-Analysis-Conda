@@ -1,0 +1,31 @@
+{
+  "extends": ["config:base"],
+  "enabledManagers": ["conda"],
+  "timezone": "Australia/Brisbane",
+  "labels": ["deps:conda"],
+  "prHourlyLimit": 4,
+  "prConcurrentLimit": 10,
+  "conda": {
+    "fileMatch": ["^environments/.+/environment\\.ya?ml$"]
+  },
+  "packageRules": [
+    {
+      "description": "Automerge ACCESS-NRI packages only",
+      "matchManagers": ["conda"],
+      "matchDatasources": ["conda"],
+      "matchPackageNames": [
+        "accessnri/access-mopper",
+        "accessnri/access-vis"
+      ],
+      "automerge": false,
+      "automergeType": "pr",
+      "platformAutomerge": false,
+      "labels": ["deps:access-nri", "automerge"]
+    },
+    {
+      "description": "Everything else: normal PRs (no automerge)",
+      "matchManagers": ["conda"],
+      "automerge": false
+    }
+  ]
+}
