@@ -32,4 +32,4 @@ When a build job is submitted it will modify the conda environment given by `${E
 
 Set the following:
 * Under `Advanced options > Module directories` insert: `/g/data/xp65/public/modules`
-* Under `Advanced options > Modules` insert: `conda/access-med`
+* Under `Advanced options > Modules` insert: `conda/analysis3`
