@@ -194,6 +194,7 @@ dependencies:
   - pytables
   - pytest
   - pytest-cov
+  - pytest-subtests
   - python-eccodes
   - python-graphviz
   - python-magic
