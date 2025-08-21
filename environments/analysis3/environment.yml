@@ -29,7 +29,6 @@ dependencies:
   - accessnri::yamanifest>=0.3.12
   - accessnri::access-med-tools==0.1.21
   - accessnri::access-mopper==2.3.0a23
-  - atteggiani::ants
   - atteggiani::mule
   - atteggiani::um-packing
   - atteggiani::mule-utils
