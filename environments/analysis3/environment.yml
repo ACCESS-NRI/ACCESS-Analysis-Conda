@@ -62,6 +62,7 @@ dependencies:
   - cftime
   - cfunits
   - climpred
+  - cmcrameri
   - cmdline_provenance
   - cmocean
   - cmor
