@@ -34,7 +34,8 @@ function inner() {
     ### Create the environment
     if [[ "${1}" == "--install" ]]; then
         ### Use --relocate-prefix to prevent micromamba helpfully resolving symlinks...
-        ${MAMBA} create -p "${CONDA_INSTALLATION_PATH}/envs/${FULLENV}" --relocate-prefix "${CONDA_INSTALLATION_PATH}/envs/${FULLENV}" -f "${ENV_FILE}" -y
+        ${MAMBA} create -p "${CONDA_INSTALLATION_PATH}/envs/${FULLENV}" --relocate-prefix "${CONDA_INSTALLATION_PATH}/envs/${FULLENV}" -f "${ENV_FILE}" -y --no-cache
+        ${MAMBA} clean --all --yes
         if [[ $? -ne 0 ]]; then
             echo "Error installing new environment"
             exit 1
@@ -44,8 +45,9 @@ function inner() {
         echo > "${CONDA_INSTALLATION_PATH}"/envs/${FULLENV}/conda-meta/history
         ${MAMBA} env export -p "${CONDA_INSTALLATION_PATH}/envs/${FULLENV}" > deployed."${CONDA_ENVIRONMENT}".old.yml
         ### micromamba forces this to be done in 2 steps - install for new packages, and update to check for updates
-        ${MAMBA} install -p "${CONDA_INSTALLATION_PATH}/envs/${FULLENV}" --relocate-prefix "${CONDA_INSTALLATION_PATH}/envs/${FULLENV}" -f "${ENV_FILE}" -y
-        ${MAMBA} update -p "${CONDA_INSTALLATION_PATH}/envs/${FULLENV}" --relocate-prefix "${CONDA_INSTALLATION_PATH}/envs/${FULLENV}" -f "${ENV_FILE}" -y
+        ${MAMBA} install -p "${CONDA_INSTALLATION_PATH}/envs/${FULLENV}" --relocate-prefix "${CONDA_INSTALLATION_PATH}/envs/${FULLENV}" -f "${ENV_FILE}" -y --no-cache
+        ${MAMBA} update -p "${CONDA_INSTALLATION_PATH}/envs/${FULLENV}" --relocate-prefix "${CONDA_INSTALLATION_PATH}/envs/${FULLENV}" -f "${ENV_FILE}" -y --no-cache
+        ${MAMBA} clean --all --yes
         if [[ $? -ne 0 ]]; then
             echo "Error updating new environment"
             exit 1
@@ -65,7 +67,7 @@ function inner() {
     pushd "${ENV_INSTALLATION_PATH}"
     ### Get rid of stuff from packages we don't want
     for dir in bin lib etc libexec include; do
-	if [[ -d "${dir}" ]]; then
+    if [[ -d "${dir}" ]]; then
             pushd $dir
             for i in $( rpm -qli "${rpms_to_remove[@]}" ); do
                 fn=$( basename $i )
@@ -73,13 +75,13 @@ function inner() {
                 [[ -d $fn ]] && rm -rf $fn
             done
             popd
-	fi
+    fi
     done
 
     ### Replace things from apps
     for pkg in "${replace_from_apps[@]}"; do
         for dir in bin etc lib include; do
-	        if [[ -d "${dir}" ]]; then
+            if [[ -d "${dir}" ]]; then
                 pushd $dir
                 apps_subdir=/apps/"${pkg}"/"${dir}"
                 for i in $( find "${apps_subdir}" -type f ); do
@@ -89,7 +91,7 @@ function inner() {
                     ln -sf "${i}" "${fn}"
                 done
                 popd
-	        fi
+            fi
         done
     done
 
