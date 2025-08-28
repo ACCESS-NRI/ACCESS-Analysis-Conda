@@ -55,7 +55,7 @@ dependencies:
   - cartopy
   - cdo
   - celluloid
-  - cf-python
+  - cf-python>=3.17
   - cf-units
   - cfchecker
   - cfgrib
