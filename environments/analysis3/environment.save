@@ -1,6 +1,5 @@
 name: analysis3
 channels:
-  - accessnri
   - conda-forge
   - nodefaults
 dependencies:
