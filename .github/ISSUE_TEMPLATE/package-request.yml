@@ -1,0 +1,127 @@
+name: 📦 Package Addition Request
+description: Request a new package to be added to the conda/analysis3 environment
+title: "[PACKAGE REQUEST] Add <package-name> to analysis3 environment"
+labels: ["package-request", "enhancement"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for requesting a new package for the analysis3 environment! 
+        
+        Please fill out the information below to help us assess your request. Package requests are evaluated based on:
+        - Dependencies required and their impact on the overall package stack
+        - Whether the package is actively maintained
+        - Value to the broader community
+        - Compatibility with existing SPEC0 packages
+
+  - type: input
+    id: package-name
+    attributes:
+      label: Package Name
+      description: What is the name of the package you'd like to add?
+      placeholder: e.g., xesmf, cartopy, seaborn
+    validations:
+      required: true
+
+  - type: input
+    id: package-version
+    attributes:
+      label: Preferred Version (Optional)
+      description: Do you need a specific version of this package?
+      placeholder: e.g., >=2.0.0, ~=1.5.0, or leave blank for latest
+
+  - type: dropdown
+    id: environment-target
+    attributes:
+      label: Target Environment
+      description: Which environment should this package be added to?
+      options:
+        - analysis3-YY.MM (stable environment with proven compatibility)
+        - analysis3-edge-YY.MM (cutting-edge environment with latest packages)
+        - Both environments
+        - I'm not sure - please advise
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use Case and Community Value
+      description: |
+        Describe how this package would be valuable to the broader ACCESS community.
+        What scientific workflows or analyses would it enable?
+      placeholder: |
+        e.g., "This package enables regridding of ocean model output to atmospheric grids, 
+        which is essential for coupled model analysis workflows used by multiple research groups."
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Known Dependencies
+      description: |
+        List any dependencies this package requires that might not already be in the environment.
+        If you're unsure, you can leave this blank and we'll investigate.
+      placeholder: |
+        e.g., 
+        - requires GDAL >= 3.0
+        - depends on cartopy
+        - needs specific versions of numpy/scipy
+
+  - type: checkboxes
+    id: maintenance-check
+    attributes:
+      label: Package Maintenance Status
+      description: Please verify the maintenance status of the requested package
+      options:
+        - label: The package is actively maintained on GitHub/GitLab
+        - label: The package has recent releases (within the last 2 years)
+        - label: The package is available on conda-forge or a similar reliable channel
+
+  - type: dropdown
+    id: spec0-impact
+    attributes:
+      label: Impact on Key SPEC0 Packages
+      description: |
+        Does this package require changes to any key SPEC0 packages? 
+        Key packages: Python, Dask, NumPy, SciPy, Matplotlib, Pandas, Scikit-Image, Scikit-Learn, Xarray, IPython, Zarr
+      options:
+        - "No impact - package works with current versions"
+        - "Minor impact - may require updated versions but no downgrades"
+        - "Major impact - requires downgrades or significant version changes"
+        - "Unknown - needs investigation"
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: |
+        Have you considered any alternatives? Are there existing packages in the environment 
+        that could meet your needs?
+      placeholder: |
+        e.g., "Considered using matplotlib directly, but this package provides specialized 
+        plotting functions that would require significant custom code to replicate."
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Additional Information
+      description: Any other information that might be helpful for evaluating this request?
+      placeholder: |
+        e.g., Links to documentation, examples of usage, timeline requirements, 
+        number of users who would benefit, etc.
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        
+        **Note for Maintainers:**
+        - Packages with minimal dependencies will generally be added
+        - Packages requiring outdated SPEC0 packages may not be included due to compatibility issues
+        - Requests requiring major changes to key packages need strong community justification
+        - analysis3-YY.MM prioritizes stability, analysis3-edge-YY.MM allows for latest versions
