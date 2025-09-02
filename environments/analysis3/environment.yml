@@ -179,6 +179,7 @@ dependencies:
   - poppler
   - posix_ipc
   - psutil
+  - pyaml
   - pyarrow
   - pydantic
   - pydap
@@ -259,6 +260,7 @@ dependencies:
     - py360convert
     - numpy-quaternion
     - climate-ref
+    - pycnv
 
 # Needed for ESMValTool merge
   - esmvaltool==2.12.*
