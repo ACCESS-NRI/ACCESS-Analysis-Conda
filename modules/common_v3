@@ -43,5 +43,7 @@ setenv CONDA_EXE $prefix/$package/bin/micromamba
 setenv DASK_JOBQUEUE__PBS__PYTHON /g/data/xp65/public/apps/med_conda_scripts/$condaenv.d/bin/python
 ### Set the path to the benchcab utility
 setenv BENCHCAB_PATH /g/data/xp65/public/apps/med_conda_scripts/$condaenv.d/bin/benchcab
+### Set launcher script path for payu
+setenv ENV_LAUNCHER_SCRIPT_PATH /g/data/xp65/public/apps/med_conda_scripts/$condaenv.d/bin/launcher.sh
 ### Set the path to the cartopy pre existing data
 setenv CARTOPY_DATA_DIR /g/data/xp65/public/apps/cartopy-data
