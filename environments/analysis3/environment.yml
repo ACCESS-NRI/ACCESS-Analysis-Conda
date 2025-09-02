@@ -168,6 +168,7 @@ dependencies:
   - numexpr
   - odc-geo
   - opencv
+  - palettable
   - panel
   - param
   - parcels
