@@ -50,3 +50,5 @@ setenv CARTOPY_DATA_DIR /g/data/xp65/public/apps/cartopy-data
 ### Set configuration for the Rapid Evaluation Framework
 setenv REF_DATASET_CACHE_DIR /scratch/xp65/climate-ref-cache
 setenv REF_CONFIGURATION /g/data/xp65/public/apps/climate-ref
+### Add uqstat 
+prepend-path PATH /g/data/xp65/public/apps/nci_scripts
