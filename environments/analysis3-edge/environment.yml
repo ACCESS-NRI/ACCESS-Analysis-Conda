@@ -5,8 +5,8 @@ channels:
 dependencies:
 # SPEC0 packages
 - python==3.11.*
-- dask==2025.5.*
-- numpy==2.3.*
+- dask==2025.7.*
+- numpy>2.0.*
 - scipy==1.15.*
 - matplotlib>3.9
 - pandas==2.3.*
@@ -25,22 +25,20 @@ dependencies:
 - cmor==3.9.*
 - accessnri::access-nri-intake==1.2.*
 - accessnri::access-py-telemetry==0.1.*
-# - numba needs numpy < 2.0
-#- dask-ml Causing issue for some reasons
-#- datashader requires numpy <2.0
-#- geocat-comp issue with numpy <2. and probably python 3.11
-#- geocat-comp requires numba and numpy < 2.0
-#- icclim requires numba
-#- neutralocean needs numpy < 2.0
+- numba #needs numpy < 2.0
+- dask-ml #Causing issue for some reasons
+- datashader #requires numpy <2.0
+- geocat-comp #requires numba and numpy < 2.0
+- icclim #requires numba
+- neutralocean #needs numpy < 2.0
 #- regional-mom6 needs numpy <2
 #- tensorflow
-#- u8darts-all requires numba
+- u8darts-all requires numba
 #- wavespectra, needs numpy <2
 #- wrf-python needs numpy <2
-#- xarray-spatial needs numpy <2.
+- xarray-spatial #needs numpy <2.
 - aiohttp
 - aiohttp-cors
-- ants
 - anytree
 - arch-py
 - argopy
