@@ -25,18 +25,18 @@ dependencies:
 - cmor==3.9.*
 - accessnri::access-nri-intake==1.2.*
 - accessnri::access-py-telemetry==0.1.*
-- numba #needs numpy < 2.0
-- dask-ml #Causing issue for some reasons
-- datashader #requires numpy <2.0
-- geocat-comp #requires numba and numpy < 2.0
-- icclim #requires numba
-- neutralocean #needs numpy < 2.0
+- numba
+- dask-ml
+- datashader
+- geocat-comp
+- icclim
+- neutralocean
 #- regional-mom6 needs numpy <2
 #- tensorflow
-- u8darts-all requires numba
+- u8darts-all
 #- wavespectra, needs numpy <2
 #- wrf-python needs numpy <2
-- xarray-spatial #needs numpy <2.
+- xarray-spatial
 - aiohttp
 - aiohttp-cors
 - anytree
