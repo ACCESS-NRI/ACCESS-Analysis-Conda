@@ -9,7 +9,7 @@
 
 ### Optional config for custom deploy script
 export VERSION_TO_MODIFY=25.09
-export STABLE_VERSION=25.07
+export STABLE_VERSION=25.08
 export UNSTABLE_VERSION=25.09
 
 ### Version settings

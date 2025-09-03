@@ -255,12 +255,12 @@ dependencies:
   - xwrf
 
   - pip:
-    - lavavu==1.9.5
+    - lavavu==1.9.10
     - railroad-diagrams ### Unlisted dependency of pip and pyparsing 
-    - accessvis==1.1.0
+    - accessvis==1.1.4
     - py360convert
     - numpy-quaternion
-    - climate-ref
+    - climate-ref[aft-providers]
     - pycnv
 
 # Needed for ESMValTool merge
