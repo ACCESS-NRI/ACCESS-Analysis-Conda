@@ -177,7 +177,7 @@ dependencies:
   - pillow
   - pint
   - plotly
-  - polars
+  - polars==1.32.0
   - poppler
   - posix_ipc
   - psutil
