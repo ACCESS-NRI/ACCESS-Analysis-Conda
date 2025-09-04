@@ -261,7 +261,6 @@ dependencies:
     - accessvis==1.1.4
     - py360convert
     - numpy-quaternion
-    - climate-ref[aft-providers]
     - pycnv
 
 # Needed for ESMValTool merge
