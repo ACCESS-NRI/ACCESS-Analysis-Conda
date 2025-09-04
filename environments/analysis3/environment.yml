@@ -170,6 +170,7 @@ dependencies:
   - opencv
   - palettable
   - panel
+  - papermill
   - param
   - parcels
   - pdbufr
