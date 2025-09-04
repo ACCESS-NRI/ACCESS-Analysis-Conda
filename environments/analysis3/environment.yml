@@ -255,6 +255,7 @@ dependencies:
   - xwrf
 
   - pip:
+    - numpy==1.26.* # Explicitly pin for pip to avoid overriding 
     - lavavu==1.9.10
     - lavavu-osmesa==1.9.10
     - railroad-diagrams ### Unlisted dependency of pip and pyparsing 
