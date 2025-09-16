@@ -14,7 +14,7 @@ dependencies:
   - scikit-learn==1.7.*
   - xarray==2025.6.*
   - ipython<9.0 # See ESMValTool
-  - zarr<3.0 # Intake-ESM limitation
+  - zarr>=3.1.0
   - iris==3.12.*
   - netcdf4==1.7.*
   - libnetcdf=*=mpi_openmpi*
