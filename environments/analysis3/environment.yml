@@ -24,6 +24,7 @@ dependencies:
   - jupyterlab==4.4.*
   - cmor==3.9.*
   - accessnri::access-nri-intake==1.3.0
+  - accessnri::intake-esm-access==2025.9.18
   - accessnri::access-py-telemetry==0.1.9
   - accessnri::access-intake-utils==0.1.7
   - conda-forge::intake-dataframe-catalog==0.4.0
@@ -119,7 +120,6 @@ dependencies:
   - icclim
   - ilamb==2.7.2
   - intake
-  - intake-esm==2025.7.9
   - ipdb
   - ipympl
   - ipynbname
