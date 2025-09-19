@@ -79,6 +79,8 @@ function write_modulerc() {
     env_name="${3}"
     module_path="${4}"
     module_name="${5}"
+    stable_aliases="${6:-${env_name}}"  # Default to env_name if not provided
+    unstable_aliases="${7:-${env_name}-unstable}"  # Default to env_name-unstable if not provided
 
     modulerc_file="${module_path}/.modulerc"
 
@@ -87,16 +89,37 @@ function write_modulerc() {
         touch "${modulerc_file}"
     fi
 
-    # Remove lines containing the specified module_name
+    # Remove existing entries that have the same aliases as what we're about to add
+    # This approach removes old versions of the same environment based on aliases, not version numbers
     temp_file=$(mktemp)
-    grep -v "module-version ${module_name}/" "${modulerc_file}" > "${temp_file}"
+    
+    # For each alias in stable_aliases, remove lines that end with that alias pattern
+    cp "${modulerc_file}" "${temp_file}"
+    
+    # Split stable_aliases on spaces and remove lines for each alias
+    for alias in ${stable_aliases}; do
+        # Remove lines that contain this exact alias (word boundary matching)
+        grep -v -E "module-version ${module_name}/[^ ]+ .*\b${alias}\b" "${temp_file}" > "${temp_file}.tmp"
+        mv "${temp_file}.tmp" "${temp_file}"
+    done
+    
+    # If we have unstable version, also remove its aliases
+    if [[ -n "${unstable}" ]]; then
+        for alias in ${unstable_aliases}; do
+            grep -v -E "module-version ${module_name}/[^ ]+ .*\b${alias}\b" "${temp_file}" > "${temp_file}.tmp"
+            mv "${temp_file}.tmp" "${temp_file}"
+        done
+    fi
+    
     mv "${temp_file}" "${modulerc_file}"
 
-    # Append the new module_version lines
-    cat <<EOF >> "${modulerc_file}"
-module-version ${module_name}/${stable} access-med ${env_name}
-module-version ${module_name}/${unstable} ${env_name}-unstable
-EOF
+    # Add the new stable version entry
+    echo "module-version ${module_name}/${stable} ${stable_aliases}" >> "${modulerc_file}"
+    
+    # Add unstable version entry only if unstable version is provided
+    if [[ -n "${unstable}" ]]; then
+        echo "module-version ${module_name}/${unstable} ${unstable_aliases}" >> "${modulerc_file}"
+    fi
 
     set_apps_perms "${modulerc_file}"
 }

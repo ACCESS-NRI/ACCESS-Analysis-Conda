@@ -4,9 +4,9 @@ NEXT_STABLE="${ENVIRONMENT}-${STABLE_VERSION}"
 CURRENT_UNSTABLE=$( get_aliased_module "${MODULE_NAME}"/analysis3-unstable "${CONDA_MODULE_PATH}" )
 NEXT_UNSTABLE="${ENVIRONMENT}-${UNSTABLE_VERSION}"
 
-# Define the aliases for analysis3
-STABLE_ALIASES="analysis3 esmvaltool ilamb"
-UNSTABLE_ALIASES="analysis3-unstable"
+# Define the aliases for benchcab
+STABLE_ALIASES="benchcab"
+UNSTABLE_ALIASES="benchcab-unstable"
 
 # Check if this is a new unstable version being created for the first time
 if [[ -z "${CURRENT_UNSTABLE}" ]] && [[ "${NEXT_UNSTABLE}" != "${NEXT_STABLE}" ]]; then
