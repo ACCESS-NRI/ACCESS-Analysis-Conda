@@ -12,9 +12,9 @@ dependencies:
 - pandas==2.3.*
 - scikit-image==0.25.*
 - scikit-learn==1.7.*
-- xarray==2025.6.*
+- xarray==2025.7.*
 - ipython<9.0
-- zarr<3.0
+- zarr>3.0
 - iris==3.12.*
 - netcdf4==1.7.*
 - libnetcdf=*=mpi_openmpi*
