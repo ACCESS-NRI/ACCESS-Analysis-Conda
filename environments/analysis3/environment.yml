@@ -234,6 +234,7 @@ dependencies:
   - ultraplot
   - ujson
   - vtk
+  - virtualizarr
   - watchdog
   - watermark
   - wavespectra
