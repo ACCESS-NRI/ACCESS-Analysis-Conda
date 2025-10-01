@@ -241,7 +241,7 @@ dependencies:
   - webcolors
   - windspharm
   - wradlib
-  - wrf-python
+  - conda-forge::wrf-python
   - xarray-spatial
   - xarraymannkendall
   - xcdat
