@@ -23,8 +23,9 @@ dependencies:
   - hdf5=1.14.*=mpi_openmpi* # issues with version 1.14.3, version 1.14.4 not available for openmpi < 5.0
   - jupyterlab==4.3.2
   - cmor==3.9.*
-  - accessnri::access-nri-intake==1.4.0
+  - accessnri::access-nri-intake==1.4.1
   - accessnri::intake-esm-access==2025.9.18
+  - accessnri::ecgtools>=2025.10.7
   - accessnri::access-py-telemetry==0.1.9
   - accessnri::access-intake-utils==0.1.7
   - conda-forge::intake-dataframe-catalog==0.4.0
