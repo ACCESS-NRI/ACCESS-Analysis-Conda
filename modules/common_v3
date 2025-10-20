@@ -41,13 +41,6 @@ setenv CONDA_EXE $prefix/$package/bin/micromamba
 
 ### Set Python path for Dask PBSCluster
 setenv DASK_JOBQUEUE__PBS__PYTHON /g/data/xp65/public/apps/med_conda_scripts/$condaenv.d/bin/python
-### And some other related dask stuff - increase default chunk size to 300MiB
-setenv DASK_ARRAY__CHUNK_SIZE 300MiB
-### One thread per worker - segfault issues
-setenv DASK_DISTRIBUTED__WORKER_THREADS_PER_WORKER 1
-### Disable memory limit for workers - see https://coecms.github.io/posts/2023-09-20-dask-optimiser.html#removed-memory-worker-limit
-setenv DASK_DISTRIBUTED__WORKER__MEMORY__LIMIT None
-
 
 ### Set the path to the benchcab utility
 setenv BENCHCAB_PATH /g/data/xp65/public/apps/med_conda_scripts/$condaenv.d/bin/benchcab
