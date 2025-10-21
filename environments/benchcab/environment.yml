@@ -6,5 +6,5 @@ channels:
 dependencies:
 # Note: the pinned benchcab version should match the BENCHCAB_VERSION
 # environment variable in environments/benchcab/config.sh:
-- accessnri::benchcab==4.2.4
+- accessnri::benchcab==4.3.0
 - accessnri::payu>=1.1.7
