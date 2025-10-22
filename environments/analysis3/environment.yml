@@ -95,7 +95,7 @@ dependencies:
   - erddapy
   - esmf
   - esmpy
-  - esmvalcore
+  - esmvalcore==2.13.*
   - f90nml
   - ffmpeg
   - filelock
@@ -266,7 +266,7 @@ dependencies:
     - pycnv
 
 # Needed for ESMValTool merge
-  - esmvaltool==2.12.*
+  - esmvaltool==2.13.*
   - cdsapi
   - curl<8.10
   - importlib_metadata<8 # https://github.com/ESMValGroup/ESMValTool/issues/3699 only for Python 3.10/11 and esmpy<8.6
