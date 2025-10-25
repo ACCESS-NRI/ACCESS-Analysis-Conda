@@ -30,7 +30,7 @@ dependencies:
   - accessnri::access-intake-utils==0.1.7
   - conda-forge::intake-dataframe-catalog==0.4.0
   - accessnri::yamanifest>=0.3.12
-  - accessnri::access-med-tools==0.1.21
+  - accessnri::access-med-tools==0.1.23
   - accessnri::access-mopper==2.3.0a24
   - accessnri::mule
   - accessnri::um-packing
