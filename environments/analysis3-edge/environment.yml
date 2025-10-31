@@ -5,17 +5,17 @@ channels:
 dependencies:
 # SPEC0 packages
 - python==3.11.*
-- dask==2025.9.*
+- dask==2025.10.*
 - numpy>=2.0
 - scipy==1.15.*
-- matplotlib>3.9
+- matplotlib>3.10
 - pandas==2.3.*
 - scikit-image==0.25.*
 - scikit-learn==1.7.*
-- xarray==2025.9.*
+- xarray==2025.10.1
 - ipython<9.0
 - zarr>3.0
-- iris==3.12.*
+- iris==3.13.*
 - netcdf4==1.7.*
 - libnetcdf=*=mpi_openmpi*
 - openmpi==5.0.5
