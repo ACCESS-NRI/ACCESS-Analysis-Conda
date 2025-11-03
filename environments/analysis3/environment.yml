@@ -167,6 +167,7 @@ dependencies:
   - notebook==7.3.0
   - numba
   - numexpr
+  - nvidia-ml-py
   - odc-geo
   - opencv
   - palettable
