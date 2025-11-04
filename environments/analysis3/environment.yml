@@ -119,7 +119,7 @@ dependencies:
   - hupper
   - hvplot
   - icclim
-  - ilamb==2.7.2
+  - ilamb==2.7.4
   - intake
   - ipdb
   - ipympl
