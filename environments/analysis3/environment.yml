@@ -28,7 +28,7 @@ dependencies:
   - accessnri::ecgtools-access>=2025.10.7
   - accessnri::access-py-telemetry==0.1.10
   - accessnri::access-intake-utils==0.1.7
-  - conda-forge::intake-dataframe-catalog==0.4.0
+  - conda-forge::intake-dataframe-catalog==0.5.0
   - accessnri::yamanifest>=0.3.12
   - accessnri::access-med-tools==0.1.23
   - accessnri::access-moppy==1.0.0a4
