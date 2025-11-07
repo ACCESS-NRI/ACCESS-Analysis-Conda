@@ -217,3 +217,6 @@ dependencies:
 - xrft
 - xskillscore
 - xwrf
+
+- pip:
+  - git+https://github.com/rubisco-sfa/ilamb3@v2025.9.9
