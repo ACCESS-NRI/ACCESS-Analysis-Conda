@@ -153,6 +153,7 @@ dependencies:
   - moderngl
   - mpi4py
   - mpl-scatter-density
+  - mplotutils
   - mplleaflet
   - mscorefonts
   - nbdime
