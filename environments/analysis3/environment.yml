@@ -165,7 +165,7 @@ dependencies:
   - neutralocean
   - ninja
   - nodejs
-  - notebook==7.3.0
+  - notebook==7.5.0
   - numba
   - numexpr
   - nvidia-ml-py
