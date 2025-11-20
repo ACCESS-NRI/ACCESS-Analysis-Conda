@@ -4,9 +4,9 @@ channels:
   - conda-forge
   - nodefaults
 dependencies:
-  - python==3.11.*
+  - python==3.12.*
   - dask==2025.10.*
-  - numpy==1.26.*
+  - numpy>=2.0
   - scipy==1.16.*
   - matplotlib>=3.10.*
   - pandas==2.3.*
@@ -243,7 +243,6 @@ dependencies:
   - webcolors
   - windspharm
   - wradlib
-  - wrf-python
   - xarray-spatial
   - xarraymannkendall
   - xcdat
