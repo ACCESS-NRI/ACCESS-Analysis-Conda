@@ -4,9 +4,9 @@ channels:
   - conda-forge
   - nodefaults
 dependencies:
-  - python==3.11.*
+  - python==3.12.*
   - dask==2025.10.*
-  - numpy==1.26.*
+  - numpy>2.0
   - scipy==1.16.*
   - matplotlib>=3.10.*
   - pandas==2.3.*
@@ -18,11 +18,10 @@ dependencies:
   - iris==3.13.*
   - netcdf4==1.7.*
   - libnetcdf=*=mpi_openmpi*
-  - openmpi==4.1.6
+  - openmpi>=5
   - pip=25.*
-  - hdf5=1.14.*=mpi_openmpi* # issues with version 1.14.3, version 1.14.4 not available for openmpi < 5.0
+  - hdf5=*=mpi_openmpi*
   - jupyterlab==4.5.0
-  - cmor==3.9.*
   - accessnri::access-nri-intake==1.4.1
   - accessnri::intake-esm-access==2025.9.18
   - accessnri::ecgtools-access>=2025.10.7
@@ -31,18 +30,18 @@ dependencies:
   - conda-forge::intake-dataframe-catalog==0.5.0
   - accessnri::yamanifest>=0.3.12
   - accessnri::access-med-tools==0.1.23
-  - accessnri::access-moppy==1.0.0a4
-  - accessnri::mule
-  - accessnri::um-packing
-  - accessnri::mule-utils
-  - accessnri::mule-base
-  - accessnri::um-spiral-search
-  - accessnri::um-ppibm
+#  - accessnri::access-moppy==1.0.0a4
+#  - accessnri::mule
+#  - accessnri::um-packing
+#  - accessnri::mule-utils
+#  - accessnri::mule-base
+# - accessnri::um-spiral-search need numpy <2
+#  - accessnri::um-ppibm
   - accessnri::shumlib
   - aiohttp
   - aiohttp-cors
   - anytree
-  - arch-py
+#  - arch-py
   - argopy
   - arm_pyart
   - astropy
@@ -72,7 +71,6 @@ dependencies:
   - conda-build
   - conda-lock
   - conda-tree
-  - conda-verify
   - crick
   - cupy
   - cvxpy
@@ -180,7 +178,7 @@ dependencies:
   - pillow
   - pint
   - plotly
-  - polars==1.32.0
+#  - polars==1.32.0
   - poppler
   - posix_ipc
   - psutil
@@ -188,126 +186,126 @@ dependencies:
   - pyarrow
   - pydantic
   - pydap
-  - pyextremes
-  - pygam
-  - pygamma_n
-  - pygrib
-  - pygmt
-  - pyhdf
-  - pylint
-  - pymannkendall
-  - pysal
-  - pyshp
-  - pysteps
-  - pytables
-  - pytest
-  - pytest-cov
-  - pytest-subtests
-  - python-eccodes
-  - python-graphviz
-  - python-magic
-  - python-stratify
-  - rasterio
-  - rasterstats
-  - rechunker
-  - regional-mom6>=1.0.0
-  - regionmask
-  - rioxarray
-  - ruff
-  - s3fs
-  - satpy
-  - scores
-  - seaborn
-  - sh
-  - sharppy
-  - shellcheck
-  - siphon
-  - spyder-kernels
-  - sqlalchemy
-  - statsmodels
-  - sympy
-  - tensorflow
-  - timezonefinder
-  - tintx
-  - tqdm
-  - twine
-  - u8darts-all
-  - rapidsai::ucx-py
-  - ucx==1.15.0
-  - ultraplot
-  - ujson
-  - vtk
-  - watchdog
-  - watermark
-  - wavespectra
-  - webcolors
-  - windspharm
-  - wradlib
-  - wrf-python
-  - xarray-spatial
-  - xarraymannkendall
-  - xcdat
-  - xclim
-  - xesmf
-  - xgcm
-  - xhistogram
-  - xmip
-  - xmitgcm
-  - xmovie
-  - xrft
-  - xskillscore
-  - xwrf
-
-  - pip:
-    - lavavu==1.9.10
-    - lavavu-osmesa==1.9.10
-    - railroad-diagrams ### Unlisted dependency of pip and pyparsing 
-    - accessvis==1.1.4
-    - py360convert
-    - numpy-quaternion
-    - pycnv
-
-# Needed for ESMValTool merge
-  - esmvaltool==2.13.*
-  - cdsapi
-  - curl<8.10
-  - importlib_metadata<8 # https://github.com/ESMValGroup/ESMValTool/issues/3699 only for Python 3.10/11 and esmpy<8.6
-  - lime
-  - mapgenerator>=1.0.5
-  - natsort
-  - openpyxl
-  - psyplot>=1.5.0
-  - psy-maps>=1.5.0
-  - psy-reg>=1.5.0
-  - psy-simple>=1.5.0
-  - pys2index
-  - python-cdo
-  - seawater
-  - flake8
-  - pytest-env
-  - pytest-html
-  - pytest-metadata
-  - pytest-mock
-  - pytest-xdist
-
-# For documentation
-  - autodocsumm>=0.2.2
-  - nbsphinx
-  - pydata-sphinx-theme
-  - codespell==2.3.0
-  - docformatter==1.7.5
-  - imagehash
-  - isort==5.13.2
-  - pre-commit
-  - prospector>=1.12
-  - pyroma
-  - yamllint==1.35.1
-  - yapf
-# NCL and dependencies
-  - ncl
-  - imagemagick
-  - nco
-
+#  - pyextremes
+#  - pygam
+#  - pygamma_n
+#  - pygrib
+#  - pygmt
+#  - pyhdf
+#  - pylint
+#  - pymannkendall
+#  - pysal
+#  - pyshp
+#  - pysteps
+#  - pytables
+#  - pytest
+#  - pytest-cov
+#  - pytest-subtests
+#  - python-eccodes
+#  - python-graphviz
+#  - python-magic
+#  - python-stratify
+#  - rasterio
+#  - rasterstats
+#  - rechunker
+##  - regional-mom6>=1.0.0
+#  - regionmask
+#  - rioxarray
+#  - ruff
+#  - s3fs
+#  - satpy
+#  - scores
+#  - seaborn
+#  - sh
+#  - sharppy
+#  - shellcheck
+#  - siphon
+#  - spyder-kernels
+#  - sqlalchemy
+#  - statsmodels
+#  - sympy
+#  - tensorflow
+#  - timezonefinder
+#  - tintx
+#  - tqdm
+#  - twine
+#  - u8darts-all
+#  - rapidsai::ucx-py
+#  - ucx==1.15.0
+#  - ultraplot
+#  - ujson
+#  - vtk
+#  - watchdog
+#  - watermark
+#  - wavespectra
+#  - webcolors
+#  - windspharm
+#  - wradlib
+#  - wrf-python
+#  - xarray-spatial
+#  - xarraymannkendall
+#  - xcdat
+#  - xclim
+#  - xesmf
+#  - xgcm
+#  - xhistogram
+#  - xmip
+#  - xmitgcm
+#  - xmovie
+#  - xrft
+#  - xskillscore
+#  - xwrf
+#
+#  - pip:
+#    - lavavu==1.9.10
+#    - lavavu-osmesa==1.9.10
+#    - railroad-diagrams ### Unlisted dependency of pip and pyparsing 
+#    - accessvis==1.1.4
+#    - py360convert
+#    - numpy-quaternion
+#    - pycnv
+#
+## Needed for ESMValTool merge
+#  - esmvaltool==2.13.*
+#  - cdsapi
+#  - curl<8.10
+#  - importlib_metadata<8 # https://github.com/ESMValGroup/ESMValTool/issues/3699 only for Python 3.10/11 and esmpy<8.6
+#  - lime
+#  - mapgenerator>=1.0.5
+#  - natsort
+#  - openpyxl
+#  - psyplot>=1.5.0
+#  - psy-maps>=1.5.0
+#  - psy-reg>=1.5.0
+#  - psy-simple>=1.5.0
+#  - pys2index
+#  - python-cdo
+#  - seawater
+#  - flake8
+#  - pytest-env
+#  - pytest-html
+#  - pytest-metadata
+#  - pytest-mock
+#  - pytest-xdist
+#
+## For documentation
+#  - autodocsumm>=0.2.2
+#  - nbsphinx
+#  - pydata-sphinx-theme
+#  - codespell==2.3.0
+#  - docformatter==1.7.5
+#  - imagehash
+#  - isort==5.13.2
+#  - pre-commit
+#  - prospector>=1.12
+#  - pyroma
+#  - yamllint==1.35.1
+#  - yapf
+## NCL and dependencies
+#  - ncl
+#  - imagemagick
+#  - nco
+#
 # R and dependencies
   - cdo
   - r-base>=3.5,<4.3.0 # https://github.com/ESMValGroup/ESMValTool/pull/3924
