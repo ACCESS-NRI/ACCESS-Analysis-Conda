@@ -287,7 +287,7 @@ dependencies:
 #  - pytest-metadata
 #  - pytest-mock
 #  - pytest-xdist
-#
+
 # For documentation
   - autodocsumm>=0.2.2
   - nbsphinx
@@ -301,11 +301,10 @@ dependencies:
   - pyroma
   - yamllint==1.35.1
   - yapf
-## NCL and dependencies
-#  - ncl
-#  - imagemagick
-#  - nco
-#
+# NCL and dependencies
+  - ncl
+  - imagemagick
+  - nco
 # R and dependencies
   - cdo
   - r-base>=3.5,<4.3.0 # https://github.com/ESMValGroup/ESMValTool/pull/3924
