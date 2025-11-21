@@ -54,7 +54,7 @@ dependencies:
   - bottleneck
   - branca
   - cartopy
-  - cdo
+  - cdo >2.3.0
   - celluloid
   - cf-python
   - cf-units
@@ -266,17 +266,13 @@ dependencies:
 #    - pycnv
 #
 ## Needed for ESMValTool merge
-#  - esmvaltool==2.13.*
-#  - cdsapi
-#  - lime
-#  - mapgenerator>=1.0.5
-#  - natsort
-#  - openpyxl
-#  - psyplot>=1.5.0
-#  - psy-maps>=1.5.0
-#  - psy-reg>=1.5.0
-#  - psy-simple>=1.5.0
-#  - pys2index
+  - esmvaltool==2.13.*
+  - cdsapi
+  - lime
+  - mapgenerator>=1.0.5
+  - natsort
+  - openpyxl
+  - pys2index # only from conda-forge
   - python-cdo
   - seawater
   - flake8
