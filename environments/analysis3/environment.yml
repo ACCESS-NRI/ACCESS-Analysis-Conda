@@ -288,19 +288,19 @@ dependencies:
 #  - pytest-mock
 #  - pytest-xdist
 #
-## For documentation
-#  - autodocsumm>=0.2.2
-#  - nbsphinx
-#  - pydata-sphinx-theme
-#  - codespell==2.3.0
-#  - docformatter==1.7.5
-#  - imagehash
-#  - isort==5.13.2
-#  - pre-commit
-#  - prospector>=1.12
-#  - pyroma
-#  - yamllint==1.35.1
-#  - yapf
+# For documentation
+  - autodocsumm>=0.2.2
+  - nbsphinx
+  - pydata-sphinx-theme
+  - codespell==2.3.0
+  - docformatter==1.7.5
+  - imagehash
+  - isort==5.13.2
+  - pre-commit
+  - prospector>=1.12
+  - pyroma
+  - yamllint==1.35.1
+  - yapf
 ## NCL and dependencies
 #  - ncl
 #  - imagemagick
