@@ -72,7 +72,6 @@ dependencies:
   - conda-build
   - conda-lock
   - conda-tree
-  - conda-verify
   - crick
   - cupy
   - cvxpy
