@@ -157,6 +157,7 @@ dependencies:
   - mscorefonts
   - nbdime
   - nb_conda_kernels
+  - nbval
   - nc-time-axis
   - ncdata
   - ncdu
@@ -258,15 +259,15 @@ dependencies:
   - xwrf
 
   - pip:
-    - lavavu==1.9.10
-    - lavavu-osmesa==1.9.10
-    - railroad-diagrams ### Unlisted dependency of pip and pyparsing 
-    - accessvis==1.1.4
-    - py360convert
-    - numpy-quaternion
-    - pycnv
+      - lavavu==1.9.10
+      - lavavu-osmesa==1.9.10
+      - railroad-diagrams ### Unlisted dependency of pip and pyparsing
+      - accessvis==1.1.4
+      - py360convert
+      - numpy-quaternion
+      - pycnv
 
-# Needed for ESMValTool merge
+  # Needed for ESMValTool merge
   - esmvaltool==2.13.*
   - cdsapi
   - curl<8.10
@@ -289,7 +290,7 @@ dependencies:
   - pytest-mock
   - pytest-xdist
 
-# For documentation
+  # For documentation
   - autodocsumm>=0.2.2
   - nbsphinx
   - pydata-sphinx-theme
@@ -302,12 +303,12 @@ dependencies:
   - pyroma
   - yamllint==1.35.1
   - yapf
-# NCL and dependencies
+  # NCL and dependencies
   - ncl
   - imagemagick
   - nco
 
-# R and dependencies
+  # R and dependencies
   - cdo
   - r-base>=3.5,<4.3.0 # https://github.com/ESMValGroup/ESMValTool/pull/3924
   - r-abind
@@ -334,7 +335,7 @@ dependencies:
   - r-spei
   - r-udunits2
   - r-yaml
-# R packages needed for development
+  # R packages needed for development
   - r-git2r # dependency of lintr
   - r-lintr==3.1.2
   - r-styler==1.10.3
