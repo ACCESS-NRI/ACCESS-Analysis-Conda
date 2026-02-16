@@ -228,19 +228,19 @@ dependencies:
   - timezonefinder
   - tintx
   - tqdm
-#  - twine
-#  - u8darts-all
+  - twine
+  - u8darts-all
 #  - rapidsai::ucx-py
 #  - ucx==1.15.0
-#  - ultraplot
-#  - ujson
-#  - vtk
-#  - watchdog
-#  - watermark
-#  - wavespectra
-#  - webcolors
+  - ultraplot
+  - ujson
+  - vtk
+  - watchdog
+  - watermark
+  - wavespectra
+  - webcolors
 #  - windspharm
-#  - wradlib
+  - wradlib
 #  - wrf-python
 #  - xarray-spatial
 #  - xarraymannkendall
