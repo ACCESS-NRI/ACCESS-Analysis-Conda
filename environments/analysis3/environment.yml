@@ -242,10 +242,10 @@ dependencies:
 #  - windspharm
   - wradlib
 #  - wrf-python
-#  - xarray-spatial
-#  - xarraymannkendall
-#  - xcdat
-#  - xclim
+  - xarray-spatial
+  - xarraymannkendall
+  - xcdat
+  - xclim
   - xesmf
   - xgcm
   - xhistogram
