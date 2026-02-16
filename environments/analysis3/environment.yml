@@ -41,7 +41,7 @@ dependencies:
   - aiohttp
   - aiohttp-cors
   - anytree
-#  - arch-py
+  - arch-py
   - argopy
   - arm_pyart
   - astropy
