@@ -247,14 +247,14 @@ dependencies:
 #  - xcdat
 #  - xclim
   - xesmf
-#  - xgcm
-#  - xhistogram
-#  - xmip
-#  - xmitgcm
-#  - xmovie
-#  - xrft
-#  - xskillscore
-#  - xwrf
+  - xgcm
+  - xhistogram
+  - xmip
+  - xmitgcm
+  - xmovie
+  - xrft
+  - xskillscore
+  - xwrf
 #
 #  - pip:
 #    - lavavu==1.9.10
