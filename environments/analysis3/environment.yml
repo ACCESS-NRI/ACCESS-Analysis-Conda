@@ -187,11 +187,11 @@ dependencies:
   - pydantic
   - pydap
 #  - pyextremes
-#  - pygam
-#  - pygamma_n
-#  - pygrib
-#  - pygmt
-#  - pyhdf
+  - pygam
+  - pygamma_n
+  - pygrib
+  - pygmt
+  - pyhdf
   - pylint
 #  - pymannkendall
 #  - pysal
