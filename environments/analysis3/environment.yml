@@ -206,14 +206,14 @@ dependencies:
   - python-magic
   - python-stratify
   - rasterio
-#  - rasterstats
-#  - rechunker
+  - rasterstats
+  - rechunker
 ##  - regional-mom6>=1.0.0
 #  - regionmask
-#  - rioxarray
+  - rioxarray
   - ruff
-#  - s3fs
-#  - satpy
+  - s3fs
+  - satpy
   - scores
   - seaborn
   - sh
