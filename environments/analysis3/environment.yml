@@ -186,7 +186,7 @@ dependencies:
   - pyarrow
   - pydantic
   - pydap
-#  - pyextremes
+  - pyextremes
   - pygam
   - pygamma_n
   - pygrib
