@@ -214,12 +214,12 @@ dependencies:
   - ruff
 #  - s3fs
 #  - satpy
-#  - scores
-#  - seaborn
-#  - sh
-#  - sharppy
-#  - shellcheck
-#  - siphon
+  - scores
+  - seaborn
+  - sh
+##  - sharppy # can't install for python 3.12
+  - shellcheck
+  - siphon
 #  - spyder-kernels
 #  - sqlalchemy
 #  - statsmodels
