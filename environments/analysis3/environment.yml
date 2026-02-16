@@ -193,18 +193,18 @@ dependencies:
   - pygmt
   - pyhdf
   - pylint
-#  - pymannkendall
-#  - pysal
+  - pymannkendall
+  - pysal
   - pyshp
-#  - pysteps
-#  - pytables
+  - pysteps
+  - pytables
   - pytest
   - pytest-cov
   - pytest-subtests
   - python-eccodes
   - python-graphviz
-#  - python-magic
-#  - python-stratify
+  - python-magic
+  - python-stratify
   - rasterio
 #  - rasterstats
 #  - rechunker
