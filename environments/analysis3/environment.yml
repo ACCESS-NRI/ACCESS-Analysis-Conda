@@ -209,7 +209,7 @@ dependencies:
   - rasterstats
   - rechunker
 ##  - regional-mom6>=1.0.0
-#  - regionmask
+  - regionmask
   - rioxarray
   - ruff
   - s3fs
@@ -239,9 +239,9 @@ dependencies:
   - watermark
   - wavespectra
   - webcolors
-#  - windspharm
+  - windspharm
   - wradlib
-#  - wrf-python
+  - wrf-python
   - xarray-spatial
   - xarraymannkendall
   - xcdat
