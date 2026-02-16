@@ -13,7 +13,7 @@ dependencies:
   - scikit-image==0.25.*
   - scikit-learn==1.7.*
   - xarray==2025.10.1
-  - ipython<9.0 # See ESMValTool
+  - ipython
   - zarr>=3.1.0
   - iris==3.13.*
   - netcdf4==1.7.*
