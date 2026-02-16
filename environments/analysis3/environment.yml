@@ -220,13 +220,13 @@ dependencies:
 ##  - sharppy # can't install for python 3.12
   - shellcheck
   - siphon
-#  - spyder-kernels
-#  - sqlalchemy
-#  - statsmodels
-#  - sympy
-#  - tensorflow
-#  - timezonefinder
-#  - tintx
+  - spyder-kernels
+  - sqlalchemy
+  - statsmodels
+  - sympy
+  - tensorflow
+  - timezonefinder
+  - tintx
   - tqdm
 #  - twine
 #  - u8darts-all
