@@ -178,7 +178,7 @@ dependencies:
   - pillow
   - pint
   - plotly
-  - polars==1.32.0
+  - polars
   - poppler
   - posix_ipc
   - psutil
@@ -255,16 +255,16 @@ dependencies:
   - xrft
   - xskillscore
   - xwrf
-#
-#  - pip:
-#    - lavavu==1.9.10
-#    - lavavu-osmesa==1.9.10
-#    - railroad-diagrams ### Unlisted dependency of pip and pyparsing 
-#    - accessvis==1.1.4
-#    - py360convert
-#    - numpy-quaternion
-#    - pycnv
-#
+
+  - pip:
+    - lavavu==1.9.10
+    - lavavu-osmesa==1.9.10
+    - railroad-diagrams ### Unlisted dependency of pip and pyparsing 
+    - accessvis==1.1.4
+    - py360convert
+    - numpy-quaternion
+    - pycnv
+
 ## Needed for ESMValTool merge
   - esmvaltool==2.13.*
   - cdsapi
