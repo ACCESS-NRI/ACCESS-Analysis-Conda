@@ -230,8 +230,8 @@ dependencies:
   - tqdm
   - twine
   - u8darts-all
-#  - rapidsai::ucx-py
-#  - ucx==1.15.0
+  - rapidsai::ucx-py
+  - ucx==1.18.1
   - ultraplot
   - ujson
   - vtk
