@@ -26,7 +26,7 @@ export PYTHONNOUSERSITE=true
 export CONTAINER_PATH="${SCRIPT_DIR}"/../container/base.sif
 export SINGULARITY_BINARY_PATH="/opt/singularity/bin/singularity"
 
-declare -a bind_dirs=( "/etc" "/half-root" "/local" "/ram" "/run" "/system" "/usr" "/var/lib/sss" "/var/lib/rpm" "/var/run/munge" "/sys/fs/cgroup" "/iointensive" )
+declare -a bind_dirs=( "/etc" "/half-root" "/local" "/ram" "/run" "/system" "/usr" "/var/lib/sss" "/var/lib/rpm" "/var/run/munge" "/sys/fs/cgroup" "/iointensive" "/opt/mellanox" )
 
 if [[ "${CONDA_ENVIRONMENT}" ]]; then
     if [[ -e "${SCRIPT_DIR}"/../environments/"${CONDA_ENVIRONMENT}"/config.sh  ]]; then
