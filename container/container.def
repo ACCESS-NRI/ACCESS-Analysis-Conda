@@ -40,16 +40,8 @@ Bootstrap: scratch
         mkdir -p ${SINGULARITY_ROOTFS}/var/lib/sss
         mkdir -p ${SINGULARITY_ROOTFS}/var/run/munge
 
-        mkdir -p ${SINGULARITY_ROOTFS}/opt/conda/analysis3-24.12
-        mkdir -p ${SINGULARITY_ROOTFS}/opt/conda/analysis3-25.01
-        mkdir -p ${SINGULARITY_ROOTFS}/opt/conda/analysis3-25.02
-        mkdir -p ${SINGULARITY_ROOTFS}/opt/conda/analysis3-25.03
-        mkdir -p ${SINGULARITY_ROOTFS}/opt/conda/analysis3-25.04
-        mkdir -p ${SINGULARITY_ROOTFS}/opt/conda/analysis3_edge=25.03
-        mkdir -p ${SINGULARITY_ROOTFS}/opt/conda/analysis3_edge=25.04
-        mkdir -p ${SINGULARITY_ROOTFS}/opt/conda/access-med-0.12
-        mkdir -p ${SINGULARITY_ROOTFS}/opt/conda/esmvaltool-0.5
-        mkdir -p ${SINGULARITY_ROOTFS}/opt/conda/accessvis-0.4
+        ### Generic conda environments mount point
+        mkdir -p ${SINGULARITY_ROOTFS}/opt/conda
 
 %runscript
         /usr/bin/bash -l
