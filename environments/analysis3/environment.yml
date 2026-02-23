@@ -19,7 +19,7 @@ dependencies:
   - netcdf4==1.7.*
   - libnetcdf=*=mpi_openmpi*
   - openmpi==4.1.6
-  - pip=25.*
+  - pip=26.*
   - hdf5=1.14.*=mpi_openmpi* # issues with version 1.14.3, version 1.14.4 not available for openmpi < 5.0
   - jupyterlab==4.5.0
   - cmor==3.9.*

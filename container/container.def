@@ -18,7 +18,6 @@ Bootstrap: scratch
         ln -s ../half-root/opt/gdrcopy ${SINGULARITY_ROOTFS}/opt/gdrcopy
         ln -s ../half-root/opt/intel ${SINGULARITY_ROOTFS}/opt/intel
         ln -s ../half-root/opt/knem-1.1.4.90mlnx1 ${SINGULARITY_ROOTFS}/opt/knem-1.1.4.90mlnx1
-        ln -s ../half-root/opt/mellanox ${SINGULARITY_ROOTFS}/opt/mellanox
         ln -s ../half-root/opt/pbs ${SINGULARITY_ROOTFS}/opt/pbs
         ln -s ../half-root/opt/rash ${SINGULARITY_ROOTFS}/opt/rash
         ln -s ../half-root/opt/rh ${SINGULARITY_ROOTFS}/opt/rh
@@ -34,20 +33,15 @@ Bootstrap: scratch
         mkdir -p ${SINGULARITY_ROOTFS}/sys/fs/cgroup
         mkdir -p ${SINGULARITY_ROOTFS}/iointensive
 
+        ### Mount point for Mellanox libraries
+        mkdir -p ${SINGULARITY_ROOTFS}/opt/mellanox
+
         ### Mount points for service sockets
         mkdir -p ${SINGULARITY_ROOTFS}/var/lib/sss
         mkdir -p ${SINGULARITY_ROOTFS}/var/run/munge
 
-        mkdir -p ${SINGULARITY_ROOTFS}/opt/conda/analysis3-24.12
-        mkdir -p ${SINGULARITY_ROOTFS}/opt/conda/analysis3-25.01
-        mkdir -p ${SINGULARITY_ROOTFS}/opt/conda/analysis3-25.02
-        mkdir -p ${SINGULARITY_ROOTFS}/opt/conda/analysis3-25.03
-        mkdir -p ${SINGULARITY_ROOTFS}/opt/conda/analysis3-25.04
-        mkdir -p ${SINGULARITY_ROOTFS}/opt/conda/analysis3_edge=25.03
-        mkdir -p ${SINGULARITY_ROOTFS}/opt/conda/analysis3_edge=25.04
-        mkdir -p ${SINGULARITY_ROOTFS}/opt/conda/access-med-0.12
-        mkdir -p ${SINGULARITY_ROOTFS}/opt/conda/esmvaltool-0.5
-        mkdir -p ${SINGULARITY_ROOTFS}/opt/conda/accessvis-0.4
+        ### Generic conda environments mount point
+        mkdir -p ${SINGULARITY_ROOTFS}/opt/conda
 
 %runscript
         /usr/bin/bash -l
