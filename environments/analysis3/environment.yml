@@ -18,7 +18,7 @@ dependencies:
   - iris==3.14.*
   - netcdf4==1.7.*
   - libnetcdf=*=mpi_openmpi*
-  - openmpi>=5
+  - openmpi==5.0.8
   - pip=26.*
   - hdf5=*=mpi_openmpi*
   - jupyterlab==4.5.0
