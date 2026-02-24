@@ -120,6 +120,6 @@ if { [file isdirectory $root/lib64/pkgconfig] } {
 }
 
 # Add Mellanox HColl libraries for proper InfiniBand/MPI support
-if { [file isdirectory /opt/mellanox/hcoll/lib] } {
-    prepend-path LD_LIBRARY_PATH /opt/mellanox/hcoll/lib
+if { [file isdirectory /half-root/opt/mellanox/hcoll/lib] } {
+    prepend-path LD_LIBRARY_PATH /half-root/opt/mellanox/hcoll/lib
 }

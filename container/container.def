@@ -15,6 +15,7 @@ Bootstrap: scratch
         ln -s ../half-root/opt/Modules ${SINGULARITY_ROOTFS}/opt/Modules
         ln -s ../half-root/opt/beegfs ${SINGULARITY_ROOTFS}/opt/beegfs
         ln -s ../half-root/opt/bin ${SINGULARITY_ROOTFS}/opt/bin
+        ln -s ../half-root/opt/mellanox ${SINGULARITY_ROOTFS}/opt/mellanox
         ln -s ../half-root/opt/gdrcopy ${SINGULARITY_ROOTFS}/opt/gdrcopy
         ln -s ../half-root/opt/intel ${SINGULARITY_ROOTFS}/opt/intel
         ln -s ../half-root/opt/knem-1.1.4.90mlnx1 ${SINGULARITY_ROOTFS}/opt/knem-1.1.4.90mlnx1
@@ -32,9 +33,6 @@ Bootstrap: scratch
         mkdir -p ${SINGULARITY_ROOTFS}/usr
         mkdir -p ${SINGULARITY_ROOTFS}/sys/fs/cgroup
         mkdir -p ${SINGULARITY_ROOTFS}/iointensive
-
-        ### Mount point for Mellanox libraries
-        mkdir -p ${SINGULARITY_ROOTFS}/opt/mellanox
 
         ### Mount points for service sockets
         mkdir -p ${SINGULARITY_ROOTFS}/var/lib/sss
