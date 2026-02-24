@@ -4,25 +4,24 @@ channels:
   - conda-forge
   - nodefaults
 dependencies:
-  - python==3.11.*
-  - dask==2025.10.*
-  - numpy==1.26.*
-  - scipy==1.16.*
+  - python==3.12.*
+  - dask==2026.1.*
+  - numpy>2.0
+  - scipy==1.17.*
   - matplotlib>=3.10.*
   - pandas==2.3.*
-  - scikit-image==0.25.*
-  - scikit-learn==1.7.*
-  - xarray==2025.10.1
-  - ipython<9.0 # See ESMValTool
+  - scikit-image==0.26.*
+  - scikit-learn==1.8.*
+  - xarray==2026.1.0
+  - ipython
   - zarr>=3.1.0
-  - iris==3.13.*
+  - iris==3.14.*
   - netcdf4==1.7.*
   - libnetcdf=*=mpi_openmpi*
-  - openmpi==4.1.6
+  - openmpi==5.0.8
   - pip=26.*
-  - hdf5=1.14.*=mpi_openmpi* # issues with version 1.14.3, version 1.14.4 not available for openmpi < 5.0
+  - hdf5=*=mpi_openmpi*
   - jupyterlab==4.5.0
-  - cmor==3.9.*
   - accessnri::access-nri-intake==1.5.0
   - accessnri::intake-esm-access==2025.9.18
   - accessnri::ecgtools-access>=2025.10.7
@@ -32,12 +31,12 @@ dependencies:
   - accessnri::yamanifest>=0.3.12
   - accessnri::access-med-tools==0.1.23
   - accessnri::access-moppy==1.0.9b
-  - accessnri::mule
-  - accessnri::um-packing
-  - accessnri::mule-utils
-  - accessnri::mule-base
-  - accessnri::um-spiral-search
-  - accessnri::um-ppibm
+#  - accessnri::mule
+#  - accessnri::um-packing
+#  - accessnri::mule-utils
+#  - accessnri::mule-base
+#  - accessnri::um-spiral-search need numpy <2
+#  - accessnri::um-ppibm
   - accessnri::shumlib
   - aiohttp
   - aiohttp-cors
@@ -55,7 +54,7 @@ dependencies:
   - bottleneck
   - branca
   - cartopy
-  - cdo
+  - cdo >2.3.0
   - celluloid
   - cf-python
   - cf-units
@@ -210,7 +209,7 @@ dependencies:
   - rasterio
   - rasterstats
   - rechunker
-  - regional-mom6>=1.0.0
+##  - regional-mom6>=1.0.0
   - regionmask
   - rioxarray
   - ruff
@@ -219,7 +218,7 @@ dependencies:
   - scores
   - seaborn
   - sh
-  - sharppy
+##  - sharppy # can't install for python 3.12
   - shellcheck
   - siphon
   - spyder-kernels
@@ -233,7 +232,7 @@ dependencies:
   - twine
   - u8darts-all
   - rapidsai::ucx-py
-  - ucx==1.15.0
+  - ucx==1.18.1
   - ultraplot
   - ujson
   - vtk
@@ -268,20 +267,14 @@ dependencies:
     - pycnv
     - CMIP7-data-request-api
 
-# Needed for ESMValTool merge
+## Needed for ESMValTool merge
   - esmvaltool==2.13.*
   - cdsapi
-  - curl<8.10
-  - importlib_metadata<8 # https://github.com/ESMValGroup/ESMValTool/issues/3699 only for Python 3.10/11 and esmpy<8.6
   - lime
   - mapgenerator>=1.0.5
   - natsort
   - openpyxl
-  - psyplot>=1.5.0
-  - psy-maps>=1.5.0
-  - psy-reg>=1.5.0
-  - psy-simple>=1.5.0
-  - pys2index
+  - pys2index # only from conda-forge
   - python-cdo
   - seawater
   - flake8
@@ -305,12 +298,10 @@ dependencies:
   - yamllint==1.35.1
   - yapf
 # NCL and dependencies
-  - ncl
+  - ncl >=6.6.2
   - imagemagick
   - nco
-
 # R and dependencies
-  - cdo
   - r-base>=3.5,<4.3.0 # https://github.com/ESMValGroup/ESMValTool/pull/3924
   - r-abind
   - r-akima
