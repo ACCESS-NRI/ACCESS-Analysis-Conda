@@ -136,6 +136,7 @@ dependencies:
   - jupyter-server-proxy
   - jupyterlab_server
   - kerchunk
+  - knem
   - lftp
   - libgdal
   - libtiff
