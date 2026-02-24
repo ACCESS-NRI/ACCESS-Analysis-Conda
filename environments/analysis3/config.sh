@@ -16,6 +16,6 @@ export UNSTABLE_VERSION=26.03
 export ENVIRONMENT=analysis3
 export FULLENV="${ENVIRONMENT}-${VERSION_TO_MODIFY}"
 
-declare -a rpms_to_remove=( "openssh-clients" "openssh-server" "openssh" "openmpi/5.0.8" )
-declare -a replace_from_apps=( "ucx/1.18.1" )
+declare -a rpms_to_remove=( "openssh-clients" "openssh-server" "openssh" )
+declare -a replace_from_apps=( "ucx/1.18.1" "openmpi/5.0.8")
 declare -a outside_commands_to_include=( "pbs_tmrsh" "ssh" )
