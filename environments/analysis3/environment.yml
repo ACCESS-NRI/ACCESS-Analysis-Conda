@@ -19,7 +19,7 @@ dependencies:
   - netcdf4==1.7.*
   - libnetcdf=*=mpi_openmpi*
   - openmpi>=5
-  - pip=25.*
+  - pip=26.*
   - hdf5=*=mpi_openmpi*
   - jupyterlab==4.5.0
   - accessnri::access-nri-intake==1.5.0
@@ -30,7 +30,7 @@ dependencies:
   - conda-forge::intake-dataframe-catalog==0.5.1
   - accessnri::yamanifest>=0.3.12
   - accessnri::access-med-tools==0.1.23
-  - accessnri::access-moppy==1.0.0a4
+  - accessnri::access-moppy==1.0.9b
 #  - accessnri::mule
 #  - accessnri::um-packing
 #  - accessnri::mule-utils
