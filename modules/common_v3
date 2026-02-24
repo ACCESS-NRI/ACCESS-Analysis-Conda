@@ -93,3 +93,33 @@ setenv REF_DATASET_CACHE_DIR /scratch/xp65/climate-ref-cache
 setenv REF_CONFIGURATION /g/data/xp65/public/apps/climate-ref
 ### Add uqstat 
 prepend-path PATH /g/data/xp65/public/apps/nci_scripts
+
+# Fix Open MPI relocation (moved from hh5 -> xp65)
+set root /g/data/xp65/public/apps/openmpi/4.1.6
+
+setenv OPAL_PREFIX $root
+prepend-path PATH $root/bin
+
+# Libraries (add whichever exists)
+if { [file isdirectory $root/lib] } {
+    prepend-path LD_LIBRARY_PATH $root/lib
+}
+if { [file isdirectory $root/lib64] } {
+    prepend-path LD_LIBRARY_PATH $root/lib64
+}
+
+# Nice-to-have
+if { [file isdirectory $root/share/man] } {
+    prepend-path MANPATH $root/share/man
+}
+if { [file isdirectory $root/lib/pkgconfig] } {
+    prepend-path PKG_CONFIG_PATH $root/lib/pkgconfig
+}
+if { [file isdirectory $root/lib64/pkgconfig] } {
+    prepend-path PKG_CONFIG_PATH $root/lib64/pkgconfig
+}
+
+# Add Mellanox HColl libraries for proper InfiniBand/MPI support
+if { [file isdirectory /half-root/opt/mellanox/hcoll/lib] } {
+    prepend-path LD_LIBRARY_PATH /half-root/opt/mellanox/hcoll/lib
+}

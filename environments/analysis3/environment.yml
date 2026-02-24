@@ -156,6 +156,7 @@ dependencies:
   - mscorefonts
   - nbdime
   - nb_conda_kernels
+  - nbval
   - nc-time-axis
   - ncdata
   - ncdu
@@ -259,11 +260,12 @@ dependencies:
   - pip:
     - lavavu==1.9.10
     - lavavu-osmesa==1.9.10
-    - railroad-diagrams ### Unlisted dependency of pip and pyparsing 
+    - railroad-diagrams ### Unlisted dependency of pip and pyparsing
     - accessvis==1.1.4
     - py360convert
     - numpy-quaternion
     - pycnv
+    - CMIP7-data-request-api
 
 ## Needed for ESMValTool merge
   - esmvaltool==2.13.*
