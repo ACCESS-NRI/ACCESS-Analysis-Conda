@@ -44,8 +44,15 @@ jobs:
           script: |
             source ${{secrets.GADI_REPO_PATH}}/scripts/install_config.sh
             source ${{secrets.GADI_REPO_PATH}}/scripts/functions.sh
-            mkdir -p $ADMIN_DIR $JOB_LOG_DIR $BUILD_STAGE_DIR
-            set_admin_perms $ADMIN_DIR $JOB_LOG_DIR $BUILD_STAGE_DIR
+            for arg in $ADMIN_DIR $JOB_LOG_DIR $BUILD_STAGE_DIR; do
+              if [ -d "$arg" ]; then
+                echo "Directory $arg already exists, skipping creation."
+              else
+                echo "Creating directory: $arg"
+                 mkdir -p "$arg"
+                 set_admin_perms $arg
+              fi
+            done
 
   build:
     needs: [ generate_matrix, setup ]
