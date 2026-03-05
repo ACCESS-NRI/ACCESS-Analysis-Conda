@@ -12,6 +12,9 @@ export VERSION_TO_MODIFY=26.02
 export STABLE_VERSION=26.01
 export UNSTABLE_VERSION=26.02
 
+# CUDA Support
+export CONDA_OVERRIDE_CUDA=12
+
 ### Version settings
 export ENVIRONMENT=analysis3
 export FULLENV="${ENVIRONMENT}-${VERSION_TO_MODIFY}"
