@@ -70,7 +70,11 @@ function set_admin_perms() {
             chgrp -h "${APPS_USERS_GROUP}" "${arg}"
         fi
     done
-
+    # With no return, the return value of this function seems to be assigned to the last command executed, which is the last chgrp in the loop. 
+    # This can cause issues if the last chgrp fails for permissions reasons, etc.
+    # To avoid this, we explicitly return 0 at the end of the function.
+    # @TODO: This seems janky & needs investigating 
+    return 0
 }
 
 function write_modulerc() {
