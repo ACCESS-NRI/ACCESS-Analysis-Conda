@@ -67,7 +67,7 @@ dependencies:
   - cmcrameri
   - cmdline_provenance
   - cmocean
-  - cmor
+  # - cmor # Pinned to 3.9.* above 
   - compliance-checker
   - conda-build
   - conda-lock
@@ -207,7 +207,7 @@ dependencies:
   - python-graphviz
   - python-magic
   - python-stratify
-  - pytorch-gpu
+  - pytorch-gpu=2.4.*=cuda118*
   - rasterio
   - rasterstats
   - rechunker
@@ -227,7 +227,7 @@ dependencies:
   - sqlalchemy
   - statsmodels
   - sympy
-  - tensorflow
+  # - tensorflow # Probably conflicting(ish) with cuda
   - timezonefinder
   - tintx
   - tqdm
@@ -311,7 +311,7 @@ dependencies:
   - nco
 
 # R and dependencies
-  - cdo
+  # - cdo We separately have cdo above
   - r-base>=3.5,<4.3.0 # https://github.com/ESMValGroup/ESMValTool/pull/3924
   - r-abind
   - r-akima
