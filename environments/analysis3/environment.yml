@@ -1258,7 +1258,7 @@ dependencies:
   - uc-micro-py=2.0.0=pyhcf101f3_0
   - ucc=1.4.4=h85763d7_1
   - ucx=1.18.1=h990bcc0_2
-  - ucx-py=0.45.00=py312_250806_d53bdda0
+  - rapidsai::ucx-py
   - udunits2=2.2.28=h40f5838_3
   - ujson=5.11.0=py312h8285ef7_1
   - ukkonen=1.1.0=py312hd9148b4_0
