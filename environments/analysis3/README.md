@@ -93,7 +93,7 @@ jq -r '
 2.5. Make the following change:
 ```diff
 - ucx-py=0.45.00=py312_250806_d53bdda0
-- rapidsai::ucx-py
++ rapidsai::ucx-py
 ```
 
 N.B. the hashes and whatnot might have changed. Don't worry about that.
