@@ -1,7 +1,10 @@
 # How to solve the conda environment with pixi
 
 
-### Importing a conda environment into pixi
+### Importing a conda environment into pixi 
+
+> [!IMPORTANT]
+> This should only be necessary to generate a pixi.toml. If it already exists, skip this section
 
 1. Install pixi, if you don't already have it.
 
@@ -13,6 +16,13 @@ pixi import environment.yml --format=conda-env
 ```
 
 *You now have a pixi project, which you can solve. Pixi uses the `rattler` solver, which is apparently quite a lot better than `mamba` (N.B Wolf Vollprecht wrote both, and I think he's focussing primarily on `rattler` now).*
+
+### Updating the pixi environment
+
+Do not directly modify `environment.yml` - we are going to totally rebuild it.
+Instead, you want to modify `pixi.toml`. You can do this either by editing it directly, or by using pixi commands.
+
+Once you've added/removed whatever you were after, proceed to solving.
 
 ### Solving the pixi environment
 
@@ -79,6 +89,17 @@ jq -r '
 
 ) > environment.yml
 ```
+
+2.5. Make the following change:
+```diff
+- ucx-py=0.45.00=py312_250806_d53bdda0
+- rapidsai::ucx-py
+```
+
+N.B. the hashes and whatnot might have changed. Don't worry about that.
+
+
+
 
 3. Submit a PR to this repo. In theory everything will build just fine. If not, ask chatGPT for help.
 
