@@ -18,9 +18,10 @@ dependencies:
   - iris==3.13.*
   - netcdf4==1.7.*
   - libnetcdf=*=mpi_openmpi*
+  - libnetcdf=4.9.2=mpi_openmpi*
   - openmpi==4.1.6
   - pip=26.*
-  - hdf5=1.14.*=mpi_openmpi* # issues with version 1.14.3, version 1.14.4 not available for openmpi < 5.0
+  - hdf5=1.14.3=mpi_openmpi* # issues with version 1.14.3, version 1.14.4 not available for openmpi < 5.0. Seems we need 1.14.3 for pytorch-gpu to work
   - jupyterlab==4.5.0
   - cmor==3.9.*
   - accessnri::access-nri-intake==1.5.0
@@ -67,7 +68,7 @@ dependencies:
   - cmcrameri
   - cmdline_provenance
   - cmocean
-  - cmor
+  # - cmor # Pinned to 3.9.* above 
   - compliance-checker
   - conda-build
   - conda-lock
@@ -207,6 +208,8 @@ dependencies:
   - python-graphviz
   - python-magic
   - python-stratify
+  - pytorch==2.4.1=cuda118_py311*
+  - pytorch-gpu==2.4.1=cuda118*
   - rasterio
   - rasterstats
   - rechunker
@@ -226,7 +229,7 @@ dependencies:
   - sqlalchemy
   - statsmodels
   - sympy
-  - tensorflow
+  # - tensorflow # Probably conflicting(ish) with cuda
   - timezonefinder
   - tintx
   - tqdm
@@ -310,7 +313,7 @@ dependencies:
   - nco
 
 # R and dependencies
-  - cdo
+  # - cdo We separately have cdo above
   - r-base>=3.5,<4.3.0 # https://github.com/ESMValGroup/ESMValTool/pull/3924
   - r-abind
   - r-akima
