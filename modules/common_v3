@@ -95,13 +95,17 @@ setenv REF_CONFIGURATION /g/data/xp65/public/apps/climate-ref
 prepend-path PATH /g/data/xp65/public/apps/nci_scripts
 
 # Fix Open MPI relocation (moved from hh5 -> xp65)
-# set root /g/data/xp65/public/apps/openmpi/4.1.6 # Breaks netcdf
+# /g/data/xp65/public/apps/openmpi/4.1.6 # This breaks netcdf, now we're moving to 
+# openmpi 5.0.8 with python 3.12
+set root /apps/openmpi/5.0.8
+# ^ @CT_NOTE: This is gonna break stuff, because we aren't loading that module here.
+# But I think we basically want to copy that to this module?
 
 setenv OPAL_PREFIX $root
 prepend-path PATH $root/bin
 
 # Libraries (add whichever exists)
-if { [file isdirectory $root/lib] } {
+if {} {
     prepend-path LD_LIBRARY_PATH $root/lib
 }
 if { [file isdirectory $root/lib64] } {
