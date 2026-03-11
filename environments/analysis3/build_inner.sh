@@ -26,3 +26,13 @@ pushd "${CONDA_INSTALLATION_PATH}/envs/${FULLENV}/lib/${PYTHON_VERSION}/site-pac
 rm config-developer.yml
 ln -sf /g/data/xp65/public/apps/esmvaltool/config/config-developer.yml config-developer.yml
 popd
+
+# Fix the mpi library for mpifh
+# This is needed because NCI provides different versions of the mpi library depending on the required compiler
+# but does not have a default. If we do not do this, the mpifh library will be linked against 
+# the wrong mpi library and will not work properly.
+pushd "${CONDA_INSTALLATION_PATH}/envs/${FULLENV}/lib/"
+cp /apps/openmpi/5.0.8/lib/libmpi_mpifh_GNU.so.40.40.1 libmpi_mpifh.so.40.40.1
+ln -sf libmpi_mpifh.so.40.40.1 libmpi_mpifh.so.40
+ln -sf libmpi_mpifh.so.40.40.1 libmpi_mpifh.so
+popd    
