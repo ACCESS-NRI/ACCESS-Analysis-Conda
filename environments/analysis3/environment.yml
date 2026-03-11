@@ -6,7 +6,7 @@ channels:
 dependencies:
   - python==3.11.*
   - dask==2025.10.*
-  - numpy==1.26.*
+  - numpy<2.0,>=1.26.*
   - scipy==1.16.*
   - matplotlib>=3.10.*
   - pandas==2.3.*
@@ -207,6 +207,7 @@ dependencies:
   - python-graphviz
   - python-magic
   - python-stratify
+  - quaternion
   - rasterio
   - rasterstats
   - rechunker
@@ -241,6 +242,7 @@ dependencies:
   - watermark
   - wavespectra
   - webcolors
+  - wget
   - windspharm
   - wradlib
   - wrf-python
@@ -259,12 +261,12 @@ dependencies:
   - xwrf
 
   - pip:
+    - -c constraints.txt
     - lavavu==1.9.10
     - lavavu-osmesa==1.9.10
     - railroad-diagrams ### Unlisted dependency of pip and pyparsing
     - accessvis==1.1.4
     - py360convert
-    - numpy-quaternion
     - pycnv
     - CMIP7-data-request-api
 
