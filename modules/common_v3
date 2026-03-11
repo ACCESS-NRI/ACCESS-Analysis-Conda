@@ -94,35 +94,6 @@ setenv REF_CONFIGURATION /g/data/xp65/public/apps/climate-ref
 ### Add uqstat 
 prepend-path PATH /g/data/xp65/public/apps/nci_scripts
 
-# Fix Open MPI relocation (moved from hh5 -> xp65)
-# /g/data/xp65/public/apps/openmpi/4.1.6 # This breaks netcdf, now we're moving to 
-# openmpi 5.0.8 with python 3.12
-set root /apps/openmpi/5.0.8
-# ^ @CT_NOTE: This is gonna break stuff, because we aren't loading that module here.
-# But I think we basically want to copy that to this module?
-
-setenv OPAL_PREFIX $root
-prepend-path PATH $root/bin
-
-# Libraries (add whichever exists)
-if {} {
-    prepend-path LD_LIBRARY_PATH $root/lib
-}
-if { [file isdirectory $root/lib64] } {
-    prepend-path LD_LIBRARY_PATH $root/lib64
-}
-
-# Nice-to-have
-if { [file isdirectory $root/share/man] } {
-    prepend-path MANPATH $root/share/man
-}
-if { [file isdirectory $root/lib/pkgconfig] } {
-    prepend-path PKG_CONFIG_PATH $root/lib/pkgconfig
-}
-if { [file isdirectory $root/lib64/pkgconfig] } {
-    prepend-path PKG_CONFIG_PATH $root/lib64/pkgconfig
-}
-
 # Add Mellanox HColl libraries for proper InfiniBand/MPI support
 if { [file isdirectory /half-root/opt/mellanox/hcoll/lib] } {
     prepend-path LD_LIBRARY_PATH /half-root/opt/mellanox/hcoll/lib
