@@ -13,9 +13,9 @@ version = "0.1.0"
 channels = ["accessnri", "conda-forge", "nodefaults", "https://conda.anaconda.org/accessnri", "https://conda.anaconda.org/conda-forge", "https://conda.anaconda.org/rapidsai"]
 
 [feature.analysis3.dependencies]
-python = "3.12.*"
+python = "3.11.*"
 dask = "2026.1.*"
-numpy = ">2.0"
+numpy = ">=1.26,<2.0"
 scipy = "1.17.*"
 matplotlib = ">=3.10"
 pandas = "2.3.*"
