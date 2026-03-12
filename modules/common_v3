@@ -1,38 +1,42 @@
 #%Module1.0
 
 # Function: check_analysis3_age
-# Supports conda/analysis3-YY.MM and conda/analysis3-edge-YY.MM
+# Supports conda/analysis3-YY.MM, conda/analysis3-edge-YY.MM, and conda/analysis3_edge-YY.MM
 proc check_analysis3_age {} {
     # Get full module name, e.g. "conda/analysis3-25.08" or "conda/analysis3-edge-25.08"
     set modname [module-info name]
 
-    # Match both stable and edge variants
-    if { [regexp {analysis3(?:-edge)?-(\d{2})\.(\d{2})} $modname -> yy mm] } {
-        # Parse version numbers as decimal (avoid octal issue)
-        set year [expr {2000 + [scan $yy %d]}]
-        set month [scan $mm %d]
+    # Only check modules that contain "analysis3" - skip other modules like benchcab
+    if { [string match "*analysis3*" $modname] } {
+        # Match both stable and edge variants, handle both - and _ separators for edge
+        if { [regexp {analysis3(?:[-_]edge)?-(\d{2})\.(\d{2})} $modname -> yy mm] } {
+            # Parse version numbers as decimal (avoid octal issue)
+            set year [expr {2000 + [scan $yy %d]}]
+            set month [scan $mm %d]
 
-        # Current date
-        set now [clock seconds]
-        set current_year [scan [clock format $now -format %Y] %d]
-        set current_month [scan [clock format $now -format %m] %d]
+            # Current date
+            set now [clock seconds]
+            set current_year [scan [clock format $now -format %Y] %d]
+            set current_month [scan [clock format $now -format %m] %d]
 
-        # Convert both to "months since year 0"
-        set current_total_months [expr {$current_year * 12 + $current_month}]
-        set env_total_months [expr {$year * 12 + $month}]
-        set diff_months [expr {$current_total_months - $env_total_months}]
+            # Convert both to "months since year 0"
+            set current_total_months [expr {$current_year * 12 + $current_month}]
+            set env_total_months [expr {$year * 12 + $month}]
+            set diff_months [expr {$current_total_months - $env_total_months}]
 
-        # Warn if too old, or notify if from the future
-        if { $diff_months > 6 } {
-            puts stderr "\033\[1;33mWARNING:\033\[0m The environment '$modname' is more than $diff_months months old."
-            puts stderr "It will soon be deprecated. Please move to a newer 'conda/analysis3' environment."
-        } elseif { $diff_months < -1 } {
-            puts stderr "\033\[1;33mNOTICE:\033\[0m The environment '$modname' appears to be from the future ($year-$month)."
-            puts stderr "Please verify that you have loaded the correct module."
+            # Warn if too old, or notify if from the future
+            if { $diff_months > 6 } {
+                puts stderr "\033\[1;33mWARNING:\033\[0m The environment '$modname' is more than $diff_months months old."
+                puts stderr "It will soon be deprecated. Please move to a newer 'conda/analysis3' environment."
+            } elseif { $diff_months < -1 } {
+                puts stderr "\033\[1;33mNOTICE:\033\[0m The environment '$modname' appears to be from the future ($year-$month)."
+                puts stderr "Please verify that you have loaded the correct module."
+            }
+        } else {
+            puts stderr "Note: Could not determine environment version from module name '$modname'."
         }
-    } else {
-        puts stderr "Note: Could not determine environment version from module name '$modname'."
     }
+    # Silently skip non-analysis3 modules (like benchcab)
 }
 
 # Run the check only when module is being loaded
@@ -93,31 +97,6 @@ setenv REF_DATASET_CACHE_DIR /scratch/xp65/climate-ref-cache
 setenv REF_CONFIGURATION /g/data/xp65/public/apps/climate-ref
 ### Add uqstat 
 prepend-path PATH /g/data/xp65/public/apps/nci_scripts
-
-# Fix Open MPI relocation (moved from hh5 -> xp65)
-set root /g/data/xp65/public/apps/openmpi/4.1.6
-
-setenv OPAL_PREFIX $root
-prepend-path PATH $root/bin
-
-# Libraries (add whichever exists)
-if { [file isdirectory $root/lib] } {
-    prepend-path LD_LIBRARY_PATH $root/lib
-}
-if { [file isdirectory $root/lib64] } {
-    prepend-path LD_LIBRARY_PATH $root/lib64
-}
-
-# Nice-to-have
-if { [file isdirectory $root/share/man] } {
-    prepend-path MANPATH $root/share/man
-}
-if { [file isdirectory $root/lib/pkgconfig] } {
-    prepend-path PKG_CONFIG_PATH $root/lib/pkgconfig
-}
-if { [file isdirectory $root/lib64/pkgconfig] } {
-    prepend-path PKG_CONFIG_PATH $root/lib64/pkgconfig
-}
 
 # Add Mellanox HColl libraries for proper InfiniBand/MPI support
 if { [file isdirectory /half-root/opt/mellanox/hcoll/lib] } {
