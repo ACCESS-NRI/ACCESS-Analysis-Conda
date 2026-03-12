@@ -253,8 +253,8 @@ dependencies:
   - erddapy=3.1.1=pyhd8ed1ab_0
   - esda=2.8.1=pyhd8ed1ab_0
   - esgf-pyclient=0.3.1=pyhd8ed1ab_5
-  - esmf=8.8.1=mpi_openmpi_h461c5ee_0
-  - esmpy=8.8.1=pyhecae5ae_0
+  - esmf=8.6.1=mpi_openmpi_hc3b5101_0
+  - esmpy=8.6.1=pyhc1e730c_0
   - esmvalcore=2.13.0=pyhcf101f3_0
   - esmvaltool=2.13.0=pyh22db52d_2
   - esmvaltool-ncl=2.13.0=hb13dca2_2
@@ -380,7 +380,7 @@ dependencies:
   - harfbuzz=11.0.0=h76408a6_0
   - hdbscan=0.8.41=py311h0372a8f_0
   - hdf4=4.2.15=h2a13503_7
-  - hdf5=1.14.3=mpi_openmpi_h39ae36c_9
+  - hdf5=1.14.3=mpi_openmpi_hf5a2fd3_4
   - hdfeos2=2.20=h3e53b52_1004
   - hdfeos5=5.1.16=h51d0b48_17
   - hicolor-icon-theme=0.17=ha770c72_3
@@ -529,8 +529,6 @@ dependencies:
   - libev=4.33=hd590300_2
   - libevent=2.1.12=hf998b51_1
   - libexpat=2.7.4=hecca717_0
-  - libfabric=2.4.0=ha770c72_1
-  - libfabric1=2.4.0=h8f87c3e_1
   - libffi=3.5.2=h3435931_0
   - libfido2=1.16.0=h5da5774_0
   - libflac=1.5.0=he200343_1
@@ -590,7 +588,7 @@ dependencies:
   - libmambapy=2.0.8=py311head96a8_0
   - libml_dtypes-headers=0.5.4=h707e725_0
   - libmo_unpack=3.1.2=hf484d3e_1001
-  - libnetcdf=4.9.2=mpi_openmpi_ha1e512f_14
+  - libnetcdf=4.9.2=mpi_openmpi_h958ee74_13
   - libnghttp2=1.67.0=had1ee68_0
   - libnl=3.11.0=hb9d3cd8_0
   - libnsl=2.0.1=hb9d3cd8_1
@@ -619,8 +617,7 @@ dependencies:
   - libosqp=1.0.0=np2py312h1a77e3e_2
   - libparquet=19.0.1=h081d1f1_3_cpu
   - libpciaccess=0.18=hb9d3cd8_0
-  - libpmix=5.0.8=h4bd6b51_2
-  - libpnetcdf=1.13.0=mpi_openmpi_h521bef2_1
+  - libpnetcdf=1.12.3=mpi_openmpi_hbcf1124_1
   - libpng=1.6.55=h421ea60_0
   - libpq=17.6=h3675c94_1
   - libprotobuf=5.28.3=h6128344_1
@@ -763,7 +760,7 @@ dependencies:
   - nest-asyncio=1.6.0=pyhd8ed1ab_1
   - nested-lookup=0.2.25=pyhd8ed1ab_2
   - netcdf-flattener=1.2.0=pyhd8ed1ab_1
-  - netcdf-fortran=4.6.1=mpi_openmpi_h2e02aee_8
+  - netcdf-fortran=4.6.1=mpi_openmpi_hc1a8302_3
   - netcdf4=1.7.2=nompi_py311hae66bec_101
   - networkx=3.6.1=pyhcf101f3_0
   - neutralocean=2.4.1=pyhd8ed1ab_0
@@ -796,7 +793,7 @@ dependencies:
   - openh264=2.6.0=hc22cd8d_0
   - openjpeg=2.5.3=h55fea9a_1
   - openldap=2.6.10=he970967_0
-  - openmpi=5.0.8=hacb30cd_104
+  - openmpi=4.1.6=hc5af2df_101
   - openpyxl=3.1.5=py311h534898f_3
   - openssh=10.2p1=h20e8eec_0
   - openssl=3.6.1=h35e630c_1
@@ -814,7 +811,7 @@ dependencies:
   - panel=1.8.9=pyhd8ed1ab_0
   - pango=1.56.3=h9ac818e_1
   - papermill=2.7.0=pyhd8ed1ab_0
-  - parallelio=2.6.3=mpi_openmpi_h9c32635_0
+  - parallelio=2.6.2=mpi_openmpi_h2b8e048_0
   - param=2.3.2=pyhc455866_0
   - parcels=3.1.0=pyh6fe113f_1
   - parso=0.8.6=pyhcf101f3_0
@@ -1263,7 +1260,6 @@ dependencies:
   - u8darts=0.38.0=pyhd8ed1ab_0
   - u8darts-all=0.38.0=pyhd8ed1ab_0
   - uc-micro-py=2.0.0=pyhcf101f3_0
-  - ucc=1.4.4=h85763d7_1
   - ucx=1.18.1=h990bcc0_2
   - rapidsai::ucx-py
   - udunits2=2.2.28=h40f5838_3
@@ -1383,7 +1379,6 @@ dependencies:
   - zstd=1.5.7=hb78ec9c_6
   - pip
   - pip:
-    - numpy==1.26.4
     - accessvis==1.1.4
     - cmip7-data-request-api==1.4
     - lavavu==1.9.10
