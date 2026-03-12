@@ -25,7 +25,7 @@ zarr = ">=3.1.0"
 iris = "3.14.*"
 netcdf4 = "1.7.*"
 libnetcdf = { version = "*", build = "mpi_openmpi*" }
-openmpi = "==5.0.8"
+openmpi = "==4.1.6"
 pip = "26.*"
 hdf5 = { version = "*", build = "mpi_openmpi*" }
 jupyterlab = "==4.5.0"
