@@ -26,3 +26,4 @@ pushd "${CONDA_INSTALLATION_PATH}/envs/${FULLENV}/lib/${PYTHON_VERSION}/site-pac
 rm config-developer.yml
 ln -sf /g/data/xp65/public/apps/esmvaltool/config/config-developer.yml config-developer.yml
 popd
+
