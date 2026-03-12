@@ -1,21 +1,19 @@
 [workspace]
 authors = ["Charles Turner <charles.turner@anu.edu.au>"]
-channels = ["conda-forge"]
+channels = ["accessnri", "conda-forge", "nodefaults", "https://conda.anaconda.org/accessnri", "https://conda.anaconda.org/conda-forge", "https://conda.anaconda.org/rapidsai"]
 name = "analysis3"
 platforms = ["linux-64"]
 version = "0.1.0"
 
+[environments]
+analysis3 = ["default"]
+
 [tasks]
 
 [dependencies]
-
-[feature.analysis3]
-channels = ["accessnri", "conda-forge", "nodefaults", "https://conda.anaconda.org/accessnri", "https://conda.anaconda.org/conda-forge", "https://conda.anaconda.org/rapidsai"]
-
-[feature.analysis3.dependencies]
-python = "3.12.*"
+python = "3.11.*"
 dask = "2026.1.*"
-numpy = ">2.0"
+numpy = ">=1.26,<2.0"
 scipy = "1.17.*"
 matplotlib = ">=3.10"
 pandas = "2.3.*"
@@ -209,6 +207,7 @@ python-eccodes = "*"
 python-graphviz = "*"
 python-magic = "*"
 python-stratify = "*"
+quaternion = {channel = "conda-forge", version = "*" } # Numpy-quaternion
 rasterio = "*"
 rasterstats = "*"
 rechunker = "*"
@@ -316,15 +315,11 @@ r-git2r = "*"
 r-lintr = "==3.1.2"
 r-styler = "==1.10.3"
 
-[feature.analysis3.pypi-dependencies]
+[pypi-dependencies]
 lavavu = "==1.9.10"
 lavavu-osmesa = "==1.9.10"
 railroad-diagrams = "*"
 accessvis = "==1.1.4"
 py360convert = "*"
-numpy-quaternion = "*"
 pycnv = "*"
 cmip7-data-request-api = "*"
-
-[environments]
-analysis3 = { features = ["analysis3"], no-default-feature = true }
