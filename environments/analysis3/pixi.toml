@@ -5,6 +5,9 @@ name = "analysis3"
 platforms = ["linux-64"]
 version = "0.1.0"
 
+[environments]
+analysis3 = ["default"]
+
 [tasks]
 
 [dependencies]
