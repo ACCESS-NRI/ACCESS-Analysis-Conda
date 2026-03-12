@@ -1379,6 +1379,7 @@ dependencies:
   - zstd=1.5.7=hb78ec9c_6
   - pip
   - pip:
+    - numpy==1.26.4
     - accessvis==1.1.4
     - cmip7-data-request-api==1.4
     - lavavu==1.9.10
