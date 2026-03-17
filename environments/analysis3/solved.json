@@ -24376,6 +24376,33 @@
     "track_features": []
   },
   {
+    "name": "nci_ipynb",
+    "version": "2023.11.0.3",
+    "build": null,
+    "build_number": null,
+    "size_bytes": 7992,
+    "kind": "pypi",
+    "source": "nci_ipynb-2023.11.0.3-py3-none-any.whl",
+    "license": null,
+    "license_family": null,
+    "is_explicit": true,
+    "md5": null,
+    "sha256": "7b4d916568308b89c7efd6bd8fc1abe601511a1c521cec7ca3b9b33019813568",
+    "arch": null,
+    "platform": null,
+    "subdir": null,
+    "timestamp": null,
+    "noarch": null,
+    "file_name": null,
+    "url": "https://files.pythonhosted.org/packages/97/ac/32afd602d3fd8cd001d910747c7953c37c82cb564aeddcf40f027c057a60/nci_ipynb-2023.11.0.3-py3-none-any.whl",
+    "requested_spec": "\">=2023.11.0.3, <2024\"",
+    "constrains": [],
+    "depends": [
+      "ipykernel"
+    ],
+    "track_features": []
+  },
+  {
     "name": "ncl",
     "version": "6.6.2",
     "build": "ha9e1b40_55",
