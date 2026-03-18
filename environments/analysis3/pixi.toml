@@ -316,6 +316,7 @@ r-yaml = "*"
 r-git2r = "*"
 r-lintr = "==3.1.2"
 r-styler = "==1.10.3"
+knem-headers = ">=1.1.4,<2"
 
 [pypi-dependencies]
 lavavu = "==1.9.10"
