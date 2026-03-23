@@ -31164,6 +31164,35 @@
     "track_features": []
   },
   {
+    "name": "python-swiftclient",
+    "version": "4.10.0",
+    "build": "pyh332efcf_0",
+    "build_number": 0,
+    "size_bytes": 77752,
+    "kind": "conda",
+    "source": "https://conda.anaconda.org/conda-forge",
+    "license": "Apache-2.0",
+    "license_family": "APACHE",
+    "is_explicit": true,
+    "md5": "00f2cdb0eb5eb8f7797d6c4980f32972",
+    "sha256": "1f5f02f422e048a4272674d64104e007f8209653176a0c4c9c78015b3ce4b787",
+    "arch": null,
+    "platform": null,
+    "subdir": "noarch",
+    "timestamp": 1772096381641,
+    "noarch": "python",
+    "file_name": "python-swiftclient-4.10.0-pyh332efcf_0.conda",
+    "url": "https://conda.anaconda.org/conda-forge/noarch/python-swiftclient-4.10.0-pyh332efcf_0.conda",
+    "requested_spec": ">=4.10.0,<5",
+    "constrains": [],
+    "depends": [
+      "python >=3.10",
+      "requests",
+      "setuptools"
+    ],
+    "track_features": []
+  },
+  {
     "name": "python-tzdata",
     "version": "2025.3",
     "build": "pyhd8ed1ab_0",
