@@ -51,7 +51,7 @@ or however you might want to do it.
 1. Export the pixi environment to json:
 
 ```bash
-pixi list --json -e analysis3 > solved.json
+pixi list --json > solved.json
 ```
 
 2. Run this big chungus of a script, which uses `jq` to create a new `environment.yml` file with the solved package versions:
