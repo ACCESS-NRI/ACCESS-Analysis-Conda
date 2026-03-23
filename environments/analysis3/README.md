@@ -48,6 +48,15 @@ or however you might want to do it.
 
 ### Exporting the pixi environment back to conda
 
+#### Via Pixi Task
+
+Run 
+```sh
+$ pixi run rebuild-env
+```
+
+#### Manually
+
 1. Export the pixi environment to json:
 
 ```bash
