@@ -1,7 +1,6 @@
 #!/bin/bash -l
 set -e 
 
-mv environment.yml environment.yml.bak
 (
 echo "name: analysis3"
 echo "channels:"
