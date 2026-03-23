@@ -9,21 +9,10 @@ version = "0.1.0"
 analysis3 = ["default"]
 
 [tasks]
-ensure-locked = { cmd = "pixi lock --check", description = "Ensure the lockfile is up to date (--check will return nonzero if not up to date)" }
+ensure-locked = { cmd = "pixi lock --check", description = "Ensure the lockfile is up to date" }
 export-json = { cmd = "pixi list --json > solved.json", description = "Export the solved environment to JSON format" , depends-on = ["ensure-locked"] }
 create-backup-env = {cmd = "mv environment.yml environment.yml.bak", description = "Create a backup of the current environment.yml file", depends-on = ["export-json"] }
-rebuild-env = { cmd = """(
-echo "name: analysis3"
-echo "channels:"
-echo "  - accessnri"
-echo "  - conda-forge"
-echo "  - nodefaults"
-echo "dependencies:"
-jq -r '.[] | select(.name | startswith("__") | not) | select(.name | startswith("_") | not) | select(.build != null) | "  - \\(.name)=\\(.version)=\\(.build)"' solved.json
-echo "  - pip"
-echo "  - pip:"
-jq -r '.[] | select(.name | startswith("__") | not) | select(.name | startswith("_") | not) | select(.build == null) | "    - \\(.name | gsub("_"; "-"))==\\(.version)"' solved.json
-) > environment.yml""", description = "Rebuild environment.yml from solved.json", depends-on = ["create-backup-env"] }
+rebuild-env = { cmd = "bash recreate-env-yml.sh", description = "Rebuild environment.yml from solved.json", depends-on = ["create-backup-env"] }
 
 [dependencies]
 python = "3.12.*"
