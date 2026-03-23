@@ -33,12 +33,12 @@ pixi lock
 
 If you wanted to use pixi shell at this point, instead of creating a pixi environment, you could do:
 ```bash
-pixi shell -e analysis-3
+pixi shell 
 ```
 
 You can verify package versions in the pixi environment with:
 ```bash
-pixi run python -e analysis-3
+pixi run python 
 ```
 ```python
 import blah_package
