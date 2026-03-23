@@ -64,6 +64,9 @@ echo "channels:"
 echo "  - accessnri"
 echo "  - conda-forge"
 echo "  - nodefaults"
+echo "  - rapidsai"
+echo "  - pytorch"
+echo "  - nvidia"
 echo "dependencies:"
 
 # Conda packages
@@ -89,17 +92,6 @@ jq -r '
 
 ) > environment.yml
 ```
-
-2.5. Make the following change:
-```diff
-- ucx-py=0.45.00=py312_250806_d53bdda0
-+ rapidsai::ucx-py
-```
-
-N.B. the hashes and whatnot might have changed. Don't worry about that.
-
-
-
 
 3. Submit a PR to this repo. In theory everything will build just fine. If not, ask chatGPT for help.
 
