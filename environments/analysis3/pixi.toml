@@ -319,6 +319,7 @@ r-styler = "==1.10.3"
 knem-headers = ">=1.1.4,<2"
 virtualizarr = ">=2.4.0,<3"
 icechunk = ">=1.1.21,<2"
+python-swiftclient = ">=4.10.0,<5"
 
 [pypi-dependencies]
 lavavu = "==1.9.10"
