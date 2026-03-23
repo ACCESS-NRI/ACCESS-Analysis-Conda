@@ -9,6 +9,10 @@ version = "0.1.0"
 analysis3 = ["default"]
 
 [tasks]
+ensure-locked = { cmd = "pixi lock --check", description = "Ensure the lockfile is up to date" }
+export-json = { cmd = "pixi list --json > solved.json", description = "Export the solved environment to JSON format" , depends-on = ["ensure-locked"] }
+create-backup-env = {cmd = "mv environment.yml environment.yml.bak", description = "Create a backup of the current environment.yml file", depends-on = ["export-json"] }
+rebuild-env = { cmd = "bash recreate-env-yml.sh", description = "Rebuild environment.yml from solved.json", depends-on = ["create-backup-env"] }
 
 [dependencies]
 python = "3.12.*"
@@ -319,6 +323,7 @@ r-styler = "==1.10.3"
 knem-headers = ">=1.1.4,<2"
 virtualizarr = ">=2.4.0,<3"
 icechunk = ">=1.1.21,<2"
+python-swiftclient = ">=4.10.0,<5"
 
 [pypi-dependencies]
 lavavu = "==1.9.10"

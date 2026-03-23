@@ -33,12 +33,12 @@ pixi lock
 
 If you wanted to use pixi shell at this point, instead of creating a pixi environment, you could do:
 ```bash
-pixi shell -e analysis-3
+pixi shell 
 ```
 
 You can verify package versions in the pixi environment with:
 ```bash
-pixi run python -e analysis-3
+pixi run python 
 ```
 ```python
 import blah_package
@@ -51,7 +51,7 @@ or however you might want to do it.
 1. Export the pixi environment to json:
 
 ```bash
-pixi list --json -e analysis3 > solved.json
+pixi list --json > solved.json
 ```
 
 2. Run this big chungus of a script, which uses `jq` to create a new `environment.yml` file with the solved package versions:
@@ -64,6 +64,9 @@ echo "channels:"
 echo "  - accessnri"
 echo "  - conda-forge"
 echo "  - nodefaults"
+echo "  - rapidsai"
+echo "  - pytorch"
+echo "  - nvidia"
 echo "dependencies:"
 
 # Conda packages
@@ -89,17 +92,6 @@ jq -r '
 
 ) > environment.yml
 ```
-
-2.5. Make the following change:
-```diff
-- ucx-py=0.45.00=py312_250806_d53bdda0
-+ rapidsai::ucx-py
-```
-
-N.B. the hashes and whatnot might have changed. Don't worry about that.
-
-
-
 
 3. Submit a PR to this repo. In theory everything will build just fine. If not, ask chatGPT for help.
 
