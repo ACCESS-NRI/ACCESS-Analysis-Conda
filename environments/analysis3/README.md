@@ -48,10 +48,22 @@ or however you might want to do it.
 
 ### Exporting the pixi environment back to conda
 
+#### Via Pixi tasks
+
+Assuming you have already solved your environment, just run:
+```bash
+pixi run rebuild-env
+```
+
+Alternatively, follow the steps below (the task above just automates them to make life easier)
+
+#### Manually
+
+
 1. Export the pixi environment to json:
 
 ```bash
-pixi list --json -e analysis3 > solved.json
+pixi list --json > solved.json
 ```
 
 2. Run this big chungus of a script, which uses `jq` to create a new `environment.yml` file with the solved package versions:
@@ -64,6 +76,9 @@ echo "channels:"
 echo "  - accessnri"
 echo "  - conda-forge"
 echo "  - nodefaults"
+echo "  - rapidsai"
+echo "  - pytorch"
+echo "  - nvidia"
 echo "dependencies:"
 
 # Conda packages
