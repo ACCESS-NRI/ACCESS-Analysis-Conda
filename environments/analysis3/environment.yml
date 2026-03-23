@@ -978,6 +978,7 @@ dependencies:
   - python-magic=0.4.27=pyh9ac5cc3_5
   - python-multipart=0.0.22=pyhcf101f3_0
   - python-stratify=0.4.0=py312h4c3975b_3
+  - python-swiftclient=4.10.0=pyh332efcf_0
   - python-tzdata=2025.3=pyhd8ed1ab_0
   - python-utils=3.9.1=pyhff2d567_1
   - python-xxhash=3.6.0=py312h0d868a3_1
