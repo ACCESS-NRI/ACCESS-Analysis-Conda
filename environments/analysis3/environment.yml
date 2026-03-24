@@ -61,6 +61,7 @@ dependencies:
   - attrdict=2.0.1=py_0
   - attrs=25.4.0=pyhcf101f3_1
   - autodocsumm=0.2.14=pyhd8ed1ab_0
+  - autopage=0.6.0=pyhd8ed1ab_0
   - autopep8=2.3.2=pyhd8ed1ab_0
   - av=15.1.0=py312hdd571cc_0
   - aws-c-auth=0.8.6=hd08a7f5_4
@@ -148,12 +149,14 @@ dependencies:
   - click=8.3.1=pyh8f84b5b_1
   - click-default-group=1.2.4=pyhd8ed1ab_1
   - click-plugins=1.1.1.2=pyhd8ed1ab_0
+  - cliff=4.13.2=pyhd8ed1ab_0
   - cligj=0.7.2=pyhd8ed1ab_2
   - climpred=2.6.0=pyhd8ed1ab_0
   - cloudpickle=3.1.2=pyhcf101f3_1
   - cmaps=2.0.1=pyhd8ed1ab_0
   - cmarkgfm=2024.11.20=py312h4c3975b_1
   - cmcrameri=1.9=pyhd8ed1ab_1
+  - cmd2=3.4.0=py312h7900ff3_0
   - cmdline_provenance=1.1.0=pyhd8ed1ab_1
   - cmocean=4.0.3=pyhd8ed1ab_1
   - cmor=3.10.0=py312h9ea2cd8_0
@@ -225,6 +228,7 @@ dependencies:
   - dav1d=1.2.1=hd590300_0
   - dbus=1.13.6=h5008d03_3
   - dcw-gmt=2.2.0=ha770c72_0
+  - debtcollector=3.0.0=pyhd8ed1ab_1
   - debugpy=1.8.20=py312h8285ef7_0
   - decorator=5.2.1=pyhd8ed1ab_0
   - defusedxml=0.7.1=pyhd8ed1ab_0
@@ -241,6 +245,7 @@ dependencies:
   - docrep=0.3.2=pyh44b312d_0
   - docutils=0.21.2=pyhd8ed1ab_1
   - dodgy=0.2.1=py_0
+  - dogpile.cache=1.3.3=pyhd8ed1ab_0
   - donfig=0.8.1.post1=pyhd8ed1ab_1
   - double-conversion=3.3.1=h5888daf_0
   - dreqpy=1.2.0=pyhd8ed1ab_1
@@ -435,6 +440,7 @@ dependencies:
   - iris=3.14.1=pyha770c72_0
   - iris-esmf-regrid=0.14.0=pyhd8ed1ab_1
   - iris-grib=0.21.0=pyhd8ed1ab_0
+  - iso8601=2.1.0=pyhd8ed1ab_1
   - isodate=0.7.2=pyhd8ed1ab_1
   - isoduration=20.11.0=pyhd8ed1ab_1
   - isort=5.13.2=pyhd8ed1ab_1
@@ -485,6 +491,7 @@ dependencies:
   - kerchunk=0.2.9=pyhd8ed1ab_0
   - kernel-headers_linux-64=4.18.0=he073ed8_9
   - keyring=25.7.0=pyha804496_0
+  - keystoneauth1=5.13.1=pyhd8ed1ab_0
   - keyutils=1.6.3=hb9d3cd8_0
   - kiwisolver=1.5.0=py312h0a2e395_0
   - knem-headers=1.1.4=ha770c72_2
@@ -778,6 +785,7 @@ dependencies:
   - ncurses=6.5=h2d0b736_3
   - nest-asyncio=1.6.0=pyhd8ed1ab_1
   - nested-lookup=0.2.25=pyhd8ed1ab_2
+  - netaddr=1.3.0=pyhd8ed1ab_1
   - netcdf-fortran=4.6.1=mpi_openmpi_h2e02aee_8
   - netcdf4=1.7.2=nompi_py312h21d6d8e_101
   - networkx=3.6.1=pyhcf101f3_0
@@ -817,9 +825,16 @@ dependencies:
   - openpyxl=3.1.5=py312h7f6eeab_3
   - openssh=10.2p1=h20e8eec_0
   - openssl=3.6.1=h35e630c_1
+  - openstacksdk=4.10.0=pyhd8ed1ab_0
   - opt_einsum=3.4.0=pyhd8ed1ab_1
   - optree=0.19.0=py312hd9148b4_0
   - orc=2.1.1=h2271f48_0
+  - os-service-types=1.8.2=pyhd8ed1ab_0
+  - osc-lib=4.4.0=pyhd8ed1ab_0
+  - oslo.config=10.3.0=pyhd8ed1ab_0
+  - oslo.i18n=6.7.2=pyhd8ed1ab_0
+  - oslo.serialization=5.9.1=pyhd8ed1ab_0
+  - oslo.utils=10.0.0=pyhd8ed1ab_0
   - osqp=1.1.1=np2py312h0f77346_0
   - overrides=7.7.0=pyhd8ed1ab_1
   - owslib=0.35.0=pyhd8ed1ab_0
@@ -868,6 +883,7 @@ dependencies:
   - posix_ipc=1.3.2=py312h4c3975b_0
   - postgresql=17.6=h021f68a_1
   - pre-commit=4.5.1=pyha770c72_0
+  - prettytable=3.17.0=pyhd8ed1ab_0
   - progressbar2=4.5.0=pyhd8ed1ab_1
   - proj=9.5.1=h0054346_0
   - prometheus-cpp=1.3.0=ha5d0236_0
@@ -936,6 +952,7 @@ dependencies:
   - pyopenssl=25.3.0=pyhd8ed1ab_0
   - pyorbital=1.12.1=pyhd8ed1ab_0
   - pyparsing=3.3.2=pyhcf101f3_0
+  - pyperclip=1.11.0=pyha804496_0
   - pyproj=3.7.1=py312he630544_0
   - pyproject_hooks=1.2.0=pyhd8ed1ab_1
   - pyqt=5.15.11=py312h82c0db2_2
@@ -962,6 +979,7 @@ dependencies:
   - python=3.12.13=hd63d673_0_cpython
   - python-build=1.4.0=pyh332efcf_0
   - python-cdo=1.6.1=pyh332efcf_1
+  - python-cinderclient=9.8.0=pyh332efcf_0
   - python-dateutil=2.9.0.post0=pyhe01879c_2
   - python-dotenv=1.2.2=pyhcf101f3_0
   - python-eccodes=2.37.0=py312h4f23490_1
@@ -974,9 +992,12 @@ dependencies:
   - python-gssapi=1.11.1=py312h7cea900_0
   - python-installer=0.7.0=pyhff2d567_1
   - python-json-logger=2.0.7=pyhd8ed1ab_0
+  - python-keystoneclient=5.8.0=pyh332efcf_0
   - python-libarchive-c=5.3=pyhe01879c_1
   - python-magic=0.4.27=pyh9ac5cc3_5
   - python-multipart=0.0.22=pyhcf101f3_0
+  - python-novaclient=18.12.0=pyh332efcf_0
+  - python-openstackclient=9.0.0=pyh332efcf_0
   - python-stratify=0.4.0=py312h4c3975b_3
   - python-swiftclient=4.10.0=pyh332efcf_0
   - python-tzdata=2025.3=pyhd8ed1ab_0
@@ -1135,6 +1156,7 @@ dependencies:
   - requests-cache=1.3.1=pyhd8ed1ab_0
   - requests-oauthlib=2.0.0=pyhd8ed1ab_1
   - requests-toolbelt=1.0.0=pyhd8ed1ab_1
+  - requestsexceptions=1.4.0=py_0
   - requirements-detector=1.4.0=pyhd8ed1ab_0
   - restructuredtext_lint=2.0.2=pyhd8ed1ab_0
   - retrying=1.4.2=pyhe01879c_0
@@ -1143,6 +1165,7 @@ dependencies:
   - rfc3986-validator=0.1.1=pyh9f0ad1d_0
   - rfc3987-syntax=1.1.0=pyhe01879c_1
   - rich=14.3.3=pyhcf101f3_0
+  - rich-argparse=1.7.2=pyhd8ed1ab_0
   - rioxarray=0.20.0=pyhd8ed1ab_1
   - ripgrep=15.1.0=hdab8a38_0
   - roaring-landmask=0.10.1=py312h1d298fb_1
@@ -1341,6 +1364,7 @@ dependencies:
   - xcb-util-wm=0.4.2=hb711507_0
   - xcdat=0.11.2=pyhd8ed1ab_0
   - xclim=0.60.0=pyhd8ed1ab_0
+  - xclip=0.13=hb9d3cd8_4
   - xerces-c=3.2.5=h988505b_2
   - xesmf=0.9.2=pyhd8ed1ab_0
   - xgboost=3.2.0=cpu_pyhb39878e_1
@@ -1379,6 +1403,7 @@ dependencies:
   - xradar=0.11.1=pyhd8ed1ab_0
   - xrft=1.0.2=pyhd8ed1ab_0
   - xsdba=0.6.1=pyhd8ed1ab_0
+  - xsel=1.2.1=hb9d3cd8_6
   - xskillscore=0.0.29=pyhd8ed1ab_0
   - xwrf=0.0.5=pyhd8ed1ab_0
   - xxhash=0.8.3=hb47aa4a_0
