@@ -1435,6 +1435,6 @@ dependencies:
     - lavavu-osmesa==1.9.10
     - nci-ipynb==2023.11.0.3
     - py360convert==1.0.4
-    - pycnv==0.4.8
+    - pycnv==0.5.0
     - railroad-diagrams==3.0.1
     - wget==3.2
