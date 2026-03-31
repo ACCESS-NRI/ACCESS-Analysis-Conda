@@ -1446,7 +1446,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/4b/aa/b73950d210c4ed3ef97ba282513c5d39502b2dd34de8ec5b9abd8564ddf2/lavavu_osmesa-1.9.10-cp312-cp312-manylinux_2_28_x86_64.whl
       - pypi: https://files.pythonhosted.org/packages/97/ac/32afd602d3fd8cd001d910747c7953c37c82cb564aeddcf40f027c057a60/nci_ipynb-2023.11.0.3-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/6a/5b/b035e2d71e8be8959196e90e4db7cc3896e39cadc3a083ad37a959c88988/py360convert-1.0.4-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/b9/21/8a7787e6b8f8ebaf51295f6436d8940d131429c27db7f2d4fd35df0e76db/pycnv-0.4.8.tar.gz
+      - pypi: https://files.pythonhosted.org/packages/45/62/9bee9d417111fda0b166aa9e96fe1899cc21e445d7c3734e64f656075c59/pycnv-0.5.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/ca/43/fcf01f1ab9f744c545384bacea51016a267162de0b9e7c6fcd4996c84231/railroad_diagrams-3.0.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/47/6a/62e288da7bcda82b935ff0c6cfe542970f04e29c756b0e147251b2fb251f/wget-3.2.zip
   default:
@@ -2895,7 +2895,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/4b/aa/b73950d210c4ed3ef97ba282513c5d39502b2dd34de8ec5b9abd8564ddf2/lavavu_osmesa-1.9.10-cp312-cp312-manylinux_2_28_x86_64.whl
       - pypi: https://files.pythonhosted.org/packages/97/ac/32afd602d3fd8cd001d910747c7953c37c82cb564aeddcf40f027c057a60/nci_ipynb-2023.11.0.3-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/6a/5b/b035e2d71e8be8959196e90e4db7cc3896e39cadc3a083ad37a959c88988/py360convert-1.0.4-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/b9/21/8a7787e6b8f8ebaf51295f6436d8940d131429c27db7f2d4fd35df0e76db/pycnv-0.4.8.tar.gz
+      - pypi: https://files.pythonhosted.org/packages/45/62/9bee9d417111fda0b166aa9e96fe1899cc21e445d7c3734e64f656075c59/pycnv-0.5.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/ca/43/fcf01f1ab9f744c545384bacea51016a267162de0b9e7c6fcd4996c84231/railroad_diagrams-3.0.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/47/6a/62e288da7bcda82b935ff0c6cfe542970f04e29c756b0e147251b2fb251f/wget-3.2.zip
 packages:
@@ -16742,16 +16742,18 @@ packages:
   - pkg:pypi/pybtex?source=hash-mapping
   size: 73965
   timestamp: 1751015096707
-- pypi: https://files.pythonhosted.org/packages/b9/21/8a7787e6b8f8ebaf51295f6436d8940d131429c27db7f2d4fd35df0e76db/pycnv-0.4.8.tar.gz
+- pypi: https://files.pythonhosted.org/packages/45/62/9bee9d417111fda0b166aa9e96fe1899cc21e445d7c3734e64f656075c59/pycnv-0.5.0-py3-none-any.whl
   name: pycnv
-  version: 0.4.8
-  sha256: d8d1b1b916d0d3e923102186bed1507ed40b41cfc543374c58b90c60a6b518a7
+  version: 0.5.0
+  sha256: bd0ba41cc1c310c157bfef4383abcd70bd3259bac6b9f58120134696d57e5bc3
   requires_dist:
   - gsw
   - pyproj
   - pytz
   - pyaml
-  requires_python: '>=3.5'
+  - numpy
+  - matplotlib
+  requires_python: '>=3.7'
 - conda: https://conda.anaconda.org/conda-forge/noarch/pycodestyle-2.14.0-pyhd8ed1ab_0.conda
   sha256: 1950f71ff44e64163e176b1ca34812afc1a104075c3190de50597e1623eb7d53
   md5: 85815c6a22905c080111ec8d56741454
