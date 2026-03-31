@@ -118,7 +118,7 @@ function inner() {
     for override in "${SCRIPT_DIR}"/overrides/*; do
         copy_if_changed "${override}" "${CONDA_SCRIPT_PATH}"/overrides/"${override##*/}"
     done
-    copy_and_replace_if_changed "${SCRIPT_DIR}"/../modules/common_v3 "${CONDA_MODULE_PATH}"/.common_v3       CONDA_BASE APPS_SUBDIR CONDA_INSTALL_BASENAME SCRIPT_SUBDIR
+    copy_and_replace_if_changed "${SCRIPT_DIR}"/../modules/common_v4 "${CONDA_MODULE_PATH}"/.common_v4       CONDA_BASE APPS_SUBDIR CONDA_INSTALL_BASENAME SCRIPT_SUBDIR
     copy_and_replace_if_changed "${SCRIPT_DIR}"/launcher_conf.sh     "${CONDA_SCRIPT_PATH}"/launcher_conf.sh CONDA_BASE APPS_SUBDIR CONDA_INSTALL_BASENAME
 
     ### Create symlink tree
@@ -224,7 +224,7 @@ fi
 
 
 if [[ "${DO_UPDATE}" == "--install" ]]; then
-    ln -s .common_v3 "${CONDA_OUTER_BASE}"/"${MODULE_SUBDIR}"/"${MODULE_NAME}"/"${FULLENV}"
+    ln -s .common_v4 "${CONDA_OUTER_BASE}"/"${MODULE_SUBDIR}"/"${MODULE_NAME}"/"${FULLENV}"
 fi
 
 pushd "${CONDA_TEMP_PATH}"

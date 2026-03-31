@@ -8,9 +8,9 @@
 ### outside_files_to_copy
 
 ### Optional config for custom deploy script
-export VERSION_TO_MODIFY=26.03
-export STABLE_VERSION=26.02
-export UNSTABLE_VERSION=26.03
+export VERSION_TO_MODIFY=26.04
+export STABLE_VERSION=26.03
+export UNSTABLE_VERSION=26.04
 
 # Make sure we solve for pytorch with CUDA support
 export CONDA_OVERRIDE_CUDA=12

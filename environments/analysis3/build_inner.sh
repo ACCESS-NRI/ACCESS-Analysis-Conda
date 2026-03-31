@@ -14,17 +14,30 @@ PYTHON_VERSION=$(python -c "import sys; print(f'python{sys.version_info.major}.{
 
 pushd "${CONDA_INSTALLATION_PATH}/envs/${FULLENV}/lib/${PYTHON_VERSION}/site-packages/esmvaltool"
 rm config-references.yml
-ln -sf /g/data/xp65/public/apps/esmvaltool/config/config-references.yml config-references.yml
+ln -sf /g/data/xp65/public/apps/esmvaltool/config_2.0/config-references.yml config-references.yml
 popd
 
 pushd "${CONDA_INSTALLATION_PATH}/envs/${FULLENV}/lib/${PYTHON_VERSION}/site-packages/esmvalcore/config/configurations/defaults"
 rm config-user.yml
-ln -sf /g/data/xp65/public/apps/esmvaltool/config/config-user.yml config-user.yml
+ln -sf /g/data/xp65/public/apps/esmvaltool/config_2.0/config-user.yml config-user.yml
+rm extra_facets_access.yml
+ln -sf /g/data/xp65/public/apps/esmvaltool/config_2.0/extra_facets_access.yml extra_facets_access.yml
+rm extra_facets_native6-era5.yml
+ln -sf /g/data/xp65/public/apps/esmvaltool/config_2.0/extra_facets_native6-era5.yml extra_facets_native6-era5
 popd
 
-pushd "${CONDA_INSTALLATION_PATH}/envs/${FULLENV}/lib/${PYTHON_VERSION}/site-packages/esmvalcore"
-rm config-developer.yml
-ln -sf /g/data/xp65/public/apps/esmvaltool/config/config-developer.yml config-developer.yml
+pushd "${CONDA_INSTALLATION_PATH}/envs/${FULLENV}/lib/${PYTHON_VERSION}/site-packages/esmvalcore/config/configurations"
+rm data-esmvalcore-esgf.yml
+ln -sf /g/data/xp65/public/apps/esmvaltool/config_2.0/data-esmvalcore-esgf.yml data-esmvalcore-esgf.yml
+rm data-hpc-nci.yml
+ln -sf /g/data/xp65/public/apps/esmvaltool/config_2.0/data-hpc-nci.yml data-hpc-nci.yml
+rm data-native-access.yml
+ln -sf /g/data/xp65/public/apps/esmvaltool/config_2.0/data-native-access.yml data-native-access.yml
+popd
+
+# User Tracking
+pushd "${CONDA_INSTALLATION_PATH}/envs/${FULLENV}/lib/${PYTHON_VERSION}/site-packages"
+cp /g/data/xp65/admin/analysis3/sitecustomize.py .
 popd
 
 # This is needed because NCI provides different versions of the mpi library depending on the required compiler
