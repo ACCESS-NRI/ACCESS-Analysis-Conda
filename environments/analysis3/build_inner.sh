@@ -37,7 +37,7 @@ popd
 
 # User Tracking
 pushd "${CONDA_INSTALLATION_PATH}/envs/${FULLENV}/lib/${PYTHON_VERSION}/site-packages"
-cp /g/data/xp65/admin/analysis3/sitecustomize.py .
+ln -sf /g/data/xp65/admin/analysis3/sitecustomize.py sitecustomize.py
 popd
 
 # This is needed because NCI provides different versions of the mpi library depending on the required compiler
