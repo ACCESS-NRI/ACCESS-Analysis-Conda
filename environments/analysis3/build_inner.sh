@@ -22,8 +22,8 @@ rm config-user.yml
 ln -sf /g/data/xp65/public/apps/esmvaltool/config_2.0/config-user.yml config-user.yml
 rm extra_facets_access.yml
 ln -sf /g/data/xp65/public/apps/esmvaltool/config_2.0/extra_facets_access.yml extra_facets_access.yml
-rm extra_facets_native6-era5.yml
-ln -sf /g/data/xp65/public/apps/esmvaltool/config_2.0/extra_facets_native6-era5.yml extra_facets_native6-era5
+rm extra_facets_native6.yml
+ln -sf /g/data/xp65/public/apps/esmvaltool/config_2.0/extra_facets_native6.yml extra_facets_native6.yml
 popd
 
 pushd "${CONDA_INSTALLATION_PATH}/envs/${FULLENV}/lib/${PYTHON_VERSION}/site-packages/esmvalcore/config/configurations"
