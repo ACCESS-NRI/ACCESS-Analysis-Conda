@@ -241,6 +241,7 @@ ucx-py = { channel = "rapidsai" }
 ucx = "==1.18.1"
 ultraplot = "*"
 ujson = "*"
+uncertainties =">=3.2.3,!=3.2.4"
 vtk = "*"
 watchdog = "*"
 watermark = "*"
@@ -325,6 +326,7 @@ virtualizarr = ">=2.4.0,<3"
 icechunk = ">=1.1.21,<2"
 python-swiftclient = ">=4.10.0,<5"
 python-openstackclient = ">=9.0.0,<10"
+parsl = ">=2026.3.16,<2027"
 
 [pypi-dependencies]
 lavavu = "==1.9.10"
