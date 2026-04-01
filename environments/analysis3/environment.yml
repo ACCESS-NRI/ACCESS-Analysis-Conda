@@ -1310,7 +1310,7 @@ dependencies:
   - ujson=5.12.0=py312h8285ef7_0
   - ukkonen=1.1.0=py312hd9148b4_0
   - ultraplot=2.1.3=pyhd8ed1ab_0
-  - uncertainties=3.2.4=pyhd8ed1ab_0
+  - uncertainties=3.2.4
   - uncompresspy=0.4.1=pyhd8ed1ab_0
   - unicodedata2=17.0.1=py312h4c3975b_0
   - universal-pathlib=0.3.10=hd8ed1ab_0
