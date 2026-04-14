@@ -422,7 +422,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/hvplot-0.12.2-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/hyperframe-6.1.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/icclim-7.1.0-pyhd8ed1ab_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/icechunk-1.1.21-py312h0ccc70a_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/icechunk-2.0.1-py312h0ccc70a_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/icu-75.1-he02047a_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/id-1.6.1-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/identify-2.6.18-pyhd8ed1ab_0.conda
@@ -1885,7 +1885,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/hvplot-0.12.2-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/hyperframe-6.1.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/icclim-7.1.0-pyhd8ed1ab_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/icechunk-1.1.21-py312h0ccc70a_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/icechunk-2.0.1-py312h0ccc70a_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/icu-75.1-he02047a_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/id-1.6.1-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/identify-2.6.18-pyhd8ed1ab_0.conda
@@ -9200,23 +9200,23 @@ packages:
   - pkg:pypi/icclim?source=hash-mapping
   size: 91748
   timestamp: 1773735705722
-- conda: https://conda.anaconda.org/conda-forge/linux-64/icechunk-1.1.21-py312h0ccc70a_0.conda
-  sha256: fe7f0907ad10fa207782c525dc8e8a1cdf759bb71e888f9f885fd2d1b2fb40a0
-  md5: 735de0a467c28a124c1dc72b0711ba02
+- conda: https://conda.anaconda.org/conda-forge/linux-64/icechunk-2.0.1-py312h0ccc70a_1.conda
+  sha256: f8b2042d1e91375228c683642592e9ca7f6a08ec236bda35354fca6df3716a60
+  md5: 76b9ab7decd56e7c9b25ca3273656ef5
   depends:
   - __glibc >=2.17,<3.0.a0
   - libgcc >=14
   - python >=3.12,<3.13.0a0
   - python_abi 3.12.* *_cp312
-  - zarr >=3
+  - zarr >=3.1
   constrains:
   - __glibc >=2.17
   license: Apache-2.0
   license_family: APACHE
   purls:
   - pkg:pypi/icechunk?source=hash-mapping
-  size: 12333303
-  timestamp: 1773675214163
+  size: 11960428
+  timestamp: 1775749221625
 - conda: https://conda.anaconda.org/conda-forge/linux-64/icu-75.1-he02047a_0.conda
   sha256: 71e750d509f5fa3421087ba88ef9a7b9be11c53174af3aa4d06aff4c18b38e8e
   md5: 8b189310083baabfb622af68fd9d3ae3
