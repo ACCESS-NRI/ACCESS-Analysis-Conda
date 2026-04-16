@@ -34,7 +34,7 @@ pip = "26.*"
 hdf5 = { version = "*", build = "mpi_openmpi*" }
 jupyterlab = "==4.5.0"
 access-nri-intake = { version = "==1.6.0", channel = "accessnri" }
-intake-esm-access = { version = "==2025.9.18", channel = "accessnri" }
+access-intake-esm = { version = "==2026.4.19", channel = "accessnri" }
 ecgtools-access = { version = ">=2025.10.7", channel = "accessnri" }
 access-py-telemetry = { version = "==0.1.10", channel = "accessnri" }
 access-intake-utils = { version = "==0.1.7", channel = "accessnri" }
