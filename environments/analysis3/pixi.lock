@@ -23,7 +23,7 @@ environments:
       - conda: https://conda.anaconda.org/accessnri/noarch/access-intake-esm-2026.4.19-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/access-intake-utils-0.1.7-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/access-med-tools-0.1.23-pypy_0.tar.bz2
-      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.0.9b-py_0.conda
+      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.1.0b-py_0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/access-nri-intake-1.6.0-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/access-py-telemetry-0.1.10-py_0.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/noarch/accessible-pygments-0.0.5-pyhd8ed1ab_1.conda
@@ -1479,7 +1479,7 @@ environments:
       - conda: https://conda.anaconda.org/accessnri/noarch/access-intake-esm-2026.4.19-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/access-intake-utils-0.1.7-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/access-med-tools-0.1.23-pypy_0.tar.bz2
-      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.0.9b-py_0.conda
+      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.1.0b-py_0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/access-nri-intake-1.6.0-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/access-py-telemetry-0.1.10-py_0.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/noarch/accessible-pygments-0.0.5-pyhd8ed1ab_1.conda
@@ -3030,9 +3030,9 @@ packages:
   license_family: APACHE
   size: 46216
   timestamp: 1761304298179
-- conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.0.9b-py_0.conda
-  sha256: a5231e782fa9deab587740721fe4751c2e722bfd30bf188979d07e08575084f2
-  md5: 4eaa39861c65ace8a30223dbdd757d2a
+- conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.1.0b-py_0.conda
+  sha256: 94e35446f5338952363c12826b2da55c2f0293280002ab6f668efb10d22210ce
+  md5: 54a1ec56973790783581b2aea0bfac76
   depends:
   - cftime
   - dask
@@ -3041,8 +3041,8 @@ packages:
   - pyyaml
   - xarray
   license: Apache-2.0
-  size: 422115
-  timestamp: 1771900913880
+  size: 7991549
+  timestamp: 1777000789551
 - conda: https://conda.anaconda.org/accessnri/noarch/access-nri-intake-1.6.0-py_0.tar.bz2
   sha256: a1f65754783989b575a0b1e3a7e51cd5dd142347eae56c89759c0abeccb4ea44
   md5: 0543354819bcbf2fcc14f7c9bb2140cf
