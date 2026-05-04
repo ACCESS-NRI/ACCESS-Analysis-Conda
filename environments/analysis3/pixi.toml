@@ -41,7 +41,7 @@ access-intake-utils = { version = "==0.1.7", channel = "accessnri" }
 intake-dataframe-catalog = { version = "==0.5.1", channel = "conda-forge" }
 yamanifest = { version = ">=0.3.12", channel = "accessnri" }
 access-med-tools = { version = "==0.1.23", channel = "accessnri" }
-access-moppy = { version = "==1.0.9b", channel = "accessnri" }
+access-moppy-esmval = { version = "==1.2.9b", channel = "accessnri" }
 shumlib = { channel = "accessnri" }
 aiohttp = "*"
 aiohttp-cors = "*"
