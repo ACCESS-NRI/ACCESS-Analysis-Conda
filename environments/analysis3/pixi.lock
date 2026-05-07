@@ -438,7 +438,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/importlib_resources-6.5.2-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/inequality-1.1.2-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/iniconfig-2.3.0-pyhd8ed1ab_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/intake-2.0.9-pyhd8ed1ab_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/intake-2.0.8-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/intake-dataframe-catalog-0.5.1-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/intake-esgf-2026.1.26-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/intake-esm-2025.12.12-pyhd8ed1ab_0.conda
@@ -1895,7 +1895,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/importlib_resources-6.5.2-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/inequality-1.1.2-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/iniconfig-2.3.0-pyhd8ed1ab_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/intake-2.0.9-pyhd8ed1ab_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/intake-2.0.8-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/intake-dataframe-catalog-0.5.1-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/intake-esgf-2026.1.26-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/intake-esm-2025.12.12-pyhd8ed1ab_0.conda
@@ -9479,21 +9479,21 @@ packages:
   - pkg:pypi/iniconfig?source=compressed-mapping
   size: 13387
   timestamp: 1760831448842
-- conda: https://conda.anaconda.org/conda-forge/noarch/intake-2.0.9-pyhd8ed1ab_0.conda
-  sha256: a857279d40df4dc61d99dc3685754cbe62eccc96e48134c346d4304e3eea1c9b
-  md5: e8501489d6720634f0a165ebf32d42d1
+- conda: https://conda.anaconda.org/conda-forge/noarch/intake-2.0.8-pyhd8ed1ab_0.conda
+  sha256: 54b81550dbacdedb8aa272859233f7455bdd89e89fcb154beb7022f61af3af4a
+  md5: bcd8513a2f3b9b8d83fc7f04302cf800
   depends:
   - fsspec >=2023.0.0
   - networkx
   - platformdirs
-  - python >=3.10
+  - python >=3.9
   - pyyaml
   license: BSD-2-Clause
   license_family: BSD
   purls:
   - pkg:pypi/intake?source=hash-mapping
-  size: 203370
-  timestamp: 1773073581836
+  size: 198517
+  timestamp: 1736882413828
 - conda: https://conda.anaconda.org/conda-forge/noarch/intake-dataframe-catalog-0.5.1-pyhd8ed1ab_0.conda
   sha256: f779764410d249c2781e4810425dcc1c3e37a8ec861a967af6a93d76ab61b94f
   md5: ca5bcf7109c18df1b7c87301d6128e22
