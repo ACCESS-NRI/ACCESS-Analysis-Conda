@@ -1428,7 +1428,7 @@ dependencies:
   - yamllint=1.35.1=pyhd8ed1ab_1
   - yapf=0.43.0=pyhd8ed1ab_1
   - yarl=1.23.0=py312h8a5da7c_0
-  - zarr=3.1.5=pyhcf101f3_0
+  - zarr=3.2.1=pyhc364b38_0
   - zeromq=4.3.5=h387f397_9
   - zfp=1.0.1=h909a3a2_5
   - zict=3.0.0=pyhd8ed1ab_1
