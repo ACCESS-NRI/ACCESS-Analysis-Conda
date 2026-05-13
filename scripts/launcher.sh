@@ -21,7 +21,11 @@ else
     debug=true
 fi
 
-wrapper_path=$( realpath "${0}" )
+### Detect if being sourced (e.g. by VSCode for environment activation)
+being_sourced=false
+[[ "${BASH_SOURCE[0]}" != "${0}" ]] && being_sourced=true
+
+wrapper_path=$( realpath "${BASH_SOURCE[0]:-${0}}" )
 wrapper_bin=${wrapper_path%/*}
 $debug "wrapper_bin = " "${wrapper_bin}"
 conf_file="${wrapper_bin}"/launcher_conf.sh
@@ -108,7 +112,7 @@ $debug "CONTAINER_OVERLAY_PATH after override check = " ${CONTAINER_OVERLAY_PATH
 
 export CONDA_BASE="${CONDA_BASE_ENV_PATH}/envs/${myenv}"
 
-if ! [[ -x "${SINGULARITY_BINARY_PATH}" ]]; then
+if ! [[ "${being_sourced}" ]] && ! [[ -x "${SINGULARITY_BINARY_PATH}" ]]; then
     ### Short circuit detection
     ### In some cases (e.g. mpi processes launched from orterun), launcher will be invoked from
     ### within the container. The tell-tale sign for this is if /opt/singularity is missing.
@@ -134,6 +138,10 @@ if [[ -e "${wrapper_bin}"/../overrides/"${cmd_to_run[0]##*/}".config.sh ]]; then
 fi
 
 export SINGULARITYENV_LD_LIBRARY_PATH=$LD_LIBRARY_PATH
+### Ensure key geospatial data paths are always available inside the container,
+### including interactive shells launched via launcher.sh bash.
+export SINGULARITYENV_PROJ_DATA="${CONDA_BASE}/share/proj"
+export SINGULARITYENV_GDAL_DATA="${CONDA_BASE}/share/gdal"
 declare -a singularity_default_path=( '/usr/local/sbin' '/usr/local/bin' '/usr/sbin' '/usr/bin' '/sbin' '/bin' )
 
 while IFS= read -r -d: i; do
@@ -160,6 +168,21 @@ done
 bind_str=${bind_str%,}
 
 $debug "binding args= " ${bind_str}
+
+if [[ "${being_sourced}" ]]; then
+    ### Sourced activation is used by VSCode. Keep this path non-interactive and
+    ### avoid shell replacement. Set key runtime vars needed by common geospatial
+    ### libraries and return control to the caller.
+    ### NOTE: CONDA_BASE paths live inside the squashfs overlay and don't exist on
+    ### the host filesystem, so we must NOT guard these with -d checks. The paths
+    ### are valid inside the singularity container where python actually runs.
+    $debug "Being sourced - applying non-interactive activation environment"
+
+    export PROJ_DATA="${CONDA_BASE}/share/proj"
+    export GDAL_DATA="${CONDA_BASE}/share/gdal"
+
+    return 0
+fi
 
 $debug "Singularity invocation: " "$SINGULARITY_BINARY_PATH" -s exec --bind "${bind_str}" ${overlay_args} "${CONTAINER_PATH}" "${cmd_to_run[@]}"
 "$SINGULARITY_BINARY_PATH" -s exec --bind "${bind_str}" ${overlay_args} "${CONTAINER_PATH}" "${cmd_to_run[@]}"
