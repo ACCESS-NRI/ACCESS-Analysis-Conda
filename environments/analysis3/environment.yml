@@ -1440,11 +1440,16 @@ dependencies:
   - pip
   - pip:
     - accessvis==1.1.4
+    - cc-plugin-wcrp==2.2.1
     - cmip7-data-request-api==1.4
+    - esgvoc==4.0.1
     - lavavu==1.9.10
     - lavavu-osmesa==1.9.10
     - nci-ipynb==2023.11.0.3
     - py360convert==1.0.4
     - pycnv==0.5.0
+    - pyfive==1.1.2
+    - pyld==3.0.0
     - railroad-diagrams==3.0.1
+    - sqlmodel==0.0.38
     - wget==3.2

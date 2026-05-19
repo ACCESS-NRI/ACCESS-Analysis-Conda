@@ -20,89 +20,48 @@ pixi import environment.yml --format=conda-env
 ### Updating the pixi environment
 
 Do not directly modify `environment.yml` - we are going to totally rebuild it.
-Instead, you want to modify `pixi.toml`. You can do this either by editing it directly, or by using pixi commands.
+Instead, you want to modify `pixi.toml`.
 
-Once you've added/removed whatever you were after, proceed to solving.
+You can either:
 
-### Solving the pixi environment
+- edit `pixi.toml` directly, or
+- use pixi commands such as:
 
-1. Solve the pixi environment:
 ```bash
-pixi lock
+pixi add <package>
+pixi remove <package>
 ```
+
+If you need to target a specific dependency group or channel, adjust the command accordingly and let pixi update `pixi.toml` for you.
+
+Once you've added/removed whatever you were after, rebuild the environment.
+
+### Rebuilding the conda environment from pixi
+
+Once you've updated `pixi.toml`, use the task:
+
+```bash
+pixi run rebuild-env
+```
+
+That task handles the lock/update flow and regenerates `environment.yml` for you.
 
 If you wanted to use pixi shell at this point, instead of creating a pixi environment, you could do:
 ```bash
-pixi shell 
+pixi shell
 ```
 
 You can verify package versions in the pixi environment with:
 ```bash
-pixi run python 
+pixi run python
 ```
 ```python
 import blah_package
 blah.__version__
 ```
-or however you might want to do it. 
+or however you might want to do it.
 
-### Exporting the pixi environment back to conda
-
-#### Via Pixi Task
-
-Run 
-```sh
-$ pixi run rebuild-env
-```
-
-#### Manually
-
-1. Export the pixi environment to json:
-
-```bash
-pixi list --json > solved.json
-```
-
-2. Run this big chungus of a script, which uses `jq` to create a new `environment.yml` file with the solved package versions:
-
-```bash
-mv environment.yml environment.yml.bak
-(
-echo "name: analysis3"
-echo "channels:"
-echo "  - accessnri"
-echo "  - conda-forge"
-echo "  - nodefaults"
-echo "  - rapidsai"
-echo "  - pytorch"
-echo "  - nvidia"
-echo "dependencies:"
-
-# Conda packages
-jq -r '
-.[] 
-| select(.name | startswith("__") | not)
-| select(.name | startswith("_") | not)
-| select(.build != null)
-| "  - \(.name)=\(.version)=\(.build)"
-' solved.json
-
-echo "  - pip"
-echo "  - pip:"
-
-# Pip packages
-jq -r '
-.[] 
-| select(.name | startswith("__") | not)
-| select(.name | startswith("_") | not)
-| select(.build == null)
-| "    - \(.name | gsub("_"; "-"))==\(.version)"
-' solved.json
-
-) > environment.yml
-```
-
-3. Submit a PR to this repo. In theory everything will build just fine. If not, ask chatGPT for help.
+Then submit a PR to this repo. In theory everything will build just fine. If not, ask chatGPT for help.
 
 ### Updating the environment
 
