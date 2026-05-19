@@ -20,7 +20,19 @@ pixi import environment.yml --format=conda-env
 ### Updating the pixi environment
 
 Do not directly modify `environment.yml` - we are going to totally rebuild it.
-Instead, you want to modify `pixi.toml`. You can do this either by editing it directly, or by using pixi commands.
+Instead, you want to modify `pixi.toml`.
+
+You can either:
+
+- edit `pixi.toml` directly, or
+- use pixi commands such as:
+
+```bash
+pixi add <package>
+pixi remove <package>
+```
+
+If you need to target a specific dependency group or channel, adjust the command accordingly and let pixi update `pixi.toml` for you.
 
 Once you've added/removed whatever you were after, rebuild the environment.
 
