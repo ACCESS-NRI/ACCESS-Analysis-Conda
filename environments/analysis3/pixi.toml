@@ -1,6 +1,15 @@
 [workspace]
 authors = ["Charles Turner <charles.turner@anu.edu.au>"]
-channels = ["accessnri", "conda-forge", "nodefaults", "rapidsai", "pytorch", "nvidia"]
+channels = [
+  "conda-forge",
+  # get most recent versions of packages we control
+  { channel = "accessnri", exclude-newer = "0d" },
+  "nodefaults",
+  "rapidsai",
+  "pytorch",
+  "nvidia",
+]
+exclude-newer = "7d"
 name = "analysis3"
 platforms = ["linux-64"]
 version = "0.1.0"
