@@ -21,9 +21,15 @@ else
     debug=true
 fi
 
-### Detect if being sourced (e.g. by VSCode for environment activation)
+### Detect if being sourced (e.g. by VSCode for environment activation).
+### Detect this from argv[0]: when sourced, $0 is the current shell (bash/zsh/sh),
+### while normal command invocation sets $0 to the script path/symlink (e.g. python).
 being_sourced=false
-[[ "${BASH_SOURCE[0]}" != "${0}" ]] && being_sourced=true
+case "${0##*/}" in
+    bash|-bash|sh|-sh|zsh|-zsh|ksh|-ksh)
+        being_sourced=true
+        ;;
+esac
 
 wrapper_path=$( realpath "${BASH_SOURCE[0]:-${0}}" )
 wrapper_bin=${wrapper_path%/*}
@@ -75,9 +81,11 @@ done
 
 $debug "PROG_ARGS =" "${PROG_ARGS[@]}"
 
-if ! [[ "${SINGULARITY_BINARY_PATH}" ]]; then
-    module load singularity
-    export SINGULARITY_BINARY_PATH=$( type -p singularity )
+if [[ "${being_sourced}" != "true" ]] && ! [[ -x "${SINGULARITY_BINARY_PATH}" ]]; then
+    ### Host-side fallback: if configured singularity path is stale, try module path.
+    module load singularity >/dev/null 2>&1 || true
+    singularity_bin=$( type -p singularity 2>/dev/null || true )
+    [[ "${singularity_bin}" ]] && export SINGULARITY_BINARY_PATH="${singularity_bin}"
 fi
 
 [[ "${LAUNCHER_SCRIPT}" ]] || export LAUNCHER_SCRIPT="${0%/*}"/launcher.sh
@@ -112,7 +120,7 @@ $debug "CONTAINER_OVERLAY_PATH after override check = " ${CONTAINER_OVERLAY_PATH
 
 export CONDA_BASE="${CONDA_BASE_ENV_PATH}/envs/${myenv}"
 
-if ! [[ "${being_sourced}" ]] && ! [[ -x "${SINGULARITY_BINARY_PATH}" ]]; then
+if [[ "${being_sourced}" != "true" ]] && ! [[ -x "${SINGULARITY_BINARY_PATH}" ]]; then
     ### Short circuit detection
     ### In some cases (e.g. mpi processes launched from orterun), launcher will be invoked from
     ### within the container. The tell-tale sign for this is if /opt/singularity is missing.
@@ -169,7 +177,7 @@ bind_str=${bind_str%,}
 
 $debug "binding args= " ${bind_str}
 
-if [[ "${being_sourced}" ]]; then
+if [[ "${being_sourced}" == "true" ]]; then
     ### Sourced activation is used by VSCode. Keep this path non-interactive and
     ### avoid shell replacement. Set key runtime vars needed by common geospatial
     ### libraries and return control to the caller.
