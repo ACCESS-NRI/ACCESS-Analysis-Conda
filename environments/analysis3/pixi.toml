@@ -1,6 +1,15 @@
 [workspace]
 authors = ["Charles Turner <charles.turner@anu.edu.au>"]
-channels = ["accessnri", "conda-forge", "nodefaults", "rapidsai", "pytorch", "nvidia"]
+channels = [
+  "conda-forge",
+  # get most recent versions of packages we control
+  { channel = "accessnri", exclude-newer = "0d" },
+  "nodefaults",
+  "rapidsai",
+  "pytorch",
+  "nvidia",
+]
+exclude-newer = "7d"
 name = "analysis3"
 platforms = ["linux-64"]
 version = "0.1.0"
@@ -25,7 +34,7 @@ scikit-image = "0.26.*"
 scikit-learn = "1.8.*"
 xarray = "==2026.1.0"
 ipython = "*"
-zarr = ">=3.1.0"
+zarr = ">=3.2.0"
 iris = "3.14.*"
 netcdf4 = "1.7.*"
 libnetcdf = { version = "*", build = "mpi_openmpi*" }
@@ -38,10 +47,11 @@ access-intake-esm = { version = "==2026.4.19", channel = "accessnri" }
 ecgtools-access = { version = ">=2025.10.7", channel = "accessnri" }
 access-py-telemetry = { version = "==0.1.10", channel = "accessnri" }
 access-intake-utils = { version = "==0.1.7", channel = "accessnri" }
+intake-virtual-icechunk = { version = "==0.1.0", channel = "accessnri" }
 intake-dataframe-catalog = { version = "==0.5.1", channel = "conda-forge" }
 yamanifest = { version = ">=0.3.12", channel = "accessnri" }
 access-med-tools = { version = "==0.1.23", channel = "accessnri" }
-access-moppy-esmval = { version = "==1.2.9b", channel = "accessnri" }
+access-moppy-esmval = { version = "==1.3.0b", channel = "accessnri" }
 shumlib = { channel = "accessnri" }
 aiohttp = "*"
 aiohttp-cors = "*"
@@ -337,3 +347,5 @@ py360convert = "*"
 pycnv = ">=0.5.0"
 cmip7-data-request-api = "*"
 nci-ipynb = ">=2023.11.0.3, <2024"
+cc-plugin-wcrp = ">=2.2.1, <3"
+esgvoc = ">=4.0.1, <5"
