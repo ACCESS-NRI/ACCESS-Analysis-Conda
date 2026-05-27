@@ -1425,7 +1425,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/wradlib-2.8.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/wslink-2.5.7-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/wurlitzer-3.1.1-pyhd8ed1ab_1.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/xarray-2026.1.0-pyhcf101f3_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/xarray-2026.4.0-pyhc364b38_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/xarray-einstats-0.10.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/xarray-spatial-0.9.9-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/xarraymannkendall-1.4.5-pyhd8ed1ab_0.conda
@@ -2893,7 +2893,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/wradlib-2.8.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/wslink-2.5.7-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/wurlitzer-3.1.1-pyhd8ed1ab_1.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/xarray-2026.1.0-pyhcf101f3_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/xarray-2026.4.0-pyhc364b38_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/xarray-einstats-0.10.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/xarray-spatial-0.9.9-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/xarraymannkendall-1.4.5-pyhd8ed1ab_0.conda
@@ -24137,13 +24137,13 @@ packages:
   - pkg:pypi/wurlitzer?source=hash-mapping
   size: 14194
   timestamp: 1736089258836
-- conda: https://conda.anaconda.org/conda-forge/noarch/xarray-2026.1.0-pyhcf101f3_0.conda
-  sha256: 878d190db1a78f1e3fe90497e053a0dc0941937e82378cc990f43115ffe2bee6
-  md5: 397276eff153e81b0e7128acc56deb32
+- conda: https://conda.anaconda.org/conda-forge/noarch/xarray-2026.4.0-pyhc364b38_0.conda
+  sha256: 9f5f5905afea6e0188aa6887aed0809033143343a7af06983f4b390c2286d2d7
+  md5: 099794df685f800c3f319ff4742dc1bb
   depends:
   - python >=3.11
   - numpy >=1.26
-  - packaging >=24.1
+  - packaging >=24.2
   - pandas >=2.2
   - python
   constrains:
@@ -24173,8 +24173,8 @@ packages:
   license_family: APACHE
   purls:
   - pkg:pypi/xarray?source=hash-mapping
-  size: 1010206
-  timestamp: 1769665430320
+  size: 1017999
+  timestamp: 1776122774298
 - conda: https://conda.anaconda.org/conda-forge/noarch/xarray-einstats-0.10.0-pyhd8ed1ab_0.conda
   sha256: 02943091700f860bc3fc117deabe5fd609ed7bae64fd97da2f70241167c2719d
   md5: b82273c95432c78efe98f14cbc46be7d
