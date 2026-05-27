@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'server/pixi.lock'
+      - 'environments/analysis3/pixi.lock'
 
 permissions:
   contents: read
@@ -19,8 +19,8 @@ jobs:
         with:
           fetch-depth: 0
           sparse-checkout: |
-            server/pyproject.toml
-            server/pixi.lock
+            environments/analysis3/pixi.toml
+            environments/analysis3/pixi.lock
           sparse-checkout-cone-mode: false
 
       - uses: prefix-dev/setup-pixi@5185adfbffb4bd703da3010310260805d89ebb11 #v0.9.6
@@ -33,7 +33,7 @@ jobs:
       - name: Generate lock diff with base branch
         working-directory: ./environments/analysis3
         run: |
-          git show origin/${{ github.base_ref }}:server/pixi.lock > /tmp/base.lock
+          git show origin/${{ github.base_ref }}:environments/analysis3/pixi.lock > /tmp/base.lock
           pixi diff --before /tmp/base.lock --after pixi.lock \
             | pixi diff-to-markdown > /tmp/diff.md
 
