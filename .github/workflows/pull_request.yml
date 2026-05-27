@@ -14,7 +14,7 @@ jobs:
     steps:
       - name: Checkout repository
         ### Latest at time of writing
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Check if container definition has changed
         id: changed-container-def
         uses: tj-actions/changed-files@v41

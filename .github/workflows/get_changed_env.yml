@@ -11,7 +11,7 @@ jobs:
     outputs:
       matrix: ${{ steps.diff.outputs.matrix }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Check changed environments
         id: diff
         run: |
