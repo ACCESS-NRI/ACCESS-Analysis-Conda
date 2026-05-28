@@ -435,7 +435,7 @@ dependencies:
   - intake-esgf=2026.4.28=pyhd8ed1ab_0
   - intake-esm=2025.12.12=pyhd8ed1ab_0
   - intake-esm-access=2026.4.15=py_0
-  - intake-virtual-icechunk=0.1.0=py_0
+  - intake-virtual-icechunk=0.2.0=py_0
   - ipdb=0.13.13=pyhd8ed1ab_1
   - ipydatagrid=1.4.0=pyhcf101f3_2
   - ipykernel=6.31.0=pyha191276_0
