@@ -24,7 +24,7 @@ environments:
       - conda: https://conda.anaconda.org/accessnri/noarch/access-py-telemetry-0.1.10-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/ecgtools-access-2025.10.7-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/intake-esm-access-2026.4.15-py_0.tar.bz2
-      - conda: https://conda.anaconda.org/accessnri/noarch/intake-virtual-icechunk-0.2.0-py_0.conda
+      - conda: https://conda.anaconda.org/accessnri/noarch/intake-virtual-icechunk-0.2.1-py_0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/yamanifest-0.3.13-py_0.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/linux-64/_openmp_mutex-4.5-7_kmp_llvm.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/aiohttp-3.13.5-py312h5d8c7f2_0.conda
@@ -1492,7 +1492,7 @@ environments:
       - conda: https://conda.anaconda.org/accessnri/noarch/access-py-telemetry-0.1.10-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/ecgtools-access-2025.10.7-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/intake-esm-access-2026.4.15-py_0.tar.bz2
-      - conda: https://conda.anaconda.org/accessnri/noarch/intake-virtual-icechunk-0.2.0-py_0.conda
+      - conda: https://conda.anaconda.org/accessnri/noarch/intake-virtual-icechunk-0.2.1-py_0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/yamanifest-0.3.13-py_0.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/linux-64/_openmp_mutex-4.5-7_kmp_llvm.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/aiohttp-3.13.5-py312h5d8c7f2_0.conda
@@ -3107,9 +3107,9 @@ packages:
   license_family: APACHE
   size: 36668
   timestamp: 1776309572433
-- conda: https://conda.anaconda.org/accessnri/noarch/intake-virtual-icechunk-0.2.0-py_0.conda
-  sha256: b5f18694cf054e44fefd59b5be1a229e4361b49c56593452cdd957b2ffe1c3ed
-  md5: 6e8cae1a7918b31c96af1ed9f2c6d2b5
+- conda: https://conda.anaconda.org/accessnri/noarch/intake-virtual-icechunk-0.2.1-py_0.conda
+  sha256: 2eb46a0c8aae474cd9b1a959c0b01c06cf47b20c4e58e432087b67f11e44cedc
+  md5: fd7c60d19d0c9727b69f4f5627c24e47
   depends:
   - icechunk
   - intake >=2.0.0
@@ -3127,8 +3127,8 @@ packages:
   - zarr >=3.2.0
   license: Apache Software
   license_family: APACHE
-  size: 32925
-  timestamp: 1779932507548
+  size: 33862
+  timestamp: 1780288622996
 - conda: https://conda.anaconda.org/accessnri/noarch/yamanifest-0.3.13-py_0.tar.bz2
   sha256: 3bbb4c88a47bf4590ecc4175e661e277b03d7a5fb8de9ffd7355a1e11e284095
   md5: 16e9dc1dad80a9f309605f8298229532
