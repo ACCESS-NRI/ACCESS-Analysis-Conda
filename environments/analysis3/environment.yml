@@ -1452,6 +1452,7 @@ dependencies:
     - cc-plugin-wcrp==2.2.1
     - cmip7-data-request-api==1.4
     - esgvoc==4.0.1
+    - frisky==0.1.0
     - lavavu==1.9.10
     - lavavu-osmesa==1.9.10
     - nci-ipynb==2023.11.0.3
