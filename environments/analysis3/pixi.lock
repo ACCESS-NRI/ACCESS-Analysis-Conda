@@ -1469,6 +1469,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/b8/c1/ad51336a39919be7b288498aed098029b948c2f4a38192b339b7d2cbcf8b/lavavu-1.9.10-cp312-cp312-manylinux_2_28_x86_64.whl
       - pypi: https://files.pythonhosted.org/packages/bf/ab/259b09a1ed4653378103f5a0edd9ad3eb3a8af995b11d9d52528807ae6e9/accessvis-1.1.4-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/ca/43/fcf01f1ab9f744c545384bacea51016a267162de0b9e7c6fcd4996c84231/railroad_diagrams-3.0.1-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/dd/af/49904d0704885455540ac8031b3640fac3db9b0095855a76c9ec8b32baec/frisky-0.1.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
       - pypi: https://files.pythonhosted.org/packages/f7/91/923cb8ea3ed18ed9bd2fdf170b2fc4d6ef9543e45ca7f15dfd3d5248d505/cmip7_data_request_api-1.4-py3-none-any.whl
   default:
     channels:
@@ -2937,6 +2938,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/b8/c1/ad51336a39919be7b288498aed098029b948c2f4a38192b339b7d2cbcf8b/lavavu-1.9.10-cp312-cp312-manylinux_2_28_x86_64.whl
       - pypi: https://files.pythonhosted.org/packages/bf/ab/259b09a1ed4653378103f5a0edd9ad3eb3a8af995b11d9d52528807ae6e9/accessvis-1.1.4-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/ca/43/fcf01f1ab9f744c545384bacea51016a267162de0b9e7c6fcd4996c84231/railroad_diagrams-3.0.1-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/dd/af/49904d0704885455540ac8031b3640fac3db9b0095855a76c9ec8b32baec/frisky-0.1.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
       - pypi: https://files.pythonhosted.org/packages/f7/91/923cb8ea3ed18ed9bd2fdf170b2fc4d6ef9543e45ca7f15dfd3d5248d505/cmip7_data_request_api-1.4-py3-none-any.whl
 packages:
 - conda: https://conda.anaconda.org/accessnri/linux-64/shumlib-2025.10.1-h3218e01_0.conda
@@ -24824,6 +24826,19 @@ packages:
   version: 3.0.1
   sha256: d414ff2439ed53345950e197938097548721b5d097926fafeaabc2bb069b44f9
   requires_python: '>=3.7'
+- pypi: https://files.pythonhosted.org/packages/dd/af/49904d0704885455540ac8031b3640fac3db9b0095855a76c9ec8b32baec/frisky-0.1.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+  name: frisky
+  version: 0.1.0
+  sha256: bc07d269a29bf758b4f49ab311f937dc51319c0f62a50478a88eb6d579c45005
+  requires_dist:
+  - cloudpickle
+  - rich
+  - typer>=0.9.0
+  - dask ; extra == 'dask'
+  - distributed ; extra == 'dask'
+  - pytest ; extra == 'dev'
+  - pytest-timeout ; extra == 'dev'
+  requires_python: '>=3.9'
 - pypi: https://files.pythonhosted.org/packages/f7/91/923cb8ea3ed18ed9bd2fdf170b2fc4d6ef9543e45ca7f15dfd3d5248d505/cmip7_data_request_api-1.4-py3-none-any.whl
   name: cmip7-data-request-api
   version: '1.4'
