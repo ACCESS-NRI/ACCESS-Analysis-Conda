@@ -9,7 +9,7 @@ channels:
 dependencies:
   - absl-py=2.4.0=pyhd8ed1ab_0
   - access=1.1.10.post3=pyhd8ed1ab_0
-  - access-intake-esm=2026.4.19=py_0
+  - access-intake-esm=2026.7.1=py_0
   - access-intake-utils=0.1.7=py_0
   - access-med-tools=0.1.23=pypy_0
   - access-moppy=1.5.1b=py_0
