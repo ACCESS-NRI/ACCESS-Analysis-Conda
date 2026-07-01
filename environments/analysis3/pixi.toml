@@ -42,7 +42,7 @@ openmpi = "==5.0.8"
 pip = "26.*"
 hdf5 = { version = "*", build = "mpi_openmpi*" }
 jupyterlab = "==4.5.0"
-access-nri-intake = { version = "==1.6.0", channel = "accessnri" }
+access-nri-intake = { version = "==1.6.2", channel = "accessnri" }
 access-intake-esm = { version = "==2026.7.1", channel = "accessnri" }
 ecgtools-access = { version = ">=2025.10.7", channel = "accessnri" }
 access-py-telemetry = { version = "==0.1.10", channel = "accessnri" }
