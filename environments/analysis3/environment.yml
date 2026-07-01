@@ -943,7 +943,6 @@ dependencies:
   - pyfive=1.1.2=pyhd8ed1ab_0
   - pyflakes=3.4.0=pyhd8ed1ab_0
   - pygam=0.12.0=pyhd8ed1ab_0
-  - pygamma_n=1.0.0=py312h4cfd3ad_1
   - pygeoif=1.6.0=pyhd8ed1ab_0
   - pygments=2.20.0=pyhd8ed1ab_0
   - pygmt=0.18.0=pyhcf101f3_0
