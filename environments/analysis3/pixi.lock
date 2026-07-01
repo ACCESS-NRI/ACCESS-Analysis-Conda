@@ -489,7 +489,6 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/pycosat-0.6.6-py312h4c3975b_3.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/pydantic-core-2.46.4-py312h868fb18_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/pyerfa-2.0.1.5-py310h32771cd_2.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/pygamma_n-1.0.0-py312h4cfd3ad_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/pygrib-2.1.8-py312h2f48d4f_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/pyhdf-0.11.6-py312h52fbf50_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/pykdtree-1.4.3-py312h4f23490_2.conda
@@ -1958,7 +1957,6 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/pycosat-0.6.6-py312h4c3975b_3.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/pydantic-core-2.46.4-py312h868fb18_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/pyerfa-2.0.1.5-py310h32771cd_2.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/pygamma_n-1.0.0-py312h4cfd3ad_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/pygrib-2.1.8-py312h2f48d4f_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/pyhdf-0.11.6-py312h52fbf50_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/pykdtree-1.4.3-py312h4f23490_2.conda
@@ -10403,23 +10401,6 @@ packages:
   - pkg:pypi/pyerfa?source=hash-mapping
   size: 295617
   timestamp: 1756821497270
-- conda: https://conda.anaconda.org/conda-forge/linux-64/pygamma_n-1.0.0-py312h4cfd3ad_1.conda
-  sha256: 3f5819c80156da39f98fceea5c4a3f567b237eb7be26b9ed492cf2489209796b
-  md5: 4069fbbf8d6259bc570ec00447c17211
-  depends:
-  - __glibc >=2.17,<3.0.a0
-  - libgcc-ng >=12
-  - libgfortran-ng
-  - libgfortran5 >=12.3.0
-  - netcdf-fortran >=4.6.1,<4.7.0a0
-  - numpy >=1.19,<3
-  - python >=3.12,<3.13.0a0
-  - python_abi 3.12.* *_cp312
-  license: MIT AND LicenseRef-CSIRO
-  purls:
-  - pkg:pypi/pygamma-n?source=hash-mapping
-  size: 906748
-  timestamp: 1720546393292
 - conda: https://conda.anaconda.org/conda-forge/linux-64/pygrib-2.1.8-py312h2f48d4f_0.conda
   sha256: 103918fb12ee7eb5c0bd5c4ee473e99859fb0083581a9bcf0bf2beb6dcad3cf8
   md5: 34f263005e0650dfe47a52e66a3ba6c9
