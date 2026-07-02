@@ -1167,6 +1167,7 @@ dependencies:
   - rechunker=0.5.2=pyhd8ed1ab_2
   - referencing=0.37.0=pyhcf101f3_0
   - regex=2026.5.9=py312h4c3975b_0
+  - regional-mom6=1.0.1=pyhd8ed1ab_0
   - regionmask=0.13.0=pyhd8ed1ab_0
   - reproc=14.2.7.post0=hb03c661_0
   - reproc-cpp=14.2.7.post0=hecca717_0
