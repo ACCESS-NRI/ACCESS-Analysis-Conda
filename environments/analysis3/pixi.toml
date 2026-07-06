@@ -132,7 +132,7 @@ httpx = "*"
 hupper = "*"
 hvplot = "*"
 icclim = "*"
-ilamb = "==2.7.2"
+ilamb = "==2.7.3"
 intake = "<2.0.9" # Until https://github.com/intake/intake/issues/887 resolved
 ipdb = "*"
 ipympl = "*"

@@ -189,7 +189,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/highspy-1.13.1-np2py312h0f77346_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/icechunk-2.0.4-py312h0ccc70a_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/icu-75.1-he02047a_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/ilamb-2.7.2-py312h7900ff3_4.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/ilamb-2.7.3-py312h7900ff3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/imagecodecs-2025.3.30-py312hbc2ce58_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/imagemagick-7.1.1_47-imagemagick_hf2058d9_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/imath-3.1.12-h7955e40_0.conda
@@ -1658,7 +1658,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/highspy-1.13.1-np2py312h0f77346_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/icechunk-2.0.4-py312h0ccc70a_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/icu-75.1-he02047a_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/ilamb-2.7.2-py312h7900ff3_4.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/ilamb-2.7.3-py312h7900ff3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/imagecodecs-2025.3.30-py312hbc2ce58_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/imagemagick-7.1.1_47-imagemagick_hf2058d9_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/imath-3.1.12-h7955e40_0.conda
@@ -5812,9 +5812,9 @@ packages:
   purls: []
   size: 12129203
   timestamp: 1720853576813
-- conda: https://conda.anaconda.org/conda-forge/linux-64/ilamb-2.7.2-py312h7900ff3_4.conda
-  sha256: 99cabfad7a5d3be0c366d1bcfd2434de3a3ba48f1f4f3c50059045f98e66a828
-  md5: 7ef1fef161f41aa61f60597239891ca9
+- conda: https://conda.anaconda.org/conda-forge/linux-64/ilamb-2.7.3-py312h7900ff3_0.conda
+  sha256: 5a6e8136e5d602798e83106ae851b7469f6bea4df046813f001ba613219695dc
+  md5: f7ceb29ced11e234dae7de1fead2b67c
   depends:
   - cartopy >=0.17.0
   - cf-units >=2.0.0
@@ -5839,8 +5839,8 @@ packages:
   license_family: BSD
   purls:
   - pkg:pypi/ilamb?source=hash-mapping
-  size: 401864
-  timestamp: 1759797282548
+  size: 403379
+  timestamp: 1767897809178
 - conda: https://conda.anaconda.org/conda-forge/linux-64/imagecodecs-2025.3.30-py312hbc2ce58_0.conda
   sha256: b2db96c74a1ec9bb3a0c644b4e1fab6107dd0bfebcf4b6f0d4d12ac34112f558
   md5: 2d164898e50b4a261a54c4850cbc6ff8
