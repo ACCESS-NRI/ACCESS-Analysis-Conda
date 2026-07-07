@@ -417,7 +417,7 @@ dependencies:
   - id=1.6.1=pyhcf101f3_0
   - identify=2.6.19=pyhd8ed1ab_0
   - idna=3.13=pyhcf101f3_0
-  - ilamb=2.7.2=py312h7900ff3_4
+  - ilamb=2.7.3=py312h7900ff3_0
   - imagecodecs=2025.3.30=py312hbc2ce58_0
   - imagehash=4.3.2=pyhd8ed1ab_0
   - imageio=2.37.0=pyhfb79c49_0
