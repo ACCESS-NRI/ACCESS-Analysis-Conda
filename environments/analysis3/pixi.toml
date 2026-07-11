@@ -8,6 +8,7 @@ channels = [
   "rapidsai",
   "pytorch",
   "nvidia",
+  "conda-forge/label/broken",
 ]
 exclude-newer = "7d"
 name = "analysis3"
@@ -22,6 +23,7 @@ ensure-locked = { cmd = "pixi lock --check", description = "Ensure the lockfile 
 export-json = { cmd = "pixi list --json > solved.json", description = "Export the solved environment to JSON format" , depends-on = ["ensure-locked"] }
 create-backup-env = {cmd = "mv environment.yml environment.yml.bak", description = "Create a backup of the current environment.yml file", depends-on = ["export-json"] }
 rebuild-env = { cmd = "bash recreate-env-yml.sh", description = "Rebuild environment.yml from solved.json", depends-on = ["create-backup-env"] }
+check-broken-packages = { cmd = "python3 check_broken_packages.py", description = "Check that broken-labelled packages in pixi.lock match pixi.toml declarations" }
 
 [dependencies]
 python = "3.12.*"
@@ -204,6 +206,7 @@ pydantic = "*"
 pydap = "*"
 pyextremes = "*"
 pygam = "*"
+pygamma_n = { version = "==1.0.0", channel = "conda-forge/label/broken" }
 pygrib = "*"
 pygmt = "*"
 pyhdf = "*"

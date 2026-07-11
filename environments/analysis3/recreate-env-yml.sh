@@ -10,6 +10,7 @@ echo "  - nodefaults"
 echo "  - rapidsai"
 echo "  - pytorch"
 echo "  - nvidia"
+echo "  - conda-forge/label/broken"
 echo "dependencies:"
 
 # Conda packages
