@@ -1,0 +1,132 @@
+name: Pixi Broken Package Check
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'environments/analysis3/pixi.lock'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  pixi-broken-package-check:
+    runs-on: ubuntu-latest
+    env:
+      ALLOWED_BROKEN_PACKAGES: pygamma_n
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          sparse-checkout: |
+            environments/analysis3/pixi.lock
+          sparse-checkout-cone-mode: false
+
+      - name: Generate broken package report
+        id: report
+        working-directory: ./environments/analysis3
+        env:
+          BASE_REF: ${{ github.base_ref }}
+        run: |
+          git show origin/${BASE_REF}:environments/analysis3/pixi.lock > /tmp/base.lock
+
+          python3 - <<'PY'
+          import os
+          import pathlib
+          import re
+          from urllib.parse import urlparse
+
+          BROKEN_RE = re.compile(r'https://[^\s"\']+/label/broken/[^\s"\']+')
+
+          def parse_broken_packages(path):
+              text = pathlib.Path(path).read_text()
+              packages = []
+              seen = set()
+              for url in BROKEN_RE.findall(text):
+                  if url in seen:
+                      continue
+                  seen.add(url)
+                  filename = pathlib.Path(urlparse(url).path).name
+                  stem = filename.removesuffix('.conda').removesuffix('.tar.bz2')
+                  name, version, build = stem.rsplit('-', 2)
+                  packages.append({
+                      'name': name,
+                      'version': version,
+                      'build': build,
+                      'url': url,
+                  })
+              packages.sort(key=lambda p: (p['name'], p['version'], p['build']))
+              return packages
+
+          def by_key(items):
+              return {(item['name'], item['version'], item['build'], item['url']): item for item in items}
+
+          base = parse_broken_packages('/tmp/base.lock')
+          head = parse_broken_packages('pixi.lock')
+          base_keys = by_key(base)
+          head_keys = by_key(head)
+          added = [head_keys[key] for key in sorted(head_keys.keys() - base_keys.keys())]
+          removed = [base_keys[key] for key in sorted(base_keys.keys() - head_keys.keys())]
+
+          allowlist = {item.strip() for item in os.environ.get('ALLOWED_BROKEN_PACKAGES', '').split(',') if item.strip()}
+          disallowed = [item for item in head if item['name'] not in allowlist]
+
+          lines = []
+          lines.append('## Pixi broken package check')
+          lines.append('')
+          lines.append(f"Allowlist: `{', '.join(sorted(allowlist)) if allowlist else '(empty)'}`")
+          lines.append('')
+          lines.append(f"Current broken-label packages in `pixi.lock`: **{len(head)}**")
+          lines.append('')
+          if head:
+              for item in head:
+                  lines.append(f"- `{item['name']}` {item['version']} `{item['build']}`")
+                  lines.append(f"  - `{item['url']}`")
+          else:
+              lines.append('- none')
+          lines.append('')
+          lines.append(f"Added vs base branch: **{len(added)}**")
+          if added:
+              for item in added:
+                  lines.append(f"- `{item['name']}` {item['version']} `{item['build']}`")
+                  lines.append(f"  - `{item['url']}`")
+          else:
+              lines.append('- none')
+          lines.append('')
+          lines.append(f"Removed vs base branch: **{len(removed)}**")
+          if removed:
+              for item in removed:
+                  lines.append(f"- `{item['name']}` {item['version']} `{item['build']}`")
+                  lines.append(f"  - `{item['url']}`")
+          else:
+              lines.append('- none')
+          lines.append('')
+          if disallowed:
+              lines.append('❌ Disallowed broken-label packages detected:')
+              lines.append('')
+              for item in disallowed:
+                  lines.append(f"- `{item['name']}` {item['version']} `{item['build']}`")
+                  lines.append(f"  - `{item['url']}`")
+          else:
+              lines.append('✅ All broken-label packages are allowlisted.')
+
+          pathlib.Path('/tmp/broken-packages.md').write_text('\n'.join(lines) + '\n')
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
+              fh.write(f"violations={'true' if disallowed else 'false'}\n")
+          PY
+
+      - name: Comment broken package report on PR
+        if: always()
+        uses: access-nri/actions/.github/actions/comment@main
+        with:
+          number: ${{ github.event.pull_request.number }}
+          label: pixi-broken-package-check
+          message-file: /tmp/broken-packages.md
+
+      - name: Fail on disallowed broken packages
+        if: steps.report.outputs.violations == 'true'
+        run: |
+          echo 'Disallowed broken-label packages were detected in pixi.lock.'
+          exit 1
