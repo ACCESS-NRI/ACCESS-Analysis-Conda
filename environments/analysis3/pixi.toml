@@ -2,6 +2,7 @@
 authors = ["Charles Turner <charles.turner@anu.edu.au>"]
 channels = [
   "conda-forge",
+  "conda-forge/label/broken",
   # get most recent versions of packages we control
   { channel = "accessnri", exclude-newer = "0d" },
   "nodefaults",
@@ -204,6 +205,7 @@ pydantic = "*"
 pydap = "*"
 pyextremes = "*"
 pygam = "*"
+pygamma_n = { version = "==1.0.0", channel = "conda-forge/label/broken" }
 pygrib = "*"
 pygmt = "*"
 pyhdf = "*"
