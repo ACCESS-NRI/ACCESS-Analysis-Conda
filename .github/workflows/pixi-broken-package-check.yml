@@ -5,6 +5,7 @@ on:
     branches:
       - main
     paths:
+      - 'environments/analysis3/pixi.toml'
       - 'environments/analysis3/pixi.lock'
 
 permissions:
@@ -17,10 +18,9 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          fetch-depth: 0
           sparse-checkout: |
-            .github/pixi-broken-package-allowlist.txt
             .github/workflows/pixi-broken-package-check.yml
+            environments/analysis3/pixi.toml
             environments/analysis3/pixi.lock
             scripts/check_broken_packages.py
           sparse-checkout-cone-mode: false
@@ -29,14 +29,11 @@ jobs:
         id: report
         working-directory: ./environments/analysis3
         env:
-          BASE_REF: ${{ github.base_ref }}
           GITHUB_OUTPUT_PATH: /tmp/github-output.txt
         run: |
-          git show origin/${BASE_REF}:environments/analysis3/pixi.lock > /tmp/base.lock
           python3 ../../scripts/check_broken_packages.py \
-            --base-lockfile /tmp/base.lock \
-            --head-lockfile pixi.lock \
-            --allowlist-file ../../.github/pixi-broken-package-allowlist.txt \
+            --pixi-toml pixi.toml \
+            --lockfile pixi.lock \
             --markdown-output /tmp/broken-packages.md \
             --github-output ${GITHUB_OUTPUT_PATH}
           cat ${GITHUB_OUTPUT_PATH} >> "$GITHUB_OUTPUT"
@@ -49,8 +46,8 @@ jobs:
           label: pixi-broken-package-check
           message-file: /tmp/broken-packages.md
 
-      - name: Fail on disallowed broken packages
+      - name: Fail on broken package mismatch
         if: steps.report.outputs.violations == 'true'
         run: |
-          echo 'Disallowed broken-label packages were detected in pixi.lock.'
+          echo 'Broken-label packages in pixi.lock do not match pixi.toml declarations.'
           exit 1

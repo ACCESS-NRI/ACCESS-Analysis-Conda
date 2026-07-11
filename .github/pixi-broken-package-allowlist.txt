@@ -1,3 +1,0 @@
-# One package name per line.
-# These are allowed to resolve from /label/broken/ in pixi.lock.
-pygamma_n
