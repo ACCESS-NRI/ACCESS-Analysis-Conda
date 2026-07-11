@@ -6,11 +6,11 @@ echo "name: analysis3"
 echo "channels:"
 echo "  - accessnri"
 echo "  - conda-forge"
-echo "  - conda-forge/label/broken"
 echo "  - nodefaults"
 echo "  - rapidsai"
 echo "  - pytorch"
 echo "  - nvidia"
+echo "  - conda-forge/label/broken"
 echo "dependencies:"
 
 # Conda packages

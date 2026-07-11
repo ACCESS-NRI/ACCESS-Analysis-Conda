@@ -2,11 +2,11 @@ name: analysis3
 channels:
   - accessnri
   - conda-forge
-  - conda-forge/label/broken
   - nodefaults
   - rapidsai
   - pytorch
   - nvidia
+  - conda-forge/label/broken
 dependencies:
   - shumlib=2026.07.2=h3218e01_0
   - access-intake-esm=2026.7.1=py_0
