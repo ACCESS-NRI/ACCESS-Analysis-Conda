@@ -25,18 +25,13 @@ jobs:
             scripts/check_broken_packages.py
           sparse-checkout-cone-mode: false
 
+      - uses: prefix-dev/setup-pixi@5185adfbffb4bd703da3010310260805d89ebb11 #v0.9.6
+        with:
+          run-install: false
+
       - name: Generate broken package report
-        id: report
         working-directory: ./environments/analysis3
-        env:
-          GITHUB_OUTPUT_PATH: /tmp/github-output.txt
-        run: |
-          python3 ../../scripts/check_broken_packages.py \
-            --pixi-toml pixi.toml \
-            --lockfile pixi.lock \
-            --markdown-output /tmp/broken-packages.md \
-            --github-output ${GITHUB_OUTPUT_PATH}
-          cat ${GITHUB_OUTPUT_PATH} >> "$GITHUB_OUTPUT"
+        run: pixi run --as-is check-broken-packages
 
       - name: Comment broken package report on PR
         if: always()
@@ -45,9 +40,3 @@ jobs:
           number: ${{ github.event.pull_request.number }}
           label: pixi-broken-package-check
           message-file: /tmp/broken-packages.md
-
-      - name: Fail on broken package mismatch
-        if: steps.report.outputs.violations == 'true'
-        run: |
-          echo 'Broken-label packages in pixi.lock do not match pixi.toml declarations.'
-          exit 1
