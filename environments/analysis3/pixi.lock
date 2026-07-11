@@ -10,12 +10,12 @@ environments:
   analysis3:
     channels:
     - url: https://conda.anaconda.org/conda-forge/
-    - url: https://conda.anaconda.org/conda-forge/label/broken/
     - url: https://conda.anaconda.org/accessnri/
     - url: https://conda.anaconda.org/nodefaults/
     - url: https://conda.anaconda.org/rapidsai/
     - url: https://conda.anaconda.org/pytorch/
     - url: https://conda.anaconda.org/nvidia/
+    - url: https://conda.anaconda.org/conda-forge/label/broken/
     indexes:
     - https://pypi.org/simple
     packages:
@@ -1494,12 +1494,12 @@ environments:
   default:
     channels:
     - url: https://conda.anaconda.org/conda-forge/
-    - url: https://conda.anaconda.org/conda-forge/label/broken/
     - url: https://conda.anaconda.org/accessnri/
     - url: https://conda.anaconda.org/nodefaults/
     - url: https://conda.anaconda.org/rapidsai/
     - url: https://conda.anaconda.org/pytorch/
     - url: https://conda.anaconda.org/nvidia/
+    - url: https://conda.anaconda.org/conda-forge/label/broken/
     indexes:
     - https://pypi.org/simple
     packages:

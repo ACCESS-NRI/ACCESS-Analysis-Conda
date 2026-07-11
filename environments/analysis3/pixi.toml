@@ -2,13 +2,13 @@
 authors = ["Charles Turner <charles.turner@anu.edu.au>"]
 channels = [
   "conda-forge",
-  "conda-forge/label/broken",
   # get most recent versions of packages we control
   { channel = "accessnri", exclude-newer = "0d" },
   "nodefaults",
   "rapidsai",
   "pytorch",
   "nvidia",
+  "conda-forge/label/broken",
 ]
 exclude-newer = "7d"
 name = "analysis3"
