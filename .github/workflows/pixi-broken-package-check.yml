@@ -19,19 +19,13 @@ jobs:
       - uses: actions/checkout@v6
         with:
           sparse-checkout: |
-            .github/workflows/pixi-broken-package-check.yml
             environments/analysis3/pixi.toml
             environments/analysis3/pixi.lock
-            scripts/check_broken_packages.py
+            environments/analysis3/check_broken_packages.py
           sparse-checkout-cone-mode: false
 
-      - uses: prefix-dev/setup-pixi@5185adfbffb4bd703da3010310260805d89ebb11 #v0.9.6
-        with:
-          run-install: false
-
       - name: Generate broken package report
-        working-directory: ./environments/analysis3
-        run: pixi run --as-is check-broken-packages
+        run: python3 environments/analysis3/check_broken_packages.py
 
       - name: Comment broken package report on PR
         if: always()

@@ -5,17 +5,14 @@ Writes a markdown report and exits non-zero if the set of packages resolved from
 broken channel in pixi.toml.
 """
 
-from __future__ import annotations
-
 import re
 import tomllib
 from pathlib import Path
-from urllib.parse import urlparse
 
 BROKEN_MARKER = "/label/broken"
 BROKEN_URL_RE = re.compile(r"https://[^\s\"']+/label/broken/[^\s\"']+")
 
-ENV_DIR = Path(__file__).resolve().parent.parent / "environments" / "analysis3"
+ENV_DIR = Path(__file__).resolve().parent
 PIXI_TOML = ENV_DIR / "pixi.toml"
 LOCKFILE = ENV_DIR / "pixi.lock"
 MARKDOWN_OUTPUT = Path("/tmp/broken-packages.md")
@@ -45,11 +42,8 @@ def resolved_broken(lockfile: Path) -> dict[str, str]:
     """Map package name -> URL for every package resolved from a broken channel in the lock."""
     resolved: dict[str, str] = {}
     for url in BROKEN_URL_RE.findall(lockfile.read_text()):
-        stem = (
-            Path(urlparse(url).path)
-            .name.removesuffix(".conda")
-            .removesuffix(".tar.bz2")
-        )
+        filename = url.rsplit("/", 1)[-1]
+        stem = filename.removesuffix(".conda").removesuffix(".tar.bz2")
         resolved[stem.rsplit("-", 2)[0]] = url
     return resolved
 
