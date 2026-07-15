@@ -1466,6 +1466,7 @@ dependencies:
     - accessvis==1.1.4
     - cc-plugin-wcrp==2.3.2
     - cmip7-data-request-api==1.4
+    - cmip7-repack==1.1.0
     - esgvoc==4.2.0
     - frisky==0.1.1
     - lavavu==1.9.10

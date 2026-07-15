@@ -1476,6 +1476,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/45/62/9bee9d417111fda0b166aa9e96fe1899cc21e445d7c3734e64f656075c59/pycnv-0.5.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/47/6a/62e288da7bcda82b935ff0c6cfe542970f04e29c756b0e147251b2fb251f/wget-3.2.zip
       - pypi: https://files.pythonhosted.org/packages/4b/aa/b73950d210c4ed3ef97ba282513c5d39502b2dd34de8ec5b9abd8564ddf2/lavavu_osmesa-1.9.10-cp312-cp312-manylinux_2_28_x86_64.whl
+      - pypi: https://files.pythonhosted.org/packages/5a/c5/39fb0bf9fa2ce5a6c448b4483105178d46482bfdabf0c8fae5d65213d683/cmip7_repack-1.1.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/6a/5b/b035e2d71e8be8959196e90e4db7cc3896e39cadc3a083ad37a959c88988/py360convert-1.0.4-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/6d/5d/20b47c32a3987bdda9e9d49a26af6a0a0613668fc20f0935efd655b6a8ba/esgvoc-4.2.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/97/ac/32afd602d3fd8cd001d910747c7953c37c82cb564aeddcf40f027c057a60/nci_ipynb-2023.11.0.3-py3-none-any.whl
@@ -2960,6 +2961,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/45/62/9bee9d417111fda0b166aa9e96fe1899cc21e445d7c3734e64f656075c59/pycnv-0.5.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/47/6a/62e288da7bcda82b935ff0c6cfe542970f04e29c756b0e147251b2fb251f/wget-3.2.zip
       - pypi: https://files.pythonhosted.org/packages/4b/aa/b73950d210c4ed3ef97ba282513c5d39502b2dd34de8ec5b9abd8564ddf2/lavavu_osmesa-1.9.10-cp312-cp312-manylinux_2_28_x86_64.whl
+      - pypi: https://files.pythonhosted.org/packages/5a/c5/39fb0bf9fa2ce5a6c448b4483105178d46482bfdabf0c8fae5d65213d683/cmip7_repack-1.1.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/6a/5b/b035e2d71e8be8959196e90e4db7cc3896e39cadc3a083ad37a959c88988/py360convert-1.0.4-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/6d/5d/20b47c32a3987bdda9e9d49a26af6a0a0613668fc20f0935efd655b6a8ba/esgvoc-4.2.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/97/ac/32afd602d3fd8cd001d910747c7953c37c82cb564aeddcf40f027c057a60/nci_ipynb-2023.11.0.3-py3-none-any.whl
@@ -27102,6 +27104,23 @@ packages:
   - numpy-quaternion
   - pillow
   requires_python: '>=3.5'
+- pypi: https://files.pythonhosted.org/packages/5a/c5/39fb0bf9fa2ce5a6c448b4483105178d46482bfdabf0c8fae5d65213d683/cmip7_repack-1.1.0-py3-none-any.whl
+  name: cmip7-repack
+  version: 1.1.0
+  sha256: d5ce3ccef28f9acc0987267faf1f1ffcb8f847d1ef1bb09af2be50b7cb9ef128
+  requires_dist:
+  - pyfive>=1.1.1
+  - packaging
+  - pytest ; extra == 'test'
+  - pytest-mock ; extra == 'test'
+  - docker ; extra == 'test'
+  - pytest ; extra == 'dev'
+  - pytest-mock ; extra == 'dev'
+  - ipython ; extra == 'dev'
+  - autodocsumm ; extra == 'doc'
+  - sphinx ; extra == 'doc'
+  - sphinx-rtd-theme ; extra == 'doc'
+  requires_python: '>=3.10'
 - pypi: https://files.pythonhosted.org/packages/6a/5b/b035e2d71e8be8959196e90e4db7cc3896e39cadc3a083ad37a959c88988/py360convert-1.0.4-py3-none-any.whl
   name: py360convert
   version: 1.0.4
