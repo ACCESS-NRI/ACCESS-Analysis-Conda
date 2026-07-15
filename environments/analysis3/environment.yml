@@ -13,8 +13,8 @@ dependencies:
   - access-intake-esm=2026.7.1=py_0
   - access-intake-utils=0.1.7=py_0
   - access-med-tools=0.1.23=pypy_0
-  - access-moppy=1.6.2b=py_0
-  - access-moppy-esmval=1.6.2b=0
+  - access-moppy=1.6.3b=py_0
+  - access-moppy-esmval=1.6.3b=0
   - access-nri-intake=1.6.2=py_0
   - access-py-telemetry=0.1.10=py_0
   - accessible-pygments=0.0.5=pyhd8ed1ab_1
