@@ -1,11 +1,6 @@
 version: 7
 platforms:
 - name: linux-64
-  virtual-packages:
-  - __unix=0=0
-  - __linux=4.18
-  - __glibc=2.28
-  - __archspec=0=x86_64
 environments:
   analysis3:
     channels:
@@ -24,8 +19,8 @@ environments:
       - conda: https://conda.anaconda.org/accessnri/noarch/access-intake-esm-2026.7.1-py_0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/access-intake-utils-0.1.7-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/access-med-tools-0.1.23-pypy_0.tar.bz2
-      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.5.1b-py_0.conda
-      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-esmval-1.5.1b-0.conda
+      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.6.1b-py_0.conda
+      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-esmval-1.6.1b-0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/access-nri-intake-1.6.2-py_0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/access-py-telemetry-0.1.10-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/ecgtools-access-2025.10.7-py_0.tar.bz2
@@ -1508,8 +1503,8 @@ environments:
       - conda: https://conda.anaconda.org/accessnri/noarch/access-intake-esm-2026.7.1-py_0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/access-intake-utils-0.1.7-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/access-med-tools-0.1.23-pypy_0.tar.bz2
-      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.5.1b-py_0.conda
-      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-esmval-1.5.1b-0.conda
+      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.6.1b-py_0.conda
+      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-esmval-1.6.1b-0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/access-nri-intake-1.6.2-py_0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/access-py-telemetry-0.1.10-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/ecgtools-access-2025.10.7-py_0.tar.bz2
@@ -3036,9 +3031,9 @@ packages:
   license_family: APACHE
   size: 46216
   timestamp: 1761304298179
-- conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.5.1b-py_0.conda
-  sha256: 2e4bd9cb4d37140655e7216181d94ddbedc3522f176c91f2335add7c76d2b6c7
-  md5: 284e25b0d8169d58ad44fbcfd1afce39
+- conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.6.1b-py_0.conda
+  sha256: 1a4e2d6193575567ecfc81e8677b860e021ac809bf1bb599aea79081de0ce0c0
+  md5: 62d15be90707d554b50ed6a6d3eed0ad
   depends:
   - cftime
   - dask
@@ -3054,18 +3049,18 @@ packages:
   - tqdm
   - xarray
   license: Apache-2.0
-  size: 11093036
-  timestamp: 1782185932224
-- conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-esmval-1.5.1b-0.conda
+  size: 11102558
+  timestamp: 1784082037146
+- conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-esmval-1.6.1b-0.conda
   noarch: python
-  sha256: d07d552ef5a454ad3e4807b57ba475d5367929967bd1e5bc23998662d0b07717
-  md5: d7245c3bf66b6eea27de68aa1c3a4abe
+  sha256: 61edd0bfb9d24d90f9cc0d0cce3b7118b64d3050f221699a512c7c0a58b0b7fb
+  md5: 3e5833627d18f4fcfe71587ec92357fa
   depends:
-  - access-moppy 1.5.1b py_0
+  - access-moppy 1.6.1b py_0
   - esmvalcore >=2.14
   license: Apache-2.0
-  size: 9139
-  timestamp: 1782185942723
+  size: 9151
+  timestamp: 1784082047812
 - conda: https://conda.anaconda.org/accessnri/noarch/access-nri-intake-1.6.2-py_0.conda
   sha256: 25d58c9af852d63c7bbba59062dad14e4ac2b4ecb11062843949a74634df9dfc
   md5: 446719c0e7d24f9471a8c717385fc596
