@@ -1,4 +1,4 @@
-name: analysis3
+name: default
 channels:
 - conda-forge
 - accessnri
@@ -1482,6 +1482,7 @@ dependencies:
   - accessvis==1.1.4
   - railroad-diagrams==3.0.1
   - sqlmodel==0.0.39
+  - skillmetrics==1.2.5
   - cc-plugin-wcrp==2.3.2
   - cmip7-data-request-api==1.4
 
