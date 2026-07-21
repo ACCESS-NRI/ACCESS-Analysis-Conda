@@ -338,6 +338,7 @@ python-swiftclient = ">=4.10.0,<5"
 python-openstackclient = ">=9.0.0,<10"
 parsl = ">=2026.3.16,<2027"
 regional-mom6 = ">=1.0.1,<2"
+xwmb = "*"
 
 [pypi-dependencies]
 lavavu = "==1.9.10"
