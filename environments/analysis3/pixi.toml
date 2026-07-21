@@ -20,7 +20,7 @@ analysis3 = ["default"]
 
 [tasks]
 ensure-locked = { cmd = "pixi lock --check", description = "Ensure the lockfile is up to date" }
-rebuild-env = { cmd = "pixi workspace export conda-environment --name analysis3 --from-lockfile environment.yml", description = "Rebuild environment.yml from lock file", depends-on = [
+rebuild-env = { cmd = "pixi workspace export conda-environment --platform linux-64 --name analysis3 --from-lock-file | grep -v '^- _' > environment.yml", description = "Rebuild environment.yml from lock file, dropping internal _-prefixed packages the solver re-adds transitively", depends-on = [
   "ensure-locked",
 ] }
 check-broken-packages = { cmd = "python3 check_broken_packages.py", description = "Check that broken-labelled packages in pixi.lock match pixi.toml declarations" }

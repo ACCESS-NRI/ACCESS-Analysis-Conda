@@ -22,7 +22,6 @@ dependencies:
 - intake-virtual-icechunk ==0.2.2 py_0
 - yamanifest ==0.3.13 py_0
 - pygamma_n ==1.0.0 py312h4cfd3ad_1
-- _openmp_mutex ==4.5 7_kmp_llvm
 - aiohttp ==3.14.1 py312h5d8c7f2_0
 - alsa-lib ==1.2.16.1 hb03c661_0
 - aom ==3.9.1 hac33072_0
@@ -703,9 +702,6 @@ dependencies:
 - zlib-ng ==2.2.5 hde8ca8f_1
 - zstandard ==0.25.0 py312h5253ce2_1
 - zstd ==1.5.7 hb78ec9c_6
-- _python_abi3_support ==1.0 hd8ed1ab_2
-- _r-mutex ==1.0.1 anacondar_1
-- _x86_64-microarch-level ==1 4_level1
 - absl-py ==2.5.0 pyhd8ed1ab_0
 - access ==1.1.10.post3 pyhd8ed1ab_0
 - accessible-pygments ==0.0.5 pyhd8ed1ab_1
@@ -1488,3 +1484,4 @@ dependencies:
   - sqlmodel==0.0.39
   - cc-plugin-wcrp==2.3.2
   - cmip7-data-request-api==1.4
+

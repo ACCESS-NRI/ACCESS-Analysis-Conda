@@ -46,6 +46,17 @@ pixi run rebuild-env
 
 That task handles the lock/update flow and regenerates `environment.yml` for you.
 
+On macOS, add `--as-is`:
+
+```bash
+pixi run --as-is rebuild-env
+```
+
+The workspace only targets `linux-64`, so a plain `pixi run` fails with `unsupported-platform`
+when it tries to activate the environment. `--as-is` skips that activation; the task itself only
+needs the `pixi` binary and `grep`, and it renders `linux-64` explicitly, so the output is
+byte-identical to a Linux run.
+
 If you wanted to use pixi shell at this point, instead of creating a pixi environment, you could do:
 ```bash
 pixi shell
