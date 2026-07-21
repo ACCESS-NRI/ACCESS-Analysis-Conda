@@ -1,4 +1,4 @@
-name: default
+name: analysis3
 channels:
 - conda-forge
 - accessnri
