@@ -20,7 +20,7 @@ analysis3 = ["default"]
 
 [tasks]
 ensure-locked = { cmd = "pixi lock --check", description = "Ensure the lockfile is up to date" }
-rebuild-env = { cmd = "pixi workspace export conda-environment --from-lock-file > environment.yml", description = "Rebuild environment.yml from lock file", depends-on = [
+rebuild-env = { cmd = "pixi workspace export conda-environment --platform linux-64 --name analysis3 --from-lock-file | grep -v '^- _' > environment.yml", description = "Rebuild environment.yml from lock file, dropping internal _-prefixed packages the solver re-adds transitively", depends-on = [
   "ensure-locked",
 ] }
 check-broken-packages = { cmd = "python3 check_broken_packages.py", description = "Check that broken-labelled packages in pixi.lock match pixi.toml declarations" }
@@ -340,6 +340,7 @@ python-swiftclient = ">=4.10.0,<5"
 python-openstackclient = ">=9.0.0,<10"
 parsl = ">=2026.3.16,<2027"
 regional-mom6 = ">=1.0.1,<2"
+xwmb = "*"
 
 [pypi-dependencies]
 lavavu = "==1.9.10"
