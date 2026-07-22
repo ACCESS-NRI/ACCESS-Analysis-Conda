@@ -341,6 +341,7 @@ python-openstackclient = ">=9.0.0,<10"
 parsl = ">=2026.3.16,<2027"
 regional-mom6 = ">=1.0.1,<2"
 xwmb = "*"
+meson = ">=1.11.2,<2"
 
 [pypi-dependencies]
 lavavu = "==1.9.10"
