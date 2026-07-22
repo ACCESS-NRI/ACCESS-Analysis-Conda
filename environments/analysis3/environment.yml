@@ -13,8 +13,8 @@ dependencies:
 - access-intake-esm ==2026.7.1 py_0
 - access-intake-utils ==0.1.7 py_0
 - access-med-tools ==0.1.23 pypy_0
-- access-moppy ==1.6.8b py_0
-- access-moppy-esmval ==1.6.8b 0
+- access-moppy ==1.6.9b py_0
+- access-moppy-esmval ==1.6.9b 0
 - access-nri-intake ==1.6.2 py_0
 - access-py-telemetry ==0.1.10 py_0
 - ecgtools-access ==2025.10.7 py_0
