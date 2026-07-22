@@ -53,7 +53,7 @@ intake-virtual-icechunk = { version = "==0.2.2", channel = "accessnri" }
 intake-dataframe-catalog = { version = "==0.5.1", channel = "conda-forge" }
 yamanifest = { version = ">=0.3.12", channel = "accessnri" }
 access-med-tools = { version = "==0.1.23", channel = "accessnri" }
-access-moppy-esmval = { version = "==1.6.8b", channel = "accessnri" }
+access-moppy-esmval = { version = "==1.6.9b", channel = "accessnri" }
 shumlib = { channel = "accessnri" }
 aiohttp = "*"
 aiohttp-cors = "*"
