@@ -24,8 +24,8 @@ environments:
       - conda: https://conda.anaconda.org/accessnri/noarch/access-intake-esm-2026.7.1-py_0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/access-intake-utils-0.1.7-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/access-med-tools-0.1.23-pypy_0.tar.bz2
-      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.6.9b-py_0.conda
-      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-esmval-1.6.9b-0.conda
+      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.6.10b-py_0.conda
+      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-esmval-1.6.10b-0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/access-nri-intake-1.6.2-py_0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/access-py-telemetry-0.1.10-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/ecgtools-access-2025.10.7-py_0.tar.bz2
@@ -1516,8 +1516,8 @@ environments:
       - conda: https://conda.anaconda.org/accessnri/noarch/access-intake-esm-2026.7.1-py_0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/access-intake-utils-0.1.7-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/access-med-tools-0.1.23-pypy_0.tar.bz2
-      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.6.9b-py_0.conda
-      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-esmval-1.6.9b-0.conda
+      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.6.10b-py_0.conda
+      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-esmval-1.6.10b-0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/access-nri-intake-1.6.2-py_0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/access-py-telemetry-0.1.10-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/ecgtools-access-2025.10.7-py_0.tar.bz2
@@ -3052,9 +3052,9 @@ packages:
   license_family: APACHE
   size: 46216
   timestamp: 1761304298179
-- conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.6.9b-py_0.conda
-  sha256: 8cd831a344af2b9bb2f2188699c650258c61f1e58a8505a4f2f0d8ffe8a3afd6
-  md5: fbf2f48826fd0d10c991745f2da2df18
+- conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.6.10b-py_0.conda
+  sha256: 39033f56cb2972c816d6d9611804b7ed85e8f0eecb10cdeabf6b131109cc86c3
+  md5: cc68373f6443be1012e26d882b91af57
   depends:
   - cftime
   - dask
@@ -3070,18 +3070,18 @@ packages:
   - tqdm
   - xarray
   license: Apache-2.0
-  size: 11105202
-  timestamp: 1784710229639
-- conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-esmval-1.6.9b-0.conda
+  size: 11145234
+  timestamp: 1784843492855
+- conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-esmval-1.6.10b-0.conda
   noarch: python
-  sha256: ebf4178b490ccef37c110b7232b8fda2e53978ad3c49bb9508fb57a9fee95042
-  md5: 778f3bbeb0a4d79cbff5825beae3f2ec
+  sha256: a0542f32980222a7f6b221dbf689b22d9fd7a03a6e738f5414187a5145fbcee2
+  md5: a3ed9018d8686daea17b30ba6f4cc0b4
   depends:
-  - access-moppy 1.6.9b py_0
+  - access-moppy 1.6.10b py_0
   - esmvalcore >=2.14
   license: Apache-2.0
-  size: 9201
-  timestamp: 1784710238697
+  size: 9185
+  timestamp: 1784843503498
 - conda: https://conda.anaconda.org/accessnri/noarch/access-nri-intake-1.6.2-py_0.conda
   sha256: 25d58c9af852d63c7bbba59062dad14e4ac2b4ecb11062843949a74634df9dfc
   md5: 446719c0e7d24f9471a8c717385fc596
@@ -15597,7 +15597,7 @@ packages:
   license: MIT
   license_family: MIT
   purls:
-  - pkg:pypi/anyio?source=hash-mapping
+  - pkg:pypi/anyio?source=compressed-mapping
   run_exports: {}
   size: 161308
   timestamp: 1782357087265
@@ -18377,7 +18377,7 @@ packages:
   license: BSD-3-Clause
   license_family: BSD
   purls:
-  - pkg:pypi/fsspec?source=hash-mapping
+  - pkg:pypi/fsspec?source=compressed-mapping
   run_exports: {}
   size: 149709
   timestamp: 1781615868173
@@ -22039,7 +22039,7 @@ packages:
   license: MIT
   license_family: MIT
   purls:
-  - pkg:pypi/pip?source=hash-mapping
+  - pkg:pypi/pip?source=compressed-mapping
   run_exports: {}
   size: 1203173
   timestamp: 1780262795392
@@ -25948,7 +25948,7 @@ packages:
   - python
   license: MIT AND BSD-3-Clause
   purls:
-  - pkg:pypi/typer?source=hash-mapping
+  - pkg:pypi/typer?source=compressed-mapping
   run_exports: {}
   size: 186572
   timestamp: 1782477870892
