@@ -24,8 +24,8 @@ environments:
       - conda: https://conda.anaconda.org/accessnri/noarch/access-intake-esm-2026.7.1-py_0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/access-intake-utils-0.1.7-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/access-med-tools-0.1.23-pypy_0.tar.bz2
-      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.6.10b-py_0.conda
-      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-esmval-1.6.10b-0.conda
+      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.6.11b-py_0.conda
+      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-esmval-1.6.11b-0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/access-nri-intake-1.6.2-py_0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/access-py-telemetry-0.1.10-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/ecgtools-access-2025.10.7-py_0.tar.bz2
@@ -1516,8 +1516,8 @@ environments:
       - conda: https://conda.anaconda.org/accessnri/noarch/access-intake-esm-2026.7.1-py_0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/access-intake-utils-0.1.7-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/access-med-tools-0.1.23-pypy_0.tar.bz2
-      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.6.10b-py_0.conda
-      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-esmval-1.6.10b-0.conda
+      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.6.11b-py_0.conda
+      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-esmval-1.6.11b-0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/access-nri-intake-1.6.2-py_0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/access-py-telemetry-0.1.10-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/ecgtools-access-2025.10.7-py_0.tar.bz2
@@ -3052,9 +3052,9 @@ packages:
   license_family: APACHE
   size: 46216
   timestamp: 1761304298179
-- conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.6.10b-py_0.conda
-  sha256: 39033f56cb2972c816d6d9611804b7ed85e8f0eecb10cdeabf6b131109cc86c3
-  md5: cc68373f6443be1012e26d882b91af57
+- conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.6.11b-py_0.conda
+  sha256: 85218fc617a1c2355f9ce2996797b2f46ec64f074eedb3a2ea286d71dd7d357c
+  md5: e64658365c143af40d44bf7129e45b26
   depends:
   - cftime
   - dask
@@ -3070,18 +3070,18 @@ packages:
   - tqdm
   - xarray
   license: Apache-2.0
-  size: 11145234
-  timestamp: 1784843492855
-- conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-esmval-1.6.10b-0.conda
+  size: 11169897
+  timestamp: 1785123884097
+- conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-esmval-1.6.11b-0.conda
   noarch: python
-  sha256: a0542f32980222a7f6b221dbf689b22d9fd7a03a6e738f5414187a5145fbcee2
-  md5: a3ed9018d8686daea17b30ba6f4cc0b4
+  sha256: ab692cf948c17440ff5d8fdb1dc6af0d249113e6c47c660c916f48f4b4aaed47
+  md5: 1e0cd99f34a5fd101a56e83d91820215
   depends:
-  - access-moppy 1.6.10b py_0
+  - access-moppy 1.6.11b py_0
   - esmvalcore >=2.14
   license: Apache-2.0
-  size: 9185
-  timestamp: 1784843503498
+  size: 9137
+  timestamp: 1785123891535
 - conda: https://conda.anaconda.org/accessnri/noarch/access-nri-intake-1.6.2-py_0.conda
   sha256: 25d58c9af852d63c7bbba59062dad14e4ac2b4ecb11062843949a74634df9dfc
   md5: 446719c0e7d24f9471a8c717385fc596
@@ -6170,7 +6170,7 @@ packages:
   license: Apache-2.0
   license_family: APACHE
   purls:
-  - pkg:pypi/hf-xet?source=compressed-mapping
+  - pkg:pypi/hf-xet?source=hash-mapping
   run_exports: {}
   size: 3548957
   timestamp: 1781767564501
@@ -11256,7 +11256,7 @@ packages:
   license: Apache-2.0
   license_family: APACHE
   purls:
-  - pkg:pypi/propcache?source=compressed-mapping
+  - pkg:pypi/propcache?source=hash-mapping
   run_exports: {}
   size: 51586
   timestamp: 1780037816755
@@ -13505,7 +13505,7 @@ packages:
   license: Apache-2.0
   license_family: APACHE
   purls:
-  - pkg:pypi/safetensors?source=compressed-mapping
+  - pkg:pypi/safetensors?source=hash-mapping
   run_exports: {}
   size: 502350
   timestamp: 1781179687261
@@ -15597,7 +15597,7 @@ packages:
   license: MIT
   license_family: MIT
   purls:
-  - pkg:pypi/anyio?source=compressed-mapping
+  - pkg:pypi/anyio?source=hash-mapping
   run_exports: {}
   size: 161308
   timestamp: 1782357087265
@@ -18134,7 +18134,7 @@ packages:
   - python >=3.10
   license: Unlicense
   purls:
-  - pkg:pypi/filelock?source=compressed-mapping
+  - pkg:pypi/filelock?source=hash-mapping
   run_exports: {}
   size: 38993
   timestamp: 1783063554943
@@ -20805,7 +20805,7 @@ packages:
   license: Apache-2.0
   license_family: APACHE
   purls:
-  - pkg:pypi/meson?source=compressed-mapping
+  - pkg:pypi/meson?source=hash-mapping
   run_exports: {}
   size: 776793
   timestamp: 1783761667053
@@ -20858,7 +20858,7 @@ packages:
   license: BSD-3-Clause
   license_family: BSD
   purls:
-  - pkg:pypi/mistune?source=compressed-mapping
+  - pkg:pypi/mistune?source=hash-mapping
   run_exports: {}
   size: 86960
   timestamp: 1782218255079
@@ -25948,7 +25948,7 @@ packages:
   - python
   license: MIT AND BSD-3-Clause
   purls:
-  - pkg:pypi/typer?source=compressed-mapping
+  - pkg:pypi/typer?source=hash-mapping
   run_exports: {}
   size: 186572
   timestamp: 1782477870892
