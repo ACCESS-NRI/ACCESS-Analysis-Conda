@@ -718,6 +718,7 @@ dependencies:
 - aiosignal ==1.4.0 pyhd8ed1ab_0
 - alabaster ==1.0.0 pyhd8ed1ab_1
 - alembic ==1.18.5 pyhcf101f3_0
+- altair ==6.2.2 pyhd8ed1ab_0
 - amply ==0.1.7 pyhd8ed1ab_0
 - annotated-doc ==0.0.4 pyhcf101f3_0
 - annotated-types ==0.7.0 pyhd8ed1ab_1
@@ -735,6 +736,7 @@ dependencies:
 - arviz-stats ==1.2.0 pyh8e99733_0
 - arviz-stats-core ==1.2.0 pyhc364b38_0
 - asteval ==1.0.9 pyhd8ed1ab_0
+- astor ==0.8.1 pyhd8ed1ab_1
 - astropy ==8.0.0 pyhd8ed1ab_0
 - astropy-iers-data ==0.2026.6.22.1.23.34 pyhd8ed1ab_0
 - asttokens ==3.0.1 pyhd8ed1ab_0
@@ -760,6 +762,7 @@ dependencies:
 - blinker ==1.9.0 pyhff2d567_0
 - bokeh ==3.9.1 pyhd8ed1ab_0
 - boltons ==26.0.0 pyhd8ed1ab_0
+- boto3 ==1.43.0 pyhd8ed1ab_0
 - botocore ==1.43.0 pyhd8ed1ab_0
 - bqplot ==0.13.1 pyhcf101f3_0
 - bqscales ==0.3.7 pyhd8ed1ab_1
@@ -1169,6 +1172,7 @@ dependencies:
 - pydantic ==2.13.4 pyhcf101f3_0
 - pydap ==3.5.10 pyhc455866_0
 - pydata-sphinx-theme ==0.19.0 pyhcf101f3_0
+- pydeck ==0.2.1 py_0
 - pydocstyle ==6.3.0 pyhd8ed1ab_1
 - pydot ==4.0.1 pyhcf101f3_2
 - pyextremes ==2.5.0 pyhd8ed1ab_0
@@ -1187,6 +1191,7 @@ dependencies:
 - pylint-plugin-utils ==0.9.0 pyhd8ed1ab_0
 - pymannkendall ==1.4.3 pyha21a80b_0
 - pymbolic ==2025.1 pyhc455866_0
+- pympler ==1.1 pyhd8ed1ab_2
 - pynvml ==12.0.0 pyhd8ed1ab_0
 - pyod ==3.6.1 pyhd8ed1ab_0
 - pyopenssl ==26.3.0 pyhcf101f3_0
@@ -1234,6 +1239,7 @@ dependencies:
 - pytz ==2026.2 pyhcf101f3_0
 - pyu2f ==0.1.5 pyhd8ed1ab_1
 - pyviz_comms ==3.0.6 pyhd8ed1ab_0
+- pywin32-on-windows ==0.1.0 pyh1179c8e_3
 - pyxdg ==0.28 pyhd8ed1ab_0
 - quantecon ==0.11.2 pyhd8ed1ab_0
 - r-abind ==1.4_8 r44hc72bb7e_1
@@ -1319,6 +1325,7 @@ dependencies:
 - rsa ==4.9.1 pyhd8ed1ab_0
 - rtree ==1.4.1 pyh11ca60a_0
 - s3fs ==2026.6.0 pyhd8ed1ab_0
+- s3transfer ==0.17.1 pyhd8ed1ab_0
 - satpy ==0.60.0 pyhd8ed1ab_0
 - scores ==2.5.0 pyhd8ed1ab_0
 - seaborn ==0.13.2 hd8ed1ab_3
@@ -1362,6 +1369,7 @@ dependencies:
 - spyder-kernels ==3.1.5 unix_pyh707e725_0
 - stack_data ==0.6.3 pyhd8ed1ab_1
 - stevedore ==5.9.0 pyhd8ed1ab_0
+- streamlit ==1.8.0 pyhd8ed1ab_0
 - sympy ==1.14.0 pyh2585a3b_106
 - sysroot_linux-64 ==2.28 h4ee821c_9
 - tabulate ==0.10.0 pyhcf101f3_0
