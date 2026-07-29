@@ -16,6 +16,7 @@ jobs:
           host: gadi.nci.org.au
           username: ${{secrets.GADI_USER}}
           key: ${{secrets.DEPLOY_KEY}}
+          command_timeout: 30m
           script: |
             export SCRIPT_DIR=${{secrets.GADI_REPO_PATH}}/scripts
             export CONDA_ENVIRONMENT=${{ inputs.environment }}
