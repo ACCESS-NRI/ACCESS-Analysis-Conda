@@ -15,6 +15,15 @@ name = "analysis3"
 platforms = ["linux-64"]
 version = "0.1.0"
 
+[exclude-newer]
+esmvaltool = "0d"
+# Subpackages of esmvaltool which need to be explicitly excluded from delay.
+# See also https://pixi.prefix.dev/latest/reference/pixi_manifest/#exclude-newer-optional
+esmvaltool-ncl = "0d"
+esmvaltool-python = "0d"
+esmvaltool-r = "0d"
+
+
 [environments]
 analysis3 = ["default"]
 
