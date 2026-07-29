@@ -10,7 +10,7 @@ channels = [
   "nvidia",
   "conda-forge/label/broken",
 ]
-exclude-newer = "7d"
+exclude-newer = "0d"
 name = "analysis3"
 platforms = ["linux-64"]
 version = "0.1.0"
@@ -110,7 +110,7 @@ eofs = "*"
 erddapy = "*"
 esmf = "*"
 esmpy = "*"
-esmvalcore = "2.14.*"
+esmvalcore = "2.15.*"
 f90nml = "*"
 ffmpeg = "*"
 filelock = "*"
@@ -275,7 +275,7 @@ xmovie = "*"
 xrft = "*"
 xskillscore = "*"
 xwrf = "*"
-esmvaltool = "2.14.*"
+esmvaltool = "2.15.*"
 cdsapi = "*"
 lime = "*"
 mapgenerator = ">=1.0.5"
