@@ -32,7 +32,10 @@ jobs:
           for line in $DIFF; do
             if [[ $line =~ environments ]]; then
                 env_name=$( basename ${line%/*} )
-                if ! [[ $json =~ $env_name ]]; then
+                ### Skip environments that no longer exist at this commit (e.g. removed
+                ### entirely) - otherwise a deletion queues a build that immediately
+                ### fails since environment.yml is gone.
+                if [[ -e "environments/${env_name}/environment.yml" ]] && ! [[ $json =~ $env_name ]]; then
                     json="$json{\"environment\":\"$env_name\"},"
                 fi
             fi
