@@ -160,7 +160,14 @@ fi
 if [[ -d "${CONDA_INSTALLATION_PATH}" ]]; then
     mkdir -p "${CONDA_OUTER_BASE}"
     echo "Copying base conda installation to ${CONDA_TEMP_PATH}"
-    rsync --recursive --links --perms --times --specials --partial --one-file-system --hard-links --acls --relative --exclude=*.sqsh -- "${CONDA_INSTALLATION_PATH}" "${CONDA_SCRIPT_PATH}" "${CONDA_MODULE_PATH}" "${CONDA_OUTER_BASE}"/
+    ### Only this environment's own .d directory is needed out of the scripts tree.
+    ### Every other environment/version's .d directory is irrelevant to this build,
+    ### and they accumulate forever since old environments are decommissioned manually -
+    ### copying the whole tree here (and later archiving it in conda_base.tar) gets
+    ### more expensive on every single build as the install ages.
+    declare -a script_paths=( "${CONDA_SCRIPT_PATH}"/launcher.sh "${CONDA_SCRIPT_PATH}"/launcher_conf.sh "${CONDA_SCRIPT_PATH}"/overrides )
+    [[ -d "${CONDA_SCRIPT_PATH}/${FULLENV}.d" ]] && script_paths+=( "${CONDA_SCRIPT_PATH}/${FULLENV}.d" )
+    rsync --recursive --links --perms --times --specials --partial --one-file-system --hard-links --acls --relative --exclude=*.sqsh -- "${CONDA_INSTALLATION_PATH}" "${script_paths[@]}" "${CONDA_MODULE_PATH}" "${CONDA_OUTER_BASE}"/
     echo "Done"
 else
     echo "Base installation not present - initialising"
@@ -253,9 +260,16 @@ construct_module_insert "${SINGULARITY_BINARY_PATH}" "${OVERLAY_BASE}" "${my_con
 set_apps_perms "${CONDA_OUTER_BASE}"
 
 ### Archive base env
+### .sqsh blobs are excluded: they are large, already immutable once deployed,
+### and are backed up individually per-environment in deploy.sh (${FULLENV}.sqsh.bak).
+### Re-bundling every environment's squashfs into this tar on every single build
+### would make it grow without bound as more environments/versions accumulate.
+### Other environments' .d directories are absent here too, since CONDA_OUTER_BASE
+### was only ever seeded with this environment's own .d directory above - so this
+### is now a backup of this environment's own footprint, not the entire shared tree.
 pushd "${CONDA_OUTER_BASE}"
 ### WARNING: Non-standard tar extension: --acls
-tar --acls -cf "${BUILD_STAGE_DIR}"/conda_base."${CONDA_ENVIRONMENT}".tar "${APPS_SUBDIR}"/"${CONDA_INSTALL_BASENAME}" "${MODULE_SUBDIR}" "${SCRIPT_SUBDIR}"
+tar --acls --exclude=*.sqsh -cf "${BUILD_STAGE_DIR}"/conda_base."${CONDA_ENVIRONMENT}".tar "${APPS_SUBDIR}"/"${CONDA_INSTALL_BASENAME}" "${MODULE_SUBDIR}" "${SCRIPT_SUBDIR}"
 popd
 
 cp deployed."${CONDA_ENVIRONMENT}".yml "${BUILD_STAGE_DIR}"/
