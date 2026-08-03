@@ -15,6 +15,9 @@ export UNSTABLE_VERSION=26.08
 # Make sure we solve for pytorch with CUDA support
 export CONDA_OVERRIDE_CUDA=12
 
+# Turn up the number of concurrent downloads mamba will run
+export MAMBA_DOWNLOAD_THREADS=16
+
 ### Version settings
 export ENVIRONMENT=analysis3
 export FULLENV="${ENVIRONMENT}-${VERSION_TO_MODIFY}"
