@@ -367,3 +367,4 @@ cc-plugin-wcrp = ">=2.2.1, <3"
 esgvoc = ">=4.0.1, <5"
 frisky = ">=0.6.0"           # Experimental - https://getfrisky.dev/. If it causes any issues we can remove it
 SkillMetrics = "*"
+xrexpr = ">=0.3.0, <0.4"
