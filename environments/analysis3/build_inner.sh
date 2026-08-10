@@ -12,11 +12,6 @@ jupyter lab build
 
 PYTHON_VERSION=$(python -c "import sys; print(f'python{sys.version_info.major}.{sys.version_info.minor}')")
 
-pushd "${CONDA_INSTALLATION_PATH}/envs/${FULLENV}/lib/${PYTHON_VERSION}/site-packages/esmvaltool"
-rm -f config-references.yml
-ln -sf /g/data/xp65/public/apps/esmvaltool/config_2.0/config-references.yml config-references.yml
-popd
-
 pushd "${CONDA_INSTALLATION_PATH}/envs/${FULLENV}/lib/${PYTHON_VERSION}/site-packages/esmvalcore/config/configurations/defaults"
 rm -f config-user.yml
 ln -sf /g/data/xp65/public/apps/esmvaltool/config_2.0/config-user.yml config-user.yml
@@ -26,12 +21,12 @@ rm -f extra_facets_native6.yml
 ln -sf /g/data/xp65/public/apps/esmvaltool/config_2.0/extra_facets_native6.yml extra_facets_native6.yml
 popd
 
-pushd "${CONDA_INSTALLATION_PATH}/envs/${FULLENV}/lib/${PYTHON_VERSION}/site-packages/esmvalcore/config/configurations"
-rm -f data-esmvalcore-esgf.yml
+pushd "${CONDA_INSTALLATION_PATH}/envs/${FULLENV}/lib/${PYTHON_VERSION}/site-packages/esmvalcore/config/configurations/defaults"
+rm -f data-esmvalcore-esgf.yml # Just in case, but the file should not exist yet
 ln -sf /g/data/xp65/public/apps/esmvaltool/config_2.0/data-esmvalcore-esgf.yml data-esmvalcore-esgf.yml
-rm -f data-hpc-nci.yml
+rm -f data-hpc-nci.yml # Just in case, but the file should not exist yet
 ln -sf /g/data/xp65/public/apps/esmvaltool/config_2.0/data-hpc-nci.yml data-hpc-nci.yml
-rm -f data-native-access.yml
+rm -f data-native-access.yml # Just in case but the file should bot exist yet
 ln -sf /g/data/xp65/public/apps/esmvaltool/config_2.0/data-native-access.yml data-native-access.yml
 popd
 
