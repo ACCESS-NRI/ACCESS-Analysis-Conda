@@ -1482,8 +1482,8 @@ dependencies:
   - wget==3.2
   - lavavu-osmesa==1.9.10
   - cmip7-repack==1.1.0
+  - esgvoc==5.0.1
   - py360convert==1.0.4
-  - esgvoc==4.2.0
   - rapidfuzz==3.14.5
   - nci-ipynb==2023.11.0.3
   - esgprep==3.3.3
