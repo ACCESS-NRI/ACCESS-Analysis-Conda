@@ -1485,6 +1485,8 @@ environments:
       - conda: https://conda.anaconda.org/pytorch/noarch/pytorch-mutex-1.0-cuda.tar.bz2
       - conda: https://conda.anaconda.org/rapidsai/linux-64/ucx-py-0.45.00-py312_250806_d53bdda0.conda
       - pypi: https://files.pythonhosted.org/packages/1b/b2/87200cbf3173dd26bac7ecc40eaa5ab7017191a9b6fc511a92d306a99cfc/frisky-0.6.0-cp311-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+      - pypi: https://files.pythonhosted.org/packages/2e/24/32361f5d0e2eff7ff1881ac6833b6b090cfe34515b1ee9082636cbe69442/treelib-1.8.0-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/43/ff/74f23998ad2f93b945c0309f825be92e04e0348e062026998b5eefef4c33/fuzzywuzzy-0.18.0-py2.py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/45/35/dc35578f1cecdcc0c6495578d23867ad19365f00e0c4c40352cfce7cc6b2/pyld-3.1.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/45/62/9bee9d417111fda0b166aa9e96fe1899cc21e445d7c3734e64f656075c59/pycnv-0.5.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/47/6a/62e288da7bcda82b935ff0c6cfe542970f04e29c756b0e147251b2fb251f/wget-3.2.zip
@@ -1492,11 +1494,17 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/5a/c5/39fb0bf9fa2ce5a6c448b4483105178d46482bfdabf0c8fae5d65213d683/cmip7_repack-1.1.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/6a/5b/b035e2d71e8be8959196e90e4db7cc3896e39cadc3a083ad37a959c88988/py360convert-1.0.4-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/6d/5d/20b47c32a3987bdda9e9d49a26af6a0a0613668fc20f0935efd655b6a8ba/esgvoc-4.2.0-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/79/72/97a9728c711c7c1b06e107d3f0623880fb4ef90e147ed13c551a1730e7cc/rapidfuzz-3.14.5-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
       - pypi: https://files.pythonhosted.org/packages/97/ac/32afd602d3fd8cd001d910747c7953c37c82cb564aeddcf40f027c057a60/nci_ipynb-2023.11.0.3-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/ab/10/e00675cf5594f8e338033b371b88da9fa8106154525cd3847761f57c26e8/esgprep-3.3.3-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/b8/c1/ad51336a39919be7b288498aed098029b948c2f4a38192b339b7d2cbcf8b/lavavu-1.9.10-cp312-cp312-manylinux_2_28_x86_64.whl
       - pypi: https://files.pythonhosted.org/packages/bf/ab/259b09a1ed4653378103f5a0edd9ad3eb3a8af995b11d9d52528807ae6e9/accessvis-1.1.4-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/c0/76/a14c46a124ec1cb731087d05e85dfdd09835a297473e6de52a049dbb8f2c/python_levenshtein-0.27.4-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/c8/22/9460e311f340cb62d26a38c419b1381b8593b0bb6b5d1f056938b086d362/lockfile-0.12.2-py2.py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/ca/43/fcf01f1ab9f744c545384bacea51016a267162de0b9e7c6fcd4996c84231/railroad_diagrams-3.0.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/cf/7d/b9813a582d4eb310be35e1fc7dfaae71207d7b62e9e53be314ebd251b53b/sqlmodel-0.0.39-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/d5/a3/34ce55c6f6accc3f827601635e667b592cd3abb1d93171dcaa0021608f57/levenshtein-0.27.4-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl
+      - pypi: https://files.pythonhosted.org/packages/ee/5e/16e17bedcf54d5b618dc0771690deda77178e5c310402881c3d2d6c5f27c/hurry.filesize-0.9.tar.gz
       - pypi: https://files.pythonhosted.org/packages/f4/87/2cbe033663e8849e801d64255262f82366ec4784bc7a31edb186dc4255ae/skillmetrics-1.2.5-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/f6/3d/302307d2f902a3fc95f0970a7f9d3c4647f4eed4e522858de3bd525d8f8b/cc_plugin_wcrp-2.3.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/f7/91/923cb8ea3ed18ed9bd2fdf170b2fc4d6ef9543e45ca7f15dfd3d5248d505/cmip7_data_request_api-1.4-py3-none-any.whl
@@ -2978,6 +2986,8 @@ environments:
       - conda: https://conda.anaconda.org/pytorch/noarch/pytorch-mutex-1.0-cuda.tar.bz2
       - conda: https://conda.anaconda.org/rapidsai/linux-64/ucx-py-0.45.00-py312_250806_d53bdda0.conda
       - pypi: https://files.pythonhosted.org/packages/1b/b2/87200cbf3173dd26bac7ecc40eaa5ab7017191a9b6fc511a92d306a99cfc/frisky-0.6.0-cp311-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+      - pypi: https://files.pythonhosted.org/packages/2e/24/32361f5d0e2eff7ff1881ac6833b6b090cfe34515b1ee9082636cbe69442/treelib-1.8.0-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/43/ff/74f23998ad2f93b945c0309f825be92e04e0348e062026998b5eefef4c33/fuzzywuzzy-0.18.0-py2.py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/45/35/dc35578f1cecdcc0c6495578d23867ad19365f00e0c4c40352cfce7cc6b2/pyld-3.1.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/45/62/9bee9d417111fda0b166aa9e96fe1899cc21e445d7c3734e64f656075c59/pycnv-0.5.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/47/6a/62e288da7bcda82b935ff0c6cfe542970f04e29c756b0e147251b2fb251f/wget-3.2.zip
@@ -2985,11 +2995,17 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/5a/c5/39fb0bf9fa2ce5a6c448b4483105178d46482bfdabf0c8fae5d65213d683/cmip7_repack-1.1.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/6a/5b/b035e2d71e8be8959196e90e4db7cc3896e39cadc3a083ad37a959c88988/py360convert-1.0.4-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/6d/5d/20b47c32a3987bdda9e9d49a26af6a0a0613668fc20f0935efd655b6a8ba/esgvoc-4.2.0-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/79/72/97a9728c711c7c1b06e107d3f0623880fb4ef90e147ed13c551a1730e7cc/rapidfuzz-3.14.5-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
       - pypi: https://files.pythonhosted.org/packages/97/ac/32afd602d3fd8cd001d910747c7953c37c82cb564aeddcf40f027c057a60/nci_ipynb-2023.11.0.3-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/ab/10/e00675cf5594f8e338033b371b88da9fa8106154525cd3847761f57c26e8/esgprep-3.3.3-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/b8/c1/ad51336a39919be7b288498aed098029b948c2f4a38192b339b7d2cbcf8b/lavavu-1.9.10-cp312-cp312-manylinux_2_28_x86_64.whl
       - pypi: https://files.pythonhosted.org/packages/bf/ab/259b09a1ed4653378103f5a0edd9ad3eb3a8af995b11d9d52528807ae6e9/accessvis-1.1.4-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/c0/76/a14c46a124ec1cb731087d05e85dfdd09835a297473e6de52a049dbb8f2c/python_levenshtein-0.27.4-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/c8/22/9460e311f340cb62d26a38c419b1381b8593b0bb6b5d1f056938b086d362/lockfile-0.12.2-py2.py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/ca/43/fcf01f1ab9f744c545384bacea51016a267162de0b9e7c6fcd4996c84231/railroad_diagrams-3.0.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/cf/7d/b9813a582d4eb310be35e1fc7dfaae71207d7b62e9e53be314ebd251b53b/sqlmodel-0.0.39-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/d5/a3/34ce55c6f6accc3f827601635e667b592cd3abb1d93171dcaa0021608f57/levenshtein-0.27.4-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl
+      - pypi: https://files.pythonhosted.org/packages/ee/5e/16e17bedcf54d5b618dc0771690deda77178e5c310402881c3d2d6c5f27c/hurry.filesize-0.9.tar.gz
       - pypi: https://files.pythonhosted.org/packages/f4/87/2cbe033663e8849e801d64255262f82366ec4784bc7a31edb186dc4255ae/skillmetrics-1.2.5-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/f6/3d/302307d2f902a3fc95f0970a7f9d3c4647f4eed4e522858de3bd525d8f8b/cc_plugin_wcrp-2.3.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/f7/91/923cb8ea3ed18ed9bd2fdf170b2fc4d6ef9543e45ca7f15dfd3d5248d505/cmip7_data_request_api-1.4-py3-none-any.whl
@@ -27223,6 +27239,19 @@ packages:
   - dask ; extra == 'dask'
   - distributed ; extra == 'dask'
   requires_python: '>=3.11'
+- pypi: https://files.pythonhosted.org/packages/2e/24/32361f5d0e2eff7ff1881ac6833b6b090cfe34515b1ee9082636cbe69442/treelib-1.8.0-py3-none-any.whl
+  name: treelib
+  version: 1.8.0
+  sha256: 5235d1ebf988c5026f26ce6e5e0cd470007f16d4978185f5c9b3eee8a25aef81
+  requires_dist:
+  - six>=1.13.0
+  requires_python: '>=3.7,<4.0'
+- pypi: https://files.pythonhosted.org/packages/43/ff/74f23998ad2f93b945c0309f825be92e04e0348e062026998b5eefef4c33/fuzzywuzzy-0.18.0-py2.py3-none-any.whl
+  name: fuzzywuzzy
+  version: 0.18.0
+  sha256: 928244b28db720d1e0ee7587acf660ea49d7e4c632569cad4f1cd7e68a5f0993
+  requires_dist:
+  - python-levenshtein>=0.12 ; extra == 'speedup'
 - pypi: https://files.pythonhosted.org/packages/45/35/dc35578f1cecdcc0c6495578d23867ad19365f00e0c4c40352cfce7cc6b2/pyld-3.1.0-py3-none-any.whl
   name: pyld
   version: 3.1.0
@@ -27308,6 +27337,13 @@ packages:
   - toml>=0.10.2
   - typer>=0.15.0
   requires_python: '>=3.10'
+- pypi: https://files.pythonhosted.org/packages/79/72/97a9728c711c7c1b06e107d3f0623880fb4ef90e147ed13c551a1730e7cc/rapidfuzz-3.14.5-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
+  name: rapidfuzz
+  version: 3.14.5
+  sha256: 48bee0b91bebfaec41e1081e351000659ab7570cc4598d617aa04d5bf827f9e6
+  requires_dist:
+  - numpy ; extra == 'all'
+  requires_python: '>=3.10'
 - pypi: https://files.pythonhosted.org/packages/97/ac/32afd602d3fd8cd001d910747c7953c37c82cb564aeddcf40f027c057a60/nci_ipynb-2023.11.0.3-py3-none-any.whl
   name: nci-ipynb
   version: 2023.11.0.3
@@ -27315,6 +27351,21 @@ packages:
   requires_dist:
   - ipykernel
   requires_python: '>=3.4'
+- pypi: https://files.pythonhosted.org/packages/ab/10/e00675cf5594f8e338033b371b88da9fa8106154525cd3847761f57c26e8/esgprep-3.3.3-py3-none-any.whl
+  name: esgprep
+  version: 3.3.3
+  sha256: 9fd580155fc1b1035419ff0edbb7c8247364f5670f10c4a1b97e8fc98884064e
+  requires_dist:
+  - esgvoc>=4.1.1
+  - fuzzywuzzy>=0.18.0
+  - hurry-filesize>=0.9
+  - lockfile>=0.12.2
+  - netcdf4>=1.7.2
+  - numpy>=2.2.6
+  - python-levenshtein>=0.27.1
+  - requests>=2.32.3
+  - treelib>=1.7.1
+  requires_python: '>=3.10'
 - pypi: https://files.pythonhosted.org/packages/b8/c1/ad51336a39919be7b288498aed098029b948c2f4a38192b339b7d2cbcf8b/lavavu-1.9.10-cp312-cp312-manylinux_2_28_x86_64.whl
   name: lavavu
   version: 1.9.10
@@ -27346,6 +27397,17 @@ packages:
   - tqdm
   - netcdf4
   requires_python: '>=3.6'
+- pypi: https://files.pythonhosted.org/packages/c0/76/a14c46a124ec1cb731087d05e85dfdd09835a297473e6de52a049dbb8f2c/python_levenshtein-0.27.4-py3-none-any.whl
+  name: python-levenshtein
+  version: 0.27.4
+  sha256: cf956834cffa7690e2242eec385b77805fe256d164015583ba45649dc75144e1
+  requires_dist:
+  - levenshtein==0.27.4
+  requires_python: '>=3.10'
+- pypi: https://files.pythonhosted.org/packages/c8/22/9460e311f340cb62d26a38c419b1381b8593b0bb6b5d1f056938b086d362/lockfile-0.12.2-py2.py3-none-any.whl
+  name: lockfile
+  version: 0.12.2
+  sha256: 6c3cb24f344923d30b2785d5ad75182c8ea7ac1b6171b08657258ec7429d50fa
 - pypi: https://files.pythonhosted.org/packages/ca/43/fcf01f1ab9f744c545384bacea51016a267162de0b9e7c6fcd4996c84231/railroad_diagrams-3.0.1-py3-none-any.whl
   name: railroad-diagrams
   version: 3.0.1
@@ -27360,6 +27422,19 @@ packages:
   - pydantic>=2.11.0
   - typing-extensions>=4.5.0
   requires_python: '>=3.10'
+- pypi: https://files.pythonhosted.org/packages/d5/a3/34ce55c6f6accc3f827601635e667b592cd3abb1d93171dcaa0021608f57/levenshtein-0.27.4-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl
+  name: levenshtein
+  version: 0.27.4
+  sha256: 6b2b97dc4986616e857df440a2a3425525a874b3a3cecea8a6316a73a14d5cec
+  requires_dist:
+  - rapidfuzz>=3.9.0,<4.0.0
+  requires_python: '>=3.10'
+- pypi: https://files.pythonhosted.org/packages/ee/5e/16e17bedcf54d5b618dc0771690deda77178e5c310402881c3d2d6c5f27c/hurry.filesize-0.9.tar.gz
+  name: hurry-filesize
+  version: '0.9'
+  sha256: f5368329adbef86accd3bc9490522340bb79260455ae89b1a42c10f63801b9a6
+  requires_dist:
+  - setuptools
 - pypi: https://files.pythonhosted.org/packages/f4/87/2cbe033663e8849e801d64255262f82366ec4784bc7a31edb186dc4255ae/skillmetrics-1.2.5-py3-none-any.whl
   name: skillmetrics
   version: 1.2.5

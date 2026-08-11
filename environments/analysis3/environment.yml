@@ -1475,6 +1475,8 @@ dependencies:
 - pip
 - pip:
   - frisky==0.6.0
+  - treelib==1.8.0
+  - fuzzywuzzy==0.18.0
   - pyld==3.1.0
   - pycnv==0.5.0
   - wget==3.2
@@ -1482,11 +1484,17 @@ dependencies:
   - cmip7-repack==1.1.0
   - py360convert==1.0.4
   - esgvoc==4.2.0
+  - rapidfuzz==3.14.5
   - nci-ipynb==2023.11.0.3
+  - esgprep==3.3.3
   - lavavu==1.9.10
   - accessvis==1.1.4
+  - python-levenshtein==0.27.4
+  - lockfile==0.12.2
   - railroad-diagrams==3.0.1
   - sqlmodel==0.0.39
+  - levenshtein==0.27.4
+  - hurry-filesize==0.9
   - skillmetrics==1.2.5
   - cc-plugin-wcrp==2.3.2
   - cmip7-data-request-api==1.4
