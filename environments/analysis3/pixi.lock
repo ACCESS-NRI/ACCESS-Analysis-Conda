@@ -24,8 +24,8 @@ environments:
       - conda: https://conda.anaconda.org/accessnri/noarch/access-intake-esm-2026.8.13-py_0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/access-intake-utils-0.1.7-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/access-med-tools-0.1.23-pypy_0.tar.bz2
-      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.7.14b-py_0.conda
-      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-esmval-1.7.14b-0.conda
+      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.7.15b-py_0.conda
+      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-esmval-1.7.15b-0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/access-nri-intake-1.6.3-py_0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/access-py-telemetry-0.1.10-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/ecgtools-access-2025.10.7-py_0.tar.bz2
@@ -1525,8 +1525,8 @@ environments:
       - conda: https://conda.anaconda.org/accessnri/noarch/access-intake-esm-2026.8.13-py_0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/access-intake-utils-0.1.7-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/access-med-tools-0.1.23-pypy_0.tar.bz2
-      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.7.14b-py_0.conda
-      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-esmval-1.7.14b-0.conda
+      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.7.15b-py_0.conda
+      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-esmval-1.7.15b-0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/access-nri-intake-1.6.3-py_0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/access-py-telemetry-0.1.10-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/ecgtools-access-2025.10.7-py_0.tar.bz2
@@ -3070,9 +3070,9 @@ packages:
   license_family: APACHE
   size: 46216
   timestamp: 1761304298179
-- conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.7.14b-py_0.conda
-  sha256: a3f51ed1c85644ffcfc79470356fe7f7602f5941230b18014ad61e80ab30532a
-  md5: 913531878b3f92a7c5fc799e9d110885
+- conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.7.15b-py_0.conda
+  sha256: 26030dfb4edabc0437a3e6568f0cc85754fec233e1f7ea13209261d022ba373f
+  md5: 7167c2b69d9ca49400431ec41a747520
   depends:
   - cftime
   - dask
@@ -3088,18 +3088,18 @@ packages:
   - tqdm
   - xarray
   license: Apache-2.0
-  size: 11176996
-  timestamp: 1786580725173
-- conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-esmval-1.7.14b-0.conda
+  size: 11127407
+  timestamp: 1786598628174
+- conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-esmval-1.7.15b-0.conda
   noarch: python
-  sha256: 48bc105af5f7dab6b5abcce20d6fb2f24a64bbaa69343cc9125dcdbc027ae530
-  md5: 485abeff5c32a9a9b9ac5ca689185679
+  sha256: 8d23ac79b5d7cbbed80f4ba06026fa966b1a400f7c6474014234b93561944699
+  md5: 3f5699e24570d9969ae1c0c37439e148
   depends:
-  - access-moppy 1.7.14b py_0
+  - access-moppy 1.7.15b py_0
   - esmvalcore >=2.14
   license: Apache-2.0
-  size: 9171
-  timestamp: 1786580734329
+  size: 9166
+  timestamp: 1786598638805
 - conda: https://conda.anaconda.org/accessnri/noarch/access-nri-intake-1.6.3-py_0.conda
   sha256: e8b73c09add4d8c872c94b76a73bb3c86ac499999201d244e3a8db1aa67dcd4e
   md5: c36553d5dfc378b70f7e79f9b9cb1dff
