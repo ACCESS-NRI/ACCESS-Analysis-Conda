@@ -10,7 +10,7 @@ channels:
 - nodefaults
 dependencies:
 - shumlib ==2026.7.2 h3218e01_0
-- access-intake-esm ==2026.7.1 py_0
+- access-intake-esm ==2026.8.13 py_0
 - access-intake-utils ==0.1.7 py_0
 - access-med-tools ==0.1.23 pypy_0
 - access-moppy ==1.7.14b py_0
