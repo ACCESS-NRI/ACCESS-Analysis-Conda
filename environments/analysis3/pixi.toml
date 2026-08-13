@@ -53,8 +53,8 @@ openmpi = "==5.0.8"
 pip = "26.*"
 hdf5 = { version = "*", build = "mpi_openmpi*" }
 jupyterlab = "==4.5.0"
-access-nri-intake = { version = "==1.6.2", channel = "accessnri" }
 access-intake-esm = { version = "==2026.8.13", channel = "accessnri" }
+access-nri-intake = { version = "==1.6.3", channel = "accessnri" }
 ecgtools-access = { version = ">=2025.10.7", channel = "accessnri" }
 access-py-telemetry = { version = "==0.1.10", channel = "accessnri" }
 access-intake-utils = { version = "==0.1.7", channel = "accessnri" }
@@ -62,13 +62,13 @@ intake-virtual-icechunk = { version = "==0.2.2", channel = "accessnri" }
 intake-dataframe-catalog = { version = "==0.5.1", channel = "conda-forge" }
 yamanifest = { version = ">=0.3.12", channel = "accessnri" }
 access-med-tools = { version = "==0.1.23", channel = "accessnri" }
-access-moppy-esmval = { version = "==1.7.12b", channel = "accessnri" }
+access-moppy-esmval = { version = "==1.7.14b", channel = "accessnri" }
 shumlib = { channel = "accessnri" }
 aiohttp = "*"
 aiohttp-cors = "*"
 anytree = "*"
 arch-py = "*"
-argopy = "*"
+argopy = ">=1.3.1"
 arm_pyart = "*"
 astropy = "*"
 asyncssh = "*"
@@ -116,7 +116,7 @@ earthpy = "*"
 eccodes = "*"
 ecmwf-api-client = "*"
 eofs = "*"
-erddapy = "*"
+erddapy = ">=3.2.1,<3.3"
 esmf = "*"
 esmpy = "*"
 esmvalcore = "2.15.*"
@@ -364,7 +364,7 @@ cmip7-data-request-api = "*"
 cmip7_repack = "*"
 nci-ipynb = ">=2023.11.0.3, <2024"
 cc-plugin-wcrp = ">=2.2.1, <3"
-esgvoc = "*"
+esgvoc = "==5.0.1"
 esgprep = "*"
 frisky = ">=0.6.0"           # Experimental - https://getfrisky.dev/. If it causes any issues we can remove it
 SkillMetrics = "*"

@@ -24,9 +24,9 @@ environments:
       - conda: https://conda.anaconda.org/accessnri/noarch/access-intake-esm-2026.8.13-py_0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/access-intake-utils-0.1.7-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/access-med-tools-0.1.23-pypy_0.tar.bz2
-      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.7.12b-py_0.conda
-      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-esmval-1.7.12b-0.conda
-      - conda: https://conda.anaconda.org/accessnri/noarch/access-nri-intake-1.6.2-py_0.conda
+      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.7.14b-py_0.conda
+      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-esmval-1.7.14b-0.conda
+      - conda: https://conda.anaconda.org/accessnri/noarch/access-nri-intake-1.6.3-py_0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/access-py-telemetry-0.1.10-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/ecgtools-access-2025.10.7-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/intake-esm-access-2026.4.15-py_0.tar.bz2
@@ -874,7 +874,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/entrypoints-0.4-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/envisage-7.0.4-pyhe01879c_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/eofs-2.0.0-pyhff2d567_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/erddapy-3.3.0-pyhc364b38_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/erddapy-3.2.1-pyhc364b38_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/esda-2.7.1-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/esgf-pyclient-0.3.1-pyhd8ed1ab_5.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/esmpy-8.8.1-pyhecae5ae_0.conda
@@ -1492,8 +1492,8 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/47/6a/62e288da7bcda82b935ff0c6cfe542970f04e29c756b0e147251b2fb251f/wget-3.2.zip
       - pypi: https://files.pythonhosted.org/packages/4b/aa/b73950d210c4ed3ef97ba282513c5d39502b2dd34de8ec5b9abd8564ddf2/lavavu_osmesa-1.9.10-cp312-cp312-manylinux_2_28_x86_64.whl
       - pypi: https://files.pythonhosted.org/packages/5a/c5/39fb0bf9fa2ce5a6c448b4483105178d46482bfdabf0c8fae5d65213d683/cmip7_repack-1.1.0-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/5e/39/a3a43c2ed73d106e50bfcae0ee8c4dbe1e3a2fee63aed270db3ac4238f06/esgvoc-5.0.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/6a/5b/b035e2d71e8be8959196e90e4db7cc3896e39cadc3a083ad37a959c88988/py360convert-1.0.4-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/6d/5d/20b47c32a3987bdda9e9d49a26af6a0a0613668fc20f0935efd655b6a8ba/esgvoc-4.2.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/79/72/97a9728c711c7c1b06e107d3f0623880fb4ef90e147ed13c551a1730e7cc/rapidfuzz-3.14.5-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
       - pypi: https://files.pythonhosted.org/packages/97/ac/32afd602d3fd8cd001d910747c7953c37c82cb564aeddcf40f027c057a60/nci_ipynb-2023.11.0.3-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/ab/10/e00675cf5594f8e338033b371b88da9fa8106154525cd3847761f57c26e8/esgprep-3.3.3-py3-none-any.whl
@@ -1525,9 +1525,9 @@ environments:
       - conda: https://conda.anaconda.org/accessnri/noarch/access-intake-esm-2026.8.13-py_0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/access-intake-utils-0.1.7-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/access-med-tools-0.1.23-pypy_0.tar.bz2
-      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.7.12b-py_0.conda
-      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-esmval-1.7.12b-0.conda
-      - conda: https://conda.anaconda.org/accessnri/noarch/access-nri-intake-1.6.2-py_0.conda
+      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.7.14b-py_0.conda
+      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-esmval-1.7.14b-0.conda
+      - conda: https://conda.anaconda.org/accessnri/noarch/access-nri-intake-1.6.3-py_0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/access-py-telemetry-0.1.10-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/ecgtools-access-2025.10.7-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/intake-esm-access-2026.4.15-py_0.tar.bz2
@@ -2375,7 +2375,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/entrypoints-0.4-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/envisage-7.0.4-pyhe01879c_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/eofs-2.0.0-pyhff2d567_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/erddapy-3.3.0-pyhc364b38_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/erddapy-3.2.1-pyhc364b38_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/esda-2.7.1-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/esgf-pyclient-0.3.1-pyhd8ed1ab_5.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/esmpy-8.8.1-pyhecae5ae_0.conda
@@ -2993,8 +2993,8 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/47/6a/62e288da7bcda82b935ff0c6cfe542970f04e29c756b0e147251b2fb251f/wget-3.2.zip
       - pypi: https://files.pythonhosted.org/packages/4b/aa/b73950d210c4ed3ef97ba282513c5d39502b2dd34de8ec5b9abd8564ddf2/lavavu_osmesa-1.9.10-cp312-cp312-manylinux_2_28_x86_64.whl
       - pypi: https://files.pythonhosted.org/packages/5a/c5/39fb0bf9fa2ce5a6c448b4483105178d46482bfdabf0c8fae5d65213d683/cmip7_repack-1.1.0-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/5e/39/a3a43c2ed73d106e50bfcae0ee8c4dbe1e3a2fee63aed270db3ac4238f06/esgvoc-5.0.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/6a/5b/b035e2d71e8be8959196e90e4db7cc3896e39cadc3a083ad37a959c88988/py360convert-1.0.4-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/6d/5d/20b47c32a3987bdda9e9d49a26af6a0a0613668fc20f0935efd655b6a8ba/esgvoc-4.2.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/79/72/97a9728c711c7c1b06e107d3f0623880fb4ef90e147ed13c551a1730e7cc/rapidfuzz-3.14.5-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
       - pypi: https://files.pythonhosted.org/packages/97/ac/32afd602d3fd8cd001d910747c7953c37c82cb564aeddcf40f027c057a60/nci_ipynb-2023.11.0.3-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/ab/10/e00675cf5594f8e338033b371b88da9fa8106154525cd3847761f57c26e8/esgprep-3.3.3-py3-none-any.whl
@@ -3070,9 +3070,9 @@ packages:
   license_family: APACHE
   size: 46216
   timestamp: 1761304298179
-- conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.7.12b-py_0.conda
-  sha256: e18512ea3006424f3ebef5b3d73e2c0a5e168d3d9daed70bf3a53ad078e6e716
-  md5: 38770d25e4662fb21ab646cb73253af1
+- conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.7.14b-py_0.conda
+  sha256: a3f51ed1c85644ffcfc79470356fe7f7602f5941230b18014ad61e80ab30532a
+  md5: 913531878b3f92a7c5fc799e9d110885
   depends:
   - cftime
   - dask
@@ -3088,21 +3088,21 @@ packages:
   - tqdm
   - xarray
   license: Apache-2.0
-  size: 11182654
-  timestamp: 1786324197571
-- conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-esmval-1.7.12b-0.conda
+  size: 11176996
+  timestamp: 1786580725173
+- conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-esmval-1.7.14b-0.conda
   noarch: python
-  sha256: 9f95629b3d5d82aaf2bb5281ca756fa57e61087b642fe6d61128bb269ee74219
-  md5: d3cf8b7873b72dc3051fcb53daf2df50
+  sha256: 48bc105af5f7dab6b5abcce20d6fb2f24a64bbaa69343cc9125dcdbc027ae530
+  md5: 485abeff5c32a9a9b9ac5ca689185679
   depends:
-  - access-moppy 1.7.12b py_0
+  - access-moppy 1.7.14b py_0
   - esmvalcore >=2.14
   license: Apache-2.0
-  size: 9178
-  timestamp: 1786324208442
-- conda: https://conda.anaconda.org/accessnri/noarch/access-nri-intake-1.6.2-py_0.conda
-  sha256: 25d58c9af852d63c7bbba59062dad14e4ac2b4ecb11062843949a74634df9dfc
-  md5: 446719c0e7d24f9471a8c717385fc596
+  size: 9171
+  timestamp: 1786580734329
+- conda: https://conda.anaconda.org/accessnri/noarch/access-nri-intake-1.6.3-py_0.conda
+  sha256: e8b73c09add4d8c872c94b76a73bb3c86ac499999201d244e3a8db1aa67dcd4e
+  md5: c36553d5dfc378b70f7e79f9b9cb1dff
   depends:
   - access-py-telemetry >=0.1.6
   - cftime
@@ -3119,12 +3119,13 @@ packages:
   - pooch
   - pydantic
   - python >=3.10
+  - wrapt >=2.1.2
   - xarray
   - yamanifest >=0.3.12
   license: Apache Software
   license_family: APACHE
-  size: 67802
-  timestamp: 1778647180218
+  size: 68100
+  timestamp: 1786427864523
 - conda: https://conda.anaconda.org/accessnri/noarch/access-py-telemetry-0.1.10-py_0.tar.bz2
   sha256: 3e3105fb0eb9a604b7da3c1f73fd2255dff5fee7472a7cfc4cb43ba2491e41c4
   md5: 121eba6a34d152fedac4f87c672a81d2
@@ -17751,9 +17752,9 @@ packages:
   run_exports: {}
   size: 854146
   timestamp: 1731925160198
-- conda: https://conda.anaconda.org/conda-forge/noarch/erddapy-3.3.0-pyhc364b38_0.conda
-  sha256: 245694e4a4359024d944f0b425453b87f6182959a88f952889075ed6adc60e1b
-  md5: 13323e198be16e0fa50dd7c6e44c2968
+- conda: https://conda.anaconda.org/conda-forge/noarch/erddapy-3.2.1-pyhc364b38_0.conda
+  sha256: 399c2f08a0fc5fa5f93c76a430f53b20ec03373f7e1872fa77c61369bc77525e
+  md5: 818da12ec5df064330105f4530fc71b2
   depends:
   - python >=3.11
   - pandas <4,>=0.25.2
@@ -17764,8 +17765,8 @@ packages:
   purls:
   - pkg:pypi/erddapy?source=hash-mapping
   run_exports: {}
-  size: 28409
-  timestamp: 1782831853172
+  size: 28333
+  timestamp: 1780322464089
 - conda: https://conda.anaconda.org/conda-forge/noarch/esda-2.7.1-pyhd8ed1ab_0.conda
   sha256: 06f105563beac4ad9541bca1ce8a4acc8589fe9728188167d82f9a6c73aa199d
   md5: b535f86002823be906422257c2cf3ef8
@@ -27309,21 +27310,10 @@ packages:
   - sphinx ; extra == 'doc'
   - sphinx-rtd-theme ; extra == 'doc'
   requires_python: '>=3.10'
-- pypi: https://files.pythonhosted.org/packages/6a/5b/b035e2d71e8be8959196e90e4db7cc3896e39cadc3a083ad37a959c88988/py360convert-1.0.4-py3-none-any.whl
-  name: py360convert
-  version: 1.0.4
-  sha256: fddb58443b9401a2741e05aae9da9e11ec9ea9e9e24511738ef8e0fa3ca069d8
-  requires_dist:
-  - numpy>=1.20.0 ; python_full_version < '3.13'
-  - numpy>=2.1.0 ; python_full_version >= '3.13'
-  - pillow>=6.0.0
-  - scipy>=1.14.0 ; python_full_version >= '3.13'
-  - scipy>=1.2.0 ; python_full_version < '3.13'
-  requires_python: '>=3.9,<4.0'
-- pypi: https://files.pythonhosted.org/packages/6d/5d/20b47c32a3987bdda9e9d49a26af6a0a0613668fc20f0935efd655b6a8ba/esgvoc-4.2.0-py3-none-any.whl
+- pypi: https://files.pythonhosted.org/packages/5e/39/a3a43c2ed73d106e50bfcae0ee8c4dbe1e3a2fee63aed270db3ac4238f06/esgvoc-5.0.1-py3-none-any.whl
   name: esgvoc
-  version: 4.2.0
-  sha256: 8c43a86083097d09d2e60446548e148509f4ae7c5b75fe7164dff0e53e892b69
+  version: 5.0.1
+  sha256: 96b897c069a2ca3fee6526acefec948dcda5c733dbb06a64722ba0aa456184a3
   requires_dist:
   - idna>=3.10
   - jinja2>=3.1.6
@@ -27337,6 +27327,17 @@ packages:
   - toml>=0.10.2
   - typer>=0.15.0
   requires_python: '>=3.10'
+- pypi: https://files.pythonhosted.org/packages/6a/5b/b035e2d71e8be8959196e90e4db7cc3896e39cadc3a083ad37a959c88988/py360convert-1.0.4-py3-none-any.whl
+  name: py360convert
+  version: 1.0.4
+  sha256: fddb58443b9401a2741e05aae9da9e11ec9ea9e9e24511738ef8e0fa3ca069d8
+  requires_dist:
+  - numpy>=1.20.0 ; python_full_version < '3.13'
+  - numpy>=2.1.0 ; python_full_version >= '3.13'
+  - pillow>=6.0.0
+  - scipy>=1.14.0 ; python_full_version >= '3.13'
+  - scipy>=1.2.0 ; python_full_version < '3.13'
+  requires_python: '>=3.9,<4.0'
 - pypi: https://files.pythonhosted.org/packages/79/72/97a9728c711c7c1b06e107d3f0623880fb4ef90e147ed13c551a1730e7cc/rapidfuzz-3.14.5-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl
   name: rapidfuzz
   version: 3.14.5

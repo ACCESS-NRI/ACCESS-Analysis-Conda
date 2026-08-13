@@ -13,9 +13,9 @@ dependencies:
 - access-intake-esm ==2026.8.13 py_0
 - access-intake-utils ==0.1.7 py_0
 - access-med-tools ==0.1.23 pypy_0
-- access-moppy ==1.7.12b py_0
-- access-moppy-esmval ==1.7.12b 0
-- access-nri-intake ==1.6.2 py_0
+- access-moppy ==1.7.14b py_0
+- access-moppy-esmval ==1.7.14b 0
+- access-nri-intake ==1.6.3 py_0
 - access-py-telemetry ==0.1.10 py_0
 - ecgtools-access ==2025.10.7 py_0
 - intake-esm-access ==2026.4.15 py_0
@@ -862,7 +862,7 @@ dependencies:
 - entrypoints ==0.4 pyhd8ed1ab_1
 - envisage ==7.0.4 pyhe01879c_1
 - eofs ==2.0.0 pyhff2d567_0
-- erddapy ==3.3.0 pyhc364b38_0
+- erddapy ==3.2.1 pyhc364b38_0
 - esda ==2.7.1 pyhd8ed1ab_0
 - esgf-pyclient ==0.3.1 pyhd8ed1ab_5
 - esmpy ==8.8.1 pyhecae5ae_0
@@ -1482,8 +1482,8 @@ dependencies:
   - wget==3.2
   - lavavu-osmesa==1.9.10
   - cmip7-repack==1.1.0
+  - esgvoc==5.0.1
   - py360convert==1.0.4
-  - esgvoc==4.2.0
   - rapidfuzz==3.14.5
   - nci-ipynb==2023.11.0.3
   - esgprep==3.3.3
