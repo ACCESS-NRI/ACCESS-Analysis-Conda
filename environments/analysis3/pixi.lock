@@ -21,7 +21,7 @@ environments:
     packages:
       linux-64:
       - conda: https://conda.anaconda.org/accessnri/linux-64/shumlib-2026.07.2-h3218e01_0.conda
-      - conda: https://conda.anaconda.org/accessnri/noarch/access-intake-esm-2026.7.1-py_0.conda
+      - conda: https://conda.anaconda.org/accessnri/noarch/access-intake-esm-2026.8.13-py_0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/access-intake-utils-0.1.7-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/access-med-tools-0.1.23-pypy_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.7.12b-py_0.conda
@@ -1522,7 +1522,7 @@ environments:
     packages:
       linux-64:
       - conda: https://conda.anaconda.org/accessnri/linux-64/shumlib-2026.07.2-h3218e01_0.conda
-      - conda: https://conda.anaconda.org/accessnri/noarch/access-intake-esm-2026.7.1-py_0.conda
+      - conda: https://conda.anaconda.org/accessnri/noarch/access-intake-esm-2026.8.13-py_0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/access-intake-utils-0.1.7-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/access-med-tools-0.1.23-pypy_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.7.12b-py_0.conda
@@ -3020,9 +3020,9 @@ packages:
   license: BSD
   size: 327451
   timestamp: 1782881759423
-- conda: https://conda.anaconda.org/accessnri/noarch/access-intake-esm-2026.7.1-py_0.conda
-  sha256: 27259605c1319f579602b7b15c98ba6e47cb27c50a430c43abb6ca0ef483673b
-  md5: 1c96562b327d29efcf7faca7e2daa7a4
+- conda: https://conda.anaconda.org/accessnri/noarch/access-intake-esm-2026.8.13-py_0.conda
+  sha256: 8f1b1fc82a4c17f5aa99424bf04303258aedce8f3564230979dbbcf82dbe66ee
+  md5: 1d79004d20591fd0cf2e9779833b3c3e
   depends:
   - dask >=2024.12
   - fastprogress >=1.0.0,<1.1.0
@@ -3040,8 +3040,8 @@ packages:
   - zarr >=2.12,!=3.0.*
   license: Apache Software
   license_family: APACHE
-  size: 38290
-  timestamp: 1782788860785
+  size: 38292
+  timestamp: 1786591163959
 - conda: https://conda.anaconda.org/accessnri/noarch/access-intake-utils-0.1.7-py_0.tar.bz2
   sha256: cf8362ce7c630ebbe99dcfc4aa19cd3da14f9ba65e81786c6306b440682829c5
   md5: 8d390d5826adaa72713e45e07019a0e0
