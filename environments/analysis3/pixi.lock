@@ -24,8 +24,8 @@ environments:
       - conda: https://conda.anaconda.org/accessnri/noarch/access-intake-esm-2026.7.1-py_0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/access-intake-utils-0.1.7-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/access-med-tools-0.1.23-pypy_0.tar.bz2
-      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.7.13b-py_0.conda
-      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-esmval-1.7.13b-0.conda
+      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.7.14b-py_0.conda
+      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-esmval-1.7.14b-0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/access-nri-intake-1.6.3-py_0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/access-py-telemetry-0.1.10-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/ecgtools-access-2025.10.7-py_0.tar.bz2
@@ -874,7 +874,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/entrypoints-0.4-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/envisage-7.0.4-pyhe01879c_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/eofs-2.0.0-pyhff2d567_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/erddapy-3.3.0-pyhc364b38_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/erddapy-3.2.1-pyhc364b38_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/esda-2.7.1-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/esgf-pyclient-0.3.1-pyhd8ed1ab_5.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/esmpy-8.8.1-pyhecae5ae_0.conda
@@ -1525,8 +1525,8 @@ environments:
       - conda: https://conda.anaconda.org/accessnri/noarch/access-intake-esm-2026.7.1-py_0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/access-intake-utils-0.1.7-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/access-med-tools-0.1.23-pypy_0.tar.bz2
-      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.7.13b-py_0.conda
-      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-esmval-1.7.13b-0.conda
+      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.7.14b-py_0.conda
+      - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-esmval-1.7.14b-0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/access-nri-intake-1.6.3-py_0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/access-py-telemetry-0.1.10-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/ecgtools-access-2025.10.7-py_0.tar.bz2
@@ -2375,7 +2375,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/entrypoints-0.4-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/envisage-7.0.4-pyhe01879c_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/eofs-2.0.0-pyhff2d567_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/erddapy-3.3.0-pyhc364b38_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/erddapy-3.2.1-pyhc364b38_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/esda-2.7.1-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/esgf-pyclient-0.3.1-pyhd8ed1ab_5.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/esmpy-8.8.1-pyhecae5ae_0.conda
@@ -3070,9 +3070,9 @@ packages:
   license_family: APACHE
   size: 46216
   timestamp: 1761304298179
-- conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.7.13b-py_0.conda
-  sha256: f2174b74c5b39672b5d1f4c49769fd10b0b19e0eec776ed72d1cbc6fcf1f58b4
-  md5: 0a6ee069aa7ec12cc684f9670207141f
+- conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.7.14b-py_0.conda
+  sha256: a3f51ed1c85644ffcfc79470356fe7f7602f5941230b18014ad61e80ab30532a
+  md5: 913531878b3f92a7c5fc799e9d110885
   depends:
   - cftime
   - dask
@@ -3088,18 +3088,18 @@ packages:
   - tqdm
   - xarray
   license: Apache-2.0
-  size: 11163158
-  timestamp: 1786432620109
-- conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-esmval-1.7.13b-0.conda
+  size: 11176996
+  timestamp: 1786580725173
+- conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-esmval-1.7.14b-0.conda
   noarch: python
-  sha256: 271825e7606aa2650c7c201b768009f23316da755288d58a5f38b685f2c906ff
-  md5: 3d5fb13e0e9468f728404f9333a7ce31
+  sha256: 48bc105af5f7dab6b5abcce20d6fb2f24a64bbaa69343cc9125dcdbc027ae530
+  md5: 485abeff5c32a9a9b9ac5ca689185679
   depends:
-  - access-moppy 1.7.13b py_0
+  - access-moppy 1.7.14b py_0
   - esmvalcore >=2.14
   license: Apache-2.0
-  size: 9169
-  timestamp: 1786432628645
+  size: 9171
+  timestamp: 1786580734329
 - conda: https://conda.anaconda.org/accessnri/noarch/access-nri-intake-1.6.3-py_0.conda
   sha256: e8b73c09add4d8c872c94b76a73bb3c86ac499999201d244e3a8db1aa67dcd4e
   md5: c36553d5dfc378b70f7e79f9b9cb1dff
@@ -17752,9 +17752,9 @@ packages:
   run_exports: {}
   size: 854146
   timestamp: 1731925160198
-- conda: https://conda.anaconda.org/conda-forge/noarch/erddapy-3.3.0-pyhc364b38_0.conda
-  sha256: 245694e4a4359024d944f0b425453b87f6182959a88f952889075ed6adc60e1b
-  md5: 13323e198be16e0fa50dd7c6e44c2968
+- conda: https://conda.anaconda.org/conda-forge/noarch/erddapy-3.2.1-pyhc364b38_0.conda
+  sha256: 399c2f08a0fc5fa5f93c76a430f53b20ec03373f7e1872fa77c61369bc77525e
+  md5: 818da12ec5df064330105f4530fc71b2
   depends:
   - python >=3.11
   - pandas <4,>=0.25.2
@@ -17765,8 +17765,8 @@ packages:
   purls:
   - pkg:pypi/erddapy?source=hash-mapping
   run_exports: {}
-  size: 28409
-  timestamp: 1782831853172
+  size: 28333
+  timestamp: 1780322464089
 - conda: https://conda.anaconda.org/conda-forge/noarch/esda-2.7.1-pyhd8ed1ab_0.conda
   sha256: 06f105563beac4ad9541bca1ce8a4acc8589fe9728188167d82f9a6c73aa199d
   md5: b535f86002823be906422257c2cf3ef8
