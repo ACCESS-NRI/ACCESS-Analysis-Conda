@@ -26,7 +26,7 @@ environments:
       - conda: https://conda.anaconda.org/accessnri/noarch/access-med-tools-0.1.23-pypy_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.7.15b-py_0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-esmval-1.7.15b-0.conda
-      - conda: https://conda.anaconda.org/accessnri/noarch/access-nri-intake-1.6.3-py_0.conda
+      - conda: https://conda.anaconda.org/accessnri/noarch/access-nri-intake-1.6.4-py_0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/access-py-telemetry-0.1.10-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/ecgtools-access-2025.10.7-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/intake-esm-access-2026.4.15-py_0.tar.bz2
@@ -1527,7 +1527,7 @@ environments:
       - conda: https://conda.anaconda.org/accessnri/noarch/access-med-tools-0.1.23-pypy_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-1.7.15b-py_0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/access-moppy-esmval-1.7.15b-0.conda
-      - conda: https://conda.anaconda.org/accessnri/noarch/access-nri-intake-1.6.3-py_0.conda
+      - conda: https://conda.anaconda.org/accessnri/noarch/access-nri-intake-1.6.4-py_0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/access-py-telemetry-0.1.10-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/ecgtools-access-2025.10.7-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/intake-esm-access-2026.4.15-py_0.tar.bz2
@@ -3100,9 +3100,9 @@ packages:
   license: Apache-2.0
   size: 9166
   timestamp: 1786598638805
-- conda: https://conda.anaconda.org/accessnri/noarch/access-nri-intake-1.6.3-py_0.conda
-  sha256: e8b73c09add4d8c872c94b76a73bb3c86ac499999201d244e3a8db1aa67dcd4e
-  md5: c36553d5dfc378b70f7e79f9b9cb1dff
+- conda: https://conda.anaconda.org/accessnri/noarch/access-nri-intake-1.6.4-py_0.conda
+  sha256: 89dbf4f33dc008eac62c4ad5d3a64dec7b4e8ce994011ba2d7cadf739c082edc
+  md5: badcecb2d98cd2d2648f77d72d73f695
   depends:
   - access-py-telemetry >=0.1.6
   - cftime
@@ -3121,11 +3121,10 @@ packages:
   - python >=3.10
   - wrapt >=2.1.2
   - xarray
-  - yamanifest >=0.3.12
   license: Apache Software
   license_family: APACHE
-  size: 68100
-  timestamp: 1786427864523
+  size: 66248
+  timestamp: 1786690035586
 - conda: https://conda.anaconda.org/accessnri/noarch/access-py-telemetry-0.1.10-py_0.tar.bz2
   sha256: 3e3105fb0eb9a604b7da3c1f73fd2255dff5fee7472a7cfc4cb43ba2491e41c4
   md5: 121eba6a34d152fedac4f87c672a81d2
