@@ -97,6 +97,9 @@ prepend-path PATH /g/data/xp65/public/apps/nci_scripts
 setenv PYTHON_IMPORT_LOG_DIR /g/data/xp65/.logs/$condaenv
 setenv PYTHON_IMPORT_LOG_INTERVAL 300
 
+### Set ESMValTool CONFIG
+setenv ESMVALTOOL_CONFIG_DIR /g/data/xp65/public/apps/esmvaltool/config_2.0
+
 # Add Mellanox HColl libraries for proper InfiniBand/MPI support
 if { [file isdirectory /half-root/opt/mellanox/hcoll/lib] } {
     prepend-path LD_LIBRARY_PATH /half-root/opt/mellanox/hcoll/lib
