@@ -14,6 +14,11 @@ jupyter lab build
 
 PYTHON_VERSION=$(python -c "import sys; print(f'python{sys.version_info.major}.{sys.version_info.minor}')")
 
+pushd "${CONDA_INSTALLATION_PATH}/envs/${FULLENV}/lib/${PYTHON_VERSION}/site-packages/esmvaltool"
+rm -f config-references.yml
+ln -sf /g/data/xp65/public/apps/esmvaltool/config-references.yml config-references.yml
+popd
+
 # User Tracking
 pushd "${CONDA_INSTALLATION_PATH}/envs/${FULLENV}/lib/${PYTHON_VERSION}/site-packages"
 ln -sf /g/data/xp65/admin/analysis3/sitecustomize.py sitecustomize.py
