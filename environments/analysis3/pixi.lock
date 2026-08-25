@@ -781,6 +781,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/cached_property-1.5.2-pyha770c72_1.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/noarch/cachetools-7.1.4-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/cattrs-26.1.0-pyhcf101f3_1.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/cdp-1.7.0-pyhd8ed1ab_2.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/cdsapi-0.7.7-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/celluloid-0.2.0-pyhd8ed1ab_0.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/noarch/certifi-2026.6.17-pyhd8ed1ab_0.conda
@@ -870,6 +871,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/ecmwf-api-client-1.7.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/ecmwf-datastores-client-0.5.1-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/emcee-3.1.6-pyhd8ed1ab_1.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/enso_metrics-2.0.0-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/ensureconda-1.6.0-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/entrypoints-0.4-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/envisage-7.0.4-pyhe01879c_1.conda
@@ -1103,6 +1105,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/nodeenv-1.10.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/notebook-7.5.0-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/notebook-shim-0.2.4-pyhd8ed1ab_1.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/numdifftools-0.10.1-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/numpy_groupies-0.11.3-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/nvidia-ml-py-12.575.51-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/oauthlib-3.3.1-pyhd8ed1ab_0.conda
@@ -1118,6 +1121,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/oslo.i18n-6.8.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/oslo.serialization-5.10.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/oslo.utils-10.1.1-pyhd8ed1ab_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/output_viewer-1.3.4-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/overrides-7.7.0-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/owslib-0.36.0-pyhc364b38_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/packaging-26.2-pyhc364b38_0.conda
@@ -1136,6 +1140,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/pathspec-1.1.1-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/patsy-1.0.2-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/pbr-7.0.3-pyhd8ed1ab_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/pcmdi_metrics-4.2.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/pdbufr-0.14.2-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/pep8-naming-0.10.0-pyh9f0ad1d_0.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/noarch/pexpect-4.9.0-pyhd8ed1ab_1.conda
@@ -2283,6 +2288,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/cached_property-1.5.2-pyha770c72_1.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/noarch/cachetools-7.1.4-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/cattrs-26.1.0-pyhcf101f3_1.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/cdp-1.7.0-pyhd8ed1ab_2.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/cdsapi-0.7.7-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/celluloid-0.2.0-pyhd8ed1ab_0.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/noarch/certifi-2026.6.17-pyhd8ed1ab_0.conda
@@ -2372,6 +2378,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/ecmwf-api-client-1.7.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/ecmwf-datastores-client-0.5.1-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/emcee-3.1.6-pyhd8ed1ab_1.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/enso_metrics-2.0.0-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/ensureconda-1.6.0-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/entrypoints-0.4-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/envisage-7.0.4-pyhe01879c_1.conda
@@ -2605,6 +2612,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/nodeenv-1.10.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/notebook-7.5.0-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/notebook-shim-0.2.4-pyhd8ed1ab_1.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/numdifftools-0.10.1-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/numpy_groupies-0.11.3-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/nvidia-ml-py-12.575.51-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/oauthlib-3.3.1-pyhd8ed1ab_0.conda
@@ -2620,6 +2628,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/oslo.i18n-6.8.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/oslo.serialization-5.10.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/oslo.utils-10.1.1-pyhd8ed1ab_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/output_viewer-1.3.4-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/overrides-7.7.0-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/owslib-0.36.0-pyhc364b38_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/packaging-26.2-pyhc364b38_0.conda
@@ -2638,6 +2647,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/pathspec-1.1.1-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/patsy-1.0.2-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/pbr-7.0.3-pyhd8ed1ab_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/pcmdi_metrics-4.2.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/pdbufr-0.14.2-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/pep8-naming-0.10.0-pyh9f0ad1d_0.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/noarch/pexpect-4.9.0-pyhd8ed1ab_1.conda
@@ -16310,6 +16320,23 @@ packages:
   run_exports: {}
   size: 59678
   timestamp: 1771485958517
+- conda: https://conda.anaconda.org/conda-forge/noarch/cdp-1.7.0-pyhd8ed1ab_2.conda
+  sha256: 7670dbfc11c49f1e1728bda2bcabfd47348e921794d4dd7aa00a7346abec9798
+  md5: 59875f47f248061a7a3dacbadac7d71c
+  depends:
+  - dask
+  - distributed
+  - output_viewer >=1.3.0
+  - python >=3.9
+  - pyyaml
+  - six
+  license: BSD-3-Clause
+  license_family: BSD
+  purls:
+  - pkg:pypi/cdp?source=hash-mapping
+  run_exports: {}
+  size: 21502
+  timestamp: 1735141969764
 - conda: https://conda.anaconda.org/conda-forge/noarch/cdsapi-0.7.7-pyhd8ed1ab_0.conda
   sha256: 1237a587e35fa74b36323084e58620367a3adf7f60f201b7a9c41261958dc5d4
   md5: 1f878573c1ee2798c052bee1f5a94f50
@@ -17691,6 +17718,30 @@ packages:
   run_exports: {}
   size: 39886
   timestamp: 1734122794598
+- conda: https://conda.anaconda.org/conda-forge/noarch/enso_metrics-2.0.0-pyhd8ed1ab_1.conda
+  sha256: 66cbbecd1837de582610dc95d09b8358fcd4a91c284b59905f9c365dc5435565
+  md5: fb877ce4f1bcd2a40be03afeb191504d
+  depends:
+  - cartopy
+  - cftime
+  - cmocean
+  - matplotlib-base
+  - numpy
+  - packaging
+  - python >=3.10
+  - regionmask
+  - scipy
+  - udunits2
+  - xarray
+  - xcdat
+  - xesmf
+  license: BSD-3-Clause
+  license_family: BSD
+  purls:
+  - pkg:pypi/ensometrics?source=hash-mapping
+  run_exports: {}
+  size: 3012982
+  timestamp: 1780340365032
 - conda: https://conda.anaconda.org/conda-forge/noarch/ensureconda-1.6.0-pyhcf101f3_0.conda
   sha256: e3c35c7cee4e6db53de4ad1ca6d35b7aced263d21a6ee2dcdffe401135646ab2
   md5: fcc02785e4da41e5f19f740e017b6ffb
@@ -21394,6 +21445,20 @@ packages:
   run_exports: {}
   size: 16817
   timestamp: 1733408419340
+- conda: https://conda.anaconda.org/conda-forge/noarch/numdifftools-0.10.1-pyhd8ed1ab_0.conda
+  sha256: da69973034be895b44952c41a4da65c47bc4c65d1301cfeceaf54f8991533c8b
+  md5: bfcf521a251127f0b816ecd8d9bb175d
+  depends:
+  - numpy >=2.0
+  - python >=3.10
+  - scipy >=1.7.3
+  license: BSD-3-Clause
+  license_family: BSD
+  purls:
+  - pkg:pypi/numdifftools?source=hash-mapping
+  run_exports: {}
+  size: 76964
+  timestamp: 1787190402317
 - conda: https://conda.anaconda.org/conda-forge/noarch/numpy_groupies-0.11.3-pyhd8ed1ab_0.conda
   sha256: 94c148b8d4687c839a37c4a68b1674fa548b065e833b9b4701865d548995239f
   md5: 5402c2b046432ceb2d192a82802e7854
@@ -21636,6 +21701,18 @@ packages:
   run_exports: {}
   size: 121960
   timestamp: 1782395210183
+- conda: https://conda.anaconda.org/conda-forge/noarch/output_viewer-1.3.4-pyhd8ed1ab_0.conda
+  sha256: 460b12561cef75e7186e2a69d71d0e59e8eaf94b0c9a91ef8d82a582af30ff71
+  md5: 8f57296a95fb02d2a760048dc9606bc3
+  depends:
+  - python >=3.10
+  - requests
+  license: ESGF
+  purls:
+  - pkg:pypi/output-viewer?source=hash-mapping
+  run_exports: {}
+  size: 90985
+  timestamp: 1776836999354
 - conda: https://conda.anaconda.org/conda-forge/noarch/overrides-7.7.0-pyhd8ed1ab_1.conda
   sha256: 1840bd90d25d4930d60f57b4f38d4e0ae3f5b8db2819638709c36098c6ba770c
   md5: e51f1e4089cad105b6cac64bd8166587
@@ -21922,6 +21999,38 @@ packages:
   run_exports: {}
   size: 85207
   timestamp: 1762194733167
+- conda: https://conda.anaconda.org/conda-forge/noarch/pcmdi_metrics-4.2.0-pyhd8ed1ab_0.conda
+  sha256: 6930ba03e2ce8e20bebbe5502c86c08cf1ff41f4fbaa2b181b2bc07fb90d7019
+  md5: c289dbcf11c0e833f23b67a3e3f1ba54
+  depends:
+  - cartopy >=0.22.0
+  - cdp >=1.7.0
+  - cmocean
+  - colorcet
+  - enso_metrics >=2.0.0
+  - eofs >=2.0.0
+  - jupyterlab
+  - matplotlib-base
+  - nc-time-axis
+  - netcdf4 >=1.6.3
+  - numdifftools
+  - numpy >=2.0.0,<3
+  - pandas <3.0.0
+  - python >=3.10
+  - rasterio >=1.3.6
+  - regionmask >=0.12.1
+  - seaborn >=0.12.2
+  - shapely >=2.0.1,<3.0.0
+  - xcdat >=0.10.0
+  - xclim
+  - xmltodict >=0.13.0
+  license: BSD-3-Clause
+  license_family: BSD
+  purls:
+  - pkg:pypi/pcmdi-metrics?source=hash-mapping
+  run_exports: {}
+  size: 4863512
+  timestamp: 1787204150456
 - conda: https://conda.anaconda.org/conda-forge/noarch/pdbufr-0.14.2-pyhcf101f3_0.conda
   sha256: c4fe14d3189afcb175c1e17d3f8e41e3bc2df0f974160ed75717d33d97d7079b
   md5: 17c5cd111cce1bbb645af3017a96f0e0

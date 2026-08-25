@@ -769,6 +769,7 @@ dependencies:
 - cached_property ==1.5.2 pyha770c72_1
 - cachetools ==7.1.4 pyhd8ed1ab_0
 - cattrs ==26.1.0 pyhcf101f3_1
+- cdp ==1.7.0 pyhd8ed1ab_2
 - cdsapi ==0.7.7 pyhd8ed1ab_0
 - celluloid ==0.2.0 pyhd8ed1ab_0
 - certifi ==2026.6.17 pyhd8ed1ab_0
@@ -858,6 +859,7 @@ dependencies:
 - ecmwf-api-client ==1.7.0 pyhd8ed1ab_0
 - ecmwf-datastores-client ==0.5.1 pyhd8ed1ab_0
 - emcee ==3.1.6 pyhd8ed1ab_1
+- enso_metrics ==2.0.0 pyhd8ed1ab_1
 - ensureconda ==1.6.0 pyhcf101f3_0
 - entrypoints ==0.4 pyhd8ed1ab_1
 - envisage ==7.0.4 pyhe01879c_1
@@ -1091,6 +1093,7 @@ dependencies:
 - nodeenv ==1.10.0 pyhd8ed1ab_0
 - notebook ==7.5.0 pyhcf101f3_0
 - notebook-shim ==0.2.4 pyhd8ed1ab_1
+- numdifftools ==0.10.1 pyhd8ed1ab_0
 - numpy_groupies ==0.11.3 pyhd8ed1ab_0
 - nvidia-ml-py ==12.575.51 pyhd8ed1ab_0
 - oauthlib ==3.3.1 pyhd8ed1ab_0
@@ -1106,6 +1109,7 @@ dependencies:
 - oslo.i18n ==6.8.0 pyhd8ed1ab_0
 - oslo.serialization ==5.10.0 pyhd8ed1ab_0
 - oslo.utils ==10.1.1 pyhd8ed1ab_0
+- output_viewer ==1.3.4 pyhd8ed1ab_0
 - overrides ==7.7.0 pyhd8ed1ab_1
 - owslib ==0.36.0 pyhc364b38_0
 - packaging ==26.2 pyhc364b38_0
@@ -1124,6 +1128,7 @@ dependencies:
 - pathspec ==1.1.1 pyhd8ed1ab_0
 - patsy ==1.0.2 pyhcf101f3_0
 - pbr ==7.0.3 pyhd8ed1ab_0
+- pcmdi_metrics ==4.2.0 pyhd8ed1ab_0
 - pdbufr ==0.14.2 pyhcf101f3_0
 - pep8-naming ==0.10.0 pyh9f0ad1d_0
 - pexpect ==4.9.0 pyhd8ed1ab_1
