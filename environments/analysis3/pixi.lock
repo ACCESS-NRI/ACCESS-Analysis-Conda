@@ -499,6 +499,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/pycosat-0.6.6-py312h4c3975b_3.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/pydantic-core-2.46.4-py312h868fb18_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/pyerfa-2.0.1.5-py310h32771cd_2.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/pygraphviz-1.14-py312h011e53f_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/pygrib-2.1.8-py312h2f48d4f_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/pyhdf-0.11.6-py312h52fbf50_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/pykdtree-1.4.3-py312h4f23490_2.conda
@@ -830,6 +831,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/contextily-1.7.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/cpython-3.12.13-py312hd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/crashtest-0.4.1-pyhd8ed1ab_1.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/cset-26.9.0-pyhc364b38_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/cuda-cccl_linux-64-12.4.127-ha770c72_2.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/cuda-cudart-dev_linux-64-12.4.127-h85509e4_2.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/cuda-cudart-static_linux-64-12.4.127-h85509e4_2.conda
@@ -1353,6 +1355,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/sh-2.2.4-pyh707e725_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/shellingham-1.5.4-pyhd8ed1ab_2.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/simpervisor-1.0.0-pyhd8ed1ab_1.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/simple-track-2.3.2-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/siphon-0.10.0-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/six-1.17.0-pyhe01879c_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/slicer-0.0.8-pyhd8ed1ab_0.conda
@@ -2006,6 +2009,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/pycosat-0.6.6-py312h4c3975b_3.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/pydantic-core-2.46.4-py312h868fb18_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/pyerfa-2.0.1.5-py310h32771cd_2.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/pygraphviz-1.14-py312h011e53f_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/pygrib-2.1.8-py312h2f48d4f_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/pyhdf-0.11.6-py312h52fbf50_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/pykdtree-1.4.3-py312h4f23490_2.conda
@@ -2337,6 +2341,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/contextily-1.7.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/cpython-3.12.13-py312hd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/crashtest-0.4.1-pyhd8ed1ab_1.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/cset-26.9.0-pyhc364b38_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/cuda-cccl_linux-64-12.4.127-ha770c72_2.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/cuda-cudart-dev_linux-64-12.4.127-h85509e4_2.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/cuda-cudart-static_linux-64-12.4.127-h85509e4_2.conda
@@ -2860,6 +2865,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/sh-2.2.4-pyh707e725_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/shellingham-1.5.4-pyhd8ed1ab_2.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/simpervisor-1.0.0-pyhd8ed1ab_1.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/simple-track-2.3.2-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/siphon-0.10.0-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/six-1.17.0-pyhe01879c_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/slicer-0.0.8-pyhd8ed1ab_0.conda
@@ -11553,6 +11559,22 @@ packages:
   run_exports: {}
   size: 295617
   timestamp: 1756821497270
+- conda: https://conda.anaconda.org/conda-forge/linux-64/pygraphviz-1.14-py312h011e53f_0.conda
+  sha256: f423d359ed9e989dd48f9c4531acebb67b96a1eb7fd60257c8e08d77e741168f
+  md5: bad112802852496a8a8e41fd3ae9128d
+  depends:
+  - __glibc >=2.17,<3.0.a0
+  - graphviz >=12.0.0,<13.0a0
+  - libgcc >=13
+  - python >=3.12,<3.13.0a0
+  - python_abi 3.12.* *_cp312
+  license: BSD-3-Clause
+  license_family: BSD
+  purls:
+  - pkg:pypi/pygraphviz?source=hash-mapping
+  run_exports: {}
+  size: 145598
+  timestamp: 1727646199446
 - conda: https://conda.anaconda.org/conda-forge/linux-64/pygrib-2.1.8-py312h2f48d4f_0.conda
   sha256: 103918fb12ee7eb5c0bd5c4ee473e99859fb0083581a9bcf0bf2beb6dcad3cf8
   md5: 34f263005e0650dfe47a52e66a3ba6c9
@@ -17111,6 +17133,36 @@ packages:
   run_exports: {}
   size: 11619
   timestamp: 1733564888371
+- conda: https://conda.anaconda.org/conda-forge/noarch/cset-26.9.0-pyhc364b38_0.conda
+  sha256: 204f32c10e4c94691d4e11b5c8f8c9eab0b0a3d19fa884e917eeb89fa8ed1d60
+  md5: e318cbe7b3c652fdbdbf026df4b79526
+  depends:
+  - python >=3.12
+  - numpy
+  - iris >=3.14.1
+  - ruamel.yaml >=0.17
+  - pygraphviz >=1.11
+  - mo_pack >=0.3
+  - isodate >=0.6
+  - markdown-it-py >=3.0
+  - nc-time-axis
+  - iris-grib
+  - scipy
+  - scikit-image
+  - scores
+  - xarray
+  - dask-core
+  - proj <9.8
+  - matplotlib-base <3.11
+  - simple-track
+  - python
+  license: Apache-2.0
+  license_family: APACHE
+  purls:
+  - pkg:pypi/cset?source=hash-mapping
+  run_exports: {}
+  size: 309617
+  timestamp: 1788448389804
 - conda: https://conda.anaconda.org/conda-forge/noarch/cuda-cccl_linux-64-12.4.127-ha770c72_2.conda
   sha256: b97bb30412c13bf0fd6211d75a35d69c882c482347962b1b55dcdbb959d13f1e
   md5: 357fbcd43f1296b02d6738a2295abc24
@@ -25169,6 +25221,26 @@ packages:
   run_exports: {}
   size: 13639
   timestamp: 1734339920707
+- conda: https://conda.anaconda.org/conda-forge/noarch/simple-track-2.3.2-pyhcf101f3_0.conda
+  sha256: 928d633d7786da2f21a1b1c268024f1d88137000739f0f52210fc4ad28eb006f
+  md5: b7351bc5b13dc80b466c3bb53cae8eb7
+  depends:
+  - python >=3.10
+  - numpy >=2.2.0
+  - pytest >=9.0
+  - pytest-cov
+  - pytest-xdist
+  - pyyaml
+  - scipy >=1.15.0
+  - scikit-image >=0.25.2
+  - python
+  license: MPL-2.0
+  license_family: MOZILLA
+  purls:
+  - pkg:pypi/simple-track?source=hash-mapping
+  run_exports: {}
+  size: 59209
+  timestamp: 1787238458594
 - conda: https://conda.anaconda.org/conda-forge/noarch/siphon-0.10.0-pyhd8ed1ab_1.conda
   sha256: 35f5dc26185bb9068b0e41dc95391cba0aa5fe0ae39310cec606ce5e79ed3236
   md5: e1d146f885588d3795c7a9986e16427d

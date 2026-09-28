@@ -488,6 +488,7 @@ dependencies:
 - pycosat ==0.6.6 py312h4c3975b_3
 - pydantic-core ==2.46.4 py312h868fb18_0
 - pyerfa ==2.0.1.5 py310h32771cd_2
+- pygraphviz ==1.14 py312h011e53f_0
 - pygrib ==2.1.8 py312h2f48d4f_0
 - pyhdf ==0.11.6 py312h52fbf50_2
 - pykdtree ==1.4.3 py312h4f23490_2
@@ -818,6 +819,7 @@ dependencies:
 - contextily ==1.7.0 pyhd8ed1ab_0
 - cpython ==3.12.13 py312hd8ed1ab_0
 - crashtest ==0.4.1 pyhd8ed1ab_1
+- cset ==26.9.0 pyhc364b38_0
 - cuda-cccl_linux-64 ==12.4.127 ha770c72_2
 - cuda-cudart-dev_linux-64 ==12.4.127 h85509e4_2
 - cuda-cudart-static_linux-64 ==12.4.127 h85509e4_2
@@ -1341,6 +1343,7 @@ dependencies:
 - sh ==2.2.4 pyh707e725_0
 - shellingham ==1.5.4 pyhd8ed1ab_2
 - simpervisor ==1.0.0 pyhd8ed1ab_1
+- simple-track ==2.3.2 pyhcf101f3_0
 - siphon ==0.10.0 pyhd8ed1ab_1
 - six ==1.17.0 pyhe01879c_1
 - slicer ==0.0.8 pyhd8ed1ab_0
