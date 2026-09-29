@@ -1494,6 +1494,7 @@ dependencies:
   - rapidfuzz==3.14.5
   - nci-ipynb==2023.11.0.3
   - xrexpr==0.4.0
+  - cc-plugin-wcrp==2.3.5
   - esgprep==3.3.3
   - lavavu==1.9.10
   - accessvis==1.1.4
@@ -1505,6 +1506,5 @@ dependencies:
   - hurry-filesize==0.9
   - frisky==0.7.2
   - skillmetrics==1.2.5
-  - cc-plugin-wcrp==2.3.2
   - cmip7-data-request-api==1.4
 
