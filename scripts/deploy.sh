@@ -28,24 +28,21 @@ pushd "${CONDA_TEMP_PATH}"
 tar --acls -xf "${BUILD_STAGE_DIR}"/conda_base."${CONDA_ENVIRONMENT}".tar
 popd
 
-### A staged tar can predate a manual retirement. Publish only this version's
-### entries; otherwise rsync (which intentionally has no global --delete) can
-### restore module files and links for versions removed since the build.
-for entry in "${CONDA_TEMP_PATH}/${APPS_SUBDIR}/${CONDA_INSTALL_BASENAME}/envs/"*; do
-    [[ -e "${entry}" || -L "${entry}" ]] || continue
-    [[ "${entry##*/}" == "${FULLENV}" ]] || rm -rf -- "${entry}"
-done
-for entry in "${CONDA_TEMP_PATH}/${MODULE_SUBDIR}/${MODULE_NAME}/"* "${CONDA_TEMP_PATH}/${MODULE_SUBDIR}/${MODULE_NAME}/".*; do
-    [[ -e "${entry}" || -L "${entry}" ]] || continue
-    case "${entry##*/}" in
-        .|..|.common_v4|"${FULLENV}"|".${FULLENV}") ;;
-        *) rm -rf -- "${entry}" ;;
-    esac
-done
-for entry in "${CONDA_TEMP_PATH}/${SCRIPT_SUBDIR}/"*.d; do
-    [[ -e "${entry}" || -L "${entry}" ]] || continue
-    [[ "${entry##*/}" == "${FULLENV}.d" ]] || rm -rf -- "${entry}"
-done
+### A staged tar can predate a manual retirement. Exclude dated analysis3
+### entries other than the version being deployed, so rsync cannot recreate
+### retired versions. Leave other environments and shared files untouched.
+if [[ "${CONDA_ENVIRONMENT}" == analysis3 ]]; then
+    for entry in "${CONDA_TEMP_PATH}/${APPS_SUBDIR}/${CONDA_INSTALL_BASENAME}/envs/"analysis3-[0-9][0-9].[0-9][0-9] \
+                 "${CONDA_TEMP_PATH}/${MODULE_SUBDIR}/${MODULE_NAME}/"analysis3-[0-9][0-9].[0-9][0-9] \
+                 "${CONDA_TEMP_PATH}/${MODULE_SUBDIR}/${MODULE_NAME}/".analysis3-[0-9][0-9].[0-9][0-9] \
+                 "${CONDA_TEMP_PATH}/${SCRIPT_SUBDIR}/"analysis3-[0-9][0-9].[0-9][0-9].d; do
+        [[ -e "${entry}" || -L "${entry}" ]] || continue
+        case "${entry##*/}" in
+            "${FULLENV}"|".${FULLENV}"|"${FULLENV}.d") ;;
+            *) rm -rf -- "${entry}" ;;
+        esac
+    done
+fi
 
 
 ### rsync --archive attempts to set permissions on 
