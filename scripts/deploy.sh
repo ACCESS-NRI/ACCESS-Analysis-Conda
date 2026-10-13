@@ -28,14 +28,39 @@ pushd "${CONDA_TEMP_PATH}"
 tar --acls -xf "${BUILD_STAGE_DIR}"/conda_base."${CONDA_ENVIRONMENT}".tar
 popd
 
+### A staged tar can predate a manual retirement. Exclude dated analysis3
+### entries other than the version being deployed, so rsync cannot recreate
+### retired versions. Leave other environments and shared files untouched.
+if [[ "${CONDA_ENVIRONMENT}" == analysis3 ]]; then
+    for entry in "${CONDA_TEMP_PATH}/${APPS_SUBDIR}/${CONDA_INSTALL_BASENAME}/envs/"analysis3-[0-9][0-9].[0-9][0-9] \
+                 "${CONDA_TEMP_PATH}/${MODULE_SUBDIR}/${MODULE_NAME}/"analysis3-[0-9][0-9].[0-9][0-9] \
+                 "${CONDA_TEMP_PATH}/${MODULE_SUBDIR}/${MODULE_NAME}/".analysis3-[0-9][0-9].[0-9][0-9] \
+                 "${CONDA_TEMP_PATH}/${SCRIPT_SUBDIR}/"analysis3-[0-9][0-9].[0-9][0-9].d; do
+        [[ -e "${entry}" || -L "${entry}" ]] || continue
+        case "${entry##*/}" in
+            "${FULLENV}"|".${FULLENV}"|"${FULLENV}.d") ;;
+            *) rm -rf -- "${entry}" ;;
+        esac
+    done
+fi
+
+
 ### rsync --archive attempts to set permissions on 
 ### "${CONDA_BASE}" itself, which results in errors.
 set +e
 echo "Sync across any changes in the base conda environment"
 rsync --archive --verbose --partial --progress --one-file-system --itemize-changes --hard-links --acls --relative -- "${CONDA_TEMP_PATH}"/./"${APPS_SUBDIR}"/"${CONDA_INSTALL_BASENAME}" "${CONDA_TEMP_PATH}"/./"${MODULE_SUBDIR}" "${CONDA_TEMP_PATH}"/./"${SCRIPT_SUBDIR}" "${CONDA_BASE}"
+base_rsync_status=$?
+
+
 
 echo "Make sure anything deleted from this environments scripts directory is also deleted from the prod copy"
 rsync --archive --verbose --partial --progress --one-file-system --itemize-changes --hard-links --acls --relative --delete -- "${CONDA_TEMP_PATH}"/./"${SCRIPT_SUBDIR}"/"${FULLENV}".d "${CONDA_BASE}"
+scripts_rsync_status=$?
+if (( base_rsync_status != 0 || scripts_rsync_status != 0 )); then
+    echo "Error: rsync failed; refusing to publish the image or retire versions" >&2
+    exit 1
+fi
 set -e
 
 [[ -e "${CONDA_INSTALLATION_PATH}"/envs/"${FULLENV}".sqsh ]] && cp "${CONDA_INSTALLATION_PATH}"/envs/"${FULLENV}".sqsh "${ADMIN_DIR}"/"${FULLENV}".sqsh.bak

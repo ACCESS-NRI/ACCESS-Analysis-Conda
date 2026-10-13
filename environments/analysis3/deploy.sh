@@ -30,3 +30,11 @@ else
         symlink_atomic_update "${CONDA_SCRIPT_PATH}"/"${ENVIRONMENT}"-unstable.d "${NEXT_UNSTABLE}".d
     fi
 fi
+
+# Retire old public versions only after the new image and aliases are in place.
+python3 "${SCRIPT_DIR}"/retire_environments.py \
+    --base "${CONDA_BASE}" --admin "${ADMIN_DIR}" \
+    --environment "${ENVIRONMENT}" \
+    --config "${SCRIPT_DIR}"/../environments/analysis3/retention.json \
+    --protect "${FULLENV}" --protect "${NEXT_STABLE}" \
+    --protect "${NEXT_UNSTABLE}" --apply
