@@ -1,4 +1,5 @@
 ### Update stable/unstable if necessary
+# The shared rsync metadata workaround is in scripts/deploy.sh.
 CURRENT_STABLE=$( get_aliased_module "${MODULE_NAME}"/analysis3 "${CONDA_MODULE_PATH}" )
 NEXT_STABLE="${ENVIRONMENT}-${STABLE_VERSION}"
 CURRENT_UNSTABLE=$( get_aliased_module "${MODULE_NAME}"/analysis3-unstable "${CONDA_MODULE_PATH}" )

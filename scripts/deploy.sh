@@ -47,15 +47,17 @@ fi
 
 ### rsync --archive attempts to set permissions on 
 ### "${CONDA_BASE}" itself, which results in errors.
+### Leave shared parent metadata and directory timestamps unchanged until
+### the CI-owned deployment tree can be separated from legacy-owned paths.
 set +e
 echo "Sync across any changes in the base conda environment"
-rsync --archive --verbose --partial --progress --one-file-system --itemize-changes --hard-links --acls --relative -- "${CONDA_TEMP_PATH}"/./"${APPS_SUBDIR}"/"${CONDA_INSTALL_BASENAME}" "${CONDA_TEMP_PATH}"/./"${MODULE_SUBDIR}" "${CONDA_TEMP_PATH}"/./"${SCRIPT_SUBDIR}" "${CONDA_BASE}"
+rsync --archive --verbose --partial --progress --one-file-system --itemize-changes --hard-links --acls --relative --no-implied-dirs --omit-dir-times --exclude="/${MODULE_SUBDIR}/${MODULE_NAME}/.modulerc.save" -- "${CONDA_TEMP_PATH}"/./"${APPS_SUBDIR}"/"${CONDA_INSTALL_BASENAME}" "${CONDA_TEMP_PATH}"/./"${MODULE_SUBDIR}" "${CONDA_TEMP_PATH}"/./"${SCRIPT_SUBDIR}" "${CONDA_BASE}"
 base_rsync_status=$?
 
 
 
 echo "Make sure anything deleted from this environments scripts directory is also deleted from the prod copy"
-rsync --archive --verbose --partial --progress --one-file-system --itemize-changes --hard-links --acls --relative --delete -- "${CONDA_TEMP_PATH}"/./"${SCRIPT_SUBDIR}"/"${FULLENV}".d "${CONDA_BASE}"
+rsync --archive --verbose --partial --progress --one-file-system --itemize-changes --hard-links --acls --relative --no-implied-dirs --omit-dir-times --delete -- "${CONDA_TEMP_PATH}"/./"${SCRIPT_SUBDIR}"/"${FULLENV}".d "${CONDA_BASE}"
 scripts_rsync_status=$?
 if (( base_rsync_status != 0 || scripts_rsync_status != 0 )); then
     echo "Error: rsync failed; refusing to publish the image or retire versions" >&2
