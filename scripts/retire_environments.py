@@ -53,7 +53,7 @@ def main():
 
     versions = {}
     for image in envs.glob(prefix + "*.sqsh"):
-        version = image.name.removesuffix(".sqsh")
+        version = image.stem
         match = version_re.fullmatch(version)
         if match and image.is_file() and not image.is_symlink():
             versions[version] = tuple(map(int, match.groups()))
@@ -67,7 +67,7 @@ def main():
         for parent, suffix in ((envs, ""), (scripts, ".d")):
             target = link_target_version(parent / (alias + suffix), prefix)
             if target:
-                protected.add(target.removesuffix(".d"))
+                protected.add(target[:-2] if target.endswith(".d") else target)
     modulerc = modules / ".modulerc"
     if modulerc.exists():
         for line in modulerc.read_text().splitlines():
