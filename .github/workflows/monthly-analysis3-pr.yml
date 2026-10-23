@@ -1,0 +1,132 @@
+name: Prepare monthly analysis3 PR
+
+on:
+  # Retry on the last few days of each month if an earlier solve or run fails.
+  schedule:
+    - cron: '17 16 28-31 * *'
+      timezone: Australia/Brisbane
+  workflow_dispatch:
+    inputs:
+      target_version:
+        description: 'Optional YY.MM version; defaults to next month in Brisbane'
+        required: false
+        type: string
+
+permissions:
+  contents: read
+  pull-requests: read
+
+concurrency:
+  group: monthly-analysis3-pr
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Require GitHub App credentials
+        env:
+          APP_CLIENT_ID: ${{ vars.ANALYSIS3_PR_APP_CLIENT_ID }}
+          APP_PRIVATE_KEY: ${{ secrets.ANALYSIS3_PR_APP_PRIVATE_KEY }}
+        run: |
+          if [[ -z "$APP_CLIENT_ID" || -z "$APP_PRIVATE_KEY" ]]; then
+            echo '::error::Set ANALYSIS3_PR_APP_CLIENT_ID and ANALYSIS3_PR_APP_PRIVATE_KEY before running this workflow.'
+            exit 1
+          fi
+
+      - name: Check out main
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          persist-credentials: false
+
+      - name: Check version rollover logic
+        run: python3 -m unittest discover -s tests -p 'test_prepare_monthly_analysis3.py'
+
+      - name: Advance analysis3 version
+        id: version
+        env:
+          TARGET_VERSION: ${{ inputs.target_version }}
+        run: |
+          args=()
+          if [[ -n "$TARGET_VERSION" ]]; then
+            args+=(--target-version "$TARGET_VERSION")
+          fi
+          python3 scripts/prepare_monthly_analysis3.py "${args[@]}"
+
+      - name: Check whether this release already has a PR
+        if: steps.version.outputs.changed == 'true'
+        id: existing
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          branch="codex/analysis3-${VERSION}"
+          count=$(gh pr list --base main --head "$branch" --state all --json number --jq 'length')
+          if [[ "$count" != 0 ]]; then
+            echo "A PR for ${branch} already exists; leaving it for review."
+            echo 'exists=true' >> "$GITHUB_OUTPUT"
+          else
+            if git ls-remote --exit-code --heads origin "$branch" >/dev/null; then
+              echo "::error::${branch} exists without a PR. Review that branch before retrying."
+              exit 1
+            else
+              status=$?
+              if [[ "$status" != 2 ]]; then
+                echo "::error::Could not check whether ${branch} exists (git exit ${status})."
+                exit "$status"
+              fi
+              echo 'exists=false' >> "$GITHUB_OUTPUT"
+            fi
+          fi
+
+      - name: Install Pixi
+        if: steps.version.outputs.changed == 'true' && steps.existing.outputs.exists == 'false'
+        uses: prefix-dev/setup-pixi@5185adfbffb4bd703da3010310260805d89ebb11 # v0.9.6
+        with:
+          pixi-version: v0.82.1
+          run-install: false
+
+      - name: Refresh lock and export conda environment
+        if: steps.version.outputs.changed == 'true' && steps.existing.outputs.exists == 'false'
+        working-directory: environments/analysis3
+        run: |
+          pixi update --no-install
+          pixi run --as-is rebuild-env
+          test -s environment.yml
+
+      - name: Create GitHub App token
+        if: steps.version.outputs.changed == 'true' && steps.existing.outputs.exists == 'false'
+        id: app-token
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.ANALYSIS3_PR_APP_CLIENT_ID }}
+          private-key: ${{ secrets.ANALYSIS3_PR_APP_PRIVATE_KEY }}
+          permission-contents: write
+          permission-pull-requests: write
+
+      - name: Commit and open pull request
+        if: steps.version.outputs.changed == 'true' && steps.existing.outputs.exists == 'false'
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+          APP_SLUG: ${{ steps.app-token.outputs.app-slug }}
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          branch="codex/analysis3-${VERSION}"
+          git switch -c "$branch"
+          app_user_id=$(gh api "/users/${APP_SLUG}[bot]" --jq .id)
+          git config user.name "${APP_SLUG}[bot]"
+          git config user.email "${app_user_id}+${APP_SLUG}[bot]@users.noreply.github.com"
+          git add environments/analysis3/config.sh environments/analysis3/pixi.lock environments/analysis3/environment.yml
+          git commit -m "Prepare analysis3-${VERSION}"
+          gh auth setup-git
+          git push --set-upstream origin "$branch"
+
+          cat > "$RUNNER_TEMP/monthly-pr.md" <<EOF
+          Prepare analysis3-${VERSION} for next month. This advances the stable alias to the current release, refreshes compatible packages in Pixi, and regenerates the pinned Conda environment.
+
+          Review the package diff and wait for the existing PR build on Gadi to pass before merging. PR tests are currently disabled in this repository. The push-to-main workflow deploys the staged environment after merge.
+
+          Generated by the monthly analysis3 workflow.
+          EOF
+          gh pr create --base main --head "$branch" --title "Prepare analysis3-${VERSION}" --body-file "$RUNNER_TEMP/monthly-pr.md"
