@@ -83,7 +83,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/c-compiler-1.0.0-h14c3975_0.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/linux-64/cairo-1.18.4-h3394656_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/capnproto-1.0.2-h766bdaa_3.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/cartopy-0.25.0-py312hf79963d_1.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/cartopy-0.26.0-np2py312h748b537_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/catboost-1.2.10-cuda120_py312hd5f8c11_100.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/cdo-2.5.0-hc8165f4_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/cf-python-3.20.0-py312h3111c9b_0.conda
@@ -845,6 +845,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/dask-jobqueue-0.9.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/dask-labextension-7.0.0-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/dask-ml-2025.1.0-pyhd8ed1ab_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/dask-setup-2.3.0-pyh5ded981_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/dask-xgboost-0.1.11-pyh9f0ad1d_0.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/noarch/dataclasses-json-0.6.7-pyhcf101f3_2.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/dataset-1.5.2-pyhd8ed1ab_0.tar.bz2
@@ -1195,7 +1196,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/pygam-0.12.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/pygeoif-1.6.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/pygments-2.20.0-pyhd8ed1ab_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/pygmt-0.18.0-pyhcf101f3_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/pygmt-0.19.0-pyhc364b38_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/pyjwt-2.13.0-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/pylint-4.0.6-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/pylint-celery-0.3-py_1.tar.bz2
@@ -1593,7 +1594,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/c-compiler-1.0.0-h14c3975_0.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/linux-64/cairo-1.18.4-h3394656_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/capnproto-1.0.2-h766bdaa_3.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/cartopy-0.25.0-py312hf79963d_1.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/cartopy-0.26.0-np2py312h748b537_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/catboost-1.2.10-cuda120_py312hd5f8c11_100.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/cdo-2.5.0-hc8165f4_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/cf-python-3.20.0-py312h3111c9b_0.conda
@@ -2355,6 +2356,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/dask-jobqueue-0.9.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/dask-labextension-7.0.0-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/dask-ml-2025.1.0-pyhd8ed1ab_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/dask-setup-2.3.0-pyh5ded981_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/dask-xgboost-0.1.11-pyh9f0ad1d_0.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/noarch/dataclasses-json-0.6.7-pyhcf101f3_2.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/dataset-1.5.2-pyhd8ed1ab_0.tar.bz2
@@ -2705,7 +2707,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/pygam-0.12.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/pygeoif-1.6.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/pygments-2.20.0-pyhd8ed1ab_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/pygmt-0.18.0-pyhcf101f3_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/pygmt-0.19.0-pyhc364b38_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/pyjwt-2.13.0-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/pylint-4.0.6-pyhcf101f3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/pylint-celery-0.3-py_1.tar.bz2
@@ -4108,28 +4110,29 @@ packages:
     - capnproto >=1.0.2,<1.0.3.0a0
   size: 4037969
   timestamp: 1730914760842
-- conda: https://conda.anaconda.org/conda-forge/linux-64/cartopy-0.25.0-py312hf79963d_1.conda
-  sha256: de9bb34948b0ac7025707fe0bdaa26a6f253374ddf9da8f74b2ed14943c14211
-  md5: 6c913a686cb4060cbd7639a36fa144f0
+- conda: https://conda.anaconda.org/conda-forge/linux-64/cartopy-0.26.0-np2py312h748b537_1.conda
+  sha256: 733c75a4a33486dcda16a26d313fb24820ee10a2538a44f75326d0c0cfe3af05
+  md5: b8d5a8220d88a90fe30a2e120a36bea3
   depends:
-  - __glibc >=2.17,<3.0.a0
-  - libgcc >=14
-  - libstdcxx >=14
-  - matplotlib-base >=3.6
-  - numpy >=1.23,<3
-  - packaging >=21
-  - pyproj >=3.3.1
-  - pyshp >=2.3
-  - python >=3.12,<3.13.0a0
-  - python_abi 3.12.* *_cp312
+  - python
+  - numpy >=1.26
+  - matplotlib-base >=3.8
   - shapely >=2.0
+  - packaging >=21
+  - pyshp >=2.3.1
+  - pyproj >=3.6
+  - __glibc >=2.17,<3.0.a0
+  - libgcc >=15
+  - libstdcxx >=15
+  - numpy >=1.25,<3
+  - python_abi 3.12.* *_cp312
   license: BSD-3-Clause
   license_family: BSD
   purls:
-  - pkg:pypi/cartopy?source=hash-mapping
+  - pkg:pypi/cartopy?source=compressed-mapping
   run_exports: {}
-  size: 1541225
-  timestamp: 1756883734658
+  size: 1588623
+  timestamp: 1789829342706
 - conda: https://conda.anaconda.org/conda-forge/linux-64/catboost-1.2.10-cuda120_py312hd5f8c11_100.conda
   sha256: d71c317912089228d606779bb79a4fb593d304fa21a42aa6b4c2d892dbea2812
   md5: c58a6e71b6601072c63b143ae8f218c0
@@ -17358,6 +17361,25 @@ packages:
   run_exports: {}
   size: 113608
   timestamp: 1739051599005
+- conda: https://conda.anaconda.org/conda-forge/noarch/dask-setup-2.3.0-pyh5ded981_0.conda
+  sha256: 8e6a7f0d7dd4b91123197f360448ef0556f17be07c96c339f8b74330b3455be5
+  md5: 517dff0d36123a089239aa8fb26934e2
+  depends:
+  - python >=3.11
+  - dask-core >=2024.1.0
+  - distributed >=2024.1.0
+  - psutil >=5.9
+  - pyyaml >=6.0
+  - python
+  constrains:
+  - dask-jobqueue >=0.8
+  license: Apache-2.0
+  license_family: APACHE
+  purls:
+  - pkg:pypi/dask-setup?source=compressed-mapping
+  run_exports: {}
+  size: 123467
+  timestamp: 1790855467703
 - conda: https://conda.anaconda.org/conda-forge/noarch/dask-xgboost-0.1.11-pyh9f0ad1d_0.tar.bz2
   sha256: c810c7279315a091a97b9b36d39fd3b7376af9a99b91112dcb84eb0cbd9bd1c3
   md5: 307faba2c258a9ee726a075873b53f7b
@@ -22863,24 +22885,24 @@ packages:
   run_exports: {}
   size: 893031
   timestamp: 1774796815820
-- conda: https://conda.anaconda.org/conda-forge/noarch/pygmt-0.18.0-pyhcf101f3_0.conda
-  sha256: 550444fc9de29594d19196db6404fb87ba8bdcfe081d89f660b44b2dab05d443
-  md5: 38a38f4f218b4ce8617d45125a0f74bc
+- conda: https://conda.anaconda.org/conda-forge/noarch/pygmt-0.19.0-pyhc364b38_0.conda
+  sha256: 0591d39a2130644c0f77f9dc2e7981e04addb734294db760a5d663952ced43a4
+  md5: 810aa49451ba4d29982e50aef8fb434b
   depends:
   - gmt >=6.5.0,<7.0
-  - numpy >=2.0
+  - numpy >=2.1
   - packaging >=24.2
-  - pandas >=2.2
+  - pandas >=2.3
   - python >=3.12
-  - xarray >=2024.5
+  - xarray >=2024.7
   - python
   license: BSD-3-Clause
   license_family: BSD
   purls:
   - pkg:pypi/pygmt?source=hash-mapping
   run_exports: {}
-  size: 205112
-  timestamp: 1768189945712
+  size: 225354
+  timestamp: 1783439254836
 - conda: https://conda.anaconda.org/conda-forge/noarch/pyjwt-2.13.0-pyhcf101f3_0.conda
   sha256: 58cda7489477fecb859ec95bf73cba7e4634db1a517e29e0d3086d7ec71733ae
   md5: edb808d7f7396478ab6e457e697b8ec5
