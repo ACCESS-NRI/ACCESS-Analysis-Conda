@@ -962,7 +962,7 @@ dependencies:
 - iniconfig ==2.3.0 pyhd8ed1ab_0
 - intake ==2.0.8 pyhd8ed1ab_0
 - intake-dataframe-catalog ==0.5.1 pyhd8ed1ab_0
-- intake-esgf ==2026.6.4 pyhd8ed1ab_0
+- intake-esgf ==2026.9.28 pyhd8ed1ab_0
 - intake-esm ==2025.12.12 pyhd8ed1ab_0
 - ipdb ==0.13.13 pyhd8ed1ab_1
 - ipydatagrid ==1.4.0 pyhcf101f3_2

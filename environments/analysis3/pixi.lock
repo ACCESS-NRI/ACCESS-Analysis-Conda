@@ -974,7 +974,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/iniconfig-2.3.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/intake-2.0.8-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/intake-dataframe-catalog-0.5.1-pyhd8ed1ab_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/intake-esgf-2026.6.4-pyhd8ed1ab_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/intake-esgf-2026.9.28-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/intake-esm-2025.12.12-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/ipdb-0.13.13-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/ipydatagrid-1.4.0-pyhcf101f3_2.conda
@@ -2484,7 +2484,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/iniconfig-2.3.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/intake-2.0.8-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/intake-dataframe-catalog-0.5.1-pyhd8ed1ab_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/intake-esgf-2026.6.4-pyhd8ed1ab_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/intake-esgf-2026.9.28-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/intake-esm-2025.12.12-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/ipdb-0.13.13-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/ipydatagrid-1.4.0-pyhcf101f3_2.conda
@@ -19417,9 +19417,9 @@ packages:
   run_exports: {}
   size: 24263
   timestamp: 1768964662343
-- conda: https://conda.anaconda.org/conda-forge/noarch/intake-esgf-2026.6.4-pyhd8ed1ab_0.conda
-  sha256: f35c8741574fd389c07137603c1d42d665c78ededa47044a5eb448ffa4ce3e41
-  md5: 7e2f4066878064058e9161968a8f751a
+- conda: https://conda.anaconda.org/conda-forge/noarch/intake-esgf-2026.9.28-pyhd8ed1ab_0.conda
+  sha256: 50cf1325adf552828290dc2333f48652f1ea8e41c2103859e6a706ad2411787d
+  md5: 399fda1c067bd132279378fccaa903e7
   depends:
   - dask
   - globus-sdk <4
@@ -19437,10 +19437,10 @@ packages:
   license: BSD-3-Clause
   license_family: BSD
   purls:
-  - pkg:pypi/intake-esgf?source=hash-mapping
+  - pkg:pypi/intake-esgf?source=compressed-mapping
   run_exports: {}
-  size: 55844
-  timestamp: 1781007383732
+  size: 60364
+  timestamp: 1790686381150
 - conda: https://conda.anaconda.org/conda-forge/noarch/intake-esm-2025.12.12-pyhd8ed1ab_0.conda
   sha256: 1bca0522f380e6baa0458b4583e6fbbe1c28eda8ffdd56ea5690a692b491b996
   md5: 51f07f9ce314c7cf35417371408ea78f
