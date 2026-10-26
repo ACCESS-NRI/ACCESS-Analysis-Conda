@@ -72,7 +72,7 @@ dependencies:
 - c-compiler ==1.0.0 h14c3975_0
 - cairo ==1.18.4 h3394656_0
 - capnproto ==1.0.2 h766bdaa_3
-- cartopy ==0.25.0 py312hf79963d_1
+- cartopy ==0.26.0 np2py312h748b537_1
 - catboost ==1.2.10 cuda120_py312hd5f8c11_100
 - cdo ==2.5.0 hc8165f4_0
 - cf-python ==3.20.0 py312h3111c9b_0
@@ -833,6 +833,7 @@ dependencies:
 - dask-jobqueue ==0.9.0 pyhd8ed1ab_0
 - dask-labextension ==7.0.0 pyhd8ed1ab_1
 - dask-ml ==2025.1.0 pyhd8ed1ab_0
+- dask-setup ==2.3.0 pyh5ded981_0
 - dask-xgboost ==0.1.11 pyh9f0ad1d_0
 - dataclasses-json ==0.6.7 pyhcf101f3_2
 - dataset ==1.5.2 pyhd8ed1ab_0
@@ -1183,7 +1184,7 @@ dependencies:
 - pygam ==0.12.0 pyhd8ed1ab_0
 - pygeoif ==1.6.0 pyhd8ed1ab_0
 - pygments ==2.20.0 pyhd8ed1ab_0
-- pygmt ==0.18.0 pyhcf101f3_0
+- pygmt ==0.19.0 pyhc364b38_0
 - pyjwt ==2.13.0 pyhcf101f3_0
 - pylint ==4.0.6 pyhcf101f3_0
 - pylint-celery ==0.3 py_1
