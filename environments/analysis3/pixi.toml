@@ -174,6 +174,7 @@ matchpy = "*"
 matplotlib-scalebar = "*"
 matplotlib-venn = "*"
 mayavi = "*"
+med-diagnostics = { version = ">=2.0.0", channel = "accessnri" }
 memory_profiler = "*"
 metpy = "*"
 mo_pack = "*"
