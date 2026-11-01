@@ -27,8 +27,8 @@ wait for the Gadi build, then review and merge the PR.
 
 The scheduled workflow only runs once this workflow file is on the default
 branch. For an immediate release PR, use the manual trigger after merging this
-workflow. If a monthly solve fails, the next scheduled run retries; you can
-also rerun it manually after adjusting `pixi.toml`.
+workflow. If monthly preparation fails, the next scheduled run retries; you can
+also rerun it manually after correcting the underlying issue.
 
 The ACCESS-MED Containerised Conda environment is an approach to deploying and maintaining large conda environmnents while reducing inode usage and increasing performance. It takes advantage of `singularity`'s ability to manage overlay and `squashfs` filesystems. Each conda environment is consolidated into its own squashfs file, and then one or more of these squashfs environments is loaded using components of the environment.
 
