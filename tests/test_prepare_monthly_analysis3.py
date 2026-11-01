@@ -1,8 +1,9 @@
 import tempfile
 import unittest
+from datetime import date
 from pathlib import Path
 
-from scripts.prepare_monthly_analysis3 import next_version, prepare
+from scripts.prepare_monthly_analysis3 import next_version, prepare, target_for
 
 
 class MonthlyAnalysis3Tests(unittest.TestCase):
@@ -30,6 +31,14 @@ class MonthlyAnalysis3Tests(unittest.TestCase):
 
     def test_rolls_year_forward(self):
         self.assertEqual(next_version("26.12"), "27.01")
+
+    def test_missed_month_is_prepared_before_next_month(self):
+        self.assertEqual(target_for(date(2026, 11, 2), "26.10"), "26.11")
+        self.assertEqual(target_for(date(2026, 11, 28), "26.10"), "26.11")
+
+    def test_already_prepared_next_month_is_not_advanced_early(self):
+        self.assertEqual(target_for(date(2026, 10, 29), "26.11"), "26.11")
+        self.assertEqual(target_for(date(2026, 12, 31), "26.12"), "27.01")
 
 
 if __name__ == "__main__":
