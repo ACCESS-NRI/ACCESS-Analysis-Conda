@@ -31,6 +31,7 @@ environments:
       - conda: https://conda.anaconda.org/accessnri/noarch/ecgtools-access-2025.10.7-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/intake-esm-access-2026.4.15-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/intake-virtual-icechunk-0.2.2-py_0.conda
+      - conda: https://conda.anaconda.org/accessnri/noarch/med-diagnostics-2.0.0-py_0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/yamanifest-0.3.13-py_0.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/label/broken/linux-64/pygamma_n-1.0.0-py312h4cfd3ad_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/_openmp_mutex-4.5-7_kmp_llvm.conda
@@ -1542,6 +1543,7 @@ environments:
       - conda: https://conda.anaconda.org/accessnri/noarch/ecgtools-access-2025.10.7-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/intake-esm-access-2026.4.15-py_0.tar.bz2
       - conda: https://conda.anaconda.org/accessnri/noarch/intake-virtual-icechunk-0.2.2-py_0.conda
+      - conda: https://conda.anaconda.org/accessnri/noarch/med-diagnostics-2.0.0-py_0.conda
       - conda: https://conda.anaconda.org/accessnri/noarch/yamanifest-0.3.13-py_0.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/label/broken/linux-64/pygamma_n-1.0.0-py312h4cfd3ad_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/_openmp_mutex-4.5-7_kmp_llvm.conda
@@ -3222,6 +3224,20 @@ packages:
   license_family: APACHE
   size: 38227
   timestamp: 1782460620816
+- conda: https://conda.anaconda.org/accessnri/noarch/med-diagnostics-2.0.0-py_0.conda
+  sha256: f5b020251b5be34bf590f4456ffa56166043b742724ca10afb312e977f526767
+  md5: edcb3abf819d6312788f6191e18910d9
+  depends:
+  - access-nri-intake
+  - datashader
+  - hvplot
+  - matplotlib-base
+  - nc-time-axis
+  - panel
+  - python >=3.10
+  license: Apache-2.0
+  size: 64109
+  timestamp: 1793317462741
 - conda: https://conda.anaconda.org/accessnri/noarch/yamanifest-0.3.13-py_0.tar.bz2
   sha256: 3bbb4c88a47bf4590ecc4175e661e277b03d7a5fb8de9ffd7355a1e11e284095
   md5: 16e9dc1dad80a9f309605f8298229532

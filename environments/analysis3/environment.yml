@@ -20,6 +20,7 @@ dependencies:
 - ecgtools-access ==2025.10.7 py_0
 - intake-esm-access ==2026.4.15 py_0
 - intake-virtual-icechunk ==0.2.2 py_0
+- med-diagnostics ==2.0.0 py_0
 - yamanifest ==0.3.13 py_0
 - pygamma_n ==1.0.0 py312h4cfd3ad_1
 - _openmp_mutex ==4.5 7_kmp_llvm
