@@ -63,7 +63,7 @@ intake-dataframe-catalog = { version = "==0.5.1", channel = "conda-forge" }
 intake-esgf = { version = ">=2026.9.4", channel = "conda-forge" }
 yamanifest = { version = ">=0.3.12", channel = "accessnri" }
 access-med-tools = { version = "==0.1.23", channel = "accessnri" }
-access-moppy-esmval = { version = "==1.8.4", channel = "accessnri" }
+access-moppy-esmval = { version = "==1.8.5", channel = "accessnri" }
 shumlib = { channel = "accessnri" }
 aiohttp = "*"
 aiohttp-cors = "*"
