@@ -12,9 +12,10 @@ GitHub Actions at any time; the optional `target_version` input accepts `YY.MM`.
 After a missed month, a manual run prepares the earliest missing version first.
 
 The PR advances `VERSION_TO_MODIFY` and `UNSTABLE_VERSION` to the new month,
-promotes the current version to `STABLE_VERSION`, runs `pixi update --no-install`
-within the existing `pixi.toml` constraints, and regenerates `environment.yml`
-from the refreshed lock. The workflow does not merge or deploy. The existing PR
+promotes the current version to `STABLE_VERSION`, validates the existing Pixi
+lock, and regenerates `environment.yml` from that lock. It keeps the current
+package versions; package updates can be added to the PR before merging. The
+workflow does not merge or deploy. The existing PR
 workflow builds and stages the environment on Gadi; merging starts deployment
 through the push-to-main workflow. The PR test job is currently disabled, so
 review the package diff and Gadi build result before merging.

@@ -76,11 +76,10 @@ jobs:
           pixi-version: v0.82.1
           run-install: false
 
-      - name: Refresh lock and export conda environment
+      - name: Validate lock and export conda environment
         if: steps.version.outputs.changed == 'true' && steps.existing.outputs.exists == 'false'
         working-directory: environments/analysis3
         run: |
-          pixi update --no-install
           pixi run --as-is rebuild-env
           test -s environment.yml
 
@@ -99,7 +98,7 @@ jobs:
           git push --set-upstream origin "$branch"
 
           cat > "$RUNNER_TEMP/monthly-pr.md" <<EOF
-          Prepare analysis3-${VERSION} for next month. This advances the stable alias to the current release, refreshes compatible packages in Pixi, and regenerates the pinned Conda environment.
+          Prepare analysis3-${VERSION} for next month. This advances the stable alias to the current release and regenerates the Conda environment from the existing Pixi lock. Package updates can be added to this PR before merging.
 
           Approve this PR's workflow run in GitHub, then review the package diff and wait for the Gadi build to pass before merging. PR tests are currently disabled in this repository. The push-to-main workflow deploys the staged environment after merge.
 
