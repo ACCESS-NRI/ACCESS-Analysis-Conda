@@ -19,19 +19,15 @@ workflow builds and stages the environment on Gadi; merging starts deployment
 through the push-to-main workflow. The PR test job is currently disabled, so
 review the package diff and Gadi build result before merging.
 
-Before enabling the workflow, install a GitHub App on this repository with
-**Contents: read and write** and **Pull requests: read and write** permissions.
-Set repository variable `ANALYSIS3_PR_APP_CLIENT_ID` to its client ID and
-repository secret `ANALYSIS3_PR_APP_PRIVATE_KEY` to its private key. The workflow
-creates a short-lived installation token after resolving packages. The App
-opens the PR, so you can approve it, and its PR event starts the existing build
-without a separate workflow approval. A PR created with the built-in
-`GITHUB_TOKEN` would require a separate approval to start its workflows.
+The workflow uses the repository's built-in `GITHUB_TOKEN`; no App credentials
+or additional repository secret are needed. GitHub requires a maintainer to
+approve workflow runs on PRs opened by this token. Approve the PR workflow run,
+wait for the Gadi build, then review and merge the PR.
 
 The scheduled workflow only runs once this workflow file is on the default
 branch. For an immediate release PR, use the manual trigger after merging this
 workflow. If a monthly solve fails, the next scheduled run retries; you can
-also rerun it manually after adjusting `pixi.toml` or the repository token.
+also rerun it manually after adjusting `pixi.toml`.
 
 The ACCESS-MED Containerised Conda environment is an approach to deploying and maintaining large conda environmnents while reducing inode usage and increasing performance. It takes advantage of `singularity`'s ability to manage overlay and `squashfs` filesystems. Each conda environment is consolidated into its own squashfs file, and then one or more of these squashfs environments is loaded using components of the environment.
 
