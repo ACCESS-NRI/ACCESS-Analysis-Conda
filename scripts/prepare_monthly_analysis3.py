@@ -24,6 +24,16 @@ def next_version(version: str) -> str:
     return version_for(2000 + year + (month == 12), month % 12 + 1)
 
 
+def target_for(today: date, current: str) -> str:
+    """Catch up a missed release before preparing a later month."""
+    current_year, current_month = map(int, current.split("."))
+    release_month = (2000 + current_year) * 12 + current_month
+    calendar_month = today.year * 12 + today.month
+    if release_month < calendar_month:
+        return next_version(current)
+    return version_for(today.year + (today.month == 12), today.month % 12 + 1)
+
+
 def prepare(config: Path, target: str) -> bool:
     if not re.fullmatch(r"\d{2}\.(0[1-9]|1[0-2])", target):
         raise ValueError(f"Invalid target version: {target}; expected YY.MM")
@@ -64,14 +74,16 @@ def prepare(config: Path, target: str) -> bool:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--target-version", help="Override next month's YY.MM version for a manual run")
+    parser.add_argument("--target-version", help="Override the calculated YY.MM version for a manual run")
     parser.add_argument("--date", help="Date in Australia/Brisbane (YYYY-MM-DD), for reproducible runs")
     args = parser.parse_args()
 
     today = date.fromisoformat(args.date) if args.date else datetime.now(ZoneInfo("Australia/Brisbane")).date()
-    next_month = 1 if today.month == 12 else today.month + 1
-    next_year = today.year + (today.month == 12)
-    target = args.target_version or version_for(next_year, next_month)
+    config_text = CONFIG.read_text()
+    match = re.search(r"^export VERSION_TO_MODIFY=(\d{2}\.\d{2})$", config_text, re.MULTILINE)
+    if not match:
+        raise ValueError(f"VERSION_TO_MODIFY missing from {CONFIG}")
+    target = args.target_version or target_for(today, match.group(1))
     changed = prepare(CONFIG, target)
     print(f"analysis3-{target}: {'prepared' if changed else 'already configured'}")
 

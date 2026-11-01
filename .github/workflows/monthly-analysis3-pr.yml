@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
     inputs:
       target_version:
-        description: 'Optional YY.MM version; defaults to next month in Brisbane'
+        description: 'Optional YY.MM version; otherwise catch up or prepare next month'
         required: false
         type: string
 

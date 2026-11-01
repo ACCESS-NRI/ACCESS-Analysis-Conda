@@ -9,6 +9,7 @@ The [monthly workflow](.github/workflows/monthly-analysis3-pr.yml) runs at
 successful run opens a PR for the following month's `analysis3-YY.MM`. Later
 runs leave that PR alone. You can also run **Prepare monthly analysis3 PR** from
 GitHub Actions at any time; the optional `target_version` input accepts `YY.MM`.
+After a missed month, a manual run prepares the earliest missing version first.
 
 The PR advances `VERSION_TO_MODIFY` and `UNSTABLE_VERSION` to the new month,
 promotes the current version to `STABLE_VERSION`, runs `pixi update --no-install`
