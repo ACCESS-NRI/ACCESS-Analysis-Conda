@@ -764,7 +764,7 @@ dependencies:
 - bqplot ==0.13.1 pyhcf101f3_0
 - bqscales ==0.3.7 pyhd8ed1ab_1
 - branca ==0.8.2 pyhd8ed1ab_0
-- ca-certificates ==2026.6.17 hbd8a1cb_0
+- ca-certificates ==2026.10.23 hbd8a1cb_0
 - cachecontrol ==0.14.4 pyha770c72_0
 - cachecontrol-with-filecache ==0.14.4 pyhd8ed1ab_0
 - cached-property ==1.5.2 hd8ed1ab_1
@@ -774,7 +774,7 @@ dependencies:
 - cdp ==1.7.0 pyhd8ed1ab_2
 - cdsapi ==0.7.7 pyhd8ed1ab_0
 - celluloid ==0.2.0 pyhd8ed1ab_0
-- certifi ==2026.6.17 pyhd8ed1ab_0
+- certifi ==2026.10.23 pyhd8ed1ab_0
 - cf-xarray ==0.11.3 pyhd8ed1ab_0
 - cf_xarray ==0.11.3 pyhd8ed1ab_0
 - cfchecker ==4.1.0 pyhd8ed1ab_1
