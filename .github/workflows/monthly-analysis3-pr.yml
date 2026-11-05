@@ -29,8 +29,8 @@ jobs:
         with:
           ref: main
 
-      - name: Check version rollover logic
-        run: python3 -m unittest discover -s tests -p 'test_prepare_monthly_analysis3.py'
+      - name: Check version rollover and security validation logic
+        run: python3 -m unittest discover -s tests
 
       - name: Advance analysis3 version
         id: version
@@ -83,6 +83,7 @@ jobs:
           pixi update --no-install ca-certificates certifi
           pixi run --as-is rebuild-env
           test -s environment.yml
+          python3 ../../scripts/check_analysis3_security.py environment.yml
 
       - name: Commit and open pull request
         if: steps.version.outputs.changed == 'true' && steps.existing.outputs.exists == 'false'
