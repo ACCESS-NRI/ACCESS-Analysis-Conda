@@ -5,6 +5,11 @@ eval "$( ${MAMBA} shell hook --shell bash)"
 micromamba activate "${CONDA_INSTALLATION_PATH}/envs/${FULLENV}"
 set -u
 
+# Fail before packaging if the installed prefix or pip's private CA bundle is old.
+# This gate also runs when the optional post-build Gadi test job is disabled.
+python "${SCRIPT_DIR}/check_analysis3_security.py" --installed
+CONDA_ENVIRONMENT=analysis3 python -m pytest -q "${SCRIPT_DIR}/test_analysis3_security.py"
+
 # Fix shebang in esmvaltool 
 sed -i "1s|^#!/.*$|#!${CONDA_INSTALLATION_PATH}/envs/${FULLENV}/bin/python|" ${CONDA_INSTALLATION_PATH}/envs/${FULLENV}/bin/esmvaltool
 # Fix shebang in esgvoc 

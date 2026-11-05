@@ -27,6 +27,7 @@ jobs:
       - uses: prefix-dev/setup-pixi@5185adfbffb4bd703da3010310260805d89ebb11 #v0.9.6
         with:
           run-install: false
+          pixi-version: v0.82.1
 
       - name: Install pixi extensions
         run: pixi global install pixi-diff==0.1.5 pixi-diff-to-markdown==0.3.9

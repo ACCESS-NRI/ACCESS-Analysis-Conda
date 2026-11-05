@@ -13,6 +13,7 @@ channels = [
 exclude-newer = "0d"
 name = "analysis3"
 platforms = ["linux-64"]
+requires-pixi = ">=0.82.1"
 version = "0.1.0"
 
 [exclude-newer]
@@ -35,7 +36,13 @@ rebuild-env = { cmd = "pixi workspace export conda-environment --platform linux-
 check-broken-packages = { cmd = "python3 check_broken_packages.py", description = "Check that broken-labelled packages in pixi.lock match pixi.toml declarations" }
 
 [dependencies]
-python = "3.12.*"
+# eMudhra / emSign: Python's key denylist and each bundled CA store need fixes.
+# See docs/analysis3-emudhra-remediation.md for advisories and validation.
+python = ">=3.12.16,<3.13"
+conda = ">=26.9.4,<27"
+certifi = ">=2026.10.19"
+ca-certificates = ">=2026.10.19"
+virtualenv = ">=21.14.12,<22"
 dask = "2026.1.*"
 numpy = ">=2.0"
 scipy = "1.17.*"
@@ -50,7 +57,7 @@ iris = "3.14.*"
 netcdf4 = "1.7.*"
 libnetcdf = { version = "*", build = "mpi_openmpi*" }
 openmpi = "==5.0.8"
-pip = "26.*"
+pip = ">=26.2.2,<27"
 hdf5 = { version = "*", build = "mpi_openmpi*" }
 jupyterlab = "==4.5.0"
 access-intake-esm = { version = "==2026.8.13", channel = "accessnri" }

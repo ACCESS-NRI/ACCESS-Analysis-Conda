@@ -1,0 +1,29 @@
+name: Analysis3 security validation
+
+on:
+  workflow_call:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Test security policy and monthly rollover
+        run: python3 -m unittest discover -s tests
+      - name: Check generated package security minimums
+        run: python3 scripts/check_analysis3_security.py
+      - uses: prefix-dev/setup-pixi@5185adfbffb4bd703da3010310260805d89ebb11 # v0.9.6
+        with:
+          pixi-version: v0.82.1
+          run-install: false
+      - name: Check lock consistency and reproducible export
+        working-directory: environments/analysis3
+        run: |
+          pixi lock --check
+          pixi workspace export conda-environment --platform linux-64 --name analysis3 --from-lock-file \
+            | grep -v '^- _x86_64-microarch-level ' > "$RUNNER_TEMP/analysis3-environment.yml"
+          diff -u environment.yml "$RUNNER_TEMP/analysis3-environment.yml"
