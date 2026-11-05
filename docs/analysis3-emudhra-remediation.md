@@ -24,6 +24,7 @@ values unchanged.
 | certifi | 2026.10.23 | 2026.10.19 |
 | ca-certificates (conda-forge) | 2026.10.23 | 2026.10.19 |
 | virtualenv | 20.39.0 | 21.14.12 |
+| py-rattler | 0.25.0 | 0.28.0; manifest selects 0.28.1+ for solver compatibility |
 
 The [Python Security Response Team announcement](https://discuss.python.org/t/information-for-python-users-regarding-emudhra-emsign-ca-certificate-security-incident/109576/1)
 specifies the Python, pip, virtualenv and certificate fixes. Independently
@@ -46,30 +47,96 @@ installed bundle.
 
 Also present: py-rattler 0.25.0 and conda-rattler-solver 0.1.1. The advisory
 identifies py-rattler 0.28.0 as fixed, but warns about solver compatibility.
-This locked solver requires py-rattler below 0.26. Its conda download path uses
-conda's CA configuration; direct py-rattler TLS use remains a separate unresolved
-exposure. An administrator must select and test a compatible solver/py-rattler
-combination rather than updating that library independently.
+The locked solver requires py-rattler below 0.26. A subsequent
+[conda-rattler-solver 26.10.2 release](https://github.com/conda/conda-rattler-solver/releases/tag/26.10.2)
+is now available on conda-forge and requires py-rattler >=0.28.1,<0.29.0a0.
+The manifest now selects this compatible pair, and the security guard checks
+py-rattler if present. A fresh reduced solve passes with Python 3.12.16,
+conda 26.9.4, solver 26.10.2 and py-rattler 0.28.1. Full-environment runtime
+validation is still required; the old committed lock remains affected.
+In a separate installed test prefix, the installed security guard passes and
+`conda create --solver rattler --dry-run --override-channels -c conda-forge
+--prefix <temporary-target> zlib` returns `success: true, dry_run: true`.
+That verifies plugin loading and a basic solve, not analysis3's complete graph.
 
 ## Why regeneration is blocked
 
 Both Pixi 0.82.1 (the CI version) and local Pixi 0.84.1 fail the complete solve,
-including with the existing `CONDA_OVERRIDE_CUDA=12` setting. A Python-only probe
-also fails, so the Python incompatibility is independent of the virtualenv floor.
+including with the existing `CONDA_OVERRIDE_CUDA=12` setting. Updating only the
+Python requirement in the full manifest also fails; Python 3.12.16 itself solves
+successfully in a smaller environment. The conflict is with the scientific
+dependency graph, independently of the virtualenv floor.
 
 The available conda-forge linux-64 Python 3.12.16 build is
 `h5f976f7_0_cpython`. Its metadata requires `libsqlite >=3.54.1` and a separate
 libpython package. The candidate libsqlite builds either require ICU 78.3/79.1 or
 constrain ICU to `<0.0a0` (the build without ICU). The current environment has ICU
-75.1, required by several existing scientific/graphics/R packages. Pixi reports
-no solution with the current manifest, including its preserved package pins.
-This cannot be resolved by merely updating the interpreter record in the lock.
+75.1. This cannot be resolved by merely updating the interpreter record in the
+lock or deleting SQLite's deliberate ICU constraint.
 
-There is a second concrete compatibility constraint: the currently locked
+### Packages that need compatible builds
+
+Fresh, reduced solves on 2026-11-06 isolate these independent blockers:
+
+| Component | Verified constraint | What is needed |
+| --- | --- | --- |
+| NCL / ESMValTool | Python >=3.12.16,<3.13 plus NCL >=6.6.2 already fails. The current NCL 6.6.2 build requires libnetcdf <4.9.3, HDF5 1.14.3, GDAL 3.10 and PROJ 9.5. The old netCDF/XML graph requires ICU 75, conflicting with Python's SQLite dependency. ESMValTool 2.15 includes its NCL component. | A Python 3.12.16 compatibility build against the retained library stack, or a rebuilt NCL and coordinated scientific-library migration. There is no released NCL version bump that resolves this. |
+| Mayavi / VTK + PyTorch + NumExpr | Even without NCL, adding these three packages to the patched Python/MPI core fails. Each pair solves. The newer VTK selected with ICU 78.3 needs TBB >=2022.3; the available Python-3.12 PyTorch packages from the required `pytorch` channel require LLVM OpenMP <16. Compatible MKL choices for NumExpr then require TBB 2021. Non-MKL NumExpr conflicts with PyTorch's MKL requirement. PyTables also brings in NumExpr. | Retain the existing compatible graphics/MKL stack via a Python compatibility build, or separately review compatible VTK/PyTorch/NumExpr builds. Removing NCL alone is insufficient. |
+| conda-lock + virtualenv | Released conda-lock 4.0.2 through 4.0.5 require virtualenv <21, below the security floor. An unconstrained conda-lock solve evades this by downgrading to 2.5.8. | Package the upstream virtualenv-21 compatibility fix; do not downgrade conda-lock or just edit its dependency cap. |
+
+The [NCL netCDF rebuild PR](https://github.com/conda-forge/ncl-feedstock/pull/173)
+is still open, not an available package. A current-library rebuild would also
+need review against the pinned Gadi MPI/UCX versions. The existing manifest
+retains all scientific packages, including NCL and the complete ESMValTool.
+
+There is a separate packaging-tool compatibility constraint: the currently locked
 conda-lock 4.0.2 requires `virtualenv >=20.26.6,<21.0.0`. A fresh minimal solve of
 conda-lock 4.0.2 plus virtualenv >=21.14.12 fails. Keeping the old virtualenv would
 retain its affected seeded packaging tools. The latest conda-lock package
 metadata inspected (4.0.5) still has the same upper bound.
+
+[conda-lock PR #972](https://github.com/conda/conda-lock/pull/972) merged on
+2026-11-04 at `317ebe406326040ca3c9bb320192eeca8bf21598`, after the latest
+4.0.5 release. It removes vendored Poetry's obsolete `--no-wheel` option and
+requires **virtualenv >=21.15.2,<22** plus **filelock >=4.2.1,<5**. The conda-forge
+recipe must carry both the code change and the new requirements. A reviewed
+backport build or the next release containing this commit is needed; an
+unreleased Git checkout is not used in this environment. The manifest now keeps
+conda-lock >=4.0.2,<5 to prevent the otherwise observed downgrade to 2.5.8.
+
+### Recommended route to a build
+
+First request a trusted **Python 3.12.16 compatibility build** against the
+existing ICU-compatible SQLite and library stack. An alternative is a tested
+SQLite 3.54.1 build for ICU 75. Either is a proposed packaging change, not a
+package that this investigation built or proved compatible. Check any retained
+library's security support as part of that review. This route aims to preserve
+NCL, ESMValTool, VTK, PyTorch and the existing CUDA/MPI libraries. Then package the
+conda-lock fix above and use the released conda-rattler-solver/py-rattler pair.
+Only an actual complete solve and runtime tests can establish that those builds
+are sufficient; additional conflicts may emerge.
+
+The alternative is a coordinated NCL/netCDF/HDF5/XML/ICU and graphics/MKL
+migration. That is materially broader than this security update and requires
+an explicit compatibility decision and a package-by-package diff. Do not remove
+NCL/ESMValTool components, move PyTorch to another channel, or loosen the MPI/CUDA
+constraints just to make the solver return success.
+
+OpenMPI **5.0.8** and UCX **1.18.1** are not independently incompatible with
+Python 3.12.16: fresh reduced solves retain their exact original builds
+`hacb30cd_104` and `h990bcc0_2`, alongside MPI HDF5 1.14.6/netCDF 4.9.3.
+These reduced solves are diagnostic, not proposed lockfile replacements.
+Upgrading UCX to 1.19/1.20 is not a safe shortcut: the existing rapidsai
+ucx-py 0.45 requires UCX <1.19. R 4.4.3 also has a newer build that solves with
+ICU 78.3 and the existing r-lintr/r-styler pins; an R major/minor upgrade is not
+established as necessary.
+
+The reported reduced probes used new temporary lockfiles, conda-forge channel metadata,
+Pixi 0.82.1, Python <3.13 and the original channel order. The graphics probes
+retained the OpenMPI/UCX pins and MPI variants of HDF5/netCDF. Pairwise positive
+controls and the three-package failure distinguish the interaction from an
+individual package incompatibility. No reduced manifest was copied over the
+real environment.
 
 The normal generation commands were attempted:
 
@@ -121,7 +188,9 @@ or changes to system trust stores are used. Rejection must be verification code
 | Existing lock exported with the existing Pixi command | PASS: byte-identical to existing environment.yml |
 | Proposed complete lock solve, Pixi 0.82.1 and 0.84.1 | FAIL: dependency incompatibility; no corrected lock produced |
 | Existing `rebuild-env` task with the new constraints | FAIL at lock prerequisite |
-| Security guard against the committed export | Expected FAIL: Python, pip, conda and virtualenv are below floors |
+| Security guard against the committed export | Expected FAIL: Python, pip, conda, virtualenv and py-rattler are below floors |
+| Fresh reduced dependency probes | PASS/FAIL as documented above: NCL and graphics interaction reproduced; preserved MPI/UCX core and released rattler solver pair solve |
+| Installed conda-rattler-solver 26.10.2 / py-rattler 0.28.1 | PASS: installed security guard including pip's private bundle; Conda rattler-plugin zlib dry-run succeeds in an isolated prefix |
 | Isolated patched runtime security tests | PASS: 10 tests, Python 3.12.16, pip 26.2.2, conda 26.9.4, virtualenv 21.14.12 |
 | Pip's vendored certifi in that isolated runtime | PASS: 2026.10.19; standalone certifi and CA package are 2026.10.23 |
 | Python 3.12.13 negative control | Expected FAIL: all 8 compromised-key cases; the random-key control passes |
@@ -139,9 +208,9 @@ and must not be used as a harmless test-only command.
 1. Obtain a trusted Python 3.12.16+ conda build compatible with the existing
    dependency graph, or approve a concrete, separately reviewed library migration
    after inspecting its package diff. Keep Python below 3.13. Resolve the
-   conda-lock/virtualenv constraint with compatible package metadata/builds or an
-   explicitly reviewed separation of packaging tools. Resolve direct py-rattler
-   TLS use as above. Do not weaken the security floors.
+   conda-lock/virtualenv constraint with a release or reviewed backport containing
+   PR #972. Use and test the compatible rattler solver pair above. Do not weaken
+   the security floors or rely on a conda-lock downgrade.
 2. Once those package decisions are resolved, regenerate with the existing Pixi
    task, compare every version/build against the baseline, and pass the new
    checks. Run the scientific smoke tests and existing Gadi validation against the

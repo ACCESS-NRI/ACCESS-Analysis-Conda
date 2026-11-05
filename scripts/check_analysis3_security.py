@@ -25,6 +25,7 @@ MINIMUMS = {
     "uv": "0.13.6",
     "sigstore": "4.5.1",
     "pixi": "0.82.1",
+    "py-rattler": "0.28.0",
 }
 REQUIRED = {"python", "pip", "certifi", "ca-certificates"}
 

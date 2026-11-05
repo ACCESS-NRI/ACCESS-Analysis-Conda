@@ -38,9 +38,12 @@ class SecurityPolicyTests(unittest.TestCase):
         versions, errors = security.export_versions(
             "dependencies:\n- python ==3.12.16 h5f976f7_0_cpython\n"
             "- pip ==26.2.2 pyh8b19718_0\n- pip\n- pip:\n  - uv==0.13.6\n"
+            "  - py-rattler==0.28.1\n"
         )
         self.assertEqual(errors, [])
-        self.assertEqual(versions, {"python": "3.12.16", "pip": "26.2.2", "uv": "0.13.6"})
+        self.assertEqual(versions, {
+            "python": "3.12.16", "pip": "26.2.2", "uv": "0.13.6", "py-rattler": "0.28.1",
+        })
 
     def test_unpinned_duplicate_and_prerelease_exports_fail(self):
         for spec in ("- python >=3.12.16", "- python ==3.12.16rc1", "- python ==3.12.16\n- python ==3.12.13"):
