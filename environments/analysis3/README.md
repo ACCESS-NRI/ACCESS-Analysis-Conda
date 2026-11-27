@@ -1,4 +1,24 @@
-# How to solve the conda environment with pixi
+# analysis3 environment
+
+## Changes in 26.12
+
+Parcels is upgraded to **4.0.3**, with Zarr 3 support. Parcels 4 changes the
+kernel and FieldSet APIs and writes trajectory output in Parquet format.
+Existing Parcels workflows should follow the
+[upstream migration guide](https://github.com/Parcels-code/Parcels/blob/v4.0.3/docs/user_guide/v4-migration.md).
+
+**NCL is no longer included.** ESMValTool 2.15 retains Python and R support
+through the `esmvaltool-python` and `esmvaltool-r` packages. Standalone NCL
+scripts, ESMValTool diagnostics written in NCL, and NCL-based CMORization
+scripts require an NCL-capable environment. The `esmvaltool` module alias
+still follows the stable analysis3 release; after it advances to 26.12,
+it will also provide Python and R support only.
+
+For workflows requiring NCL, use the versioned `conda/analysis3-26.11`
+module. That release is pinned in `retention.json` so automated retirement
+keeps it available alongside newer analysis3 releases.
+
+## How to solve the conda environment with pixi
 
 
 ### Importing a conda environment into pixi 

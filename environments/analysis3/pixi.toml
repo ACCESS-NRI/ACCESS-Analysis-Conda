@@ -16,10 +16,8 @@ platforms = ["linux-64"]
 version = "0.1.0"
 
 [exclude-newer]
-esmvaltool = "0d"
 # Subpackages of esmvaltool which need to be explicitly excluded from delay.
 # See also https://pixi.prefix.dev/latest/reference/pixi_manifest/#exclude-newer-optional
-esmvaltool-ncl = "0d"
 esmvaltool-python = "0d"
 esmvaltool-r = "0d"
 
@@ -204,7 +202,7 @@ palettable = "*"
 panel = "*"
 papermill = "*"
 param = "*"
-parcels = "*"
+parcels = "==4.0.3"
 pdbufr = "*"
 pillow = "*"
 pint = "*"
@@ -288,7 +286,10 @@ xmovie = "*"
 xrft = "*"
 xskillscore = "*"
 xwrf = "*"
-esmvaltool = "2.15.*"
+# Keep Python and R diagnostics; the full metapackage also requires NCL,
+# whose native dependencies conflict with Parcels 4 and Rasterio.
+esmvaltool-python = "2.15.*"
+esmvaltool-r = "2.15.*"
 cdsapi = "*"
 lime = "*"
 mapgenerator = ">=1.0.5"
@@ -315,7 +316,6 @@ prospector = ">=1.12"
 pyroma = "*"
 yamllint = "==1.35.1"
 yapf = "*"
-ncl = ">=6.6.2"
 imagemagick = "*"
 nco = "*"
 r-base = ">=3.5"
