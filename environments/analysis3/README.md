@@ -2,6 +2,13 @@
 
 ## Changes in 26.12
 
+Sectionate requires **0.3.5 or later**, fixing incorrect transports across
+the MOM tripolar grid fold, including Arctic latitude sections
+([#525](https://github.com/ACCESS-NRI/ACCESS-Analysis-Conda/issues/525)).
+PROJ requires **9.6.0 or later** for the Spilhaus projection used by PyGMT
+([#521](https://github.com/ACCESS-NRI/ACCESS-Analysis-Conda/issues/521));
+the environment already resolves PROJ 9.7.1.
+
 Parcels is upgraded to **4.0.3**, with Zarr 3 support. Parcels 4 changes the
 kernel and FieldSet APIs and writes trajectory output in Parquet format.
 Existing Parcels workflows should follow the
@@ -41,6 +48,10 @@ pixi import environment.yml --format=conda-env
 
 Do not directly modify `environment.yml` - we are going to totally rebuild it.
 Instead, you want to modify `pixi.toml`.
+
+For package requests that specify a minimum version, use `>=` constraints
+in `pixi.toml` rather than exact pins. The lockfile and generated
+`environment.yml` still record exact versions for reproducible builds.
 
 You can either:
 

@@ -1332,7 +1332,7 @@ dependencies:
 - seaborn ==0.13.2 hd8ed1ab_3
 - seaborn-base ==0.13.2 pyhd8ed1ab_3
 - seawater ==3.3.5 pyhd8ed1ab_1
-- sectionate ==0.3.3 pyhd8ed1ab_0
+- sectionate ==0.3.5 pyhd8ed1ab_0
 - segregation ==2.5.5 pyhd8ed1ab_0
 - semver ==3.0.4 pyhcf101f3_1
 - send2trash ==2.1.0 pyha191276_1
