@@ -1344,7 +1344,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/seaborn-0.13.2-hd8ed1ab_3.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/seaborn-base-0.13.2-pyhd8ed1ab_3.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/seawater-3.3.5-pyhd8ed1ab_1.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/sectionate-0.3.3-pyhd8ed1ab_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/sectionate-0.3.5-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/segregation-2.5.5-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/semver-3.0.4-pyhcf101f3_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/send2trash-2.1.0-pyha191276_1.conda
@@ -2854,7 +2854,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/seaborn-0.13.2-hd8ed1ab_3.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/seaborn-base-0.13.2-pyhd8ed1ab_3.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/seawater-3.3.5-pyhd8ed1ab_1.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/sectionate-0.3.3-pyhd8ed1ab_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/sectionate-0.3.5-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/segregation-2.5.5-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/semver-3.0.4-pyhcf101f3_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/send2trash-2.1.0-pyha191276_1.conda
@@ -25074,9 +25074,9 @@ packages:
   run_exports: {}
   size: 27160
   timestamp: 1734958954564
-- conda: https://conda.anaconda.org/conda-forge/noarch/sectionate-0.3.3-pyhd8ed1ab_0.conda
-  sha256: f08c15a682ffae43f61bd175e2a759df17fb79d2fdbc0e376b4ecde55bfab788
-  md5: cf7745a7dece2c2a67afee810189a686
+- conda: https://conda.anaconda.org/conda-forge/noarch/sectionate-0.3.5-pyhd8ed1ab_0.conda
+  sha256: b76278931e3dfb27989677d09e8a2e2afb42f8a2399877000f2ba2bda68aff58
+  md5: c13d545ae9246713eda704bef694d079
   depends:
   - dask
   - numba
@@ -25084,14 +25084,14 @@ packages:
   - python >=3.11
   - scipy
   - xarray
-  - xgcm >=0.9.0
+  - xgcm >=0.9.0,<0.10
   license: GPL-3.0-only
   license_family: GPL
   purls:
   - pkg:pypi/sectionate?source=hash-mapping
   run_exports: {}
-  size: 37054
-  timestamp: 1771695058220
+  size: 57004
+  timestamp: 1795583723572
 - conda: https://conda.anaconda.org/conda-forge/noarch/segregation-2.5.5-pyhd8ed1ab_0.conda
   sha256: d3f74bb2ee712b7e373f5806caee795b55e0febe82dae9e5ff6eeba2d7cffbb8
   md5: 40449f39a0113ba929f5b880424439c6
